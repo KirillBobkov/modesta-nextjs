@@ -32,6 +32,7 @@ const NavLinkComponent = React.memo(
           className={styles.navigation__parent}
         >
           <Link
+            prefetch={false}
             className={`${
               router.pathname === item.parent.path
                 ? styles["navigation__item--active"]
@@ -46,6 +47,7 @@ const NavLinkComponent = React.memo(
           >
             {item.childs.map((child) => (
               <Link
+                prefetch={false}
                 key={child.value}
                 className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
                 onClick={() => closeMenu(item.parent.path)}
@@ -61,6 +63,7 @@ const NavLinkComponent = React.memo(
     } else {
       return (
         <Link
+          prefetch={false}
           className={`${
             router.pathname === item.parent.path
               ? styles["navigation__item--active"]
@@ -103,6 +106,7 @@ export const Navigation = React.memo(({ isMobile }) => {
     <header className={styles.navigation}>
       <nav className={styles.navigation__container}>
         <Link
+          prefetch={false}
           className={styles.navigation__logo}
           onClick={() => handleMobileMenu(false)}
           href={"/"}
