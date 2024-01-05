@@ -11,7 +11,7 @@ const nextConfig = {
     // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
     // skipTrailingSlashRedirect: true,
    
-    distDir: 'docs',
+    distDir: 'out',
   }
    
   module.exports = nextConfig
