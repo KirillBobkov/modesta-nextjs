@@ -1,11 +1,22 @@
 import iconSK from "../../public/images/iconSK.png";
 import icon45ru from "../../public/images/45ru.png";
 import containerStyles from "../../styles/container.module.css";
+import shadowStyles from "../../styles/shadow.module.css";
 import styles from "./Footer.module.css";
+
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+
+const geo = [55.44711106925449,65.35028099999987];
+
+const defaultState = {
+    center: geo,
+    zoom: 16,
+}
 
 export default React.memo(() => {
+
   return (
     <footer className={`${containerStyles.container} ${styles.footer}`}>
       <div className={styles.footer__grid}>
@@ -185,13 +196,13 @@ export default React.memo(() => {
       </div>
       <div className={styles.footer__block}>
         <p className={styles.footer__title}>Адрес</p>
-        <iframe
-          className={styles.footer__map}
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A81da998328a234f9b1f1b6f3031d87ebfb28d9c844a61379ccb071c214c74164&amp;source=constructor"
-          width="100%"
-          height="240"
-          frameBorder="0"
-        ></iframe>
+        <div className={`${styles.footer__map} ${shadowStyles.shadow}`}>
+        <YMaps>
+          <Map width="100%" defaultState={defaultState}>
+            <Placemark geometry={geo} />
+          </Map>
+        </YMaps>
+        </div>
         <p className={styles.footer__address}>
           ООО "МОДЕСТА" (ОГРН 1234500001603)
         </p>

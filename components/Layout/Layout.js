@@ -13,6 +13,8 @@ const getMetaConfig = (pathname) => {
       title: "Модеста - о разработке",
       description:
         "Разрабатывая протезы, мы решаем сложные задачи, связанные с функциональностью, хватательной силой, практичностью и долговечностью протезов.",
+      keywords:
+        "разработка технологии 3Д печать 3D печать дизайн сколково курган культеприёмная гильза клешня",
     };
   }
   if (pathname.includes("team")) {
@@ -20,7 +22,7 @@ const getMetaConfig = (pathname) => {
       title: "Модеста - команда профессионалов",
       description:
         "Мы не стоим на месте, и постоянно повышаем свою квалификацию.",
-        keywords:
+      keywords:
         "команда руководитель инженер дизанер программист робот конструктор научный руководитель",
     };
   }
@@ -47,7 +49,7 @@ const getMetaConfig = (pathname) => {
       description:
         "На этой странице вы можете узнать все этапы развития компании Модеста.",
       keywords:
-        "разработка технологии 3Д печать 3D печать дизайн сколково курган культеприёмная гильза клешня",
+        "время стартап протезирование протезы временной путь история компании развитие сколково телемедфорум резиденты",
     };
   }
   return {
@@ -81,13 +83,16 @@ export default function Layout({ children }) {
         <meta httpEquiv="Reply-to" content="blagobionic44@gmail.com" />
         <meta name="keywords" content={keywords} />
         <meta name="robots" content="index,follow" />
-        <meta property="og:url" content="https://modesta.tech" />
+        <meta
+          property="og:url"
+          content={`https://modesta.tech${router.pathname}`}
+        />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://modesta.tech/sitepreview.jpg"
+          content="https://modesta.tech/images/sitepreview.jpg"
         />
         <link rel="icon" href="/images/favicon.ico" />
         <link
@@ -113,11 +118,19 @@ export default function Layout({ children }) {
         />
         <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
       </Head>
-      <div style={{ display: 'none'}} itemScope itemType="http://schema.org/ImageObject">
+      <div
+        style={{ display: "none" }}
+        itemScope
+        itemType="http://schema.org/ImageObject"
+      >
         <h1 itemProp="name">{title}</h1>
-        <img src="/images/sitepreview.jpg" itemProp="contentUrl" alt="Инновационный протез" />
+        <img
+          src="/images/sitepreview.jpg"
+          itemProp="contentUrl"
+          alt="Инновационный протез"
+        />
         <span itemProp="description">{description}</span>
-    </div>
+      </div>
       <Navigation isMobile={isMobile} />
       <main>{children}</main>
       <GetProthesisForm />

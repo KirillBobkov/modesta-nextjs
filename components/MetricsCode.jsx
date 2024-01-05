@@ -1,7 +1,7 @@
 import Script from "next/script";
 export default function MetricsCode() {
   return (
-    <Script id="valera" strategy="afterInteractive">
+    <Script strategy="afterInteractive">
       {`
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
