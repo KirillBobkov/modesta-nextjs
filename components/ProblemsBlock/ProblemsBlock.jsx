@@ -14,40 +14,40 @@ export function ProblemsBlock() {
             <h2 className={containerStyles.container__title}id="problems">Решаемые задачи</h2>
             <VisibilityManager as="ul" classes={containerStyles.container}>    
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`} id="problem">
-                    <Image className={styles.problem__image} src={problem1} alt="Фото производства" />
+                    <Image priority className={styles.problem__image} src={problem1} alt="Фото производства" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Развиваем производство в РФ </h2>
-                        <p className={styles.problem__description}>В России не хватает компаний, занимающихся производством протезов. Мы разрабатываем новые модели и улучшаем уже существующие изделия.</p>
+                        <p className={styles.problem__description}>В России не хватает компаний, занимающихся производством протезов. Мы разрабатываем новые модели и улучшаем уже существующие изделия</p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`}>
-                    <Image className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
+                    <Image priority className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Меняем правила
                         </h2>
-                        <p className={styles.problem__description}>Больше 85% продукции, приобретаемой через государственные заказы, представляют собой косметические изделия, не обладающие высокой эффективностью. Наша задача - обеспечивать максимальный функционал.
+                        <p className={styles.problem__description}>Больше 85% продукции, приобретаемой через государственные заказы, представляют собой косметические изделия, не обладающие высокой эффективностью. Наша задача - обеспечивать максимальный функционал
                         </p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`}>
-                    <Image className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
+                    <Image priority className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Своевременно обслуживаем</h2>
                         <p className={styles.problem__description}>
-                            В условиях санкций и проблем с логистикой возникают трудности с обслуживанием импортных изделий. Наше производство находится в России, поэтому вы можете рассчитывать на быстрое обслуживание.
+                        В условиях санкций и проблем с логистикой возникают трудности с обслуживанием импортных изделий. Наше производство находится в России, поэтому вы можете рассчитывать на быстрый сервис
                         </p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li"  classes={`${styles.problem} shadow`}>
-                    <Image className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
+                    <Image priority className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Помогаем освоить протез
                         </h2>
-                        <p className={styles.problem__description}>Приобщение и приспособление к протезу часто требует значительного труда и времени, и часто пользователи отказываются от его использования.
+                        <p className={styles.problem__description}>
+                        Приобщение и приспособление к протезу требуют значительного труда и времени, и часто пользователи отказываются от его использования.
                         </p>
                         <p className={styles.problem__description}>
-                            Мы создаем собственные программные решения, чтобы помочь людям более легко осваивать протезы, предлагая игровой опыт и непосредственную обратную связь в реальном времени.
-                        </p>
+                        Мы создаем собственные программные решения, чтобы помочь людям легче осваивать наши изделия, предлагая игровой опыт и непосредственную обратную связь в реальном времени                        </p>
                     </div>
                 </VisibilityManager>
             </VisibilityManager>

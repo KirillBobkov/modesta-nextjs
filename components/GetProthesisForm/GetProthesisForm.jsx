@@ -131,7 +131,7 @@ export function GetProthesisForm() {
         <h2 className={styles['get-prothesis-form__title']}>Оставить заявку</h2>
         <p className={styles['get-prothesis-form__description']}>
           Мы свяжемся с вами в ближайшее время и проконсультируем по вопросам
-          протезирования.
+          протезирования
         </p>
         <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
           <div className={styles['form-group']}>

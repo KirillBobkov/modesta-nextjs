@@ -23,7 +23,7 @@ export function AdvantagesBlock() {
                     classes={`${styles['advantages__item']} ${styles['advantages__item--left']} ${styles['advantage__item--1-background']} shadow `}>
                     <div className={styles['advantages__content']}>
                         <p className={styles['advantages__item-text']}>Эффективность</p>
-                        <p className={styles['advantages__item-description']}>Протезы с роботизированным захватом обеспечивают возможность управлять объектами разнообразных форм.</p>
+                        <p className={styles['advantages__item-description']}>Протезы с роботизированным захватом обеспечивают возможность управлять объектами разнообразных форм</p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li"
@@ -32,7 +32,8 @@ export function AdvantagesBlock() {
                     classes={`${styles['advantages__item']} ${styles['advantages__item--right']}  ${styles['advantage__item--2-background']} shadow`}>
                     <div className={styles['advantages__content']}>
                         <p className={styles['advantages__item-text']}>Сменные конечности</p>
-                        <p className={styles['advantages__item-description']}>Заменяемые части протеза обеспечивают его удобство в использовании в различных местах: на улице, дома или в гараже</p>
+                        <p className={styles['advantages__item-description']}>
+                        Заменяемые части протеза обеспечивают его удобство в использовании в различных местах: на улице, дома или в мастерской</p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li"
@@ -41,7 +42,7 @@ export function AdvantagesBlock() {
                     classes={`${styles['advantages__item']} ${styles['advantage__item--3-background']} shadow`}>
                     <div className={styles['advantages__content']}>
                         <p className={styles['advantages__item-text']}>Простое обслуживание</p>
-                        <p className={styles['advantages__item-description']}>Ремонт протеза доступен для самостоятельного выполнения дома или через наш сервис для оперативного восстановления.</p>
+                        <p className={styles['advantages__item-description']}>Ремонт протеза доступен для самостоятельного выполнения дома или через наш сервис для оперативного устранения неполадок</p>
                     </div>
                 </VisibilityManager>
             </ul >

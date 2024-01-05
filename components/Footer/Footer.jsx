@@ -197,9 +197,9 @@ export default React.memo(() => {
       <div className={styles.footer__block}>
         <p className={styles.footer__title}>Адрес</p>
         <div className={`${styles.footer__map} ${shadowStyles.shadow}`}>
-        <YMaps>
-          <Map width="100%" defaultState={defaultState}>
-            <Placemark geometry={geo} />
+        <YMaps key={1}>
+          <Map key={2} width="100%" defaultState={defaultState}>
+            <Placemark key={3} geometry={geo} />
           </Map>
         </YMaps>
         </div>
