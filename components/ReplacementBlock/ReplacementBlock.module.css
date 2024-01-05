@@ -15,7 +15,7 @@
 }
 
 .replacement-parts__item {
-    width: 80%;
+    width: 80%!important;
     object-fit: contain;
 }
 
