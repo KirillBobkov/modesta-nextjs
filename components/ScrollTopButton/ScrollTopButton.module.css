@@ -1,0 +1,54 @@
+.arrow-button {
+    display: flex;
+    height: 60px;
+    border: none;
+    width: 60px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 100ms;
+    border-radius: 50%;
+    color: var(--font-color);
+    fill:  var(--font-color);
+    background-color: var(--card-bg-color);
+    transition: all 500ms ease-out;
+    z-index: 1;
+}
+
+.arrow-button svg {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    padding-top: 0;
+}
+
+.arrow-button svg path {
+    fill: var(--font-color);
+}
+
+.scroll-top-button {
+    position: fixed;
+    visibility: hidden;
+    bottom: 30px;
+    left: 30px;
+    opacity: 0;
+}
+
+.scroll-top-button--visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .arrow-button {
+        height: 50px;
+        width: 50px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .arrow-button svg {
+        padding: 5px;
+    }
+}
