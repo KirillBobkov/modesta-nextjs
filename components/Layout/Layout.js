@@ -1,4 +1,4 @@
-import styles from "./layout.module.css";
+import styles from "./Layout.module.css";
 import Footer from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import { useWindowWidth } from "../../hooks/useWindowWidth";
