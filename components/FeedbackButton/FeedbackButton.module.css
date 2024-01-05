@@ -28,13 +28,13 @@
     100% { transform: rotate(0deg); }
   }
 
-.feedback-button svg {
+.feedback-button .svg {
     width: 30px;
     height: 30px;
     animation: tilt-shaking 0.2s linear infinite;
 }
 
-.feedback-button span {
+.feedback-button .feedback-button__text {
     flex-grow: 1;
     font-weight: bold;
 }
@@ -46,12 +46,12 @@
         right: 15px;
     }
 
-    .feedback-button svg {
+    .feedback-button .svg {
         width: 25px;
         height: 25px;
     }
 
-    .feedback-button span {
+    .feedback-button .feedback-button__text {
         font-size: 14px;
     }
 }

@@ -1,20 +1,19 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { BurgerButton } from "../BurgerButton/BurgerButton.jsx";
 import Link from "next/link";
 import styles from "./Navigation.module.css";
-import { VisibilityManager } from "../VisibilityManager.jsx";
 import { navigationTree } from "./navigationList.js";
 import { useRouter } from "next/router.js";
 
 const NavLinkComponent = React.memo(
-  ({ item, setMobileMenuOpened, isMobile }) => {
+  ({ item, setMobileMenuOpened }) => {
     const [hoverOpened, setHoverOpened] = useState(false);
     const router = useRouter();
 
     const closeMenu = useCallback((path) => {
       setMobileMenuOpened(false);
       window?.scrollTo(0, 0);
-      // ym(96028442,'reachGoal', path);
+      ym(96028442,'reachGoal', path);
     }, []);
 
     const handleMouseEnter = useCallback(() => {
@@ -142,7 +141,6 @@ export const Navigation = React.memo(({ isMobile }) => {
             return (
               <NavLinkComponent
                 key={i}
-                isMobile={isMobile}
                 item={item}
                 setMobileMenuOpened={handleMobileMenu}
               />

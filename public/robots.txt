@@ -1,2 +1,2 @@
-User-agent: Yandex
-Sitemap: http://modesta.tech/sitemap
+User-agent: *
+Sitemap: http://modesta.tech/sitemap.xml

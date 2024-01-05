@@ -1,12 +1,11 @@
-import styles from "./Layout.module.css";
 import Footer from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Script from "next/script";
 import { GetProthesisForm } from "../GetProthesisForm/GetProthesisForm";
+import FeedbackButton from "../FeedbackButton/FeedbackButton";
 
 const getMetaConfig = (pathname) => {
   if (pathname.includes("production")) {
@@ -113,17 +112,10 @@ export default function Layout({ children }) {
           href="/images/favicon180x180.png"
         />
         <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
-        <Script
-          src="https://connect.facebook.net/en_US/sdk.js"
-          strategy="lazyOnload"
-          onLoad={() =>
-            console.log(`script loaded correctly, window.FB has been populated`)
-          }
-        />
       </Head>
       <div style={{ display: 'none'}} itemScope itemType="http://schema.org/ImageObject">
         <h1 itemProp="name">{title}</h1>
-        <img src="https://modesta.tech/sitepreview.jpg" itemProp="contentUrl" alt="Инновационный протез" />
+        <img src="/images/sitepreview.jpg" itemProp="contentUrl" alt="Инновационный протез" />
         <span itemProp="description">{description}</span>
     </div>
       <Navigation isMobile={isMobile} />
@@ -131,6 +123,7 @@ export default function Layout({ children }) {
       <GetProthesisForm />
       <Footer />
       <ScrollTopButton />
+      <FeedbackButton />
     </>
   );
 }
