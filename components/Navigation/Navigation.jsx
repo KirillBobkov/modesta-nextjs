@@ -34,52 +34,29 @@ const NavLinkComponent = React.memo(
         >
           <Link
             className={`${
-                router.pathname === item.parent.path
-                  ? styles["navigation__item--active"]
-                  : ""
-              } ${styles.navigation__item}`}
+              router.pathname === item.parent.path
+                ? styles["navigation__item--active"]
+                : ""
+            } ${styles.navigation__item}`}
             onClick={() => closeMenu(item.parent.path)}
             href={item.parent.path}
           >
             {item.parent.value}
           </Link>
-          {isMobile ? (
-            <div className={styles.navigation__submenu}>
-              {item.childs.map((child) => (
-                <Link
-                  key={child.value}
-                  className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
-                  onClick={() => closeMenu(item.parent.path)}
-                  href={child.path}
-                >
-                  {" "}
-                  {child.value}
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <>
-              {hoverOpened ? (
-                <VisibilityManager
-                  speed={0.5}
-                  side="bottom"
-                  classes={`${styles.navigation__submenu} shadow`}
-                >
-                  {item.childs.map((child) => (
-                    <Link
-                      key={child.value}
-                      className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
-                      onClick={() => closeMenu(item.parent.path)}
-                      href={child.path}
-                    >
-                      {" "}
-                      {child.value}
-                    </Link>
-                  ))}
-                </VisibilityManager>
-              ) : null}
-            </>
-          )}
+          <div className={`${styles.navigation__submenu} ${hoverOpened ? styles['navigation__submenu--visible'] : ''} shadow`}
+          >
+            {item.childs.map((child) => (
+              <Link
+                key={child.value}
+                className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
+                onClick={() => closeMenu(item.parent.path)}
+                href={child.path}
+              >
+                {" "}
+                {child.value}
+              </Link>
+            ))}
+          </div>
         </div>
       );
     } else {

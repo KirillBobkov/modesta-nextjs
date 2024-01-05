@@ -1,7 +1,7 @@
 .replacement-parts {
     width: 100%;
     min-height: 700px;
-    padding: 60px 0;
+    padding-top: 60px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -21,7 +21,7 @@
 
 .replacement-parts__title {
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     text-align: center;
     font-size: 52px;
     line-height: 60px;
