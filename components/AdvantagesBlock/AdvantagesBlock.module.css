@@ -53,34 +53,9 @@
     background-repeat: no-repeat;
 }
 
-.advantage__item--1-background {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-}
-
-.advantage__item--1-background:hover {
-    background-size: auto 102%;
-}
-
-.advantage__item--2-background {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-}
-
-.advantage__item--2-background:hover {
-    background-size: auto 102%;
-}
-
-.advantage__item--3-background {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-}
-
-.advantage__item--3-background:hover {
-    background-size: auto 102%;
+.advantage__item-image {
+    position: absolute;
+    z-index: -1;
 }
 
 @media screen and (max-width: 768px) {

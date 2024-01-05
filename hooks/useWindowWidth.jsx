@@ -3,7 +3,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 export function useWindowWidth() {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState(0);
+  const [windowSize, setWindowSize] = useState(1920);
 
   const effect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
   effect(() => {

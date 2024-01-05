@@ -18,7 +18,7 @@ export default function MainPage() {
   return (
     <Layout>
       <VisibilityManager side="opacity">
-        <PreviewBlock video={rotateMp4} poster={rotate_poster} />
+        <PreviewBlock video={rotateMp4} poster={rotate_poster.src} />
         <HistoryBlock
           title={"Миссия компании"}
           subTitle={
