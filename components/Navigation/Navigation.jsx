@@ -6,14 +6,14 @@ import { navigationTree } from "./navigationList.js";
 import { useRouter } from "next/router.js";
 
 const NavLinkComponent = React.memo(
-  ({ item, setMobileMenuOpened }) => {
+  ({ item, setMobileMenuOpened, position }) => {
     const [hoverOpened, setHoverOpened] = useState(false);
     const router = useRouter();
 
     const closeMenu = useCallback((path) => {
       setMobileMenuOpened(false);
       window?.scrollTo(0, 0);
-      ym(96028442,'reachGoal', path);
+      ym(96028442, "reachGoal", path);
     }, []);
 
     const handleMouseEnter = useCallback(() => {
@@ -26,12 +26,16 @@ const NavLinkComponent = React.memo(
 
     if (item.childs) {
       return (
-        <div
+        <li
+          itemProp="itemListElement"
+          itemScope
+          itemType="http://schema.org/ListItem"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={styles.navigation__parent}
         >
           <Link
+            itemProp="item"
             prefetch={false}
             className={`${
               router.pathname === item.parent.path
@@ -41,9 +45,13 @@ const NavLinkComponent = React.memo(
             onClick={() => closeMenu(item.parent.path)}
             href={item.parent.path}
           >
-            {item.parent.value}
+            <span itemProp="name">{item.parent.value}</span>
+            <meta itemProp="position" content={position} />
           </Link>
-          <div className={`${styles.navigation__submenu} ${hoverOpened ? styles['navigation__submenu--visible'] : ''} shadow`}
+          <div
+            className={`${styles.navigation__submenu} ${
+              hoverOpened ? styles["navigation__submenu--visible"] : ""
+            } shadow`}
           >
             {item.childs.map((child) => (
               <Link
@@ -58,23 +66,30 @@ const NavLinkComponent = React.memo(
               </Link>
             ))}
           </div>
-        </div>
+        </li>
       );
     } else {
       return (
-        <Link
-          prefetch={false}
-          className={`${
-            router.pathname === item.parent.path
-              ? styles["navigation__item--active"]
-              : ""
-          } ${styles.navigation__item}`}
-          onClick={() => closeMenu(item.parent.path)}
-          href={item.parent.path}
+        <li
+          itemProp="itemListElement"
+          itemScope
+          itemType="http://schema.org/ListItem"
         >
-          {" "}
-          {item.parent.value}
-        </Link>
+          <Link
+            itemProp="item"
+            prefetch={false}
+            className={`${
+              router.pathname === item.parent.path
+                ? styles["navigation__item--active"]
+                : ""
+            } ${styles.navigation__item}`}
+            onClick={() => closeMenu(item.parent.path)}
+            href={item.parent.path}
+          >
+            <span itemProp="name">{item.parent.value}</span>
+            <meta itemProp="position" content={position} />
+          </Link>
+        </li>
       );
     }
   }
@@ -135,8 +150,9 @@ export const Navigation = React.memo(({ isMobile }) => {
             </g>
           </svg>
         </Link>
-
-        <div
+        <ul
+          itemScope
+          itemType="http://schema.org/BreadcrumbList"
           className={`${styles.navigation__list} ${
             mobileMenuOpened ? styles["navigation__list--visible"] : ""
           }`}
@@ -145,12 +161,13 @@ export const Navigation = React.memo(({ isMobile }) => {
             return (
               <NavLinkComponent
                 key={i}
+                position={i + 1}
                 item={item}
                 setMobileMenuOpened={handleMobileMenu}
               />
             );
           })}
-        </div>
+        </ul>
 
         <a
           target="_blank"
