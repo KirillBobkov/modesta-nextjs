@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://modesta.tech/sitemap.xml
+Sitemap: https://modesta.tech/sitemap.xml
