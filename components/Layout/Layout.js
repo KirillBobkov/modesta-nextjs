@@ -10,6 +10,7 @@ import FeedbackButton from "../FeedbackButton/FeedbackButton";
 const getMetaConfig = (pathname) => {
   if (pathname.includes("production")) {
     return {
+      pageTitle: "Разработка эффективного протеза",
       title: "Модеста — О разработке протезов и технологии производства",
       description:
         "Разрабатывая протезы, мы решаем сложные задачи, связанные с функциональностью, хватательной силой, практичностью и долговечностью протезов.",
@@ -19,6 +20,7 @@ const getMetaConfig = (pathname) => {
   }
   if (pathname.includes("team")) {
     return {
+      pageTitle: "Лучшие специалисты компании Модеста",
       title: "Модеста — Команда профессионалов",
       description:
         "Объединяя силу, стойкость и инновации, наша команда профессионалов, преданных своему делу, создает протезы, которые помогут вам вернуть вашу жизнь на свои рельсы. Мы здесь, чтобы помочь вам снова обрести независимость, улучшить качество вашей жизни и воплотить мечты в реальность.",
@@ -28,6 +30,7 @@ const getMetaConfig = (pathname) => {
   }
   if (pathname.includes("info")) {
     return {
+      pageTitle: "Протез для детей или для взрослых? Гарантии при получении протеза? Все ответы здесь",
       title: "Модеста — Всё, что нужно знать о протезировании",
       description:
         "Все ответы на вопросы о протезировании. Мы собрали наиболее часто задаваемые вопросы и подготовили подробные ответы на них. Наше видео-сопровождение поможет вам лучше понять процессы протезирования. А ссылки на полезные ресурсы, предоставленные нами, помогут вам получить еще больше информации по этой теме.",
@@ -37,14 +40,17 @@ const getMetaConfig = (pathname) => {
   }
   if (pathname.includes("buy")) {
     return {
+      pageTitle: "Какие документы нужны чтобы получить протез? Сколько стоит протез? Все ответы здесь",
       title: "Модеста — Как получить протез руки",
-      description: "Вся необходимая информация о том, как получить протез, какие документы для этого нужны и какой порядок действий необходимо предпринять. Мы поможем вам на каждом этапе этого процесса. Не откладывайте свою мечту - начните менять свою жизнь уже сегодня!”",
+      description:
+        "Вся необходимая информация о том, как получить протез, какие документы для этого нужны и какой порядок действий необходимо предпринять. Мы поможем вам на каждом этапе этого процесса. Не откладывайте свою мечту - начните менять свою жизнь уже сегодня!”",
       keywords:
         "постановление правительства инвалиды сво документы льготы пенсионерам получение ИПРА по государственной программе технические средства реабилитации (ТСР)",
     };
   }
   if (pathname.includes("roadmap")) {
     return {
+      pageTitle: "Откуда появилась компания Модеста? Как давно производим протезы? Все ответы здесь",
       title: "Модеста — Путь развития компании",
       description:
         "С самых первых дней нашей работы мы стремимся помочь людям вернуться к полноценной жизни. Мы создаём протезы, основываясь на новейших технологиях и исследованиях. И сегодня мы с уверенностью можем сказать, что наши усилия были не напрасны. Мы не останавливаемся на достигнутом и продолжаем развиваться, чтобы предлагать вам еще более качественные и удобные протезы. Наша история продолжается, и мы приглашаем вас стать ее частью!",
@@ -53,6 +59,7 @@ const getMetaConfig = (pathname) => {
     };
   }
   return {
+    pageTitle: "Функциональные протезы неантропоморфного типа, в виде роботизированного захвата.",
     title: "Модеста — протезы рук",
     description:
       "Официальный сайт компании Модеста. Разрабатываем протезы для предплечья и кисти.",
@@ -64,7 +71,7 @@ const getMetaConfig = (pathname) => {
 export default function Layout({ children }) {
   const isMobile = useWindowWidth() <= 1080;
   const router = useRouter();
-  const { title, description, keywords } = getMetaConfig(router.pathname);
+  const { title, description, keywords, pageTitle } = getMetaConfig(router.pathname);
 
   return (
     <>
@@ -77,7 +84,10 @@ export default function Layout({ children }) {
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0"
         />
         <meta name="yandex-verification" content="1b0b5dca04ea34dc" />
-        <meta name="google-site-verification" content="PvZcxDJwhregM2PNoehmEb_D771oqFCUgP9lbuU-MqU" />
+        <meta
+          name="google-site-verification"
+          content="PvZcxDJwhregM2PNoehmEb_D771oqFCUgP9lbuU-MqU"
+        />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="author" content="ООО Модеста" />
         <meta name="copyright" content="ООО Модеста" />
@@ -95,24 +105,19 @@ export default function Layout({ children }) {
           property="og:image"
           content="https://modesta.tech/images/sitepreview.jpg"
         />
-        <link rel="shortcut icon" href="/images/favicon.ico"/>
-        <link rel="icon" href="/images/favicon.ico" />
-        <link
-          rel="shortcut icon"
-          href="/images/favicon.ico"
-          type="image/x-icon"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="32x32"
-          href="/images/favicon32x32.png"
-        />
+
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/images/favicon32x32.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="32x32"
+          href="/images/favicon32x32.png"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -125,7 +130,7 @@ export default function Layout({ children }) {
         itemScope
         itemType="http://schema.org/ImageObject"
       >
-        <h1 itemProp="name">{title}</h1>
+        <h1 itemProp="name">{pageTitle}</h1>
         <img
           src="/images/replacement_part_1_mobile.webp"
           itemProp="contentUrl"
