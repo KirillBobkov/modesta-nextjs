@@ -77,6 +77,7 @@ export default function Layout({ children }) {
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0"
         />
         <meta name="yandex-verification" content="1b0b5dca04ea34dc" />
+        <meta name="google-site-verification" content="PvZcxDJwhregM2PNoehmEb_D771oqFCUgP9lbuU-MqU" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="author" content="ООО МОДЕСТА" />
         <meta name="copyright" content="ООО МОДЕСТА" />
@@ -94,6 +95,7 @@ export default function Layout({ children }) {
           property="og:image"
           content="https://modesta.tech/images/sitepreview.jpg"
         />
+        <link rel="shortcut icon" href="/images/favicon.ico"/>
         <link rel="icon" href="/images/favicon.ico" />
         <link
           rel="shortcut icon"
