@@ -14,14 +14,14 @@ export function ProblemsBlock() {
             <h2 className={containerStyles.container__title}id="problems">Решаемые задачи</h2>
             <VisibilityManager as="ul" classes={containerStyles.container}>    
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`} id="problem">
-                    <Image className={styles.problem__image} src={problem1} alt="Фото производства" />
+                    <Image priority className={styles.problem__image} src={problem1} alt="Фото производства" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Развиваем производство в РФ </h2>
                         <p className={styles.problem__description}>В России не хватает компаний, занимающихся производством протезов. Мы разрабатываем новые модели и улучшаем уже существующие изделия</p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`}>
-                    <Image className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
+                    <Image priority className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Меняем правила
                         </h2>
@@ -30,7 +30,7 @@ export function ProblemsBlock() {
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`}>
-                    <Image className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
+                    <Image priority className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Своевременно обслуживаем</h2>
                         <p className={styles.problem__description}>
@@ -39,7 +39,7 @@ export function ProblemsBlock() {
                     </div>
                 </VisibilityManager>
                 <VisibilityManager as="li"  classes={`${styles.problem} shadow`}>
-                    <Image className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
+                    <Image priority className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
                     <div className={styles.problem__content}>
                         <h2 className={styles.problem__title}>Помогаем освоить протез
                         </h2>

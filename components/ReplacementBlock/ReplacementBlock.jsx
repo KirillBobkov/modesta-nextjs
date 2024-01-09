@@ -38,11 +38,11 @@ export function ReplacementBlock() {
                     renderArrowPrev={(clickHandler) => <div className={styles["replacement-parts__arrow--left"]}><ArrowButton onClick={clickHandler} /></div>}
                     renderArrowNext={(clickHandler) => <div className={styles["replacement-parts__arrow--right"]}><ArrowButton onClick={clickHandler} /></div>}
                 >
-                <Image className={styles['replacement-parts__item']} src={isMobile ? replacementPart1_mobile : replacementPart1} alt="Вариант протеза с расцветкой №1" />
-                <Image className={styles['replacement-parts__item']} src={isMobile ? replacementPart2_mobile : replacementPart2} alt="Вариант протеза с расцветкой №2" />
-                <Image className={styles['replacement-parts__item']} src={isMobile ? replacementPart3_mobile : replacementPart3} alt="Вариант протеза с расцветкой №3" />
-                <Image className={styles['replacement-parts__item']} src={isMobile ? replacementPart4_mobile : replacementPart4} alt="Вариант протеза с расцветкой №4" />
-                <Image className={styles['replacement-parts__item']} src={isMobile ? replacementPart5_mobile : replacementPart5} alt="Вариант протеза с расцветкой №5" />
+                <Image priority className={styles['replacement-parts__item']} src={isMobile ? replacementPart1_mobile : replacementPart1} alt="Вариант протеза с расцветкой №1" />
+                <Image priority className={styles['replacement-parts__item']} src={isMobile ? replacementPart2_mobile : replacementPart2} alt="Вариант протеза с расцветкой №2" />
+                <Image priority className={styles['replacement-parts__item']} src={isMobile ? replacementPart3_mobile : replacementPart3} alt="Вариант протеза с расцветкой №3" />
+                <Image priority className={styles['replacement-parts__item']} src={isMobile ? replacementPart4_mobile : replacementPart4} alt="Вариант протеза с расцветкой №4" />
+                <Image priority className={styles['replacement-parts__item']} src={isMobile ? replacementPart5_mobile : replacementPart5} alt="Вариант протеза с расцветкой №5" />
                 </Carousel>
             </div>
         </VisibilityManager>
