@@ -217,12 +217,12 @@ export const Navigation = React.memo(({ isMobile }) => {
           </svg>
           <span>Участник</span>
         </a>
-        <div className={styles.navigation__burger}>
-        <BurgerButton
+        {isMobile && (
+          <BurgerButton
             menuOpened={mobileMenuOpened}
             onClick={handleBurgerClick}
           />
-        </div>
+        )}
       </nav>
     </header>
   );

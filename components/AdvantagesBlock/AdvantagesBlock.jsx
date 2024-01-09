@@ -24,14 +24,15 @@ export function AdvantagesBlock() {
         <VisibilityManager
           as="li"
           side="topmax"
-          classes={`${styles["advantages__item"]} shadow `}
+          classes={`${styles["advantages__item"]} ${styles["advantages__item--left"]} shadow `}
         >
           <Image
             className={styles["advantage__item-image"]}
             src={isMobile ? advantage_1_mobile.src : advantage_1.src}
-            alt="Изображение протеза #1"
             objectPosition="top"
             objectFit="cover"
+            priority
+            alt="Изображение протеза #1"
             fill
           />
           <div className={styles["advantages__content"]}>
@@ -50,9 +51,10 @@ export function AdvantagesBlock() {
           <Image
             className={styles["advantage__item-image"]}
             src={isMobile ? advantage_2_mobile.src : advantage_2.src}
-            alt="Изображение протеза #1"
             objectPosition="top"
             objectFit="cover"
+            priority
+            alt="Изображение протеза #1"
             fill
           />
           <div className={styles["advantages__content"]}>
@@ -73,9 +75,10 @@ export function AdvantagesBlock() {
           <Image
             className={styles["advantage__item-image"]}
             src={isMobile ? advantage_3_mobile.src : advantage_3.src}
-            alt="Изображение протеза #1"
             objectPosition="top"
             objectFit="cover"
+            priority
+            alt="Изображение протеза #1"
             fill
           />
           <div className={styles["advantages__content"]}>
