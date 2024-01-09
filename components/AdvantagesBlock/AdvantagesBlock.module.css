@@ -11,8 +11,7 @@
     overflow: hidden;
     background-color: var(--card-bg-color);
     transition: all 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-position: 10% center;
+    object-fit: cover;   
 }
 
 .advantages__item:last-child {
@@ -50,6 +49,17 @@
 .advantage__item-image {
     position: absolute;
     z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 1s ease-in-out;
+}
+
+.advantage__item-image:hover {
+    transform: scale(1.02);
 }
 
 @media screen and (max-width: 768px) {
@@ -63,6 +73,10 @@
         padding: 40px 20px;
         margin-bottom: 40px;
         justify-content: flex-end;
+    }
+
+    .advantage__item-image:hover {
+        transform: scale(1);
     }
 
     .advantages__item-text {

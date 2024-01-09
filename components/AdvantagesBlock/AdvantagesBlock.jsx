@@ -9,12 +9,9 @@ import advantage_3_mobile from "../../public/images/advantage_3_mobile.webp";
 
 import styles from "./AdvantagesBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
-import { useWindowWidth } from "../../hooks/useWindowWidth.jsx";
 import { VisibilityManager } from "../VisibilityManager.jsx";
-import Image from "next/image.js";
 
 export function AdvantagesBlock() {
-  const isMobile = useWindowWidth() <= 768;
   return (
     <VisibilityManager classes={containerStyles.container}>
       <h2 className={containerStyles.container__title} id="advantages">
@@ -26,15 +23,17 @@ export function AdvantagesBlock() {
           side="topmax"
           classes={`${styles["advantages__item"]} shadow `}
         >
-          <Image
-            className={styles["advantage__item-image"]}
-            src={isMobile ? advantage_1_mobile.src : advantage_1.src}
-            alt="Изображение протеза #1"
-            objectPosition="top"
-            objectFit="cover"
-            priority
-            fill
-          />
+          <picture>
+            <source
+              srcSet={advantage_1_mobile.src}
+              media="(max-width: 768px)"
+            />
+            <img
+              className={styles["advantage__item-image"]}
+              src={advantage_1.src}
+              alt="Изображение протеза #1"
+            />
+          </picture>
           <div className={styles["advantages__content"]}>
             <p className={styles["advantages__item-text"]}>Эффективность</p>
             <p className={styles["advantages__item-description"]}>
@@ -48,15 +47,17 @@ export function AdvantagesBlock() {
           side="topmax"
           classes={`${styles["advantages__item"]} ${styles["advantages__item--right"]} shadow`}
         >
-          <Image
-            className={styles["advantage__item-image"]}
-            src={isMobile ? advantage_2_mobile.src : advantage_2.src}
-            alt="Изображение протеза #1"
-            objectPosition="top"
-            objectFit="cover"
-            priority
-            fill
-          />
+           <picture>
+            <source
+              srcSet={advantage_2_mobile.src}
+              media="(max-width: 768px)"
+            />
+            <img
+              className={styles["advantage__item-image"]}
+              src={advantage_2.src}
+              alt="Изображение протеза #2"
+            />
+          </picture>
           <div className={styles["advantages__content"]}>
             <p className={styles["advantages__item-text"]}>
               Сменные конечности
@@ -72,15 +73,17 @@ export function AdvantagesBlock() {
           side="topmax"
           classes={`${styles["advantages__item"]} shadow`}
         >
-          <Image
-            className={styles["advantage__item-image"]}
-            src={isMobile ? advantage_3_mobile.src : advantage_3.src}
-            alt="Изображение протеза #1"
-            objectPosition="top"
-            objectFit="cover"
-            priority
-            fill
-          />
+           <picture>
+            <source
+              srcSet={advantage_3_mobile.src}
+              media="(max-width: 768px)"
+            />
+            <img
+              className={styles["advantage__item-image"]}
+              src={advantage_3.src}
+              alt="Изображение протеза #3"
+            />
+          </picture>
           <div className={styles["advantages__content"]}>
             <p className={styles["advantages__item-text"]}>
               Простое обслуживание

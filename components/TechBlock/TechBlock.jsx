@@ -1,36 +1,39 @@
 import React from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 
-import { useTheme } from "../../hooks/useTheme.jsx";
 import tech_background_white from "../../public/images/tech_background_white.webp";
 import tech_background_black from "../../public/images/tech_background_black.webp";
 import tech_background_white_mobile from "../../public/images/tech_background_white_mobile.webp";
 import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
 
 import styles from "./TechBlock.module.css";
-import { useWindowWidth } from "../../hooks/useWindowWidth.jsx";
 import containerStyles from "../../styles/container.module.css";
 
 export function TechBlock() {
-  const { theme } = useTheme();
-  const width = useWindowWidth();
-  const isMobile = width <= 768;
 
   return (
     <VisibilityManager
-      styles={{
-        backgroundImage: `url(${
-          theme === "light"
-            ? isMobile
-              ? tech_background_white_mobile.src
-              : tech_background_white.src
-            : isMobile
-            ? tech_background_black_mobile.src
-            : tech_background_black.src
-        })`,
-      }}
       classes={styles["tech-container"]}
     >
+      <picture>
+        <source
+          srcSet={tech_background_black_mobile.src}
+          media="(prefers-color-scheme: dark) and (max-width: 768px)"
+        />
+        <source
+          srcSet={tech_background_white_mobile.src}
+          media="(prefers-color-scheme: light) and (max-width: 768px)"
+        />
+        <source
+          srcSet={tech_background_black.src}
+          media="(prefers-color-scheme: dark) and (min-width: 769px)"
+        />
+        <img
+          className={styles["tech-container__image"]}
+          src={tech_background_white.src}
+          alt="Фон для блока хенических характеристик"
+        />
+      </picture>
       <h2 className={containerStyles.container__title} id="tech">
         Технические характеристики
       </h2>
