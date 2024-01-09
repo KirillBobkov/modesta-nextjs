@@ -32,7 +32,6 @@ export function AdvantagesBlock() {
             alt="Изображение протеза #1"
             objectPosition="top"
             objectFit="cover"
-            priority
             fill
           />
           <div className={styles["advantages__content"]}>
@@ -54,7 +53,6 @@ export function AdvantagesBlock() {
             alt="Изображение протеза #1"
             objectPosition="top"
             objectFit="cover"
-            priority
             fill
           />
           <div className={styles["advantages__content"]}>
@@ -78,7 +76,6 @@ export function AdvantagesBlock() {
             alt="Изображение протеза #1"
             objectPosition="top"
             objectFit="cover"
-            priority
             fill
           />
           <div className={styles["advantages__content"]}>

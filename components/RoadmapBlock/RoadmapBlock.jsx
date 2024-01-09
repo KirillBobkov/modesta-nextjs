@@ -57,7 +57,6 @@ function PeriodComponent({ title, description, image }) {
 function PeriodImageComponent({ img }) {
   return (
     <Image
-      priority
       alt={`Период времени №${1}`}
       className={`${styles.period__img} ${shadowStyles.shadow}`}
       src={img}
