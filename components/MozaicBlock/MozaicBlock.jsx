@@ -16,7 +16,7 @@ const itemClass = (a) => `mozaic__item--${a + 1}`;
               styles[itemClass(i)]
             }`}
           >
-            <Image alt={`Элемент мойзайки №${i}`} priority className={styles.mozaic__image} key={i} src={img} />
+            <Image priority className={styles.mozaic__image} key={i} src={img} />
           </li>
         );
       })}

@@ -1,21 +1,14 @@
 .tech-container {
-    position: relative;
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
     margin-bottom: 20px;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-}
-
-.tech-container__image {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
 }
 
 .tech {
