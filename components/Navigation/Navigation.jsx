@@ -27,15 +27,13 @@ const NavLinkComponent = React.memo(
     if (item.childs) {
       return (
         <li
-          itemProp="itemListElement"
-          itemScope
-          itemType="http://schema.org/ListItem"
+         
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={styles.navigation__parent}
         >
           <Link
-            itemProp="item"
+            itemProp="url"
             prefetch={false}
             className={`${
               router.pathname === item.parent.path
@@ -46,7 +44,6 @@ const NavLinkComponent = React.memo(
             href={item.parent.path}
           >
             <span itemProp="name">{item.parent.value}</span>
-            <meta itemProp="position" content={position} />
           </Link>
           <div
             className={`${styles.navigation__submenu} ${
@@ -70,13 +67,9 @@ const NavLinkComponent = React.memo(
       );
     } else {
       return (
-        <li
-          itemProp="itemListElement"
-          itemScope
-          itemType="http://schema.org/ListItem"
-        >
+        <li>
           <Link
-            itemProp="item"
+            itemProp="url"
             prefetch={false}
             className={`${
               router.pathname === item.parent.path
@@ -87,7 +80,6 @@ const NavLinkComponent = React.memo(
             href={item.parent.path}
           >
             <span itemProp="name">{item.parent.value}</span>
-            <meta itemProp="position" content={position} />
           </Link>
         </li>
       );
@@ -119,12 +111,13 @@ export const Navigation = React.memo(({ isMobile }) => {
 
   return (
     <header className={styles.navigation}>
-      <nav className={styles.navigation__container}>
+      <nav itemScope itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
         <Link
           prefetch={false}
           className={styles.navigation__logo}
           onClick={() => handleMobileMenu(false)}
           href={"/"}
+          itemProp="url"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -151,8 +144,6 @@ export const Navigation = React.memo(({ isMobile }) => {
           </svg>
         </Link>
         <ul
-          itemScope
-          itemType="http://schema.org/BreadcrumbList"
           className={`${styles.navigation__list} ${
             mobileMenuOpened ? styles["navigation__list--visible"] : ""
           }`}
@@ -176,6 +167,7 @@ export const Navigation = React.memo(({ isMobile }) => {
             ym(96028442, "reachGoal", "skolkovo");
           }}
           className={styles["navigation__item--external"]}
+          itemProp="url"
         >
           <svg
             className={styles.navigation__imgSK}
@@ -217,12 +209,12 @@ export const Navigation = React.memo(({ isMobile }) => {
           </svg>
           <span>Участник</span>
         </a>
-        {isMobile && (
+        <div className={styles.navigation__burger}>
           <BurgerButton
             menuOpened={mobileMenuOpened}
             onClick={handleBurgerClick}
           />
-        )}
+        </div>
       </nav>
     </header>
   );

@@ -23,7 +23,7 @@ const Block = React.memo((props) => {
     const { onInit = true, id, as: Tag = 'section', inViewport, styles, enterCount, forwardedRef, children, classes, side = 'topmax', speed = 1.5} = props;
 
     return (
-        <Tag id={id} ref={forwardedRef} className={classes} style={{
+        <Tag {...props} id={id} ref={forwardedRef} className={classes} style={{
             ...styles,
             transition: `opacity ${speed}s, transform  ${speed}s, background-size  ${speed}s`,
             opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,

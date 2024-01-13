@@ -24,9 +24,12 @@ export function AdvantagesBlock() {
         <VisibilityManager
           as="li"
           side="topmax"
+          itemScope
+          itemType="http://schema.org/ImageObject"
           classes={`${styles["advantages__item"]} ${styles["advantages__item--left"]} shadow `}
         >
           <Image
+            itemProp="contentUrl"
             className={styles["advantage__item-image"]}
             src={isMobile ? advantage_1_mobile.src : advantage_1.src}
             objectPosition="top"
@@ -36,19 +39,27 @@ export function AdvantagesBlock() {
             fill
           />
           <div className={styles["advantages__content"]}>
-            <p className={styles["advantages__item-text"]}>Эффективность</p>
-            <p className={styles["advantages__item-description"]}>
+            <p itemProp="name" className={styles["advantages__item-text"]}>
+              Эффективность
+            </p>
+            <p
+              itemProp="description"
+              className={styles["advantages__item-description"]}
+            >
               Протезы с роботизированным захватом обеспечивают возможность
               управлять объектами разнообразных форм
             </p>
           </div>
         </VisibilityManager>
         <VisibilityManager
+          itemScope
+          itemType="http://schema.org/ImageObject"
           as="li"
           side="topmax"
           classes={`${styles["advantages__item"]} ${styles["advantages__item--right"]} shadow`}
         >
           <Image
+            itemProp="contentUrl"
             className={styles["advantage__item-image"]}
             src={isMobile ? advantage_2_mobile.src : advantage_2.src}
             objectPosition="top"
@@ -58,7 +69,7 @@ export function AdvantagesBlock() {
             fill
           />
           <div className={styles["advantages__content"]}>
-            <p className={styles["advantages__item-text"]}>
+            <p itemProp="name" className={styles["advantages__item-text"]}>
               Сменные конечности
             </p>
             <p className={styles["advantages__item-description"]}>
@@ -68,11 +79,14 @@ export function AdvantagesBlock() {
           </div>
         </VisibilityManager>
         <VisibilityManager
+          itemScope
+          itemType="http://schema.org/ImageObject"
           as="li"
           side="topmax"
           classes={`${styles["advantages__item"]} shadow`}
         >
           <Image
+            itemProp="contentUrl"
             className={styles["advantage__item-image"]}
             src={isMobile ? advantage_3_mobile.src : advantage_3.src}
             objectPosition="top"
@@ -82,10 +96,13 @@ export function AdvantagesBlock() {
             fill
           />
           <div className={styles["advantages__content"]}>
-            <p className={styles["advantages__item-text"]}>
+            <p itemProp="name" className={styles["advantages__item-text"]}>
               Простое обслуживание
             </p>
-            <p className={styles["advantages__item-description"]}>
+            <p
+              itemProp="description"
+              className={styles["advantages__item-description"]}
+            >
               Ремонт протеза доступен для самостоятельного выполнения дома или
               через наш сервис для оперативного устранения неполадок
             </p>

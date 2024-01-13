@@ -8,17 +8,20 @@ import Image from "next/image";
 import React from "react";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
-const geo = [55.44711106925449,65.35028099999987];
+const geo = [55.44711106925449, 65.35028099999987];
 
 const defaultState = {
-    center: geo,
-    zoom: 16,
-}
+  center: geo,
+  zoom: 16,
+};
 
 export default React.memo(() => {
-
   return (
-    <footer className={`${containerStyles.container} ${styles.footer}`}>
+    <footer
+      itemScope
+      itemYype="http://schema.org/Organization"
+      className={`${containerStyles.container} ${styles.footer}`}
+    >
       <div className={styles.footer__grid}>
         <div className={styles.footer__block}>
           <p className={styles.footer__title}>Сколково</p>
@@ -177,12 +180,16 @@ export default React.memo(() => {
         <div className={styles.footer__block} id="contacts">
           <p className={styles.footer__title}>Контакты</p>
           <p className={styles.footer__number}>
-            <a href="tel:+79088380555">+79088380555</a>
+            <a itemProp="telephone" href="tel:+79088380555">
+              +79088380555
+            </a>
             <br />
             <span>Сахатский Александр Сергеевич</span>
           </p>
           <p className={styles.footer__number}>
-            <a href="tel:+79195687836">+79195687836</a>
+            <a itemProp="telephone" href="tel:+79195687836">
+              +79195687836
+            </a>
             <br />
             <span>Абрамов Роман Алексеевич</span>
           </p>
@@ -190,28 +197,39 @@ export default React.memo(() => {
         <div className={styles.footer__block}>
           <p className={styles.footer__title}>Почта</p>
           <p className={styles.footer__mail}>
-            <a href="mailto:blagobionic44@gmail.com">blagobionic44@gmail.com</a>
+            <a itemProp="email" href="mailto:blagobionic44@gmail.com">
+              blagobionic44@gmail.com
+            </a>
           </p>
         </div>
       </div>
+
       <div className={styles.footer__block}>
         <p className={styles.footer__title}>Адрес</p>
         <div className={`${styles.footer__map} ${shadowStyles.shadow}`}>
-        <YMaps key={1}>
-          <Map key={2} width="100%" defaultState={defaultState}>
-            <Placemark key={3} geometry={geo} />
-          </Map>
-        </YMaps>
+          <YMaps key={1}>
+            <Map key={2} width="100%" defaultState={defaultState}>
+              <Placemark key={3} geometry={geo} />
+            </Map>
+          </YMaps>
         </div>
-        <p className={styles.footer__address}>
-          ООО "МОДЕСТА" (ОГРН 1234500001603)
-        </p>
-        <p className={styles.footer__address}>
-          640002, Курганская область, г. Курган,
-        </p>
-        <p className={styles.footer__address}>
-          ул. Коли Мяготина, д. 150Б, офис 22
-        </p>
+        <div
+          itemProp="address"
+          itemScope
+          itemType="https://schema.org/PostalAddress"
+        >
+          <p itemProp="name" className={styles.footer__address}>
+            ООО "МОДЕСТА" (ОГРН 1234500001603)
+          </p>
+          <p itemProp="addressLocality" className={styles.footer__address}>
+            <span itemProp="postalCode"> 640002, </span>
+            <span itemProp="addressRegion">Курганская область, </span>
+            <span itemProp="addressLocality">г. Курган, </span>
+          </p>
+          <p itemProp="streetAddress" className={styles.footer__address}>
+            ул. Коли Мяготина, д. 150Б, офис 22
+          </p>
+        </div>
       </div>
     </footer>
   );

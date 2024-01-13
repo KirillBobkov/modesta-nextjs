@@ -69,7 +69,7 @@ export function TeamBlock() {
       <ul className={styles.team}>
         {teamContent.map((person) => {
           return (
-            <VisibilityManager key={person.name} as="li" classes={styles.person}>
+            <VisibilityManager  itemScope itemType="http://schema.org/Person" key={person.name} as="li" classes={styles.person}>
               <div className={styles['person__avatar-container']}>
                 <img
                   alt="Портрет члена команды"
@@ -78,8 +78,8 @@ export function TeamBlock() {
                 />
               </div>
               <p className={styles['person__info']}>
-                <span className={styles['person__name']}>{person.name}</span>
-                <span className={styles['person__profession']}>{person.profession}</span>
+                <span itemProp="name" className={styles['person__name']}>{person.name}</span>
+                <span itemProp="disambiguatingDescription" className={styles['person__profession']}>{person.profession}</span>
                 <span className={styles['person__bio']}>{person.bio}</span>
               </p>
             </VisibilityManager>

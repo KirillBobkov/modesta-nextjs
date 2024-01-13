@@ -149,6 +149,10 @@
     fill: var(--font-color);
 }
 
+.navigation__burger {
+    display: none;
+}
+
 @media screen and (max-width: 1080px) {
     .navigation {
         min-height: 55px;
@@ -238,5 +242,9 @@
     .navigation__list.navigation__list--visible {
         display: flex;
         transform: translateX(0);
+    }
+
+    .navigation__burger {
+        display: block;
     }
 }
