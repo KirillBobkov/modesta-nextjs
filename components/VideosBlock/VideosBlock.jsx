@@ -18,7 +18,7 @@ export function VideosBlock() {
       </p>
       <ul className={styles.videos}>
         <VisibilityManager
-          itemScope=""
+          itemScope
           itemType="http://schema.org/VideoObject"
           side="topmax"
           classes={`${styles.videos__item} ${shadowStyles.shadow}`}
@@ -36,7 +36,7 @@ export function VideosBlock() {
           <span
             style={{ display: 'none' }}
             itemProp="thumbnail"
-            itemScope=""
+            itemScope
             itemType="http://schema.org/ImageObject"
           >
             <img
@@ -55,7 +55,7 @@ export function VideosBlock() {
           ></iframe>
         </VisibilityManager>
         <VisibilityManager
-          itemScope=""
+          itemScope
           itemType="http://schema.org/VideoObject"
           side="topmax"
           classes={`${styles.videos__item} ${shadowStyles.shadow}`}
@@ -73,7 +73,7 @@ export function VideosBlock() {
           <span
             style={{ display: 'none' }}
             itemProp="thumbnail"
-            itemScope=""
+            itemScope
             itemType="http://schema.org/ImageObject"
           >
             <img

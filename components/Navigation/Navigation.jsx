@@ -27,7 +27,6 @@ const NavLinkComponent = React.memo(
     if (item.childs) {
       return (
         <li
-         
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={styles.navigation__parent}
@@ -111,7 +110,7 @@ export const Navigation = React.memo(({ isMobile }) => {
 
   return (
     <header className={styles.navigation}>
-      <nav itemScope="" itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
+      <nav itemScope itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
         <Link
           prefetch={false}
           className={styles.navigation__logo}

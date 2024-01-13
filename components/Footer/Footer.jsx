@@ -18,7 +18,7 @@ const defaultState = {
 export default React.memo(() => {
   return (
     <footer
-      itemScope=""
+      itemScope
       itemType="http://schema.org/Organization"
       className={`${containerStyles.container} ${styles.footer}`}
     >
@@ -215,7 +215,7 @@ export default React.memo(() => {
         </div>
         <div
           itemProp="address"
-          itemScope=""
+          itemScope
           itemType="https://schema.org/PostalAddress"
         >
           <p itemProp="name" className={styles.footer__address}>
