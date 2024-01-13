@@ -24,7 +24,7 @@ export function AdvantagesBlock() {
         <VisibilityManager
           as="li"
           side="topmax"
-          itemScope
+          itemScope=""
           itemType="http://schema.org/ImageObject"
           classes={`${styles["advantages__item"]} ${styles["advantages__item--left"]} shadow `}
         >
@@ -52,7 +52,7 @@ export function AdvantagesBlock() {
           </div>
         </VisibilityManager>
         <VisibilityManager
-          itemScope
+          itemScope=""
           itemType="http://schema.org/ImageObject"
           as="li"
           side="topmax"
@@ -79,7 +79,7 @@ export function AdvantagesBlock() {
           </div>
         </VisibilityManager>
         <VisibilityManager
-          itemScope
+          itemScope=""
           itemType="http://schema.org/ImageObject"
           as="li"
           side="topmax"

@@ -18,8 +18,8 @@ const defaultState = {
 export default React.memo(() => {
   return (
     <footer
-      itemScope
-      itemYype="http://schema.org/Organization"
+      itemScope=""
+      itemType="http://schema.org/Organization"
       className={`${containerStyles.container} ${styles.footer}`}
     >
       <div className={styles.footer__grid}>
@@ -215,7 +215,7 @@ export default React.memo(() => {
         </div>
         <div
           itemProp="address"
-          itemScope
+          itemScope=""
           itemType="https://schema.org/PostalAddress"
         >
           <p itemProp="name" className={styles.footer__address}>

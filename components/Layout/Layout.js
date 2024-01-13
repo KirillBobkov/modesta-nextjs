@@ -127,16 +127,8 @@ export default function Layout({ children }) {
       </Head>
       <div
         style={{ display: "none" }}
-        itemScope
-        itemType="http://schema.org/ImageObject"
       >
-        <h1 itemProp="name">{pageTitle}</h1>
-        <img
-          src="/images/replacement_part_1_mobile.webp"
-          itemProp="contentUrl"
-          alt="Протез некопирующий руку человека"
-        />
-        <span itemProp="description">{description}</span>
+        <h1>{pageTitle}</h1>
       </div>
       <Navigation isMobile={isMobile} />
       <main>{children}</main>

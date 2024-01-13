@@ -115,7 +115,7 @@ export const Questions = () => {
   return (
     <VisibilityManager
       classes={`${containerStyles.container}`}
-      itemScope
+      itemScope=""
       itemType="https://schema.org/FAQPage"
     >
       <h2 className={containerStyles.container__title} id="faq">
@@ -135,7 +135,7 @@ const Question = ({ title, answer }) => {
 
   return (
     <VisibilityManager
-      itemScope
+      itemScope=""
       itemProp="mainEntity"
       itemType="https://schema.org/Question"
       as="li"
@@ -151,7 +151,7 @@ const Question = ({ title, answer }) => {
       </div>
       {
         <p
-          itemScope
+          itemScope=""
           itemProp="acceptedAnswer"
           itemType="https://schema.org/Answer"
           className={`${styles.question__answer} ${
