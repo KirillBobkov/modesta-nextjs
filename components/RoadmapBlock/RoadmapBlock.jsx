@@ -43,11 +43,11 @@ export default function RoadmapBlock() {
 
 function PeriodComponent({ title, description, image }) {
   return (
-    <VisibilityManager classes={`${styles.period} ${shadowStyles.shadow}`} side="topmax">
+    <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" classes={`${styles.period} ${shadowStyles.shadow}`} side="topmax">
       <div className={`${styles.roadmap__point} ${styles['period__time-point']}`} />
       <div className={styles.period__content}>
-        <h3 className={styles.period__title}>{title}</h3>
-        <p className={styles.period__description}>{description}</p>
+        <h3 itemProp="name" className={styles.period__title}>{title}</h3>
+        <p itemProp="description" className={styles.period__description}>{description}</p>
       </div>
       <PeriodImageComponent img={image} />
     </VisibilityManager>
@@ -58,6 +58,7 @@ function PeriodImageComponent({ img }) {
   return (
     <Image
       alt={`Период времени №${1}`}
+      itemProp="contentUrl" 
       className={`${styles.period__img} ${shadowStyles.shadow}`}
       src={img}
     />
