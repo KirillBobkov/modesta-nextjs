@@ -178,7 +178,7 @@ export default React.memo(() => {
           </p>
         </div>
         <div className={styles.footer__block} id="contacts">
-          <p className={styles.footer__title}>Контакты</p>
+          <p itemProp="name" className={styles.footer__title}>Контакты</p>
           <p className={styles.footer__number}>
             <a itemProp="telephone" href="tel:+79088380555">
               +79088380555
