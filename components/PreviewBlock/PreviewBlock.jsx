@@ -37,7 +37,7 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
               side="top"
             >
               {title ? (
-                <h1 className={styles["preview__main-line"]}>{title}</h1>
+                <h2 className={styles["preview__main-line"]}>{title}</h2>
               ) : null}
               {subTitle ? (
                 <p className={styles["preview__secondary-line"]}>{subTitle}</p>
