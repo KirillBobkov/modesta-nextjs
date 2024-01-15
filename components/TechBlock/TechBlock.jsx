@@ -17,7 +17,7 @@ export function TechBlock() {
 
   return (
     <VisibilityManager
-      styles={isMobile !== undefined ? {
+      styles={theme !== undefined && isMobile !== undefined ? {
         backgroundImage: `url(${
           theme === "light"
             ? isMobile
