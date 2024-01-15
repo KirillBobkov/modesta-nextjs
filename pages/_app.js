@@ -7,8 +7,8 @@ import MetricsCode from "../components/MetricsCode";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <MetricsCode />
       <Component {...pageProps} />
+      <MetricsCode />
     </>
   );
 }
