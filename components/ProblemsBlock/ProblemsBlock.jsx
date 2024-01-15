@@ -14,14 +14,14 @@ export function ProblemsBlock() {
             <h2 className={containerStyles.container__title}id="problems">Решаемые задачи</h2>
             <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="ul" classes={containerStyles.container}>    
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`} id="problem">
-                    <Image itemProp="contentUrl" className={styles.problem__image} src={problem1} alt="Фото производства" />
+                    <Image priority itemProp="contentUrl" className={styles.problem__image} src={problem1} alt="Фото производства" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Развиваем производство в РФ </h3>
                         <p itemProp="description" className={styles.problem__description}>В России не хватает компаний, занимающихся производством протезов. Мы разрабатываем новые модели и улучшаем уже существующие изделия</p>
                     </div>
                 </VisibilityManager>
                 <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li" classes={`${styles.problem} shadow`}>
-                    <Image itemProp="contentUrl" className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
+                    <Image priority itemProp="contentUrl" className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Меняем правила
                         </h3>
@@ -30,7 +30,7 @@ export function ProblemsBlock() {
                     </div>
                 </VisibilityManager>
                 <VisibilityManager itemScope itemType="http://schema.org/ImageObject" as="li" classes={`${styles.problem} shadow`}>
-                    <Image itemProp="contentUrl"  className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
+                    <Image priority itemProp="contentUrl"  className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Своевременно обслуживаем</h3>
                         <p itemProp="description" className={styles.problem__description}>
@@ -39,7 +39,7 @@ export function ProblemsBlock() {
                     </div>
                 </VisibilityManager>
                 <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li"  classes={`${styles.problem} shadow`}>
-                    <Image itemProp="contentUrl"  className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
+                    <Image priority itemProp="contentUrl"  className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Помогаем освоить протез
                         </h3>
