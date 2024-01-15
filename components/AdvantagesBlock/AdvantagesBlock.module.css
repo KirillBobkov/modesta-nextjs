@@ -9,7 +9,7 @@
     margin-bottom: 40px;
     border-radius: 30px;
     overflow: hidden;
-    background-color: var(--card-bg-color);
+    background-color: #dedbde;
     transition: all 0.2s ease-in-out;
     background-repeat: no-repeat;
     background-position: 10% center;

@@ -17,7 +17,7 @@ export function TechBlock() {
 
   return (
     <VisibilityManager
-      styles={{
+      styles={isMobile !== undefined ? {
         backgroundImage: `url(${
           theme === "light"
             ? isMobile
@@ -27,7 +27,7 @@ export function TechBlock() {
             ? tech_background_black_mobile.src
             : tech_background_black.src
         })`,
-      }}
+      }: {}}
       classes={styles["tech-container"]}
     >
       <h2 className={containerStyles.container__title} id="tech">

@@ -89,8 +89,7 @@ const NavLinkComponent = React.memo(
 export const Navigation = React.memo(({ isMobile }) => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
 
-  const handleMobileMenu = useCallback(
-    (opened) => {
+  const handleMobileMenu = useCallback((opened) => {
       if (isMobile) {
         setMobileMenuOpened(opened);
         opened
@@ -105,7 +104,7 @@ export const Navigation = React.memo(({ isMobile }) => {
     (newState) => {
       handleMobileMenu(newState);
     },
-    [mobileMenuOpened]
+    [mobileMenuOpened, handleMobileMenu]
   );
 
   return (

@@ -73,7 +73,7 @@ const getMetaConfig = (pathname) => {
 };
 
 export default function Layout({ children }) {
-  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
+  const isMobile = useMediaQuery(`(max-width: 1079.88px)`);
   const router = useRouter();
   const { title, description, keywords, pageTitle } = getMetaConfig(
     router.pathname
