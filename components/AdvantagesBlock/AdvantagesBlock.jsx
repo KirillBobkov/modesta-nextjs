@@ -30,7 +30,7 @@ export function AdvantagesBlock() {
           classes={`${styles["advantages__item"]} ${styles["advantages__item--left"]} shadow `}
         >
           {isMobile !== undefined && (
-            <Image priority
+            <Image
               itemProp="contentUrl"
               className={styles["advantage__item-image"]}
               src={isMobile ? advantage_1_mobile.src : advantage_1.src}
@@ -61,7 +61,7 @@ export function AdvantagesBlock() {
           classes={`${styles["advantages__item"]} ${styles["advantages__item--right"]} shadow`}
         >
           {isMobile !== undefined && (
-            <Image priority
+            <Image
               itemProp="contentUrl"
               className={styles["advantage__item-image"]}
               src={isMobile ? advantage_2_mobile.src : advantage_2.src}
@@ -89,7 +89,7 @@ export function AdvantagesBlock() {
           classes={`${styles["advantages__item"]} shadow`}
         >
           {isMobile !== undefined && (
-            <Image priority
+            <Image
               itemProp="contentUrl"
               className={styles["advantage__item-image"]}
               src={isMobile ? advantage_3_mobile.src : advantage_3.src}
