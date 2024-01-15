@@ -31,7 +31,8 @@ const getMetaConfig = (pathname) => {
   }
   if (pathname.includes("info")) {
     return {
-      pageTitle: "Протез для детей или для взрослых? Гарантии при получении протеза? Все ответы здесь",
+      pageTitle:
+        "Протез для детей или для взрослых? Гарантии при получении протеза? Все ответы здесь",
       title: "Модеста — Всё, что нужно знать о получении протеза",
       description:
         "Все ответы на вопросы о протезировании. Мы собрали наиболее часто задаваемые вопросы и подготовили подробные ответы на них. Наше видео-сопровождение поможет вам лучше понять процессы протезирования. А ссылки на полезные ресурсы, предоставленные нами, помогут вам получить еще больше информации по этой теме.",
@@ -41,7 +42,8 @@ const getMetaConfig = (pathname) => {
   }
   if (pathname.includes("buy")) {
     return {
-      pageTitle: "Какие документы нужны чтобы получить протез бесплатно? Сколько стоит протез? Этапы получения протеза за счет государства? Все ответы здесь",
+      pageTitle:
+        "Какие документы нужны чтобы получить протез бесплатно? Сколько стоит протез? Этапы получения протеза за счет государства? Все ответы здесь",
       title: "Модеста — Как получить протез руки бесплатно",
       description:
         "Вся необходимая информация о том, как получить протез, какие документы для этого нужны и какой порядок действий необходимо предпринять. Мы поможем вам на каждом этапе этого процесса. Не откладывайте свою мечту - начните менять свою жизнь уже сегодня!”",
@@ -51,7 +53,8 @@ const getMetaConfig = (pathname) => {
   }
   if (pathname.includes("roadmap")) {
     return {
-      pageTitle: "Откуда появилась компания Модеста? Когда попали в Сколково? Как давно производим протезы? Все ответы здесь",
+      pageTitle:
+        "Откуда появилась компания Модеста? Когда попали в Сколково? Как давно производим протезы? Все ответы здесь",
       title: "Модеста — Путь развития компании",
       description:
         "С самых первых дней нашей работы мы стремимся помочь людям вернуться к полноценной жизни. Мы создаём протезы, основываясь на новейших технологиях и исследованиях. И сегодня мы с уверенностью можем сказать, что наши усилия были не напрасны. Мы не останавливаемся на достигнутом и продолжаем развиваться, чтобы предлагать вам еще более качественные и удобные протезы. Наша история продолжается, и мы приглашаем вас стать ее частью!",
@@ -70,11 +73,13 @@ const getMetaConfig = (pathname) => {
 };
 
 export default function Layout({ children }) {
-  const isMobile =  useMediaQuery(`(max-width: 767.98px)`);
+  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
   const router = useRouter();
-  const { title, description, keywords, pageTitle } = getMetaConfig(router.pathname);
+  const { title, description, keywords, pageTitle } = getMetaConfig(
+    router.pathname
+  );
   useTheme();
-  
+
   return (
     <>
       <Head>
@@ -126,10 +131,16 @@ export default function Layout({ children }) {
           href="/images/favicon180x180.png"
         />
         <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
+        {/* fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+          rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
       </Head>
-      <div
-        style={{ display: "none" }}
-      >
+      <div style={{ display: "none" }}>
         <h1>{pageTitle}</h1>
       </div>
       <Navigation isMobile={isMobile} />
