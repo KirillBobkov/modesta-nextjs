@@ -3,17 +3,11 @@ import icon45ru from "../../public/images/45ru.png";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import styles from "./Footer.module.css";
-
+import dynamic from 'next/dynamic'
 import Image from "next/image";
 import React from "react";
-import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
-const geo = [55.44711106925449, 65.35028099999987];
-
-const defaultState = {
-  center: geo,
-  zoom: 16,
-};
+const YandexMap = dynamic(() => import('./YandexMaps'), { ssr: false });
 
 export default React.memo(() => {
   return (
@@ -212,11 +206,7 @@ export default React.memo(() => {
         <div className={styles.footer__block}>
           <p className={styles.footer__title}>Адрес</p>
           <div className={`${styles.footer__map} ${shadowStyles.shadow}`}>
-            <YMaps key={1}>
-              <Map key={2} width="100%" defaultState={defaultState}>
-                <Placemark key={3} geometry={geo} />
-              </Map>
-            </YMaps>
+            <YandexMap />
           </div>
           <div
             itemProp="address"
