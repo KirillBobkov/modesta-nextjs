@@ -3,6 +3,7 @@ import { Navigation } from "../Navigation/Navigation";
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useRouter } from "next/router";
+import { useTheme } from "../../hooks/useTheme";
 import Head from "next/head";
 import { GetProthesisForm } from "../GetProthesisForm/GetProthesisForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
@@ -72,7 +73,8 @@ export default function Layout({ children }) {
   const isMobile = useWindowWidth() <= 1080;
   const router = useRouter();
   const { title, description, keywords, pageTitle } = getMetaConfig(router.pathname);
-
+  useTheme();
+  
   return (
     <>
       <Head>

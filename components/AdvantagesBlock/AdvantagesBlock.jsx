@@ -34,7 +34,6 @@ export function AdvantagesBlock() {
             src={isMobile ? advantage_1_mobile.src : advantage_1.src}
             objectPosition="top"
             objectFit="cover"
-            priority
             alt="Изображение протеза #1"
             fill
           />
@@ -64,7 +63,6 @@ export function AdvantagesBlock() {
             src={isMobile ? advantage_2_mobile.src : advantage_2.src}
             objectPosition="top"
             objectFit="cover"
-            priority
             alt="Изображение протеза #1"
             fill
           />
@@ -91,7 +89,6 @@ export function AdvantagesBlock() {
             src={isMobile ? advantage_3_mobile.src : advantage_3.src}
             objectPosition="top"
             objectFit="cover"
-            priority
             alt="Изображение протеза #1"
             fill
           />
