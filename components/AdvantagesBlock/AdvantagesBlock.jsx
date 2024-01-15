@@ -9,12 +9,13 @@ import advantage_3_mobile from "../../public/images/advantage_3_mobile.webp";
 
 import styles from "./AdvantagesBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
-import { useWindowWidth } from "../../hooks/useWindowWidth.jsx";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
+import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
 
 export function AdvantagesBlock() {
-  const isMobile = useWindowWidth() <= 768;
+  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
+  
   return (
     <VisibilityManager classes={containerStyles.container}>
       <h2 className={containerStyles.container__title} id="advantages">

@@ -15,12 +15,12 @@ import replacementPart5_mobile from '../../public/images/replacement_part_5_mobi
 import replacementPart2_mobile from '../../public/images/replacement_part_2_mobile.webp';
 import replacementPart3_mobile from '../../public/images/replacement_part_3_mobile.webp';
 import replacementPart4_mobile from '../../public/images/replacement_part_4_mobile.webp';
-import { useWindowWidth } from "../../hooks/useWindowWidth.jsx";
+import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
 import Image from "next/image.js";
 import containerStyles from '../../styles/container.module.css';
 
 export function ReplacementBlock() {
-    const isMobile = useWindowWidth() <= 768;
+    const isMobile =  useMediaQuery(`(max-width: 767.98px)`);
     return (
         <VisibilityManager classes={`${containerStyles.container} ${containerStyles['container--full-width']} ${styles['replacement-parts__container']}`}>
             <div className={styles['replacement-parts']} id="replacement-parts">

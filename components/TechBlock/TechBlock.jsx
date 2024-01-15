@@ -8,13 +8,12 @@ import tech_background_white_mobile from "../../public/images/tech_background_wh
 import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
 
 import styles from "./TechBlock.module.css";
-import { useWindowWidth } from "../../hooks/useWindowWidth.jsx";
+import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
 import containerStyles from "../../styles/container.module.css";
 
 export function TechBlock() {
   const { theme } = useTheme();
-  const width = useWindowWidth();
-  const isMobile = width <= 768;
+  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
 
   return (
     <VisibilityManager

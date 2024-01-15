@@ -1,6 +1,6 @@
 import Footer from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
-import { useWindowWidth } from "../../hooks/useWindowWidth";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useRouter } from "next/router";
 import { useTheme } from "../../hooks/useTheme";
@@ -70,7 +70,7 @@ const getMetaConfig = (pathname) => {
 };
 
 export default function Layout({ children }) {
-  const isMobile = useWindowWidth() <= 1080;
+  const isMobile =  useMediaQuery(`(max-width: 767.98px)`);
   const router = useRouter();
   const { title, description, keywords, pageTitle } = getMetaConfig(router.pathname);
   useTheme();
