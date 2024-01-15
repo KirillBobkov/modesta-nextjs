@@ -90,26 +90,23 @@ export const Navigation = React.memo(({ isMobile }) => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
 
   const handleMobileMenu = useCallback((opened) => {
-      if (isMobile) {
-        setMobileMenuOpened(opened);
-        opened
-          ? document.documentElement.classList.add("mobile-menu-opened")
-          : document.documentElement.classList.remove("mobile-menu-opened");
-      }
-    },
-    [isMobile]
-  );
+      setMobileMenuOpened(opened);
+      opened
+        ? document.documentElement.classList.add("mobile-menu-opened")
+        : document.documentElement.classList.remove("mobile-menu-opened");
+  }, []);
 
-  const handleBurgerClick = useCallback(
-    (newState) => {
-      handleMobileMenu(newState);
-    },
-    [mobileMenuOpened, handleMobileMenu]
-  );
+  const handleBurgerClick = useCallback((newState) => {
+    handleMobileMenu(newState);
+  }, []);
 
   return (
     <header className={styles.navigation}>
-      <nav itemScope itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
+      <nav
+        itemScope
+        itemType="http://schema.org/SiteNavigationElement"
+        className={styles.navigation__container}
+      >
         <Link
           prefetch={false}
           className={styles.navigation__logo}

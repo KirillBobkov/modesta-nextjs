@@ -47,12 +47,6 @@
     text-align: right;
 }
 
-.advantages__item--left {
-    align-items: flex-start;
-    text-align: left;
-    background-repeat: no-repeat;
-}
-
 .advantage__item-image {
     position: absolute;
     z-index: -1;

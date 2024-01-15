@@ -13,7 +13,7 @@ export function ProductionBlock() {
     return (
         <section className={`${styles.production__container} ${containerStyles.container}`}>
             <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li" side="topmax"  classes={`${styles.production__item} ${shadowStyles.shadow}`} id="production">
-                <Image priority itemProp="contentUrl" priority   className={styles.production__image} src={production1} alt="Изображение протезов" />
+                <Image priority itemProp="contentUrl"   className={styles.production__image} src={production1} alt="Изображение протезов" />
               <span style={{ display: 'none' }} itemProp="name">Изображение протезов</span>
                 <div className={styles.production__content}>
                     <p itemProp="description" className={styles.production__description}>
@@ -21,7 +21,7 @@ export function ProductionBlock() {
                 </div>
             </VisibilityManager>
             <VisibilityManager itemScope itemType="http://schema.org/ImageObject"  as="li" side="topmax"  classes={`${styles.production__item} ${shadowStyles.shadow}`}>
-                <Image priority itemProp="contentUrl" priority   className={styles.production__image} src={production2} alt="Культевая гильза" />
+                <Image priority itemProp="contentUrl"   className={styles.production__image} src={production2} alt="Культевая гильза" />
                 <div className={styles.production__content}>
                     <span style={{ display: 'none' }} itemProp="name">Культевая гильза</span>
                     <p itemProp="description" className={styles.production__description}>
@@ -30,7 +30,7 @@ export function ProductionBlock() {
                 </div>
             </VisibilityManager>
             <VisibilityManager itemScope itemType="http://schema.org/ImageObject"  as="li" side="topmax"  classes={`${styles.production__item} ${shadowStyles.shadow}`}>
-                <Image priority itemProp="contentUrl" priority  className={styles.production__image} src={production3} alt="3Д печать протеза" />
+                <Image priority itemProp="contentUrl"  className={styles.production__image} src={production3} alt="3Д печать протеза" />
                 <div className={styles.production__content}>
                     <span style={{ display: 'none' }} itemProp="name">3Д печать протеза</span>
                     <p itemProp="description" className={styles.production__description}>
@@ -39,7 +39,7 @@ export function ProductionBlock() {
                 </div>
             </VisibilityManager>
             <VisibilityManager itemScope itemType="http://schema.org/ImageObject" as="li" side="topmax"  classes={`${styles.production__item} ${shadowStyles.shadow}`}>
-                <Image priority itemProp="contentUrl" priority   className={styles.production__image} src={production4} alt="Создание культеприёмной гильзы" />
+                <Image priority itemProp="contentUrl"   className={styles.production__image} src={production4} alt="Создание культеприёмной гильзы" />
                 <div className={styles.production__content}>
                     <span style={{ display: 'none' }} itemProp="name">Создание культеприёмной гильзы</span>
                     <p itemProp="description" className={styles.production__description}>
@@ -49,7 +49,7 @@ export function ProductionBlock() {
             </VisibilityManager>
 
             <VisibilityManager itemScope itemType="http://schema.org/ImageObject"  as="li" side="topmax"  classes={`${styles.production__item} ${shadowStyles.shadow}`}>
-                <Image priority itemProp="contentUrl" priority  className={styles.production__image} src={production5} alt="Обработка деталей протеза" />
+                <Image priority itemProp="contentUrl"  className={styles.production__image} src={production5} alt="Обработка деталей протеза" />
                 <div className={styles.production__content}>
                     <span style={{ display: 'none' }} itemProp="name">Обработка деталей протеза</span>
                     <p itemProp="description" className={styles.production__description}>

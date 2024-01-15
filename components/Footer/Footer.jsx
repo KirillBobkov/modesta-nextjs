@@ -29,7 +29,7 @@ export default React.memo(() => {
               target="_blank"
               href="https://navigator.sk.ru/orn/1125414"
             >
-              <Image priority
+              <Image
                 alt="Логотип Сколково"
                 src={iconSK}
                 className={styles.footerimgSK}
@@ -140,14 +140,14 @@ export default React.memo(() => {
               target="_blank"
               href="https://45.ru/text/health/2023/01/27/71984777/"
             >
-              <Image priority
+              <Image
                 alt="45ru логотип"
                 src={icon45ru}
                 className={styles["footer__smi-link"]}
               />
             </a>
             <a target="_blank" href="https://ura.news/news/1052621906">
-              <Image priority
+              <Image
                 alt="URA.news логотип"
                 src={"https://s.ura.news/img/logos/logo_07_2020.svg"}
                 width="50"
