@@ -32,6 +32,11 @@
     text-indent: 0;
 }
 
+.question__answer::-webkit-scrollbar {
+    width: 0px;
+    height: 0;
+}
+
 .question__answer--visible {
     max-height: 800px;
     padding: 20px;
