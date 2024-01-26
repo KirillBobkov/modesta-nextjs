@@ -153,8 +153,21 @@ export const Navigation = React.memo(({ isMobile }) => {
               />
             );
           })}
+          {/* links only for mobile */}
+          <Link
+              itemProp="url"
+              prefetch={false}
+              className={`${styles.navigation__item} ${styles["navigation__item--mobile-alone"]}`}
+              onClick={() => {
+                handleMobileMenu(false);
+                window?.scrollTo(0, 0);
+                ym(96028442, "reachGoal", "/#contacts");
+              }}
+              href={"/#contacts"}
+            >
+              <span itemProp="name">{'Контакты'}</span>
+            </Link>
         </ul>
-
         <a
           target="_blank"
           href="https://navigator.sk.ru/orn/1125414"

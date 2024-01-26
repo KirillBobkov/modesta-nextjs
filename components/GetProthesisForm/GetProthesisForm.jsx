@@ -122,7 +122,7 @@ export function GetProthesisForm() {
   }
 
   return (
-    <VisibilityManager onInit={false} classes={styles['get-prothesis-block']}   styles={{ backgroundImage: `url(${formBack.src})` }} id="submit">
+    <section className={styles['get-prothesis-block']} style={{ backgroundImage: `url(${formBack.src})` }} id="submit">
       <VisibilityManager
         as="div"
         onInit={false}
@@ -249,6 +249,6 @@ export function GetProthesisForm() {
           </button>
         </form>
       </VisibilityManager>
-    </VisibilityManager>
+    </section>
   );
 }

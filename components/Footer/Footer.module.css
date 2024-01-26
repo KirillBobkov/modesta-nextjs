@@ -25,8 +25,6 @@
 
 .footer__block {
     margin-bottom: 10px;
-    flex-shrink: 0;
-    flex-grow: 1;
 }
 
 .footer__block a {

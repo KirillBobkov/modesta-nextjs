@@ -4,10 +4,11 @@ import containerStyles from "../../styles/container.module.css";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import React from "react";
+import { VisibilityManager } from "../VisibilityManager";
 
 export default React.memo(() => {
   return (
-    <footer itemScope itemType="http://schema.org/WPFooter">
+    <VisibilityManager onInit={false} side="right" itemScope itemType="http://schema.org/WPFooter">
       <meta itemProp="copyrightYear" content={new Date().getFullYear()} />
       <meta itemProp="copyrightHolder" content="ООО МОДЕСТА" />
       <div
@@ -194,6 +195,6 @@ export default React.memo(() => {
           </div>
         </div>
       </div>
-    </footer>
+    </VisibilityManager>
   );
 });

@@ -14,7 +14,7 @@ export function HistoryBlock({ title, descriptions }) {
         {title ? <h2 className={styles["history__title"]}>{title}</h2> : null}
         {descriptions
           ? descriptions.map((text) => {
-              return <p className={styles["history__description"]}>{text}</p>;
+              return <VisibilityManager as="p" side="right" classes={styles["history__description"]}>{text}</VisibilityManager>;
             })
           : null}
       </VisibilityManager>
