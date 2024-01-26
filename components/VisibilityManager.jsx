@@ -35,6 +35,7 @@ const Block = React.memo((props) => {
     classes,
     side = "topmax",
     speed = 1.5,
+    onClick
   } = props;
 
   const meta = {};
@@ -55,6 +56,7 @@ const Block = React.memo((props) => {
       id={id}
       ref={forwardedRef}
       className={classes}
+      onClick={onClick}
       style={{
         ...styles,
         transition: `opacity ${speed}s, transform  ${speed}s, background-size  ${speed}s`,
