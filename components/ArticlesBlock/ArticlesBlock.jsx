@@ -39,7 +39,7 @@ const articles = [
     title: "Пикабу",
   },
   {
-    link: "https://t.me/laba2kvadrata",
+    link: "https://t.me/modestatech",
     image: article5,
     yandexGoal: "telegram-article",
     title: "Telegram",
@@ -54,7 +54,7 @@ const articles = [
 
 export function ArticlesBlock() {
   return (
-    <div className={containerStyles.container}>
+    <VisibilityManager classes={containerStyles.container}>
       <h2 className={containerStyles.container__title} id="articles">
         Читайте нас на удобной вам прощадке
       </h2>
@@ -86,6 +86,6 @@ export function ArticlesBlock() {
           );
         })}
       </ul>
-    </div>
+    </VisibilityManager>
   );
 }

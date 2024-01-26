@@ -17,9 +17,6 @@ export default function RoadmapBlock() {
       <h1 className={`${containerStyles.container__title} ${styles.roadmap__title}`} id="articles">
         Дорожная карта
       </h1>
-      <p className={styles.roadmap__description}>
-        Визуальное представление нашего пути
-      </p>
       <div className={styles.roadmap}>
         <div className={styles['roadmap__line-container']}>
           <div className={styles.roadmap__line} />

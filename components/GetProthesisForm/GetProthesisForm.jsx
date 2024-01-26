@@ -129,10 +129,6 @@ export function GetProthesisForm() {
         classes={`${styles['get-prothesis-form']} ${shadowStyles.shadow}`}
       >
         <h2 className={styles['get-prothesis-form__title']}>Оставить заявку</h2>
-        <p className={styles['get-prothesis-form__description']}>
-          Мы свяжемся с вами в ближайшее время и проконсультируем по вопросам
-          протезирования
-        </p>
         <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
           <div className={styles['form-group']}>
             <input
@@ -230,8 +226,7 @@ export function GetProthesisForm() {
                 className={`${styles['form-checkbox__label']} ${checkbox.error ? styles['form-checkbox__label--error'] : ''}`}
                 htmlFor="form-checkbox"
               >
-                Я принимаю условия и даю согласие на обработку своих
-                персональных данных
+                Я ознакомлен (ознакомлена) с правилами обработки персональных данных
               </label>
             </div>
           </div>

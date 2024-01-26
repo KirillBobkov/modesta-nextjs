@@ -26,13 +26,6 @@
     width: 500px;
 }
 
-.get-prothesis-form__description {
-    text-align: center;
-    width: 100%;
-    color: var(--font-color);
-    margin-bottom: 30px;
-}
-
 .get-prothesis-form__title {
     font-size: 42px;
     line-height: 52px;
@@ -63,7 +56,7 @@
 
 .form .form-group .form-control {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
     padding: 10px 15px;
     display: block;
@@ -219,7 +212,7 @@
     border-radius: 30px;
     text-align: center;
     white-space: pre-line;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .formSubmitButton:hover,
@@ -267,8 +260,8 @@
     }
 
     .get-prothesis-form__title {
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 28px;
+        line-height: 36px;
         margin-bottom: 20px;
     }
 

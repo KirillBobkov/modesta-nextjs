@@ -36,7 +36,7 @@
   }
   
   .problem__description {
-     font-size: 15px;
+     font-size: 16px;
     line-height: 25px;
     color: var(--secondary-font-color);
   }
@@ -72,7 +72,7 @@
     }
   
     .problem__description {
-       font-size: 15px;
+       font-size: 16px;
       line-height: 25px;
     } 
   }

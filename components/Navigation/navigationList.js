@@ -6,16 +6,16 @@ export const  navigationTree = [
         },
         childs: [
             {
-                path: '/#history',
-                value: 'О нас',
-            },
-            {
                 path: '/#advantages',
                 value: 'Преимущества',
             },
             {
                 path: '/#tech',
                 value: 'Характеристики',
+            },
+            {
+                path: '/#faq',
+                value: 'Ответы на вопросы',
             },
             {
                 path: '/#submit',
@@ -38,47 +38,29 @@ export const  navigationTree = [
             path: '/info',
             value: 'Узнать больше',
         },
+    },
+    {
+        parent: {
+            path: '/about-us',
+            value: 'О нас',
+        },
         childs: [
             {
-                path: '/info#videos',
-                value: 'Видео',
+                path: '/about-us#history',
+                value: 'О компании',
             },
             {
-                path: '/info#articles',
+                path: '/about-us#articles',
                 value: 'Статьи на интернет-ресурсах',
             },
             {
-                path: '/info#faq',
-                value: 'Ответы на вопросы',
-            },
-        ]
-    },
-    {
-        parent: {
-            path: '/buy',
-            value: 'Получить протез',
-        },
-        childs: [
-            {
-                path: '/buy#steps',
-                value: 'Этапы протезирования',
+                path: '/about-us#videos',
+                value: 'Видео',
             },
             {
-                path: '/buy#ways',
-                value: 'Способы получения протеза',
+                path: '/about-us#team',
+                value: 'Наша команда',
             },
         ]
-    },
-    {
-        parent: {
-            path: '/team',
-            value: 'Наша команда',
-        },
-    },
-    {
-        parent: {
-            path: '/roadmap',
-            value: 'Дорожная карта',
-        },
     },
 ]

@@ -29,7 +29,6 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
         className={styles.preview}
         style={{ backgroundImage: `url(${img})` }}
       >
-        <div className={styles["preview__title-container"]}>
           {title || subTitle ? (
             <VisibilityManager
               as="div"
@@ -44,7 +43,6 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
               ) : null}
             </VisibilityManager>
           ) : null}
-        </div>
       </section>
     );
   }
@@ -52,9 +50,8 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
   if (video) {
     return (
       <section className={styles["preview"]}>
-        <div className={styles["preview__title-container"]}>
           {title || subTitle ? (
-            <VisibilityManager as="div" classes="preview__title" side="left">
+            <VisibilityManager as="div" classes={styles.preview__title} side="left">
               {title ? (
                 <h1 className={styles["preview__main-line"]}>{title}</h1>
               ) : null}
@@ -63,7 +60,6 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
               ) : null}
             </VisibilityManager>
           ) : null}
-        </div>
         <FullPageVideo
           src={video}
           poster={poster}

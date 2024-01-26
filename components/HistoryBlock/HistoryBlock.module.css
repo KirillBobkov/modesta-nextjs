@@ -1,14 +1,14 @@
 .history {
     margin: 0 auto;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .history__content {
     width: 100%;
     font-size: 18px;
     line-height: 28px;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 100px 40px 80px 40px;
     margin: 0 auto;
     border-radius: 30px;
@@ -20,22 +20,17 @@
 .history__title {
     font-size: 52px;
     line-height: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
 }
 
 .history__description {
     text-align: justify;
-    margin-bottom: 0;
-     font-size: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
     line-height: 25px;
     color: var(--secondary-font-color);
-}
-
-.history__description--subtitle {
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .history__description:last-child {
@@ -51,28 +46,24 @@
 
     .history__title {
         width: 100%;
-        font-size: 36px;
-        line-height: 42px;
-        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 40px;
         text-align: center;
     }
 
     .history__content {
         padding: 40px 30px;
-         font-size: 15px;
+        font-size: 16px;
         line-height: 25px;
         flex-direction: column;
     }
 
     .history__description {
-        text-align: center;
-        margin-bottom: 0;
-         font-size: 15px;
-        line-height: 25px;
-    }
-
-    .history__description--subtitle {
+        text-align: left;
         margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 25px;
     }
 
     .history__content-inner {

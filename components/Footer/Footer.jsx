@@ -1,13 +1,9 @@
 import iconSK from "../../public/images/iconSK.png";
 import icon45ru from "../../public/images/45ru.png";
 import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
 import styles from "./Footer.module.css";
-import dynamic from 'next/dynamic'
 import Image from "next/image";
 import React from "react";
-
-const YandexMap = dynamic(() => import('./YandexMaps'), { ssr: false });
 
 export default React.memo(() => {
   return (
@@ -21,20 +17,83 @@ export default React.memo(() => {
       >
         <div className={styles.footer__grid}>
           <div className={styles.footer__block}>
-            <p className={styles.footer__title}>Сколково</p>
-            <a
-              onClick={() => {
-                ym(96028442, "reachGoal", "skolkovo");
-              }}
-              target="_blank"
-              href="https://navigator.sk.ru/orn/1125414"
+            <p className={styles.footer__title}>Почта</p>
+            <p className={styles.footer__mail}>
+              <a itemProp="email" href="mailto:blagobionic44@gmail.com">
+                blagobionic44@gmail.com
+              </a>
+            </p>
+          </div>
+          <div className={styles.footer__block} id="contacts">
+            <p itemProp="name" className={styles.footer__title}>
+              Контакты
+            </p>
+            <p className={styles.footer__number}>
+              <a itemProp="telephone" href="tel:+79088380555">
+                +79088380555
+              </a>
+              <br />
+              <span>Сахатский Александр Сергеевич</span>
+            </p>
+          </div>
+          <div className={styles.footer__block}>
+            <p className={styles.footer__title}>Адрес</p>
+            <div
+              itemProp="address"
+              itemScope
+              itemType="https://schema.org/PostalAddress"
             >
-              <Image
-                alt="Логотип Сколково"
-                src={iconSK}
-                className={styles.footerimgSK}
-              />
-            </a>
+              <p itemProp="name" className={styles.footer__address}>
+                ООО "МОДЕСТА" (ОГРН 1234500001603)
+              </p>
+              <p itemProp="addressLocality" className={styles.footer__address}>
+                <span itemProp="postalCode"> 640002, </span>
+                <span itemProp="addressRegion">Курганская область, </span>
+                <span itemProp="addressLocality">г. Курган, </span>
+              </p>
+              <p itemProp="streetAddress" className={styles.footer__address}>
+                ул. Коли Мяготина, д. 150Б, офис 22
+              </p>
+            </div>
+          </div>
+          <div
+            className={`${styles.footer__block} ${styles["footer__block--flex"]}`}
+          >
+            <p className={styles.footer__title}>СМИ о нас</p>
+            <div className={styles.footer__smi}>
+              <a
+                onClick={() => {
+                  ym(96028442, "reachGoal", "skolkovo");
+                }}
+                target="_blank"
+                href="https://navigator.sk.ru/orn/1125414"
+              >
+                <Image
+                  alt="Логотип Сколково"
+                  src={iconSK}
+                  className={styles.footerimgSK}
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://45.ru/text/health/2023/01/27/71984777/"
+              >
+                <Image
+                  alt="45ru логотип"
+                  src={icon45ru}
+                  className={styles["footer__smi-link"]}
+                />
+              </a>
+              <a target="_blank" href="https://ura.news/news/1052621906">
+                <Image
+                  alt="URA.news логотип"
+                  src={"https://s.ura.news/img/logos/logo_07_2020.svg"}
+                  width="50"
+                  height="30"
+                  className={styles["footer__smi-link"]}
+                />
+              </a>
+            </div>
           </div>
 
           <div className={styles.footer__block}>
@@ -56,7 +115,7 @@ export default React.memo(() => {
                 />
               </svg>
             </a>
-            <a target="_blank" href="https://t.me/laba2kvadrata">
+            <a target="_blank" href="https://t.me/modestatech">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -114,50 +173,9 @@ export default React.memo(() => {
                 </g>
               </svg>
             </a>
-            <a target="_blank" href="https://facebook.com/modesta.tech">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 48 48"
-                width="52"
-                height="52"
-              >
-                <path
-                  fill="#039be5"
-                  d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"
-                />
-                <path
-                  fill="#fff"
-                  d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"
-                />
-              </svg>
-            </a>
           </div>
-          <div
-            className={`${styles.footer__block} ${styles["footer__block--flex"]}`}
-          >
-            <p className={styles.footer__title}>СМИ о нас</p>
-            <a
-              target="_blank"
-              href="https://45.ru/text/health/2023/01/27/71984777/"
-            >
-              <Image
-                alt="45ru логотип"
-                src={icon45ru}
-                className={styles["footer__smi-link"]}
-              />
-            </a>
-            <a target="_blank" href="https://ura.news/news/1052621906">
-              <Image
-                alt="URA.news логотип"
-                src={"https://s.ura.news/img/logos/logo_07_2020.svg"}
-                width="50"
-                height="30"
-                className={styles["footer__smi-link"]}
-              />
-            </a>
-          </div>
+     
           <div className={styles.footer__block}>
-            <p className={styles.footer__title}>Документы</p>
             <p className={styles.footer__doc}>
               <a target="_blank" href="/privacy-policy.pdf">
                 Политика конфиденциальности
@@ -172,57 +190,6 @@ export default React.memo(() => {
               <a target="_blank" href="/agreement-data.pdf">
                 Согласие пользователя на обработку персональных данных
               </a>
-            </p>
-          </div>
-          <div className={styles.footer__block} id="contacts">
-            <p itemProp="name" className={styles.footer__title}>
-              Контакты
-            </p>
-            <p className={styles.footer__number}>
-              <a itemProp="telephone" href="tel:+79088380555">
-                +79088380555
-              </a>
-              <br />
-              <span>Сахатский Александр Сергеевич</span>
-            </p>
-            <p className={styles.footer__number}>
-              <a itemProp="telephone" href="tel:+79195687836">
-                +79195687836
-              </a>
-              <br />
-              <span>Абрамов Роман Алексеевич</span>
-            </p>
-          </div>
-          <div className={styles.footer__block}>
-            <p className={styles.footer__title}>Почта</p>
-            <p className={styles.footer__mail}>
-              <a itemProp="email" href="mailto:blagobionic44@gmail.com">
-                blagobionic44@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.footer__block}>
-          <p className={styles.footer__title}>Адрес</p>
-          <div className={`${styles.footer__map} ${shadowStyles.shadow}`}>
-            <YandexMap />
-          </div>
-          <div
-            itemProp="address"
-            itemScope
-            itemType="https://schema.org/PostalAddress"
-          >
-            <p itemProp="name" className={styles.footer__address}>
-              ООО "МОДЕСТА" (ОГРН 1234500001603)
-            </p>
-            <p itemProp="addressLocality" className={styles.footer__address}>
-              <span itemProp="postalCode"> 640002, </span>
-              <span itemProp="addressRegion">Курганская область, </span>
-              <span itemProp="addressLocality">г. Курган, </span>
-            </p>
-            <p itemProp="streetAddress" className={styles.footer__address}>
-              ул. Коли Мяготина, д. 150Б, офис 22
             </p>
           </div>
         </div>

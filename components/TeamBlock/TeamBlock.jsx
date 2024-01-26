@@ -7,6 +7,7 @@ import avatar4 from "../../public/images/avatar4_ver2.png";
 import avatar5 from "../../public/images/avatar5_ver2.png";
 import avatar6 from "../../public/images/avatar6_ver2.png";
 import avatar7 from "../../public/images/avatar7_ver2.png";
+import avatar8 from "../../public/images/avatar8_ver2.png";
 
 import styles from "./TeamBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
@@ -42,6 +43,12 @@ const teamContent = [
     profession: "Дизайнер протезов",
     bio: "Опыт в сфере дизайна более 15 лет",
     image: avatar5.src,
+  },
+  {
+    name: "Глебова Екатерина",
+    profession: "Маркетолог",
+    bio: "Опыт в сфере организации рекламных кампаний",
+    image: avatar8.src,
   },
   {
     name: "Бобков Кирилл",

@@ -11,7 +11,7 @@ import containerStyles from '../../styles/container.module.css';
 export function ProblemsBlock() {
     return (
         <>
-            <h2 className={containerStyles.container__title}id="problems">Решаемые задачи</h2>
+            <VisibilityManager as="h2" classes={containerStyles.container__title}id="problems">Решаемые задачи</VisibilityManager>
             <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="ul" classes={containerStyles.container}>    
                 <VisibilityManager as="li" classes={`${styles.problem} shadow`} id="problem">
                     <Image priority itemProp="contentUrl" className={styles.problem__image} src={problem1} alt="Фото производства" />

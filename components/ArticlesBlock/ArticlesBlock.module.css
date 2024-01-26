@@ -24,7 +24,7 @@
     transition: all 0.2s ease-in-out;
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: auto 100%;
+    background-size: 100% auto;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -32,15 +32,15 @@
 }
 
 .articles__item:hover {
-    background-size: auto 102%;
+    background-size: 102% auto;
 }
 
 .articles__item-text {
     color: white;
     width: 100%;
     text-align: center;
-    height: 300px;
-    line-height: 300px;
+    height: 150px;
+    line-height: 150px;
     background-color: rgba(0, 0, 0, 0.6);
     vertical-align: middle;
     font-size: 40px;
@@ -48,12 +48,17 @@
 }
 
 @media screen and (max-width: 768px) {
+    .articles {
+        row-gap: 30px;
+        column-gap: 4%;
+    }
+
     .articles__description {
         width: 100%;
     }
 
     .articles__item {
-        width: 100%;
+        width: 48%;
         border-radius: 30px;
         background-size: 100% auto;
     }
@@ -64,7 +69,7 @@
 
     .articles__item-text {
         font-size: 28px;
-        height: 200px;
-        line-height: 200px;
+        height: 120px;
+        line-height: 120px;
     }
 }

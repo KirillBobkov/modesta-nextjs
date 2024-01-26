@@ -32,12 +32,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
       <changefreq>weekly</changefreq>
 </url>
 <url> 
-      <loc>https://modesta.tech/team</loc>
-      <lastmod>2024-01-15</lastmod>
-      <changefreq>weekly</changefreq>
- </url>
-<url> 
-      <loc>https://modesta.tech/roadmap</loc> 
+      <loc>https://modesta.tech/about-us</loc> 
       <lastmod>2024-01-15</lastmod>
       <changefreq>weekly</changefreq>
 </url>

@@ -4,7 +4,8 @@
 
 .team {
     display: flex;
-    gap: 40px;
+    row-gap: 0;
+    column-gap: 40px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -23,7 +24,7 @@
 
 .person__avatar-container {
     display: flex;
-    width: 36%;
+    width: 30%;
 }
 
 .person__avatar {
@@ -34,7 +35,7 @@
 }
 
 .person__info {
-    width: 64%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,11 +62,11 @@
 }
 
 .person__profession {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
     text-align: left;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -79,14 +80,14 @@
     .person__name {
         font-size: 24px;
         line-height: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .person__profession {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .person__info {
-        padding: 15px 5px 15px 15px;
+        padding: 15px 0px 15px 15px;
     }
 }

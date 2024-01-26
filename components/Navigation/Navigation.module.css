@@ -172,13 +172,12 @@
     }
 
     .navigation__item {
-        font-size: 15px;
+        font-size: 16px;
         margin-right: 10px;
         padding: 5px;
         padding-left: 10px; 
         color: var(--font-color);
         text-align: left;
-        border-left: 5px solid var(--accent);
     }
 
     .navigation__item--active {
@@ -198,6 +197,7 @@
         background-color: transparent;
         visibility: visible;
         opacity: 1;
+        display: none;
     }
 
     .navigation__submenu::before {
@@ -224,10 +224,11 @@
         z-index: 4;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 15px;
         margin-left: 0;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
 
     /* if backdrop support: very transparent and blurred */
