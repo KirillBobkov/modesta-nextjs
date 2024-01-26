@@ -19,10 +19,11 @@
 }
 
 .preview__title {
-    color: #ffffff;
+    color: #000000;
     padding:  40px 40px 40px;
     margin: 0 40px;
-    max-width: 70%;
+    width: 70%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,10 +62,12 @@
     }
 
     .preview__title {
-        padding: 0 20px;
-        top: 0;
+        padding: 0 100px 0 30px;
+        height: 100%;
         margin: 0;
+        width: 100%;
         max-width: 100%;
+        background-color: #ffffff3d;
     }
 
     .preview__main-line {
