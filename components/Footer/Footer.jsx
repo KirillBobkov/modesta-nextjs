@@ -8,7 +8,12 @@ import { VisibilityManager } from "../VisibilityManager";
 
 export default React.memo(() => {
   return (
-    <VisibilityManager onInit={false} side="right" itemScope itemType="http://schema.org/WPFooter">
+    <VisibilityManager
+      onInit={false}
+      side="right"
+      itemScope
+      itemType="http://schema.org/WPFooter"
+    >
       <meta itemProp="copyrightYear" content={new Date().getFullYear()} />
       <meta itemProp="copyrightHolder" content="ООО МОДЕСТА" />
       <div
@@ -17,14 +22,6 @@ export default React.memo(() => {
         className={`${containerStyles.container} ${styles.footer}`}
       >
         <div className={styles.footer__grid}>
-          <div className={styles.footer__block}>
-            <p className={styles.footer__title}>Почта</p>
-            <p className={styles.footer__mail}>
-              <a itemProp="email" href="mailto:blagobionic44@gmail.com">
-                blagobionic44@gmail.com
-              </a>
-            </p>
-          </div>
           <div className={styles.footer__block} id="contacts">
             <p itemProp="name" className={styles.footer__title}>
               Контакты
@@ -35,6 +32,14 @@ export default React.memo(() => {
               </a>
               <br />
               <span>Сахатский Александр Сергеевич</span>
+            </p>
+          </div>
+          <div className={styles.footer__block}>
+            <p className={styles.footer__title}>Почта</p>
+            <p className={styles.footer__mail}>
+              <a itemProp="email" href="mailto:blagobionic44@gmail.com">
+                blagobionic44@gmail.com
+              </a>
             </p>
           </div>
           <div className={styles.footer__block}>
@@ -175,7 +180,7 @@ export default React.memo(() => {
               </svg>
             </a>
           </div>
-     
+
           <div className={styles.footer__block}>
             <p className={styles.footer__doc}>
               <a target="_blank" href="/privacy-policy.pdf">
