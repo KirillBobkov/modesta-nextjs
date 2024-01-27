@@ -1,28 +1,9 @@
-.history {
-    margin: 0 auto;
-    width: 100%;
-    margin-bottom: 80px;
-}
-
 .history__content {
-    width: 100%;
-    font-size: 18px;
-    line-height: 28px;
     max-width: 1000px;
-    padding: 100px 40px 80px 40px;
     margin: 0 auto;
-    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.history__title {
-    font-size: 52px;
-    line-height: 60px;
-    margin-bottom: 40px;
-    font-weight: bold;
-    text-align: center;
 }
 
 .history__description {

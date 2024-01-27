@@ -10,7 +10,7 @@ import { VideosBlock } from "../components/VideosBlock/VideosBlock.jsx";
 export default function AboutUsPage() {
   return (
     <Layout>
-      <VisibilityManager side="opacity">
+      <VisibilityManager classes="page-offset" side="opacity">
       <HistoryBlock
           title={"Создаём качественные функциональные протезы"}
           descriptions={[

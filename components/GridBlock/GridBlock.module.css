@@ -1,0 +1,30 @@
+.grid {
+    display: flex;
+    row-gap: 30px;
+    column-gap: 2%;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid__item {
+    width: 32%;
+    padding: 20px;
+    overflow: hidden;
+    background-color: var(--card-bg-color);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+    .grid__item {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid__item {
+        width: 100%;
+        padding: 20px;
+    }
+}

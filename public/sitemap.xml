@@ -13,27 +13,22 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
             <image:title>Прототип компании Модеста</image:title>
             <image:geo_location>Курган</image:geo_location>
       </image:image>
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2024-01-27</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/production</loc> 
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2024-01-27</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/info</loc> 
-      <lastmod>2024-01-15</lastmod>
-      <changefreq>weekly</changefreq>
-</url>
-<url> 
-      <loc>https://modesta.tech/buy</loc> 
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2024-01-27</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/about-us</loc> 
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2024-01-27</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 </urlset>

@@ -36,13 +36,13 @@ body {
     overflow: hidden;
 }
 
-.root-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.page-offset {
+    padding-top: 150px;
 }
 
-.root-main {
-    flex: 1 1 auto; /*needs both shrink and grow*/
-    min-height: 100vh;
+
+@media screen and (max-width: 768px) {
+    .page-offset {
+        padding-top: 80px;
+    }
 }

@@ -38,6 +38,16 @@ export const  navigationTree = [
             path: '/info',
             value: 'Узнать больше',
         },
+        childs: [
+            {
+                path: '/info#books',
+                value: 'Библиотека',
+            },
+            {
+                path: '/info#laws',
+                value: 'Законодательство',
+            },
+        ]
     },
     {
         parent: {

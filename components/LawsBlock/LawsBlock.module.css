@@ -1,0 +1,45 @@
+.law {
+    display: flex;
+    row-gap: 30px;
+    column-gap: 2%;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.law__item {
+    display: flex;
+    gap: 3%;
+    align-items: flex-start;
+    position: relative;
+}
+
+.law__img {
+    margin-top: 7px;
+    width: 7%;
+}
+
+.law__img .law__svg {
+    display: flex;
+    fill: var(--font-color);
+}
+
+.law__title {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+    color: var(--secondary-font-color)
+}
+
+
+@media screen and (max-width: 768px) {
+    .law__item {
+        gap: 4%;
+    }
+    
+    .law__img {
+        width: 9%;
+    }
+}
