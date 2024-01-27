@@ -53,7 +53,7 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
     return (
       <section onClick={() => { videoRef?.current?.play(); }} className={styles["preview"]}>
           {title || subTitle ? (
-            <VisibilityManager as="div" classes={styles.preview__title} side="right">
+            <VisibilityManager as="div" classes={styles.preview__title} side="opacity">
               {title ? (
                 <h1 className={styles["preview__main-line"]}>{title}</h1>
               ) : null}
