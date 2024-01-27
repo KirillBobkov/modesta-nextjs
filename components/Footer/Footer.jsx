@@ -10,7 +10,7 @@ export default React.memo(() => {
   return (
     <VisibilityManager
       onInit={false}
-      side="right"
+      side="opacity"
       itemScope
       itemType="http://schema.org/WPFooter"
     >
