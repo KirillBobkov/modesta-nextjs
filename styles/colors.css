@@ -9,9 +9,9 @@
 
     --card-bg-color: #fff;
     --card-bg-color-opacity: rgba(255,255,255,0.6);
-    --card-bg-color-2: #d8d8d8;
+    --card-bg-color-2: #e8e8e8;
 
-    --box-shadow: rgba(0, 16, 61, 0.07);
+    --box-shadow: rgba(0, 0, 0, 0.07);
     --accent: #DCE359;
     --helper-green: #219e2d;
     --helper-red: #9d2222;

@@ -20,7 +20,7 @@ import Image from "next/image.js";
 import containerStyles from '../../styles/container.module.css';
 
 export function ReplacementBlock() {
-    const isMobile =  useMediaQuery(`(max-width: 767.98px)`);
+    const isMobile = useMediaQuery(`(max-width: 767.98px)`);
     return (
         <VisibilityManager classes={`${containerStyles.container} ${containerStyles['container--full-width']} ${styles['replacement-parts__container']}`}>
             <div className={styles['replacement-parts']} id="replacement-parts">

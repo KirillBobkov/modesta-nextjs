@@ -59,7 +59,7 @@ const Block = React.memo((props) => {
       onClick={onClick}
       style={{
         ...styles,
-        transition: `opacity ${speed}s, transform  ${speed}s, background-size  ${speed}s`,
+        transition: `opacity ${speed}s, transform  ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
         opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
         transform:
           inViewport || (onInit && enterCount > 0)

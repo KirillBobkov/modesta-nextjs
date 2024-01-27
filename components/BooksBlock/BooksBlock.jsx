@@ -95,6 +95,7 @@ export const BooksBlock = () => {
     <GridBlock
       title="Библиотека"
       id="books"
+      clickable
       content={booksContent}
       renderItem={(item) => <BookContent item={item}/>}
     />

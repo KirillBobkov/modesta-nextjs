@@ -37,10 +37,10 @@ export default function MainPage() {
           }
           title={"Инновационный протез для жизни"}
         />
-        <ProblemsBlock />
         <AdvantagesBlock />
-        <ReplacementBlock />
         <TechBlock />
+        <ReplacementBlock />
+        <ProblemsBlock />
         <Questions />
       </VisibilityManager>
     </Layout>

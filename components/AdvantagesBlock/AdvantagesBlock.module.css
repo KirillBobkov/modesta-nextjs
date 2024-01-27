@@ -50,7 +50,13 @@
 .advantage__item-image {
     position: absolute;
     z-index: -1;
+    transition: transform 800ms ease-in-out;
 }
+
+.advantages__item:hover .advantage__item-image {
+    transform: scale(1.05);
+}
+
 
 @media screen and (max-width: 768px) {
     .advantages__content {

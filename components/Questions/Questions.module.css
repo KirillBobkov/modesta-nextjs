@@ -17,6 +17,11 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
+    transition:  background-color 200ms ease-in-out;
+}
+
+.question__title:hover {
+    background-color: var(--card-bg-color-2);
 }
 
 .question__answer {

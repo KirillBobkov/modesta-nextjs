@@ -9,6 +9,7 @@ import advantage_3_mobile from "../../public/images/advantage_3_mobile.webp";
 
 import styles from "./AdvantagesBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
+import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
@@ -58,7 +59,7 @@ export function AdvantagesBlock() {
               side="topmax"
               classes={`${styles["advantages__item"]} ${
                 adv.right ? styles["advantages__item--right"] : ""
-              } shadow`}
+              } ${shadowStyles.shadow}`}
             >
               {isMobile !== undefined && (
                 <Image

@@ -13,7 +13,14 @@
     overflow: hidden;
     background-color: var(--card-bg-color);
     border-radius: 30px;
+}
+
+.grid__item--clickable {
     cursor: pointer;
+}
+
+.grid__item--clickable:hover {
+    background-color: var(--card-bg-color-2);
 }
 
 @media screen and (max-width: 1080px) {

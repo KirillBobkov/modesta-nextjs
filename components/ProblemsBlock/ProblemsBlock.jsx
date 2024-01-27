@@ -7,20 +7,21 @@ import styles from "./ProblemsBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import containerStyles from '../../styles/container.module.css';
+import shadowStyles from '../../styles/shadow.module.css';
 
 export function ProblemsBlock() {
     return (
         <>
             <VisibilityManager as="h2" classes={containerStyles.container__title}id="problems">Решаемые задачи</VisibilityManager>
             <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="ul" classes={containerStyles.container}>    
-                <VisibilityManager as="li" classes={`${styles.problem} shadow`} id="problem">
+                <VisibilityManager as="li" classes={`${styles.problem} ${shadowStyles.shadow}`} id="problem">
                     <Image priority itemProp="contentUrl" className={styles.problem__image} src={problem1} alt="Фото производства" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Развиваем производство в РФ </h3>
                         <p itemProp="description" className={styles.problem__description}>В России не хватает компаний, занимающихся производством протезов. Мы разрабатываем новые модели и улучшаем уже существующие изделия</p>
                     </div>
                 </VisibilityManager>
-                <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li" classes={`${styles.problem} shadow`}>
+                <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li" classes={`${styles.problem} ${shadowStyles.shadow}`}>
                     <Image priority itemProp="contentUrl" className={styles.problem__image} src={problem2} alt="Изображение военного с косметическим протезом" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Меняем правила
@@ -29,7 +30,7 @@ export function ProblemsBlock() {
                         </p>
                     </div>
                 </VisibilityManager>
-                <VisibilityManager itemScope itemType="http://schema.org/ImageObject" as="li" classes={`${styles.problem} shadow`}>
+                <VisibilityManager itemScope itemType="http://schema.org/ImageObject" as="li" classes={`${styles.problem} ${shadowStyles.shadow}`}>
                     <Image priority itemProp="contentUrl"  className={styles.problem__image} src={problem3} alt="Фото ремонта протеза" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Своевременно обслуживаем</h3>
@@ -38,7 +39,7 @@ export function ProblemsBlock() {
                         </p>
                     </div>
                 </VisibilityManager>
-                <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li"  classes={`${styles.problem} shadow`}>
+                <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" as="li"  classes={`${styles.problem} ${shadowStyles.shadow}`}>
                     <Image priority itemProp="contentUrl"  className={styles.problem__image} src={problem4} alt="Фото реабилитации пациента" />
                     <div className={styles.problem__content}>
                         <h3 itemProp="name" className={styles.problem__title}>Помогаем освоить протез
