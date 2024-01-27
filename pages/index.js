@@ -12,7 +12,7 @@ import { TechBlock } from "../components/TechBlock/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
-const rotateMp4 = "/images/rotate_1.mp4";
+const rotateMp4 = "/images/rotate_5.mp4";
 
 export default function MainPage() {
   useScrollToLocation();

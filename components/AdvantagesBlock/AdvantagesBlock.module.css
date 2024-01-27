@@ -54,7 +54,7 @@
 }
 
 .advantages__item:hover .advantage__item-image {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 
