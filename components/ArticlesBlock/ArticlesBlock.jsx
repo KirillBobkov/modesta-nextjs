@@ -56,7 +56,7 @@ export function ArticlesBlock() {
   return (
     <VisibilityManager classes={containerStyles.container}>
       <h2 className={containerStyles.container__title} id="articles">
-        Читайте нас на удобной вам прощадке
+        Читайте нас на удобной вам площадке
       </h2>
       <p className={styles.articles__description}>
         Пишем интересные статьи, рассказываем про разработку протезов, делимся с
