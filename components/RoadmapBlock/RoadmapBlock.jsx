@@ -14,11 +14,14 @@ import { VisibilityManager } from "../VisibilityManager";
 export default function RoadmapBlock() {
   return (
     <VisibilityManager classes={containerStyles.container}>
-      <h1 className={`${containerStyles.container__title} ${styles.roadmap__title}`} id="articles">
+      <h1
+        className={`${containerStyles.container__title} ${styles.roadmap__title}`}
+        id="articles"
+      >
         Дорожная карта
       </h1>
       <div className={styles.roadmap}>
-        <div className={styles['roadmap__line-container']}>
+        <div className={styles["roadmap__line-container"]}>
           <div className={styles.roadmap__line} />
         </div>
         <div className={styles.roadmap__content}>
@@ -40,11 +43,22 @@ export default function RoadmapBlock() {
 
 function PeriodComponent({ title, description, image }) {
   return (
-    <VisibilityManager  itemScope itemType="http://schema.org/ImageObject" classes={`${styles.period} ${shadowStyles.shadow}`} side="topmax">
-      <div className={`${styles.roadmap__point} ${styles['period__time-point']}`} />
+    <VisibilityManager
+      itemScope
+      itemType="http://schema.org/ImageObject"
+      classes={`${styles.period} ${shadowStyles.shadow}`}
+      side="topmax"
+    >
+      <div
+        className={`${styles.roadmap__point} ${styles["period__time-point"]}`}
+      />
       <div className={styles.period__content}>
-        <h3 itemProp="name" className={styles.period__title}>{title}</h3>
-        <p itemProp="description" className={styles.period__description}>{description}</p>
+        <h3 itemProp="name" className={styles.period__title}>
+          {title}
+        </h3>
+        <p itemProp="description" className={styles.period__description}>
+          {description}
+        </p>
       </div>
       <PeriodImageComponent img={image} />
     </VisibilityManager>
@@ -53,9 +67,10 @@ function PeriodComponent({ title, description, image }) {
 
 function PeriodImageComponent({ img }) {
   return (
-    <Image priority
+    <Image
+      priority
       alt={`Период времени №${1}`}
-      itemProp="contentUrl" 
+      itemProp="contentUrl"
       className={`${styles.period__img} ${shadowStyles.shadow}`}
       src={img}
     />

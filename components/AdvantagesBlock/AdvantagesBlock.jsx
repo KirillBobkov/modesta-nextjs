@@ -74,9 +74,9 @@ export function AdvantagesBlock() {
                 />
               )}
               <div className={styles["advantages__content"]}>
-                <p itemProp="name" className={styles["advantages__item-text"]}>
+                <h3 itemProp="name" className={styles["advantages__item-text"]}>
                   {adv.title}
-                </p>
+                </h3>
                 <p className={styles["advantages__item-description"]}>
                   {adv.description}
                 </p>
