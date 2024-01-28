@@ -29,7 +29,7 @@
 .person__avatar {
     border-radius: 50%;
     width: 100%;
-    background-color: var(--card-bg-color-2);
+    background-color: var(--secondary-card-bg-color);
     align-self: flex-end;
 }
 

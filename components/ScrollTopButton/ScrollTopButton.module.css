@@ -16,7 +16,7 @@
 }
 
 .arrow-button:hover {
-    background-color: var(--card-bg-color-2);
+    background-color: var(--secondary-card-bg-color);
 }
 
 .arrow-button svg {

@@ -20,7 +20,7 @@
 }
 
 .grid__item--clickable:hover {
-    background-color: var(--card-bg-color-2);
+    background-color: var(--secondary-card-bg-color);
 }
 
 @media screen and (max-width: 1080px) {

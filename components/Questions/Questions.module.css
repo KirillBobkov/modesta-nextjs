@@ -21,7 +21,7 @@
 }
 
 .question__title:hover {
-    background-color: var(--card-bg-color-2);
+    background-color: var(--secondary-card-bg-color);
 }
 
 .question__answer {

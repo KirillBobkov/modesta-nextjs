@@ -3,13 +3,13 @@
     --secondary-font-color: #313131;
 
     --bg-color: #f9f9f9;
-    --bg-color-opacity: rgba(255, 255, 255, 0.694);
+    --bg-color-opacity: rgba(255, 255, 255, 0.415);
     --bg-color-gradient-1: #191919;
     --bg-color-gradient-2: #393939;
 
     --card-bg-color: #fff;
     --card-bg-color-opacity: rgba(255,255,255,0.6);
-    --card-bg-color-2: #e8e8e8;
+    --secondary-card-bg-color: #e8e8e8;
 
     --box-shadow: rgba(0, 0, 0, 0.07);
     --accent: #DCE359;
@@ -28,7 +28,7 @@
 
     --card-bg-color: #1f1f1f;
     --card-bg-color-opacity: rgba(0, 0, 0, 0.52);
-    --card-bg-color-2: #2d2d2d;
+    --secondary-card-bg-color: #2d2d2d;
 
     --box-shadow: rgba(0, 16, 61, 0.07);
     --accent:  #DCE359;
