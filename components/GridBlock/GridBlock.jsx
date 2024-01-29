@@ -5,16 +5,25 @@ import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 
 export const GridBlock = React.memo(
-  ({ content, renderItem, title, id, clickable = false }) => {
+  ({ content, renderItem, title, description, id, clickable = false }) => {
     return (
       <section className={containerStyles.container}>
         {title && (
           <VisibilityManager
             as="h2"
-            classes={`${containerStyles.container__title}`}
+            classes={`${styles.grid__title}`}
             id={id}
           >
             {title}
+          </VisibilityManager>
+        )}
+        {description && (
+          <VisibilityManager
+            as="p"
+            classes={`${styles.grid__description}`}
+            id={id}
+          >
+            {description}
           </VisibilityManager>
         )}
         <ul className={styles.grid}>

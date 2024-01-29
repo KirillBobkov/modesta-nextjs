@@ -14,12 +14,12 @@ import { VisibilityManager } from "../VisibilityManager";
 export default function RoadmapBlock() {
   return (
     <VisibilityManager classes={containerStyles.container}>
-      <h1
+      <h2
         className={`${containerStyles.container__title} ${styles.roadmap__title}`}
         id="articles"
       >
         Дорожная карта
-      </h1>
+      </h2>
       <div className={styles.roadmap}>
         <div className={styles["roadmap__line-container"]}>
           <div className={styles.roadmap__line} />

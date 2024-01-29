@@ -30,7 +30,7 @@ export function TechBlock() {
       }: {}}
       classes={styles["tech-container"]}
     >
-      <h2 className={containerStyles.container__title} id="tech">
+      <h2 className={styles.tech__title} id="tech">
         Технические характеристики
       </h2>
       <ul className={styles.tech}>

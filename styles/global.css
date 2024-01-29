@@ -43,6 +43,6 @@ body {
 
 @media screen and (max-width: 768px) {
     .page-offset {
-        padding-top: 80px;
+        padding-top: 40px;
     }
 }

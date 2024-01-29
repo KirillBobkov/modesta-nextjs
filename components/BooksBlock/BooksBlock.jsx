@@ -96,6 +96,7 @@ export const BooksBlock = () => {
       title="Библиотека"
       id="books"
       clickable
+      description={'Мы собрали для вас полезные материалы о протезировании, доступные для скачивания'}
       content={booksContent}
       renderItem={(item) => <BookContent item={item}/>}
     />

@@ -21,18 +21,16 @@
   border-radius: 30px;
   width: 50%;
   padding: 40px;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
-
 
 .production__title {
   font-size: 40px;
   line-height: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -43,10 +41,15 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .production__item {
+    height: auto;
+  }
+  
   .production__title {
+    
     font-size: 28px;
     line-height: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .production__description {
@@ -82,7 +85,8 @@
   .production__title {
     font-size: 28px;
     line-height: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    max-width: 350px;
   }
 
   .production__description {

@@ -127,6 +127,8 @@ const lawsContent = [
   },
 ];
 
+// развернуть весь список
+
 const LawContent = ({ item }) => {
   return (
     <a target="_blank" className={styles["law__item"]} href={item.link}>
@@ -175,6 +177,7 @@ export const LawsBlock = () => {
   return (
     <GridBlock
       title="Законодательство"
+      description="Полезные нормативно-правовые акты в области социальной защиты и поддержки населения"
       id="laws"
       clickable
       content={lawsContent}

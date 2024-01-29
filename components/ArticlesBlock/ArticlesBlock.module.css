@@ -5,6 +5,16 @@
     column-gap: 2%;
 }
 
+
+.articles__title {
+    text-align: center;
+    font-size: 52px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+
 .articles__description {
     width: 50%;
     margin: 0 auto;
@@ -58,18 +68,30 @@
         column-gap: 4%;
     }
 
+    .articles__title {
+        width: 100%;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 10px;
+        text-align: left;
+        padding: 0 20px;
+    }
+
     .articles__description {
         width: 100%;
+        text-align: left;
+        padding: 0 20px;
+        margin-bottom: 20px;
     }
 
     .articles__item {
         width: 48%;
         border-radius: 30px;
-        background-size: 100% auto;
+        background-size: cover;
     }
 
     .articles__item:hover {
-        background-size: 100% auto;
+        background-size: cover;
     }
 
     .articles__item-text {

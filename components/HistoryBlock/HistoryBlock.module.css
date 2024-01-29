@@ -6,11 +6,20 @@
     justify-content: center;
 }
 
+.history__title {
+    text-align: center;
+    font-size: 52px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
 .history__description {
-    text-align: justify;
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 25px;
+    text-align: center;
+    white-space: pre-line;
     color: var(--secondary-font-color);
 }
 
@@ -27,14 +36,15 @@
 
     .history__title {
         width: 100%;
-        font-size: 32px;
-        line-height: 38px;
-        margin-bottom: 40px;
-        text-align: center;
+        font-size: 28px;
+        padding: 0;
+        line-height: 32px;
+        margin-bottom: 10px;
+        text-align: left;
     }
 
     .history__content {
-        padding: 40px 30px;
+        padding: 0 15px;
         font-size: 16px;
         line-height: 25px;
         flex-direction: column;
@@ -42,7 +52,7 @@
 
     .history__description {
         text-align: left;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 16px;
         line-height: 25px;
     }

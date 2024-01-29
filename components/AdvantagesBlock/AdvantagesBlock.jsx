@@ -67,7 +67,7 @@ export function AdvantagesBlock() {
                   itemProp="contentUrl"
                   className={styles["advantage__item-image"]}
                   src={isMobile ? adv.mobileImg : adv.desktopImg}
-                  objectPosition="top"
+                  objectPosition="right top"
                   objectFit="cover"
                   alt={`Изображение протеза #${i}`}
                   fill

@@ -20,14 +20,13 @@
 }
 
 .advantages__content {
-    max-width: 400px;
+    max-width: 350px;
 }
 
 .advantages__item-text {
     width: 100%;
-    text-align: center;
     vertical-align: middle;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 40px;
     line-height: 40px;
     font-weight: bold;
@@ -36,16 +35,11 @@
 }
 
 .advantages__item-description {
-    text-align: center;
     width: 100%;
     /* color: var(--secondary-font-color); */
     color: #313131;
 }
 
-.advantages__item--right {
-    align-items: flex-end;
-    text-align: right;
-}
 
 .advantage__item-image {
     position: absolute;
@@ -74,9 +68,10 @@
     .advantages__item-text {
         font-size: 28px;
         line-height: 32px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        max-width: 350px;
     }
-
+    
     .advantage__item--1-background {
         background-position: top center;
         background-size: 100%;

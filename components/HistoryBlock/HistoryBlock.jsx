@@ -14,7 +14,7 @@ export function HistoryBlock({ title, descriptions }) {
         side="topmax"
         classes={`${styles.history__content}`}
       >
-        {title ? <h2 className={containerStyles.container__title}>{title}</h2> : null}
+        {title ? <h2 className={styles.history__title}>{title}</h2> : null}
         {descriptions
           ? descriptions.map((text) => {
               return <VisibilityManager as="p" side="right" classes={styles["history__description"]}>{text}</VisibilityManager>;

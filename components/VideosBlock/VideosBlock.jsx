@@ -9,7 +9,7 @@ import shadowStyles from "../../styles/shadow.module.css";
 export function VideosBlock() {
   return (
     <VisibilityManager classes={containerStyles.container}>
-      <h2 className={containerStyles.container__title} id="videos">
+      <h2 className={styles.videos__title} id="videos">
         Оценить красоту момента помогает кино
       </h2>
       <p className={styles.videos__description}>

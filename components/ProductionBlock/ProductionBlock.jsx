@@ -34,7 +34,7 @@ export function ProductionBlock() {
             Захват предметов
           </h3>
           <p itemProp="description" className={styles.production__description}>
-            — одна из главных функций, которая необходима человеку. Поэтому, при
+            Одна из главных функций, которая необходима человеку. Поэтому, при
             разработке протеза верхних конечностей “Модеста”, нами было принято
             решение полностью пересмотреть концепцию понятия “протез руки”
           </p>
@@ -56,12 +56,10 @@ export function ProductionBlock() {
         />
         <div className={styles.production__content}>
           <h3 itemProp="name" className={styles.production__title}>
-            Простота механизмов и надежность пользования
+            Надежность пользования
           </h3>
           <p itemProp="description" className={styles.production__description}>
-            — то, к чему мы стремимся. В случае поломки, вы всегда можете
-            связаться с нами по вопросу ремонта или заменить неисправные
-            комплектующие самостоятельно
+            То, к чему мы стремимся. Все элементы сделаны из материалов, которые позволяют увеличить срок пользования
           </p>
         </div>
       </VisibilityManager>
@@ -133,12 +131,11 @@ export function ProductionBlock() {
         />
         <div className={styles.production__content}>
           <h3 itemProp="name" className={styles.production__title}>
-            Ручная обработка и сборка
+            Обслуживание
           </h3>
           <p itemProp="description" className={styles.production__description}>
-            Все элементы сделаны из материалов, которые позволяют увеличить срок
-            пользования. Когда ваш протез начнет изнашиваться, мы оперативно
-            отправим вам расходные материалы для замены
+          Когда ваш протез начнёт изнашиваться, мы оперативно отправим вам расходные материалы для замены
+
           </p>
         </div>
       </VisibilityManager>

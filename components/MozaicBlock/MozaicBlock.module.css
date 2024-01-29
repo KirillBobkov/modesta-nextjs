@@ -5,12 +5,13 @@
   grid-template-rows: repeat(10, 35px);
   grid-auto-flow: dense;
   margin: 0 auto;
-  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .mozaic__item {
   transition: all 800ms ease-in-out;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .mozaic__item .mozaic__image {
@@ -85,7 +86,6 @@
     grid-template-rows: repeat(20, 35px);
     grid-auto-flow: dense;
     margin: 0 auto;
-    margin-bottom: 20px;
   }
   
   .mozaic__item img:hover {

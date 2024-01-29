@@ -11,7 +11,7 @@ import shadowStyles from "../../styles/shadow.module.css";
 
 export function ProblemsBlock() {
   return (
-    <>
+    <div className={containerStyles.container}>
       <VisibilityManager
         as="h2"
         classes={containerStyles.container__title}
@@ -23,7 +23,6 @@ export function ProblemsBlock() {
         itemScope
         itemType="http://schema.org/ImageObject"
         as="ul"
-        classes={containerStyles.container}
       >
         <VisibilityManager
           as="li"
@@ -126,6 +125,6 @@ export function ProblemsBlock() {
           </div>
         </VisibilityManager>
       </VisibilityManager>
-    </>
+    </div>
   );
 }
