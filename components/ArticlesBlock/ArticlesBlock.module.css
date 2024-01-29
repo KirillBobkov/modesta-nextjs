@@ -5,7 +5,6 @@
     column-gap: 2%;
 }
 
-
 .articles__title {
     text-align: center;
     font-size: 52px;
@@ -13,7 +12,6 @@
     margin-bottom: 30px;
     font-weight: bold;
 }
-
 
 .articles__description {
     width: 50%;
