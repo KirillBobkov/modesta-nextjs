@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import styles from "./GridBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 
 export const GridBlock = React.memo(
-  ({ content, renderItem, title, description, id, clickable = false }) => {
+  ({ content, renderItem, title, description, hideButton, id, clickable = false }) => {
+    
+  const [opened, setOpened] = useState(false);
+
     return (
-      <section className={containerStyles.container}>
+      <section className={`${containerStyles.container}`}>
         {title && (
           <VisibilityManager
             as="h2"
@@ -26,7 +29,7 @@ export const GridBlock = React.memo(
             {description}
           </VisibilityManager>
         )}
-        <ul className={styles.grid}>
+        <ul className={`${styles.grid__list} ${hideButton ? styles.grid__container : ''} ${opened ? styles['grid__container--visible'] : ''}`}>
           {content.map((item, i) => {
             return (
               <VisibilityManager
@@ -40,6 +43,7 @@ export const GridBlock = React.memo(
               </VisibilityManager>
             );
           })}
+            {hideButton && <div className={styles.grid__button} onClick={() => { setOpened(!opened); }}>{opened ? "Cвернуть" : "Посмотреть все"}</div>}
         </ul>
       </section>
     );

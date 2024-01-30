@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LawsBlock.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
-import Image from "next/image";
 
 const lawsContent = [
-
   {
     title:
       "Приказ Министерства труда и социальной защиты РФ от 20 августа 2018 г. N 529н Об утверждении разъяснения о порядке оплаты дополнительных расходов на медицинскую",
@@ -133,7 +131,7 @@ const LawContent = ({ item }) => {
   return (
     <a target="_blank" className={styles["law__item"]} href={item.link}>
       <div className={styles.law__img}>
-        <svg viewBox="0 0 48 48" >
+        <svg viewBox="0 0 48 48">
           <defs />
           <g
             stroke="none"
@@ -175,13 +173,14 @@ const LawContent = ({ item }) => {
 
 export const LawsBlock = () => {
   return (
-    <GridBlock
-      title="Законодательство"
-      description="Полезные нормативно-правовые акты в области социальной защиты и поддержки населения"
-      id="laws"
-      clickable
-      content={lawsContent}
-      renderItem={(item) => <LawContent item={item} />}
-    />
+        <GridBlock
+          title="Законодательство"
+          description="Полезные нормативно-правовые акты в области социальной защиты и поддержки населения"
+          id="laws"
+          hideButton
+          clickable
+          content={lawsContent}
+          renderItem={(item) => <LawContent item={item} />}
+        />
   );
 };

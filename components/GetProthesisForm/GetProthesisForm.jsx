@@ -161,13 +161,13 @@ export function GetProthesisForm() {
               } ${shadowStyles.shadow}`}
               value={email.value}
               onChange={handleChange}
-              placeholder="e-mail"
+              placeholder="E-mail"
               disabled={!!responseMessage}
             />
             {email.error ? (
               <div className={styles.helper}>{email.error}</div>
             ) : email.value ? (
-              <div className={`${styles.helper} ${styles['helper--green']}`}>e-mail ✔</div>
+              <div className={`${styles.helper} ${styles['helper--green']}`}>E-mail ✔</div>
             ) : (
               ""
             )}
