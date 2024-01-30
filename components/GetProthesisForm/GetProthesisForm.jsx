@@ -136,7 +136,7 @@ export function GetProthesisForm() {
               autoComplete="name"
               className={`${styles['form-control']} ${
                 name.value ? styles['form-control--filled'] : ""
-              }`}
+              } ${shadowStyles.shadow}`}
               value={name.value}
               onChange={handleChange}
               placeholder="Ваше имя"
@@ -158,7 +158,7 @@ export function GetProthesisForm() {
               autoComplete="email"
               className={`${styles['form-control']} ${
                 email.value ? styles['form-control--filled'] : ""
-              }`}
+              } ${shadowStyles.shadow}`}
               value={email.value}
               onChange={handleChange}
               placeholder="e-mail"
@@ -179,7 +179,7 @@ export function GetProthesisForm() {
               autoComplete="phone"
               className={`${styles['form-control']}  ${
                 phone.value ? styles['form-control--filled'] : ""
-              }`}
+              } ${shadowStyles.shadow}`}
               value={phone.value}
               onChange={handleChange}
               placeholder="Телефон 89xxxxxxxx"
@@ -200,7 +200,7 @@ export function GetProthesisForm() {
               value={message.value}
               className={`${styles['form-textarea']} ${styles['form-control']} ${
                 message.value ? styles["form-control--filled"] : ""
-              }`}
+              } ${shadowStyles.shadow}`}
               onChange={handleChange}
               disabled={!!responseMessage}
               placeholder="Напишите то, что нам важно знать"
@@ -232,7 +232,7 @@ export function GetProthesisForm() {
           </div>
           <p className={styles['form-doc']}>
             <a target="_blank" href="/agreement-data.pdf">
-              Согласие пользователя на обработку персональных данных
+              Согласие на обработку персональных данных
             </a>
           </p>
           <button
