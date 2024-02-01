@@ -42,7 +42,6 @@
 .grid__container {
     max-height: 400px;
     overflow: hidden;
-    /* z-index: -1; */
     transition: all 800ms ease-in-out;
 }
 
@@ -94,8 +93,12 @@
         margin-bottom: 10px;
     }
 
+    .grid__container {
+        transition: all 300ms ease-in-out;
+    }
+
     .grid__container--visible {
-        max-height: 5000px;
+        max-height: 4800px;
         padding-bottom: 80px;
     }
     

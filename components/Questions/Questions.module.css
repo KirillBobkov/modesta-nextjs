@@ -36,6 +36,7 @@
     color: var(--secondary-font-color);
     white-space: pre-line;
     text-indent: 0;
+    opacity: 0;
 }
 
 .question__answer::-webkit-scrollbar {
@@ -46,6 +47,7 @@
 .question__answer--visible {
     max-height: 800px;
     padding: 20px;
+    opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
