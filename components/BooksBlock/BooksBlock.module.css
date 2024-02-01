@@ -21,7 +21,6 @@
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    height: 100%;
 }
 
 .books__item-description {
@@ -30,6 +29,16 @@
     text-align: left;
     width: 100%;
     color: var(--secondary-font-color);
+    height: auto;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.books__item-description--visible  {
+    max-height: 200px;
+    opacity: 1;
 }
 
 .books__item-name {
@@ -37,8 +46,8 @@
     line-height: 25px;
     text-align: left;
     width: 100%;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 768px) {

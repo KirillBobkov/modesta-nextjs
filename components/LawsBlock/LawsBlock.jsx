@@ -10,7 +10,7 @@ const lawsContent = [
   },
   {
     title:
-      "Распоряжение Правительства РФ от 30 декабря 2005 г. N 2347-р «Об утверждении федерального перечня реабилитационных мероприятий...",
+      "Распоряжение Правительства РФ от 30 декабря 2005 г. N 2347-р «Об утверждении федерального перечня реабилитационных мероприятий",
     link: "https://disk.yandex.ru/i/yz0tVOZTa97NzA",
   },
   {
@@ -130,6 +130,8 @@ const lawsContent = [
 const LawContent = ({ item }) => {
   return (
     <a target="_blank" className={styles["law__item"]} href={item.link}>
+   
+      <p className={styles.law__title}>{item.title}</p>
       <div className={styles.law__img}>
         <svg viewBox="0 0 48 48">
           <defs />
@@ -166,7 +168,6 @@ const LawContent = ({ item }) => {
           </g>
         </svg>
       </div>
-      <p className={styles.law__title}>{item.title}</p>
     </a>
   );
 };

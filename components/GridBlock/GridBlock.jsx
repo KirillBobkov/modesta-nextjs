@@ -53,7 +53,7 @@ export const GridBlock = React.memo(
           })}
           {hideButton && (
             <div
-              className={styles.grid__button}
+              className={`${styles.grid__button} ${opened ? styles['grid__button--opened'] : ''}`}
               onClick={() => {
                 if (opened) {
                   ref?.current?.scrollIntoView({
@@ -65,7 +65,7 @@ export const GridBlock = React.memo(
                 setOpened(!opened);
               }}
             >
-              {opened ? "Cвернуть" : "Посмотреть все"}
+              {opened ? "Cвернуть" : "Посмотреть всё"}
             </div>
           )}
         </ul>

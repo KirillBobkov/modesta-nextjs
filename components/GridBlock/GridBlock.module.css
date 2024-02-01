@@ -27,7 +27,6 @@
 .grid__item {
     width: 32%;
     padding: 20px;
-    overflow: hidden;
     background-color: var(--card-bg-color);
     border-radius: 30px;
 }
@@ -44,7 +43,7 @@
     max-height: 400px;
     overflow: hidden;
     /* z-index: -1; */
-    transition: all 300ms ease-in-out;
+    transition: all 800ms ease-in-out;
 }
 
 .grid__container::-webkit-scrollbar {
@@ -54,7 +53,7 @@
 
 .grid__container--visible {
     max-height: 2000px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 .grid__button {
@@ -63,10 +62,14 @@
     left: 0;
     text-align: center;
     font-weight: bold;
-    padding: 50px 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
     width: 100%;
-    background: linear-gradient(180deg, #00000000 0%, var(--bg-color) 90%);
+    background: linear-gradient(180deg, #00000000 0%, var(--bg-color) 80%);
     cursor: pointer;
+}
+
+.grid__button--opened {
+    padding: 20px 20px 20px 20px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -93,6 +96,7 @@
 
     .grid__container--visible {
         max-height: 5000px;
+        padding-bottom: 80px;
     }
     
     .grid__description {
