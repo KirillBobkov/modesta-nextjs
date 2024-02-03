@@ -11,11 +11,12 @@ export function ProductionBlock() {
       className={`${styles.production__container} ${containerStyles.container}`}
     >
       <ul>
-        {productionContent.map((production) => (
+        {productionContent.map((production, i) => (
           <VisibilityManager
             itemScope
             itemType="http://schema.org/ImageObject"
             as="li"
+            key={i}
             side="topmax"
             className={`${styles.production__item} ${shadowStyles.shadow}`}
             id="production"

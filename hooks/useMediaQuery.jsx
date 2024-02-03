@@ -12,8 +12,8 @@ export function useMediaQuery(query) {
   const [hasMatch, setHasMatches] = useState(getMatches(query));
   const [initialLoad, setInitialLoad] = useState(true);
 
-  const effect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
-  effect(() => {
+  // onli for static site generation
+  useLayoutEffect(() => {
     if (initialLoad) {
       setInitialLoad(false);
     }

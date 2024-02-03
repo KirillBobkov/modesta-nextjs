@@ -15,11 +15,12 @@ export function VideosBlock() {
       </h2>
       <p className={styles.videos__description}>{videosContent.description}</p>
       <ul className={styles.videos}>
-        {videosContent.videos.map((video) => {
+        {videosContent.videos.map((video, i) => {
           return (
             <VisibilityManager
               itemScope
               as="li"
+              key={i}
               itemType="http://schema.org/VideoObject"
               className={`${styles.videos__item} ${shadowStyles.shadow}`}
             >
