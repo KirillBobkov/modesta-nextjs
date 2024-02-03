@@ -67,6 +67,7 @@
 
 .mozaic__item {
   overflow: hidden;
+  cursor: pointer;
 }
 
 .mozaic__item .mozaic__image {
