@@ -60,7 +60,6 @@ export default function ProductionPage() {
   useScrollToLocation();
   return (
     <Layout>
-      <VisibilityManager side="opacity">
         <PreviewBlock video={processMp4} poster={process__poster.src} />
         <QuoteBlock
           title={quoteContent.title}
@@ -70,7 +69,6 @@ export default function ProductionPage() {
         <MozaicBlock images={firstMozaicImages} />
         <ProductionBlock />
         <MozaicBlock images={secondMozaicImages} />
-      </VisibilityManager>
     </Layout>
   );
 }
