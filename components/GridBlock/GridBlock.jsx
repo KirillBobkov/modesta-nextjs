@@ -20,14 +20,14 @@ export const GridBlock = React.memo(
     return (
       <section ref={ref} className={`${containerStyles.container}`}>
         {title && (
-          <VisibilityManager as="h2" classes={`${styles.grid__title}`} id={id}>
+          <VisibilityManager as="h2" className={`${styles.grid__title}`} id={id}>
             {title}
           </VisibilityManager>
         )}
         {description && (
           <VisibilityManager
             as="p"
-            classes={`${styles.grid__description}`}
+            className={`${styles.grid__description}`}
             id={id}
           >
             {description}
@@ -43,7 +43,7 @@ export const GridBlock = React.memo(
               <VisibilityManager
                 key={i}
                 as="li"
-                classes={`${styles.grid__item} ${shadowStyles.shadow} ${
+                className={`${styles.grid__item} ${shadowStyles.shadow} ${
                   clickable ? styles["grid__item--clickable"] : ""
                 }`}
               >

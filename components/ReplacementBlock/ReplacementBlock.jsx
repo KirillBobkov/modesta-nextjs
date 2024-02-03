@@ -22,9 +22,9 @@ import containerStyles from '../../styles/container.module.css';
 export function ReplacementBlock() {
     const isMobile = useMediaQuery(`(max-width: 767.98px)`);
     return (
-        <VisibilityManager classes={`${containerStyles.container} ${containerStyles['container--full-width']} ${styles['replacement-parts__container']}`}>
+        <VisibilityManager className={`${containerStyles.container} ${containerStyles['container--full-width']} ${styles['replacement-parts__container']}`}>
             <div className={styles['replacement-parts']} id="replacement-parts">
-                <VisibilityManager side="left" classes={styles['replacement-parts__title']}>Выбери свой стиль</VisibilityManager>
+                <VisibilityManager side="left" className={styles['replacement-parts__title']}>Выбери свой стиль</VisibilityManager>
                 <Carousel
                     className={styles['replacement-parts__carousel']}
                     showArrows={true}

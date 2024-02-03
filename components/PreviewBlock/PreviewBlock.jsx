@@ -34,8 +34,7 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
           {title || subTitle ? (
             <VisibilityManager
               as="div"
-              classes={styles.preview__title}
-              side="top"
+              className={styles.preview__title}
             >
               {title ? (
                 <h2 className={styles["preview__main-line"]}>{title}</h2>
@@ -53,7 +52,7 @@ export function PreviewBlock({ img, video, poster, title, subTitle }) {
     return (
       <section onClick={() => { videoRef?.current?.play(); }} className={styles["preview"]}>
           {title || subTitle ? (
-            <VisibilityManager as="div" classes={styles.preview__title} side="opacity">
+            <VisibilityManager side="opacity" as="div" className={styles.preview__title}>
               {title ? (
                 <h1 className={styles["preview__main-line"]}>{title}</h1>
               ) : null}

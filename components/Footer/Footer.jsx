@@ -8,9 +8,7 @@ import { VisibilityManager } from "../VisibilityManager";
 
 export default React.memo(() => {
   return (
-    <VisibilityManager
-      onInit={false}
-      side="opacity"
+    <footer
       itemScope
       itemType="http://schema.org/WPFooter"
     >
@@ -200,6 +198,6 @@ export default React.memo(() => {
           </div>
         </div>
       </div>
-    </VisibilityManager>
+    </footer>
   );
 });

@@ -28,11 +28,11 @@ const Block = React.memo((props) => {
     id,
     as: Tag = "section",
     inViewport,
-    styles,
+    style,
     enterCount,
     forwardedRef,
     children,
-    classes,
+    className,
     side = "topmax",
     speed = 1.5,
     onClick
@@ -55,10 +55,10 @@ const Block = React.memo((props) => {
       {...meta}
       id={id}
       ref={forwardedRef}
-      className={classes}
+      className={className}
       onClick={onClick}
       style={{
-        ...styles,
+        ...style,
         transition: `opacity ${speed}s, transform  ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
         opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
         transform:

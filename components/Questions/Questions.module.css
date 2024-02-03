@@ -19,6 +19,7 @@
     line-height: 24px;
     font-weight: bold;
     transition:  background-color 200ms ease-in-out;
+    white-space: pre-line;
 }
 
 .question__title:hover {
@@ -35,7 +36,6 @@
     transition: all 300ms ease-in-out;
     color: var(--secondary-font-color);
     white-space: pre-line;
-    text-indent: 0;
     opacity: 0;
 }
 

@@ -122,11 +122,11 @@ export function GetProthesisForm() {
   }
 
   return (
-    <section className={styles['get-prothesis-block']} style={{ backgroundImage: `url(${formBack.src})` }} id="submit">
+    <VisibilityManager className={styles['get-prothesis-block']} style={{ backgroundImage: `url(${formBack.src})` }} id="submit">
       <VisibilityManager
         as="div"
         onInit={false}
-        classes={`${styles['get-prothesis-form']} ${shadowStyles.shadow}`}
+        className={`${styles['get-prothesis-form']} ${shadowStyles.shadow}`}
       >
         <h2 className={styles['get-prothesis-form__title']}>Оставить заявку</h2>
         <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
@@ -249,6 +249,6 @@ export function GetProthesisForm() {
           </button>
         </form>
       </VisibilityManager>
-    </section>
+    </VisibilityManager>
   );
 }

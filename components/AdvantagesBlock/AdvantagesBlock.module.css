@@ -25,7 +25,7 @@
 }
 
 .advantages__content {
-    max-width: 350px;
+    max-width: 360px;
 }
 
 .advantages__item-text {
@@ -37,12 +37,14 @@
     font-weight: bold;
     /* color: var(--font-color); */
     color: #000000;
+    white-space: pre-line;
 }
 
 .advantages__item-description {
     width: 100%;
     /* color: var(--secondary-font-color); */
     color: #313131;
+    white-space: pre-line;
 }
 
 

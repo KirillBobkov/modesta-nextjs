@@ -11,7 +11,7 @@ export default function InfoPage() {
   useScrollToLocation();
   return (
     <Layout>
-      <VisibilityManager classes="page-offset">
+      <VisibilityManager className="page-offset">
         <BooksBlock />
         <LawsBlock />
       </VisibilityManager>

@@ -28,6 +28,7 @@ import workingProcess7_2 from "../public/images/working_process_2_7.jpg";
 import workingProcess8_2 from "../public/images/working_process_2_8.jpg";
 import workingProcess9_2 from "../public/images/working_process_2_9.jpg";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
+import { quoteContent } from "../content.ts";
 
 const secondMozaicImages = [
   workingProcess1,
@@ -62,9 +63,9 @@ export default function ProductionPage() {
       <VisibilityManager side="opacity">
         <PreviewBlock video={processMp4} poster={process__poster.src} />
         <QuoteBlock
-          title="Философия"
-          author="Илья Иванов, дизайнер протезов"
-          quote="«Вдохновением для меня послужили автомобильная пластика и бионический дизайн. Дизайн Модеста – это искусство воплощения функциональности, качества и эстетики. Вся суть лежит в ярко выраженных деталях, придающих форме привлекательный вид. Модеста – это шаг вперёд, к более функциональным, стильным и эффективным протезам, которые вписываются в современный облик и образ жизни людей.»"
+          title={quoteContent.title}
+          author={quoteContent.author}
+          quote={quoteContent.quote}
         />
         <MozaicBlock images={firstMozaicImages} />
         <ProductionBlock />

@@ -10,13 +10,12 @@ import { ProblemsBlock } from "../components/ProblemsBlock/ProblemsBlock";
 import { Questions } from "../components/Questions/Questions";
 import { TechBlock } from "../components/TechBlock/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { useMediaQuery } from "../hooks/useMediaQuery";
+import { header } from "../content";
 
 const rotateMp4 = "/images/rotate_5.mp4";
 
 export default function MainPage() {
   useScrollToLocation();
-  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
 
   return (
     <Layout>
@@ -24,15 +23,8 @@ export default function MainPage() {
         <PreviewBlock
           video={rotateMp4}
           poster={rotate_poster.src}
-          subTitle={
-            isMobile
-              ? `Разрабатываем протезы верхних 
-              конечностей, позволяющие 
-              восстановить утерянную функциональность`
-              : `Разрабатываем протезы верхних конечностей,
-            позволяющие восстановить утерянную функциональность`
-          }
-          title={"Протез для жизни"}
+          subTitle={header.subTitle}
+          title={header.title}
         />
         <AdvantagesBlock />
         <TechBlock />

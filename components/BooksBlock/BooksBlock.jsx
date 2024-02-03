@@ -1,68 +1,8 @@
 import React, { useState } from "react";
 import styles from "./BooksBlock.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-
-const booksContent = [
-  {
-    name: "Прикладная электрофизиология",
-    description:
-      "Полезна для тех кому интересно получить базовое понимание как работает биоэлектрический протез. Важно отметить наличие экспериментов и лабораторных работ, которые может повторить практически каждый.",
-    link: "https://ntcontest.ru/upload/iblock/b9b/b9b6120243ba5603f9ccc71b60b87c77.pdf",
-  },
-
-  {
-    name: "“Ампутации конечностей и протезы” Н. Н. Приоров (1941 год)",
-    description:
-      "Описанные знания о ампутации и последующего протезирования актуальны по сегодняшний день. Данную работу можно считать классикой презостроения.",
-    link: "https://www.booksite.ru/fulltext/174869/text.pdf",
-  },
-  {
-    name: "Погружение в мир электрофизиологии",
-    description:
-      "Подробное описания работы механизмов мышечного сокращения, с лабораторными работами.",
-    link: "https://kpfu.ru/staff_files/F_832641285/glava_2_sinaps_i_myshca__2_.pdf",
-  },
-  {
-    name: "“Вот они – роботы” А. Е. Кабринский (1972 год)",
-    description:
-      "Описание некого симбиоза человека и робота, который рождает такие продукты как современные биоэлектрические протезы.",
-    link: "https://sheba.spb.ru/za/vot-roboty-1972.htm",
-  },
-
-  {
-    name: "“Антропология киборга – Антон Круглов” (2023 год)",
-    description:
-      "Работа Антона Круглова заслуживающая внимания, полезный труд, знания которого можно брать и применять сразу после прочтения. Уделяется часть книги психологическому аспекту, техническим моментам и примерам пациентов.",
-    link: "https://static.insales-cdn.com/files/1/7512/26582360/original/antropologia_kiborga_sod_i_primeri_str_compressed.pdf",
-  },
-  {
-    name: "“DESIGN OF AN EXTERNALLY POWERED ARTIFICIAL ELBOW FOR ELECTROMYOGRAPHIC CONTROL” (1965 год)",
-    description:
-      "Описание разработки протеза локтя с управлением при помощи электромиографии. В документе приложены принципиальные электрические схемы, чертежи элементов протеза.",
-    link: "https://dspace.mit.edu/bitstream/handle/1721.1/150524/25500791-MIT.pdf",
-  },
-  {
-    name: "“Рука Юты” – S.C. Jacobsen R.B. Jerard ",
-    description:
-      "Оригинальная статья с подробным математическим описанием принципа работы. Полезно для начинающих протезостроителей.",
-    link: "https://dl.acm.org/doi/pdf/10.1145/800182.810395",
-  },
-
-  {
-    name: "“BIOELECTRIC CONTROL OF PROSTHESES” (1966 год)",
-    description:
-      "Cтроение протеза методом управления от датчиков ЭМГ. Способы управления таким протезом. Возможность получать обратную связь от протеза. Перспективы развития протезов в будущем",
-    link: "https://dspace.mit.edu/bitstream/handle/1721.1/4297/RLE-TR-446-04743378.pdf",
-  },
-
-  {
-    name: "“Making Hands: A History of Prosthetic Arms” (1919 год)",
-    description: "Первая в мире книга, руководство по протезированию.",
-    link: "https://books.google.ru/books?id=EID-DwAAQBAJ&pg=PA147&lpg=PA147&dq=Peter+Kyberd+Making+Hands+free&source=bl&ots=HPErdUUTNm&sig=ACfU3U2ql7dWWOWYaeXTmEY4LNm_3-NQHA&hl=ru&sa=X&ved=2ahUKEwiU_IT7r8mDAxX1PxAIHXdXCnw4UBDoAXoECAIQAw#v=onepage&q&f=false",
-  },
-];
+import { booksContent } from "../../content";
 
 const BookContent = ({ item }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -90,21 +30,19 @@ const BookContent = ({ item }) => {
       className={styles["books__item-wrapper"]}
       href={item.link}
     >
-      <p className={styles["books__item-info"]}>
-        <span
+      <div className={styles["books__item-info"]}>
+        <h3
           itemProp="disambiguatingDescription"
           className={styles["books__item-name"]}
         >
           {item.name}
-        </span>
+        </h3>
         <p
-          className={`${styles["books__item-description"]} ${
-            tooltipVisible ? styles["books__item-description--visible"] : ""
-          }`}
+          className={`${styles["books__item-description"]} ${tooltipVisible ? styles["books__item-description--visible"] : ""}`}
         >
           {item.description}
         </p>
-      </p>
+      </div>
       <div className={styles.books__img} {...handlers}>
         {!tooltipVisible ? (
           <svg
@@ -144,13 +82,11 @@ const BookContent = ({ item }) => {
 export const BooksBlock = () => {
   return (
     <GridBlock
-      title="Библиотека"
+      title={booksContent.title}
       id="books"
       clickable
-      description={
-        "Мы собрали для вас полезные материалы о протезировании, доступные для скачивания"
-      }
-      content={booksContent}
+      description={booksContent.description}
+      content={booksContent.blocks}
       renderItem={(item) => <BookContent item={item} />}
     />
   );

@@ -24,7 +24,6 @@ export const useFormValidation = (stateSchema, validationSchema, callback) => {
 
     const field = validationSchema[name]
 
-    console.log(name, value)
     let error = ""
 
     if (field.required) {

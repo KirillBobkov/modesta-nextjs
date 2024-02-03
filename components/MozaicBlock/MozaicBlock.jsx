@@ -7,7 +7,7 @@ export const MozaicBlock = React.memo(({ images }) => {
 
 const itemClass = (a) => `mozaic__item--${a + 1}`;
   return (
-    <VisibilityManager as="ul" classes={styles.mozaic}>
+    <VisibilityManager as="ul" className={styles.mozaic}>
       {images.map((img, i) => {
         return (
           <li

@@ -34,6 +34,7 @@
     opacity: 0;
     overflow: hidden;
     transition: all 500ms ease-in-out;
+    white-space: pre-line;
 }
 
 .books__item-description--visible  {
@@ -48,6 +49,7 @@
     width: 100%;
     font-weight: bold;
     margin-bottom: 5px;
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 768px) {

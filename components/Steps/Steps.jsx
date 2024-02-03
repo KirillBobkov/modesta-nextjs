@@ -26,7 +26,7 @@ export function Steps() {
             as="li"
             itemProp="step" itemScope 
             itemType="http://schema.org/HowToStep"
-            classes={`${styles.steps__item} ${shadowStyles.shadow}`}
+            className={`${styles.steps__item} ${shadowStyles.shadow}`}
           >
             <meta itemProp="position" content="1"/>
             <div className={styles.steps__number}>1</div>
@@ -53,7 +53,7 @@ export function Steps() {
             itemProp="step" itemScope 
             itemType="http://schema.org/HowToStep"
             as="li"
-            classes={`${styles.steps__item} ${shadowStyles.shadow}`}
+            className={`${styles.steps__item} ${shadowStyles.shadow}`}
           >
               <meta itemProp="position" content="2"/>
             <div className={styles.steps__number}>2</div>
@@ -117,7 +117,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
             itemProp="step" itemScope 
             itemType="http://schema.org/HowToStep"
             as="li"
-            classes={`${styles.steps__item} ${shadowStyles.shadow}`}
+            className={`${styles.steps__item} ${shadowStyles.shadow}`}
           >
               <meta itemProp="position" content="3"/>
             <div className={styles.steps__number}>3</div>
@@ -188,7 +188,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
             itemProp="step" itemScope 
             itemType="http://schema.org/HowToStep"
             as="li"
-            classes={`${styles.steps__item} ${shadowStyles.shadow}`}
+            className={`${styles.steps__item} ${shadowStyles.shadow}`}
           >
               <meta itemProp="position" content="4"/>
             <div className={styles.steps__number}>4</div>
@@ -330,7 +330,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
             itemProp="step" itemScope 
             itemType="http://schema.org/HowToStep"
             as="li"
-            classes={`${styles.steps__item} ${shadowStyles.shadow}`}
+            className={`${styles.steps__item} ${shadowStyles.shadow}`}
           >
               <meta itemProp="position" content="5"/>
             <div className={styles.steps__number}>5</div>
@@ -352,7 +352,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
             itemProp="step" itemScope 
             itemType="http://schema.org/HowToStep"
             as="li"
-            classes={`${styles.steps__item} ${shadowStyles.shadow}`}
+            className={`${styles.steps__item} ${shadowStyles.shadow}`}
           >
             <meta itemProp="position" content="6"/>
             <div className={styles.steps__number}>6</div>
@@ -395,7 +395,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
       <ul className={styles["steps-rows"]}>
         <VisibilityManager
           as="li"
-          classes={`${shadowStyles.shadow} ${styles["steps-rows__item"]}`}
+          className={`${shadowStyles.shadow} ${styles["steps-rows__item"]}`}
         >
           <div className={styles.steps__number}>1</div>
           <h3 className={styles["steps__description"]}>
@@ -426,7 +426,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
 
         <VisibilityManager
           as="li"
-          classes={`${shadowStyles.shadow} ${styles["steps-rows__item"]}`}
+          className={`${shadowStyles.shadow} ${styles["steps-rows__item"]}`}
         >
           <div className={styles.steps__number}>2</div>
           <h3 className={styles["steps__description"]}>
@@ -457,7 +457,7 @@ m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
 
         <VisibilityManager
           as="li"
-          classes={`${shadowStyles.shadow} ${styles["steps-rows__item"]}`}
+          className={`${shadowStyles.shadow} ${styles["steps-rows__item"]}`}
         >
           <div className={styles.steps__number}>3</div>
           <h3 className={styles["steps__description"]}>

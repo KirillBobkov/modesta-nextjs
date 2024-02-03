@@ -12,7 +12,8 @@ export function useMediaQuery(query) {
   const [hasMatch, setHasMatches] = useState(getMatches(query));
   const [initialLoad, setInitialLoad] = useState(true);
 
-  useLayoutEffect(() => {
+  const effect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+  effect(() => {
     if (initialLoad) {
       setInitialLoad(false);
     }

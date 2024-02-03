@@ -23,6 +23,7 @@
     font-weight: bold;
     text-align: center;
     position: relative;
+    white-space: pre-line;
 }
 
 .quote__description {
@@ -30,6 +31,7 @@
     margin-bottom: 30px;
      font-size: 16px;
     line-height: 25px;
+    white-space: pre-line;
     color: var(--secondary-font-color);
 }
 
@@ -39,6 +41,7 @@
     text-align: center;  
     font-weight: bold;
     color: var(--accent);
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 768px) {   

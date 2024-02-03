@@ -17,7 +17,7 @@ export function TechBlock() {
 
   return (
     <VisibilityManager
-      styles={theme !== undefined && isMobile !== undefined ? {
+      style={theme !== undefined && isMobile !== undefined ? {
         backgroundImage: `url(${
           theme === "light"
             ? isMobile
@@ -28,7 +28,7 @@ export function TechBlock() {
             : tech_background_black.src
         })`,
       }: {}}
-      classes={styles["tech-container"]}
+      className={styles["tech-container"]}
     >
       <h2 className={styles.tech__title} id="tech">
         Технические характеристики
@@ -36,8 +36,7 @@ export function TechBlock() {
       <ul className={styles.tech}>
         <VisibilityManager
           as="li"
-          side="bottom"
-          classes={`${styles.tech__item} shadow`}
+          className={`${styles.tech__item} shadow`}
         >
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
@@ -48,8 +47,7 @@ export function TechBlock() {
         </VisibilityManager>
         <VisibilityManager
           as="li"
-          side="bottom"
-          classes={`${styles.tech__item} shadow`}
+          className={`${styles.tech__item} shadow`}
         >
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
@@ -60,8 +58,7 @@ export function TechBlock() {
         </VisibilityManager>
         <VisibilityManager
           as="li"
-          side="bottom"
-          classes={`${styles.tech__item} shadow`}
+          className={`${styles.tech__item} shadow`}
         >
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
@@ -72,8 +69,7 @@ export function TechBlock() {
         </VisibilityManager>
         <VisibilityManager
           as="li"
-          side="bottom"
-          classes={`${styles.tech__item} shadow`}
+          className={`${styles.tech__item} shadow`}
         >
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>

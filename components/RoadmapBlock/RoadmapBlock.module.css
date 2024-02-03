@@ -75,7 +75,7 @@
 .period {
     position: relative;
     display: flex;
-    height: 450px;
+    height: 400px;
     background-color: var(--card-bg-color);
     border-radius: 30px;
     margin-bottom: 40px;
@@ -110,10 +110,12 @@
     line-height: 40px;
     margin-bottom: 15px;
     font-weight: bold;
+    white-space: pre-line;
 }
 
 .period__description {
     color: var(--secondary-font-color);
+    white-space: pre-line;
 }
 
 
@@ -147,6 +149,7 @@
         font-size: 28px;
         line-height: 32px;
         margin-bottom: 10px;
+        
     }
     
     .period__img {

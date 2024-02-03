@@ -50,6 +50,7 @@
     line-height: 36px;
     width: 100%;
     font-weight: bold;
+    white-space: pre-line;
 }
 
 .person__bio {
@@ -58,6 +59,7 @@
     text-align: left;
     width: 100%;
     color: var(--secondary-font-color);
+    white-space: pre-line;
 }
 
 .person__profession {
@@ -66,6 +68,7 @@
     text-align: left;
     width: 100%;
     margin-bottom: 10px;
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 768px) {
