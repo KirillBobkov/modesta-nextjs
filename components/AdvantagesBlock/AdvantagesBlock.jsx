@@ -1,3 +1,5 @@
+
+
 import styles from "./AdvantagesBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
@@ -22,7 +24,9 @@ export function AdvantagesBlock() {
               itemType="http://schema.org/ImageObject"
               as="li"
               side="topmax"
-              className={`${styles["advantages__item"]} ${adv.right ? styles["advantages__item--right"] : ""} ${shadowStyles.shadow}`}
+              className={`${styles["advantages__item"]} ${
+                adv.right ? styles["advantages__item--right"] : ""
+              } ${shadowStyles.shadow}`}
             >
               {isMobile !== undefined && (
                 <Image
@@ -40,7 +44,9 @@ export function AdvantagesBlock() {
                 <h3 itemProp="name" className={styles["advantages__item-text"]}>
                   {adv.title}
                 </h3>
-                <p className={styles["advantages__item-description"]}>{adv.description}</p>
+                <p className={styles["advantages__item-description"]}>
+                  {adv.description}
+                </p>
               </div>
             </VisibilityManager>
           );

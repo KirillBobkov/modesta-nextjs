@@ -5,7 +5,7 @@ import { useTheme } from "../hooks/useTheme";
 import shadowStyles from "../styles/shadow.module.css";
 import containerStyles from "../styles/container.module.css";
 import styles404 from "../styles/404.module.css";
-import { CustomLink } from "../components/CustomLink";
+import Link from "next/link";
 
 export default function NotFound() {
   useEffect(() => {
@@ -27,7 +27,8 @@ export default function NotFound() {
         Такой страницы не существует. Возможно, ссылка по которой вы перешли —
         неправильная.
       </p>
-      <CustomLink
+      <Link
+        prefetch={false}
         href={"/"}
         className={`${styles404["not-found-button"]} ${shadowStyles.shadow}`}
         id="not-found"
@@ -66,7 +67,7 @@ export default function NotFound() {
         <span className={styles404["not-found-button__text"]}>
           Перейти на главную страницу
         </span>
-      </CustomLink>
+      </Link>
     </section>
     </Layout>
   );
