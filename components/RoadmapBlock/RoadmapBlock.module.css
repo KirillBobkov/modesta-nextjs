@@ -13,10 +13,6 @@
     white-space: pre-line;
 }
 
-.roadmap__title {
-    margin-bottom: 30px;
-}
-
 .roadmap__line-container {
     width: 140px;
     flex-shrink: 0;

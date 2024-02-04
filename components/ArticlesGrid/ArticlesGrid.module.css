@@ -1,4 +1,4 @@
-.law__item {
+.article-grid__item {
     display: flex;
     gap: 3%;
     align-items: flex-start;
@@ -6,33 +6,34 @@
     height: 100%;
 }
 
-.law__img {
+.article-grid__img {
     margin-top: 7px;
     width: 7%;
+    
 }
 
-.law__img .law__svg {
+.article-grid__img .article-grid__svg {
+    width: 100%;
     display: flex;
     fill: var(--font-color);
 }
 
-.law__title {
+.article-grid__title {
     font-size: 16px;
     line-height: 25px;
     text-align: left;
+    font-weight: bold;
     width: 100%;
     margin-bottom: 5px;
-    color: var(--secondary-font-color);
     white-space: pre-line;
 }
 
-
 @media screen and (max-width: 768px) {
-    .law__item {
+    .article-grid__item {
         gap: 4%;
     }
     
-    .law__img {
+    .article-grid__img {
         width: 9%;
     }
 }

@@ -17,27 +17,28 @@ export function TechBlock() {
 
   return (
     <VisibilityManager
-      style={theme !== undefined && isMobile !== undefined ? {
-        backgroundImage: `url(${
-          theme === "light"
-            ? isMobile
-              ? tech_background_white_mobile.src
-              : tech_background_white.src
-            : isMobile
-            ? tech_background_black_mobile.src
-            : tech_background_black.src
-        })`,
-      }: {}}
+      style={
+        theme !== undefined && isMobile !== undefined
+          ? {
+              backgroundImage: `url(${
+                theme === "light"
+                  ? isMobile
+                    ? tech_background_white_mobile.src
+                    : tech_background_white.src
+                  : isMobile
+                  ? tech_background_black_mobile.src
+                  : tech_background_black.src
+              })`,
+            }
+          : {}
+      }
       className={styles["tech-container"]}
     >
-      <h2 className={styles.tech__title} id="tech">
+      <h2 className={`${containerStyles.container__title} ${containerStyles["container__title--always-center"]}`} id="tech">
         Технические характеристики
       </h2>
       <ul className={styles.tech}>
-        <VisibilityManager
-          as="li"
-          className={`${styles.tech__item} shadow`}
-        >
+        <VisibilityManager as="li" className={`${styles.tech__item} shadow`}>
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
               Максимальная ширина раскрытия хвата <br />
@@ -45,10 +46,7 @@ export function TechBlock() {
             </span>
           </div>
         </VisibilityManager>
-        <VisibilityManager
-          as="li"
-          className={`${styles.tech__item} shadow`}
-        >
+        <VisibilityManager as="li" className={`${styles.tech__item} shadow`}>
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
               Вес кисти — не более <br />
@@ -56,10 +54,7 @@ export function TechBlock() {
             </span>
           </div>
         </VisibilityManager>
-        <VisibilityManager
-          as="li"
-          className={`${styles.tech__item} shadow`}
-        >
+        <VisibilityManager as="li" className={`${styles.tech__item} shadow`}>
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
               Тяговый протез выдержит силу хвата свыше <br />
@@ -67,10 +62,7 @@ export function TechBlock() {
             </span>
           </div>
         </VisibilityManager>
-        <VisibilityManager
-          as="li"
-          className={`${styles.tech__item} shadow`}
-        >
+        <VisibilityManager as="li" className={`${styles.tech__item} shadow`}>
           <div className={styles.tech__content}>
             <span className={styles.tech__text}>
               Угол ротации (вращения) устройства

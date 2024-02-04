@@ -10,10 +10,12 @@ import { videosContent } from "../../content/video.js";
 export function VideosBlock() {
   return (
     <VisibilityManager className={containerStyles.container}>
-      <h2 className={styles.videos__title} id="videos">
-        {videosContent.title}
-      </h2>
-      <p className={styles.videos__description}>{videosContent.description}</p>
+      <div className={styles.videos__content}>
+        <h2 className={containerStyles.container__title} id="videos">
+          {videosContent.title}
+        </h2>
+        <p className={styles.videos__description}>{videosContent.description}</p>
+      </div>
       <ul className={styles.videos}>
         {videosContent.videos.map((video, i) => {
           return (

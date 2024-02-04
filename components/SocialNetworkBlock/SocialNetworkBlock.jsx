@@ -9,12 +9,12 @@ import { socialNetworkContent } from "../../content/socialNetwork.js";
 export function SocialNetworkBlock() {
   return (
     <VisibilityManager className={containerStyles.container}>
-      <h2 className={styles.socialNetwork__title} id="socialNetwork">
-       {socialNetworkContent.title}
-      </h2>
-      <p className={styles.socialNetwork__description}>
-        {socialNetworkContent.description}
-      </p>
+      <div className={styles.socialNetwork__content}>
+        <h2 className={containerStyles.container__title} id="social-networks">
+          {socialNetworkContent.title}
+        </h2>
+        <p className={styles.socialNetwork__description}>{socialNetworkContent.description}</p>
+      </div>
       <ul className={styles.socialNetwork}>
         {socialNetworkContent.blocks.map((a) => {
           return (
@@ -31,7 +31,7 @@ export function SocialNetworkBlock() {
                   ym(96028442, "reachGoal", a.yandexGoal);
                 }}
                 href={a.link}
-                className={styles['socialNetwork__item-text']}
+                className={styles["socialNetwork__item-text"]}
               >
                 {a.title}
               </a>

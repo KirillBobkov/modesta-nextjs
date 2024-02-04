@@ -4,18 +4,15 @@ import React from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
-import { BooksBlock } from "../components/BooksBlock/BooksBlock.jsx";
-import { LawsBlock } from "../components/LawsBlock/LawsBlock.jsx";
-import { ArticlesGrid } from "../components/ArticlesGrid/ArticlesGrid";
+import { ArticleBlock } from "../components/ArticleBlock/ArticleBlock.js";
+import { typesOfProthesis } from "../content/articles/typesOfProthesis.js";
 
-export default function InfoPage() {
+export default () => {
   useScrollToLocation();
   return (
     <Layout>
       <VisibilityManager className="page-offset">
-        <BooksBlock />
-        <ArticlesGrid />
-        <LawsBlock />
+        <ArticleBlock articleContent={typesOfProthesis}/>
       </VisibilityManager>
     </Layout>
   );

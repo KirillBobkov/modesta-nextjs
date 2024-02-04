@@ -75,6 +75,7 @@ export default React.memo(() => {
                 <Image
                   alt="Логотип Сколково"
                   src={iconSK}
+                  loading="lazy"
                   className={styles.footerimgSK}
                 />
               </a>
@@ -85,6 +86,7 @@ export default React.memo(() => {
                 <Image
                   alt="45ru логотип"
                   src={icon45ru}
+                  loading="lazy"
                   className={styles["footer__smi-link"]}
                 />
               </a>
@@ -94,6 +96,7 @@ export default React.memo(() => {
                   src={"https://s.ura.news/img/logos/logo_07_2020.svg"}
                   width="50"
                   height="30"
+                  loading="lazy"
                   className={styles["footer__smi-link"]}
                 />
               </a>
@@ -148,8 +151,6 @@ export default React.memo(() => {
             </a>
             <a target="_blank" href="https://ok.ru/group/70000004855153">
               <svg
-                data-name="Слой 1"
-                id="Слой_1"
                 width="48"
                 height="48"
                 viewBox="0 0 96 96"

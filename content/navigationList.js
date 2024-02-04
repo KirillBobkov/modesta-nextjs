@@ -44,6 +44,10 @@ export const  navigationTree = [
                 value: 'Библиотека',
             },
             {
+                path: '/info#articles',
+                value: 'Статьи',
+            },
+            {
                 path: '/info#laws',
                 value: 'Законодательство',
             },
@@ -60,8 +64,8 @@ export const  navigationTree = [
                 value: 'О компании',
             },
             {
-                path: '/about-us#articles',
-                value: 'Статьи на интернет-ресурсах',
+                path: '/about-us#social-networks',
+                value: 'Интернет-ресурсы',
             },
             {
                 path: '/about-us#videos',

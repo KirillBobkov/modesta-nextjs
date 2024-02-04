@@ -8,14 +8,6 @@
     flex-wrap: wrap;
 }
 
-.grid__title {
-    text-align: center;
-    font-size: 52px;
-    line-height: 60px;
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
 .grid__description {
     width: 50%;
     margin: 0 auto;
@@ -25,10 +17,21 @@
 }
 
 .grid__item {
-    width: 32%;
     padding: 20px;
     background-color: var(--card-bg-color);
     border-radius: 30px;
+}
+
+.grid__item--2-columns {
+    width: 48%;
+}
+
+.grid__item--3-columns {
+    width: 32%;
+}
+
+.grid__item--4-columns {
+    width: 23.5%;
 }
 
 .grid__item--clickable {
@@ -83,16 +86,6 @@
         padding: 20px;
     }
 
-    .grid__title {
-        max-width: 350px;
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: left;
-        font-size: 28px;
-        line-height: 32px;
-        margin-bottom: 10px;
-    }
-
     .grid__container {
         transition: all 300ms ease-in-out;
     }
@@ -100,6 +93,10 @@
     .grid__container--visible {
         max-height: 4800px;
         padding-bottom: 80px;
+    }
+
+    .grid__title {
+        padding: 0 20px;
     }
     
     .grid__description {

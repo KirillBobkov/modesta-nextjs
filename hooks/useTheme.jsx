@@ -6,14 +6,14 @@ export function useTheme() {
     useEffect(() => {
       const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-      if (prefersDarkScheme.matches) {
-        document.documentElement.setAttribute("theme", "dark");
-        setTheme("dark");
+      if (!prefersDarkScheme.matches) {
+        document.documentElement.setAttribute("theme", "light");
+        setTheme("light");
       } else {
         if (document.documentElement.hasAttribute("theme")) {
           document.documentElement.removeAttribute("theme");
         }
-        setTheme("light");
+        setTheme("dark");
       }
     }, [theme]);
   

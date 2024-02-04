@@ -10,7 +10,7 @@ export function TeamBlock() {
   return (
     <VisibilityManager className={containerStyles.container}>
       <h2
-        className={`${containerStyles.container__title} ${styles['team-title']}`}
+        className={`${containerStyles.container__title}`}
         id="team"
       >
         {teamContent.title}

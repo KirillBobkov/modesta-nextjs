@@ -4,6 +4,12 @@ import styles from "./GridBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 
+const widthMapper = {
+  2: 'grid__item--2-columns',
+  3: 'grid__item--3-columns',
+  4: 'grid__item--4-columns',
+  5: 'grid__item--5-columns',
+}
 export const GridBlock = React.memo(
   ({
     content,
@@ -11,6 +17,7 @@ export const GridBlock = React.memo(
     title,
     description,
     hideButton,
+    columns = 3,
     id,
     clickable = false,
   }) => {
@@ -20,7 +27,7 @@ export const GridBlock = React.memo(
     return (
       <section ref={ref} className={`${containerStyles.container}`}>
         {title && (
-          <VisibilityManager as="h2" className={`${styles.grid__title}`} id={id}>
+          <VisibilityManager as="h2" className={`${styles.grid__title} ${containerStyles.container__title}`} id={id}>
             {title}
           </VisibilityManager>
         )}
@@ -39,11 +46,12 @@ export const GridBlock = React.memo(
           } ${opened ? styles["grid__container--visible"] : ""}`}
         >
           {content.map((item, i) => {
+            const columnsClass = widthMapper[columns];
             return (
               <VisibilityManager
                 key={i}
                 as="li"
-                className={`${styles.grid__item} ${shadowStyles.shadow} ${
+                className={`${styles.grid__item} ${styles[`${columnsClass}`]} ${shadowStyles.shadow} ${
                   clickable ? styles["grid__item--clickable"] : ""
                 }`}
               >

@@ -1,6 +1,7 @@
 .navigation {
     flex-grow: 0;
     position: relative;
+    background-color: var(--card-bg-color);
 }
 
 .navigation__container {
@@ -40,13 +41,13 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: -1;
-    top: 0px;
+    top: 20px;
     padding: 10px 20px 20px;
     display: flex;
     left: 0;
     flex-direction: column;
     gap: 10px;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg-color);
     transition: all 500ms ease-in-out;
 }
 
@@ -60,11 +61,11 @@
     display: flex;
     align-items: center;
     color: var(--font-color);
-    background-color: var(--bg-color);
+    background-color: var(--card-bg-color);
     font-size: 12px;
     padding: 10px 20px;
     text-decoration: none;
-    transition: all 0.2s linear;
+    transition: opacity 0.2s linear;
     border: none;
     cursor: pointer;
     text-transform: uppercase;

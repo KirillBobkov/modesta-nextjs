@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import { BurgerButton } from "../BurgerButton/BurgerButton.jsx";
 import Link from "next/link";
 import styles from "./Navigation.module.css";
-import { navigationTree } from "./navigationList.js";
+import { navigationTree } from "../../content/navigationList.js";
 import { useRouter } from "next/router.js";
 
 const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {

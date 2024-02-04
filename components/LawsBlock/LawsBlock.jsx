@@ -54,6 +54,7 @@ export const LawsBlock = () => {
           description={lawsContent.description}
           id="laws"
           hideButton
+          columns={3}
           clickable
           content={lawsContent.blocks}
           renderItem={(item) => <LawContent item={item} />}

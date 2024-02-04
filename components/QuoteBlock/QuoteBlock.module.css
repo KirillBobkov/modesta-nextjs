@@ -16,16 +16,6 @@
     justify-content: center;
 }
 
-.quote__title {
-    font-size: 52px;
-    line-height: 60px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    white-space: pre-line;
-}
-
 .quote__description {
     text-align: center;
     margin-bottom: 30px;
@@ -49,19 +39,6 @@
         margin: 0 auto;
         width: 100%;
     }
-
-    .quote__title {
-        width: 100%;
-        font-size: 32px;
-        line-height: 38px;
-        margin-bottom: 20px;
-        text-align: left;
-    }
-
-    
-.quote__title::before {
-    top: -40px;
-}
 
     .quote__content {
         padding: 30px 30px 70px;

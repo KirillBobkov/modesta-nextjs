@@ -23,6 +23,7 @@ export function AdvantagesBlock() {
               itemScope
               itemType="http://schema.org/ImageObject"
               as="li"
+              key={i}
               side="topmax"
               className={`${styles["advantages__item"]} ${
                 adv.right ? styles["advantages__item--right"] : ""
@@ -34,7 +35,7 @@ export function AdvantagesBlock() {
                   itemProp="contentUrl"
                   className={styles["advantage__item-image"]}
                   src={isMobile ? adv.mobileImg : adv.desktopImg}
-                  objectPosition={adv.right ? "left top" : "right top"}
+                  objectPosition={"center top"}
                   objectFit="cover"
                   alt={`Изображение протеза #${i}`}
                   fill

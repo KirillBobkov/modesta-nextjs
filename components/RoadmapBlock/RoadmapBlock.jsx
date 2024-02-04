@@ -10,7 +10,7 @@ export default function RoadmapBlock() {
   return (
     <VisibilityManager className={containerStyles.container}>
       <h2
-        className={`${containerStyles.container__title} ${styles.roadmap__title}`}
+        className={`${containerStyles.container__title}`}
         id="articles"
       >
         {roadmapContent.title}
