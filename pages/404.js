@@ -15,8 +15,16 @@ export default function NotFound() {
   }, []);
 
   useTheme();
+
+  const metaConfig = {
+    pageTitle: "Страница 404",
+    title: "Модеста — Протез руки",
+    description: "Официальный сайт компании Модеста. Разрабатываем протезы для предплечья и кисти. Помогаем получить протез бесплатно",
+    keywords: "предплечье реабилитация протез руки разработка дизайн сколково курган модеста  сво травма рука протезирование",
+  };
+
   return (
-    <Layout>
+    <Layout metaConfig={metaConfig}>
     <section className={styles404["not-found"]}>
       <h1
         className={`${containerStyles.container__title} ${styles404["not-found__title"]} `}

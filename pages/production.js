@@ -57,9 +57,17 @@ const firstMozaicImages = [
 const processMp4 = "/images/process.mp4";
 
 export default function ProductionPage() {
+  const metaConfig= {
+    pageTitle: "Разработка эффективного протеза",
+    title: "Модеста — О технологии производства и разработке протезов",
+    description:
+      "При разработке протезов рук мы сталкиваемся с множеством трудностей, связанных с обеспечением их функциональности, способности захвата, удобства использования и долговечности, и успешно их решаем.",
+    keywords:
+      "разработка технологии 3Д печать 3D печать дизайн сколково курган культеприёмная гильза клешня",
+  }
   useScrollToLocation();
   return (
-    <Layout>
+    <Layout metaConfig={metaConfig}>
         <PreviewBlock video={processMp4} poster={process__poster.src} />
         <QuoteBlock
           title={quoteContent.title}

@@ -9,9 +9,16 @@ import { LawsBlock } from "../components/LawsBlock/LawsBlock.jsx";
 import { ArticlesGrid } from "../components/ArticlesGrid/ArticlesGrid";
 
 export default function InfoPage() {
+  const metaConfig = {
+    pageTitle: "Законодательство, полезные статьи, и книги о протезировании",
+    title: "Модеста — книги и статьи о протезировании",
+    description:
+      "Все ответы на вопросы о протезировании. Мы собрали наиболее часто задаваемые вопросы и подготовили подробные ответы на них. А ссылки на полезные ресурсы, предоставленные нами, помогут вам получить еще больше информации по этой теме.",
+    keywords: "habr vc.ru dzen vk telegram youtube видео статьи о протезировании вопрос и ответы FAQ ",
+  };
   useScrollToLocation();
   return (
-    <Layout>
+    <Layout metaConfig={metaConfig}>
       <VisibilityManager className="page-offset">
         <BooksBlock />
         <ArticlesGrid />

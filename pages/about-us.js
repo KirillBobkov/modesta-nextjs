@@ -9,13 +9,17 @@ import { VideosBlock } from "../components/VideosBlock/VideosBlock.jsx";
 import { missionContent } from "../content/mission.js";
 
 export default function AboutUsPage() {
+  const metaConfig = {
+    pageTitle: "Откуда появилась компания Модеста? Когда попали в Сколково? Как давно производим протезы? Все ответы здесь",
+    title: "Модеста — вдохновляющий и непредсказуемый путь в мире протезирования",
+    description:
+      "С самых первых дней нашей работы мы стремимся помочь людям вернуться к полноценной жизни. Мы создаём протезы, основываясь на новейших технологиях и исследованиях. И сегодня мы с уверенностью можем сказать, что наши усилия были не напрасны. Мы не останавливаемся на достигнутом и продолжаем развиваться, чтобы предлагать вам еще более качественные и удобные протезы. Наша история продолжается, и мы приглашаем вас стать ее частью!",
+    keywords: "время стартап протезирование протезы временной путь история компании развитие сколково телемедфорум резиденты",
+  };
   return (
-    <Layout>
+    <Layout metaConfig={metaConfig}>
       <VisibilityManager className="page-offset" side="opacity">
-        <HistoryBlock
-          title={missionContent.title}
-          description={missionContent.description}
-        />
+        <HistoryBlock title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
         <VideosBlock />
         <RoadmapBlock />

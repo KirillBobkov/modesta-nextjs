@@ -17,15 +17,17 @@ const rotateMp4 = "/images/rotate_5.mp4";
 export default function MainPage() {
   useScrollToLocation();
 
+  const metaConfig = {
+    pageTitle: "Инновационный протез, меняющий правила игры",
+    title: "Модеста — Протез руки",
+    description: "Официальный сайт компании Модеста. Разрабатываем протезы для предплечья и кисти. Помогаем получить протез бесплатно",
+    keywords: "протез руки разработка сво травма рука предплечье дизайн сколково курган модеста реабилитация протезирование",
+  };
+
   return (
-    <Layout>
+    <Layout metaConfig={metaConfig}>
       <VisibilityManager side="opacity">
-        <PreviewBlock
-          video={rotateMp4}
-          poster={rotate_poster.src}
-          subTitle={headerContent.subTitle}
-          title={headerContent.title}
-        />
+        <PreviewBlock video={rotateMp4} poster={rotate_poster.src} subTitle={headerContent.subTitle} title={headerContent.title} />
         <AdvantagesBlock />
         <TechBlock />
         <ReplacementBlock />
