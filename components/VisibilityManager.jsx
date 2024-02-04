@@ -2,21 +2,15 @@ import React from "react";
 import handleViewport from "react-in-viewport";
 
 const sideMap = {
-  left: "translateX(-20px)",
-  right: "translateX(20px)",
-  bottom: "translateY(-20px)",
-  top: "translateY(20px)",
-  topmax: "translateY(100px)",
-  opacity: "translateY(0)",
+  top: "0",
+  topmax: "0",
+  opacity: "0",
 };
 
 const sideMapNotVisible = {
-  left: "translateX(0)",
-  right: "translateX(0)",
-  bottom: "translateY(0)",
-  top: "translateY(0)",
-  topmax: "translateY(0)",
-  opacity: "translateY(0)",
+  top: "20px",
+  topmax: "100px",
+  opacity: "0",
 };
 
 const Block = React.memo((props) => {
@@ -50,6 +44,14 @@ const Block = React.memo((props) => {
     meta.itemProp = itemProp;
   }
 
+  const animationStyles = {
+    ...style,
+    transition: `top ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
+    opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
+    position: "relative",
+    top: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
+  }
+
   return (
     <Tag
       {...meta}
@@ -57,15 +59,7 @@ const Block = React.memo((props) => {
       ref={forwardedRef}
       className={className}
       onClick={onClick}
-      style={{
-        ...style,
-        transition: `opacity ${speed}s, transform  ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
-        opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
-        transform:
-          inViewport || (onInit && enterCount > 0)
-            ? sideMapNotVisible[side]
-            : sideMap[side],
-      }}
+      style={animationStyles}
     >
       {children}
     </Tag>

@@ -35,7 +35,6 @@ const Question = ({ title, answer }) => {
       itemProp="mainEntity"
       itemType="https://schema.org/Question"
       as="li"
-      side="topmax"
       className={styles.question}
     >
       <div

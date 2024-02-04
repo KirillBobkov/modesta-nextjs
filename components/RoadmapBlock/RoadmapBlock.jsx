@@ -42,7 +42,6 @@ function PeriodComponent({ title, description, image }) {
       itemScope
       itemType="http://schema.org/ImageObject"
       className={`${styles.period} ${shadowStyles.shadow}`}
-      side="topmax"
     >
       <div
         className={`${styles.roadmap__point} ${styles["period__time-point"]}`}

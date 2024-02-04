@@ -24,7 +24,6 @@ export function AdvantagesBlock() {
               itemType="http://schema.org/ImageObject"
               as="li"
               key={i}
-              side="topmax"
               className={`${styles["advantages__item"]} ${
                 adv.right ? styles["advantages__item--right"] : ""
               } ${shadowStyles.shadow}`}

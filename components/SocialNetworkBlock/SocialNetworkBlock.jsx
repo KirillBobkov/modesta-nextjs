@@ -21,7 +21,6 @@ export function SocialNetworkBlock() {
             <VisibilityManager
               key={a.link}
               style={{ backgroundImage: `url(${a.image.src})` }}
-              side="topmax"
               as="li"
               className={`${styles.socialNetwork__item} ${shadowStyles.shadow}`}
             >

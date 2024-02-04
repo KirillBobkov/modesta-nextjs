@@ -24,7 +24,7 @@ export function ReplacementBlock() {
     return (
         <VisibilityManager className={`${containerStyles.container} ${containerStyles['container--full-width']} ${styles['replacement-parts__container']}`}>
             <div className={styles['replacement-parts']} id="replacement-parts">
-                <VisibilityManager side="left" className={styles['replacement-parts__title']}>Выбери свой стиль</VisibilityManager>
+                <VisibilityManager className={styles['replacement-parts__title']}>Выбери свой стиль</VisibilityManager>
                 <Carousel
                     className={styles['replacement-parts__carousel']}
                     showArrows={true}

@@ -11,7 +11,7 @@ export const MozaicBlock = React.memo(({ images }) => {
   };
 
   return (
-    <ul className={styles.mozaic}>
+    <VisibilityManager as="ul"className={styles.mozaic}>
       {images.map((img, i) => {
         return (
           <li key={i} className={`${styles.mozaic__item} ${styles[`mozaic__item--${i + 1}`]}`}>
@@ -36,6 +36,6 @@ export const MozaicBlock = React.memo(({ images }) => {
           </li>
         );
       })}
-    </ul>
+    </VisibilityManager>
   );
 });

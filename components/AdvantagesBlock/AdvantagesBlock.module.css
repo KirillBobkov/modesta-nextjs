@@ -13,6 +13,7 @@
     transition: all 0.2s ease-in-out;
     background-repeat: no-repeat;
     background-position: 10% center;
+    z-index: 0;
 }
 
 .advantages__item--right {

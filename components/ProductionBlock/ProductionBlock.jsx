@@ -17,7 +17,6 @@ export function ProductionBlock() {
             itemType="http://schema.org/ImageObject"
             as="li"
             key={i}
-            side="topmax"
             className={`${styles.production__item} ${shadowStyles.shadow}`}
             id="production"
           >
