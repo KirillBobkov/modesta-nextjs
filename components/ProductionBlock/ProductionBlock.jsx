@@ -3,7 +3,7 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import Image from "next/image.js";
-import { productionContent } from "../../content.ts";
+import { productionContent } from "../../content/production.js";
 
 export function ProductionBlock() {
   return (

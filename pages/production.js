@@ -28,7 +28,7 @@ import workingProcess7_2 from "../public/images/working_process_2_7.jpg";
 import workingProcess8_2 from "../public/images/working_process_2_8.jpg";
 import workingProcess9_2 from "../public/images/working_process_2_9.jpg";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
-import { quoteContent } from "../content.ts";
+import { quoteContent } from "../content/quote.js";
 
 const secondMozaicImages = [
   workingProcess1,

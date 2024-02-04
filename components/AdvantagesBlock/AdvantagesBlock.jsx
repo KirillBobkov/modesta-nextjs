@@ -6,7 +6,7 @@ import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
-import { advantages } from "../../content.ts";
+import { advantagesContent } from '../../content/advantages.js';
 
 export function AdvantagesBlock() {
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
@@ -14,10 +14,10 @@ export function AdvantagesBlock() {
   return (
     <VisibilityManager className={containerStyles.container}>
       <h2 className={containerStyles.container__title} id="advantages">
-        {advantages.title}
+        {advantagesContent.title}
       </h2>
       <ul className={styles["advantages"]}>
-        {advantages.blocks.map((adv, i) => {
+        {advantagesContent.blocks.map((adv, i) => {
           return (
             <VisibilityManager
               itemScope

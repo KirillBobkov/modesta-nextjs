@@ -4,7 +4,7 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 import styles from "./SocialNetworkBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
-import { socialNetworkContent } from "../../content.ts";
+import { socialNetworkContent } from "../../content/socialNetwork.js";
 
 export function SocialNetworkBlock() {
   return (

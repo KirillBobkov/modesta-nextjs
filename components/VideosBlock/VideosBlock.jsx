@@ -5,7 +5,7 @@ import styles from "./VideosBlock.module.css";
 
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
-import { videosContent } from "../../content.ts";
+import { videosContent } from "../../content/video.js";
 
 export function VideosBlock() {
   return (

@@ -4,7 +4,7 @@ import styles from "./RoadmapBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager";
-import { roadmapContent } from "../../content";
+import { roadmapContent } from "../../content/roadmap";
 
 export default function RoadmapBlock() {
   return (

@@ -4,7 +4,7 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
-import { problemsContent } from "../../content.ts";
+import { problemsContent } from "../../content/problems.js";
 
 export function ProblemsBlock() {
   return (

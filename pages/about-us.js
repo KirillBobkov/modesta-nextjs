@@ -6,7 +6,7 @@ import { TeamBlock } from "../components/TeamBlock/TeamBlock.jsx";
 import { HistoryBlock } from "../components/HistoryBlock/HistoryBlock.jsx";
 import { SocialNetworkBlock } from "../components/SocialNetworkBlock/SocialNetworkBlock.jsx";
 import { VideosBlock } from "../components/VideosBlock/VideosBlock.jsx";
-import { missionContent } from "../content.ts";
+import { missionContent } from "../content/mission.js";
 
 export default function AboutUsPage() {
   return (

@@ -4,7 +4,7 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 import styles from "./TeamBlock.module.css";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
-import { teamContent } from "../../content.ts";
+import { teamContent } from "../../content/team.js";
 
 export function TeamBlock() {
   return (

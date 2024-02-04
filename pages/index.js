@@ -10,7 +10,7 @@ import { ProblemsBlock } from "../components/ProblemsBlock/ProblemsBlock";
 import { Questions } from "../components/Questions/Questions";
 import { TechBlock } from "../components/TechBlock/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { header } from "../content";
+import { headerContent } from "../content/header.js";
 
 const rotateMp4 = "/images/rotate_5.mp4";
 
@@ -23,8 +23,8 @@ export default function MainPage() {
         <PreviewBlock
           video={rotateMp4}
           poster={rotate_poster.src}
-          subTitle={header.subTitle}
-          title={header.title}
+          subTitle={headerContent.subTitle}
+          title={headerContent.title}
         />
         <AdvantagesBlock />
         <TechBlock />

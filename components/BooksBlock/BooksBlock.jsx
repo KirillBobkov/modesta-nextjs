@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./BooksBlock.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-import { booksContent } from "../../content";
+import { booksContent } from "../../content/books";
 
 const BookContent = ({ item }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);

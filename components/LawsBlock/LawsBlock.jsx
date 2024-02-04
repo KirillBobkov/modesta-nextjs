@@ -1,6 +1,6 @@
 import styles from "./LawsBlock.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
-import { lawsContent } from "../../content";
+import { lawsContent } from "../../content/laws";
 
 const LawContent = ({ item }) => {
   return (

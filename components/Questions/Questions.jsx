@@ -4,7 +4,7 @@ import styles from "./Questions.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
-import { questionsContent } from "../../content.ts";
+import { questionsContent } from "../../content/questions.js";
 
 export const Questions = () => {
   

@@ -5,95 +5,75 @@ import styles from "./Navigation.module.css";
 import { navigationTree } from "./navigationList.js";
 import { useRouter } from "next/router.js";
 
-const NavLinkComponent = React.memo(
-  ({ item, setMobileMenuOpened, position }) => {
-    const [hoverOpened, setHoverOpened] = useState(false);
-    const router = useRouter();
+const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
+  const [hoverOpened, setHoverOpened] = useState(false);
+  const router = useRouter();
 
-    const closeMenu = useCallback((path) => {
-      setMobileMenuOpened(false);
-      window?.scrollTo(0, 0);
-      ym(96028442, "reachGoal", path);
-    }, []);
+  const closeMenu = useCallback((path) => {
+    setMobileMenuOpened(false);
+    window?.scrollTo(0, 0);
+    ym(96028442, "reachGoal", path);
+  }, []);
 
-    const handleMouseEnter = useCallback(() => {
-      setHoverOpened(true);
-    }, []);
+  const handleMouseEnter = useCallback(() => {
+    setHoverOpened(true);
+  }, []);
 
-    const handleMouseLeave = useCallback(() => {
-      setHoverOpened(false);
-    }, []);
+  const handleMouseLeave = useCallback(() => {
+    setHoverOpened(false);
+  }, []);
 
-    if (item.childs) {
-      return (
-        <li
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={styles.navigation__parent}
+  if (item.childs) {
+    return (
+      <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles.navigation__parent}>
+        <Link
+          itemProp="url"
+          prefetch={false}
+          className={`${router.pathname === item.parent.path ? styles["navigation__item--active"] : ""} ${styles.navigation__item}`}
+          onClick={() => closeMenu(item.parent.path)}
+          href={item.parent.path}
         >
-          <Link
-            itemProp="url"
-            prefetch={false}
-            className={`${
-              router.pathname === item.parent.path
-                ? styles["navigation__item--active"]
-                : ""
-            } ${styles.navigation__item}`}
-            onClick={() => closeMenu(item.parent.path)}
-            href={item.parent.path}
-          >
-            <span itemProp="name">{item.parent.value}</span>
-          </Link>
-          <div
-            className={`${styles.navigation__submenu} ${
-              hoverOpened ? styles["navigation__submenu--visible"] : ""
-            } shadow`}
-          >
-            {item.childs.map((child) => (
-              <Link
-                prefetch={false}
-                key={child.value}
-                className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
-                onClick={() => closeMenu(item.parent.path)}
-                href={child.path}
-              >
-                {" "}
-                {child.value}
-              </Link>
-            ))}
-          </div>
-        </li>
-      );
-    } else {
-      return (
-        <li>
-          <Link
-            itemProp="url"
-            prefetch={false}
-            className={`${
-              router.pathname === item.parent.path
-                ? styles["navigation__item--active"]
-                : ""
-            } ${styles.navigation__item}`}
-            onClick={() => closeMenu(item.parent.path)}
-            href={item.parent.path}
-          >
-            <span itemProp="name">{item.parent.value}</span>
-          </Link>
-        </li>
-      );
-    }
+          <span itemProp="name">{item.parent.value}</span>
+        </Link>
+        <div className={`${styles.navigation__submenu} ${hoverOpened ? styles["navigation__submenu--visible"] : ""} shadow`}>
+          {item.childs.map((child) => (
+            <Link
+              prefetch={false}
+              key={child.value}
+              className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
+              onClick={() => closeMenu(item.parent.path)}
+              href={child.path}
+            >
+              {" "}
+              {child.value}
+            </Link>
+          ))}
+        </div>
+      </li>
+    );
+  } else {
+    return (
+      <li className={styles.navigation__parent}>
+        <Link
+          itemProp="url"
+          prefetch={false}
+          className={`${router.pathname === item.parent.path ? styles["navigation__item--active"] : ""} ${styles.navigation__item}`}
+          onClick={() => closeMenu(item.parent.path)}
+          href={item.parent.path}
+        >
+          <span itemProp="name">{item.parent.value}</span>
+        </Link>
+      </li>
+    );
   }
-);
+});
 
 export const Navigation = React.memo(({ isMobile }) => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
 
   const handleMobileMenu = useCallback((opened) => {
     setMobileMenuOpened(opened);
-    opened
-      ? document.documentElement.classList.add("mobile-menu-opened")
-      : document.documentElement.classList.remove("mobile-menu-opened");
+    opened ? document.documentElement.classList.add("mobile-menu-opened") : document.documentElement.classList.remove("mobile-menu-opened");
   }, []);
 
   const handleBurgerClick = useCallback((newState) => {
@@ -102,25 +82,9 @@ export const Navigation = React.memo(({ isMobile }) => {
 
   return (
     <header className={styles.navigation}>
-      <nav
-        itemScope
-        itemType="http://schema.org/SiteNavigationElement"
-        className={styles.navigation__container}
-      >
-        <Link
-          prefetch={false}
-          className={styles.navigation__logo}
-          onClick={() => handleMobileMenu(false)}
-          href={"/"}
-          itemProp="url"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            viewBox="0 0 462 800"
-            height={25}
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
+      <nav itemScope itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
+        <Link prefetch={false} className={styles.navigation__logo} onClick={() => handleMobileMenu(false)} href={"/"} itemProp="url">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 462 800" height={25} xmlnsXlink="http://www.w3.org/1999/xlink">
             <g>
               <path d="M -0.5,-0.5 C 27.1667,-0.5 54.8333,-0.5 82.5,-0.5C 82.369,0.238911 82.5357,0.905578 83,1.5C 137.233,55.7331 191.4,109.9 245.5,164C 226.694,183.973 207.36,203.473 187.5,222.5C 152.819,187.986 117.986,153.652 83,119.5C 82.5,189.499 82.3333,259.499 82.5,329.5C 54.8333,329.5 27.1667,329.5 -0.5,329.5C -0.5,219.5 -0.5,109.5 -0.5,-0.5 Z" />
             </g>
@@ -138,35 +102,24 @@ export const Navigation = React.memo(({ isMobile }) => {
             </g>
           </svg>
         </Link>
-        <ul
-          className={`${styles.navigation__list} ${
-            mobileMenuOpened ? styles["navigation__list--visible"] : ""
-          }`}
-        >
+        <ul className={`${styles.navigation__list} ${mobileMenuOpened ? styles["navigation__list--visible"] : ""}`}>
           {navigationTree.map((item, i) => {
-            return (
-              <NavLinkComponent
-                key={i}
-                position={i + 1}
-                item={item}
-                setMobileMenuOpened={handleMobileMenu}
-              />
-            );
+            return <NavLinkComponent key={i} position={i + 1} item={item} setMobileMenuOpened={handleMobileMenu} />;
           })}
           {/* links only for mobile */}
           <Link
-              itemProp="url"
-              prefetch={false}
-              className={`${styles.navigation__item} ${styles["navigation__item--mobile-alone"]}`}
-              onClick={() => {
-                handleMobileMenu(false);
-                window?.scrollTo(0, 0);
-                ym(96028442, "reachGoal", "/#contacts");
-              }}
-              href={"/#contacts"}
-            >
-              <span itemProp="name">{'Контакты'}</span>
-            </Link>
+            itemProp="url"
+            prefetch={false}
+            className={`${styles.navigation__item} ${styles["navigation__item--mobile-alone"]}`}
+            onClick={() => {
+              handleMobileMenu(false);
+              window?.scrollTo(0, 0);
+              ym(96028442, "reachGoal", "/#contacts");
+            }}
+            href={"/#contacts"}
+          >
+            <span itemProp="name">{"Контакты"}</span>
+          </Link>
         </ul>
         <a
           target="_blank"
@@ -185,10 +138,7 @@ export const Navigation = React.memo(({ isMobile }) => {
             viewBox="0 0 436.000000 436.000000"
             preserveAspectRatio="xMidYMid meet"
           >
-            <g
-              transform="translate(0.000000,436.000000) scale(0.100000,-0.100000)"
-              stroke="none"
-            >
+            <g transform="translate(0.000000,436.000000) scale(0.100000,-0.100000)" stroke="none">
               <path
                 d="M886 4344 c-219 -43 -408 -144 -567 -303 -161 -162 -262 -351 -304
                                 -574 -23 -121 -23 -2495 1 -2617 63 -332 282 -624 583 -774 167 -83 14 -77
@@ -218,10 +168,7 @@ export const Navigation = React.memo(({ isMobile }) => {
           <span>Участник</span>
         </a>
         <div className={styles.navigation__burger}>
-          <BurgerButton
-            menuOpened={mobileMenuOpened}
-            onClick={handleBurgerClick}
-          />
+          <BurgerButton menuOpened={mobileMenuOpened} onClick={handleBurgerClick} />
         </div>
       </nav>
     </header>
