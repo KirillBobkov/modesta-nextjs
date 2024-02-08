@@ -51,6 +51,8 @@
 
 .advantage__item-image {
     position: absolute;
+    object-position: center top;
+    object-fit: cover;
     z-index: -1;
     transition: transform 800ms ease-in-out;
 }

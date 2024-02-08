@@ -26,9 +26,12 @@ export function VideosBlock() {
               itemType="http://schema.org/VideoObject"
               className={`${styles.videos__item} ${shadowStyles.shadow}`}
             >
+              <meta itemProp="name" content={video.name} />
+              <meta itemProp="uploadDate" content={video.uploadDate} />
+              <link itemProp="thumbnailUrl" href={video.thumbnailUrl} />
               <iframe
                 className={styles.videos__frame}
-                src={video}
+                src={video.link}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

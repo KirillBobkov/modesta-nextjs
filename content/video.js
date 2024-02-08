@@ -8,7 +8,17 @@ export const videosContent = {
     description:
       "Чтобы вы могли оценить нас, снимаем разные видео-ролики о компании, о людях",
     videos: [
-      "https://www.youtube.com/embed/2A6QQnWIc_o?si=wBFMxf9fYTWeHmgb",
-      "https://www.youtube.com/embed/3PvROXkoezI?si=L9emIEvrY5ZRlPIM",
+      {
+        link: "https://www.youtube.com/embed/2A6QQnWIc_o?si=wBFMxf9fYTWeHmgb",
+        thumbnailUrl: "https://i.ytimg.com/vi/2A6QQnWIc_o/sddefault.jpg",
+        name: "Разработка протезов рук",
+        uploadDate: new Date("December 13, 2023").toISOString(),
+      },
+      {
+        link: "https://www.youtube.com/embed/3PvROXkoezI?si=L9emIEvrY5ZRlPIM",
+        thumbnailUrl: "https://i.ytimg.com/vi/3PvROXkoezI/sddefault.jpg",
+        name: "Модеста. Гараж. Часть 1",
+        uploadDate: new Date("December 13, 2023").toISOString(),
+      }
     ],
   };

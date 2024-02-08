@@ -8,27 +8,27 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> 
       <loc>https://modesta.tech/</loc> 
-      <image:image>
-            <image:loc>https://modesta.tech/images/sitepreview.jpg</image:loc>
-            <image:title>Прототип компании Модеста</image:title>
-            <image:geo_location>Курган</image:geo_location>
-      </image:image>
-      <lastmod>2024-01-27</lastmod>
+      <lastmod>2024-02-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/production</loc> 
-      <lastmod>2024-01-27</lastmod>
+      <lastmod>2024-02-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/info</loc> 
-      <lastmod>2024-01-27</lastmod>
+      <lastmod>2024-02-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
-      <loc>https://modesta.tech/about-us</loc> 
-      <lastmod>2024-01-27</lastmod>
+      <loc>https://modesta.tech/how-to-get-prothesis</loc> 
+      <lastmod>2024-02-05</lastmod>
+      <changefreq>weekly</changefreq>
+</url>
+<url> 
+      <loc>https://modesta.tech/types-of-prothesis</loc> 
+      <lastmod>2024-02-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 </urlset>

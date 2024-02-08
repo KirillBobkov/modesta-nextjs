@@ -25,9 +25,9 @@ export const GridBlock = React.memo(
     const [opened, setOpened] = useState(false);
 
     return (
-      <section ref={ref} className={`${containerStyles.container}`}>
+      <section   itemScope itemType="https://schema.org/ItemList" ref={ref} className={`${containerStyles.container}`}>
         {title && (
-          <VisibilityManager as="h2" className={`${styles.grid__title} ${containerStyles.container__title}`} id={id}>
+          <VisibilityManager itemProp="name" as="h2" className={`${styles.grid__title} ${containerStyles.container__title}`} id={id}>
             {title}
           </VisibilityManager>
         )}
@@ -51,6 +51,7 @@ export const GridBlock = React.memo(
               <VisibilityManager
                 key={i}
                 as="li"
+                itemProp="itemListElement" itemType="https://schema.org/ListItem"
                 className={`${styles.grid__item} ${styles[`${columnsClass}`]} ${shadowStyles.shadow} ${
                   clickable ? styles["grid__item--clickable"] : ""
                 }`}
