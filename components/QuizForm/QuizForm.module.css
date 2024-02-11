@@ -8,7 +8,7 @@
     }
 }
 
-.get-prothesis-block {
+.quiz-block {
     min-height: 800px;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,14 +19,14 @@
     justify-content: center;
 }
 
-.get-prothesis-form {
+.quiz-form {
     padding: 60px 60px;
     border-radius: 30px;
     background-color: var(--bg-color);
     width: 500px;
 }
 
-.get-prothesis-form__title {
+.quiz-form__title {
     font-size: 42px;
     line-height: 52px;
     margin-bottom: 30px;
@@ -207,12 +207,11 @@
     background: var(--accent);
     color: #000000;
     transition: all 0.3s;
+    cursor: pointer;
     border-radius: 30px;
     text-align: center;
     white-space: pre-line;
     margin-top: 22px;
-    cursor: pointer;
-    font-weight: bold;
 }
 
 .formSubmitButton:hover,
@@ -223,7 +222,6 @@
 .formSubmitButton:disabled {
     pointer-events: none;
     user-select: none;
-    opacity: 0.5;
 }
 
 .formSubmitButton>* {
@@ -256,17 +254,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .get-prothesis-block {
+    .quiz-block {
         padding: 10px;
     }
 
-    .get-prothesis-form__title {
+    .quiz-form__title {
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 20px;
     }
 
-    .get-prothesis-form {
+    .quiz-form {
         padding: 40px 30px;
         border-radius: 30px;
         width: 100%;

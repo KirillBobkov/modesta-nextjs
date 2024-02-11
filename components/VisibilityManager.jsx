@@ -1,16 +1,22 @@
 import React from "react";
 import handleViewport from "react-in-viewport";
 
-const sideMap = {
-  top: "0",
-  topmax: "0",
-  opacity: "0",
+const sideMapNotVisible = {
+  left: "translateX(-20px)",
+  right: "translateX(20px)",
+  bottom: "translateY(-20px)",
+  top: "translateY(20px)",
+  topmax: "translateY(100px)",
+  opacity: "translateY(0)",
 };
 
-const sideMapNotVisible = {
-  top: "20px",
-  topmax: "100px",
-  opacity: "0",
+const sideMap = {
+  left: "translateX(0)",
+  right: "translateX(0)",
+  bottom: "translateY(0)",
+  top: "translateY(0)",
+  topmax: "translateY(0)",
+  opacity: "translateY(0)",
 };
 
 const Block = React.memo((props) => {
@@ -46,10 +52,9 @@ const Block = React.memo((props) => {
 
   const animationStyles = {
     ...style,
-    transition: `top ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
+    transition: `transform ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
     opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
-    position: "relative",
-    top: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
+    transform: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
   }
 
   return (

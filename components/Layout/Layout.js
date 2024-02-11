@@ -9,7 +9,6 @@ import { GetProthesisForm } from "../GetProthesisForm/GetProthesisForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 
 export default function Layout({ children, metaConfig }) {
-  const isMobile = useMediaQuery(`(max-width: 1079.88px)`);
   const router = useRouter();
   const { title, description, keywords, pageTitle } = metaConfig;
   useTheme();
@@ -77,7 +76,7 @@ export default function Layout({ children, metaConfig }) {
       <div style={{ display: "none" }}>
         <h1>{pageTitle}</h1>
       </div>
-      <Navigation isMobile={isMobile} />
+      <Navigation />
       <main>{children}</main>
       <GetProthesisForm />
       <Footer />

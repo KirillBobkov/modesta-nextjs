@@ -12,7 +12,13 @@ import { TechBlock } from "../components/TechBlock/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { headerContent } from "../content/header.js";
 
-const rotateMp4 = "/images/rotate_5.mp4";
+const mainPageVideo = {
+    link: "/images/rotate_5.mp4",
+    thumbnailUrl: rotate_poster.src,
+    name: "Превью протеза руки человека",
+    uploadDate: new Date("February 12, 2024").toISOString(),
+    poster: rotate_poster.src,
+}
 
 export default function MainPage() {
   useScrollToLocation();
@@ -27,7 +33,7 @@ export default function MainPage() {
   return (
     <Layout metaConfig={metaConfig}>
       <VisibilityManager side="opacity">
-        <PreviewBlock video={rotateMp4} poster={rotate_poster.src} subTitle={headerContent.subTitle} title={headerContent.title} />
+        <PreviewBlock video={mainPageVideo} subTitle={headerContent.subTitle} title={headerContent.title} />
         <AdvantagesBlock />
         <TechBlock />
         <ReplacementBlock />

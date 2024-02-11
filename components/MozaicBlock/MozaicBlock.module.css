@@ -8,6 +8,12 @@
   padding: 10px;
 }
 
+.mozaic--fullscreen {
+  /* fullscreen fix with Visibility manager */
+  transform: none!important;
+  transition: transform 0s, opacity 1.5s, background-size  1.5s, background-color 1.5ms!important;
+}
+
 .mozaic__item {
   transition: all 800ms ease-in-out;
   overflow: hidden;

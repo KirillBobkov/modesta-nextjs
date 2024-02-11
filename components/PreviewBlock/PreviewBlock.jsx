@@ -3,69 +3,50 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 
 import styles from "./PreviewBlock.module.css";
 
-export const FullPageVideo = React.forwardRef(({ src, poster }, ref) => {
+export const FullPageVideo = React.forwardRef(({ video }, ref) => {
   return (
-    <section
-      className={styles["full-page-video"]}
-    >
-      <video
-        ref={ref}
-        className={styles["full-page-video__video"]}
-        poster={poster}
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={src} type="video/mp4"></source>
+    <div itemType="http://schema.org/VideoObject" className={styles["full-page-video"]}>
+      <meta itemProp="name" content={video.name} />
+      <meta itemProp="uploadDate" content={video.uploadDate} />
+      <link itemProp="thumbnailUrl" href={video.thumbnailUrl} />
+      <video ref={ref} className={styles["full-page-video__video"]} poster={video.poster} autoPlay loop muted playsInline>
+        <source src={video.link} type="video/mp4"></source>
       </video>
-    </section>
+    </div>
   );
-})
+});
 
-export function PreviewBlock({ img, video, poster, title, subTitle }) {
+export function PreviewBlock({ img, video, title, subTitle }) {
   const videoRef = useRef();
   if (img) {
     return (
-      <section
-        className={styles.preview}
-        style={{ backgroundImage: `url(${img})` }}
-      >
-          {title || subTitle ? (
-            <VisibilityManager
-              as="div"
-              className={styles.preview__title}
-            >
-              {title ? (
-                <h2 className={styles["preview__main-line"]}>{title}</h2>
-              ) : null}
-              {subTitle ? (
-                <p className={styles["preview__secondary-line"]}>{subTitle}</p>
-              ) : null}
-            </VisibilityManager>
-          ) : null}
+      <section className={styles.preview} style={{ backgroundImage: `url(${img})` }}>
+        {title || subTitle ? (
+          <VisibilityManager as="div" className={styles.preview__title}>
+            {title ? <h2 className={styles["preview__main-line"]}>{title}</h2> : null}
+            {subTitle ? <p className={styles["preview__secondary-line"]}>{subTitle}</p> : null}
+          </VisibilityManager>
+        ) : null}
       </section>
     );
   }
 
   if (video) {
     return (
-      <VisibilityManager side={'opacity'} onClick={() => { videoRef?.current?.play(); }} className={styles["preview"]}>
-          {title || subTitle ? (
-            <div className={styles.preview__title}>
-              {title ? (
-                <h1 className={styles["preview__main-line"]}>{title}</h1>
-              ) : null}
-              {subTitle ? (
-                <p className={styles["preview__secondary-line"]}>{subTitle}</p>
-              ) : null}
-            </div>
-          ) : null}
-        <FullPageVideo
-          ref={videoRef}
-          src={video}
-          poster={poster}
-        />
+      <VisibilityManager
+        side={"opacity"}
+        onClick={() => {
+          videoRef?.current?.play();
+        }}
+        className={styles["preview"]}
+      >
+        {title || subTitle ? (
+          <div className={styles.preview__title}>
+            {title ? <h1 className={styles["preview__main-line"]}>{title}</h1> : null}
+            {subTitle ? <p className={styles["preview__secondary-line"]}>{subTitle}</p> : null}
+          </div>
+        ) : null}
+        <FullPageVideo ref={videoRef} video={video} />
       </VisibilityManager>
     );
   }

@@ -54,7 +54,13 @@ const firstMozaicImages = [
   workingProcess9_2,
 ];
 
-const processMp4 = "/images/process.mp4";
+const productionPageVideo = {
+  link: "/images/process.mp4",
+  thumbnailUrl: process__poster.src,
+  name: "Процесс создания протеза руки",
+  uploadDate: new Date("February 12, 2024").toISOString(),
+  poster: process__poster.src
+}
 
 export default function ProductionPage() {
   const metaConfig= {
@@ -68,7 +74,7 @@ export default function ProductionPage() {
   useScrollToLocation();
   return (
     <Layout metaConfig={metaConfig}>
-        <PreviewBlock video={processMp4} poster={process__poster.src} />
+        <PreviewBlock video={productionPageVideo} />
         <QuoteBlock
           title={quoteContent.title}
           author={quoteContent.author}
