@@ -80,8 +80,6 @@ export const Navigation = React.memo(() => {
     handleMobileMenu(newState);
   }, []);
 
-  console.log(mobileMenuOpened);
-
   return (
     <header className={styles.navigation}>
       <nav itemScope itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
