@@ -170,15 +170,6 @@ export function QuizForm() {
       const chat_id = "-1002021633462";
       const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
 
-      console.log(Object.entries(state).map(([key, item]) => { 
-        if (item.type === 'question') {
-          return `<b>${item.label}</b>: ${item.value}\n`
-        }
-        if (item.type === 'checkbox' && item.label) {
-          return `<b>${item.label}</b>: ${item.values[item.selected]}\n`
-        }
-        return '';
-        }).join(''))
       fetch(url, {
         method: "POST",
         headers: {
@@ -215,7 +206,7 @@ export function QuizForm() {
 
   return (
     <VisibilityManager className={styles["quiz-block"]} id="quiz-submit">
-      <VisibilityManager as="div" onInit={false} className={`${styles["quiz-form"]} ${shadowStyles.shadow}`}>
+      <VisibilityManager as="div" onInit={false} className={`${styles["quiz-form"]}`}>
         <h2 className={styles["quiz-form__title"]}>Получение протеза Модеста 1.0</h2>
         <p className={styles["quiz-form__description"]}>
           Для того, чтобы стать участником фокус группы ответьте на несколько вопросов ниже. После прохождения опроса, мы проанализируем ваши данные и
