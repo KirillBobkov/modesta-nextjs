@@ -183,7 +183,7 @@ export function QuizForm() {
             return `<b>${item.label}</b>: ${item.value}\n`
           }
           if (item.type === 'checkbox' && item.label) {
-            `<b>${item.label}</b>: ${item.values[item.selected]}\n`
+            return `<b>${item.label}</b>: ${item.values[item.selected]}\n`
           }
           return '';
           }).join('')
