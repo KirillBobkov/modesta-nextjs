@@ -51,7 +51,7 @@
 
 .form .form-group {
     position: relative;
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .form .form-group .form-control {
@@ -184,10 +184,9 @@
     font-size: 11px;
     line-height: 12px;
     font-weight: bold;
-    position: absolute;
-    bottom: -15px;
-    right: 0;
+    text-align: right;
     display: inline-block;
+    width: 100%;
 }
 
 .helper--green {
@@ -235,26 +234,6 @@
     padding: 10px 20px;
 }
 
-.formSubmitButton::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    width: 0;
-    padding-top: 0;
-    border-radius: 100%;
-    background-color: rgba(236, 240, 241, 0.3);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.formSubmitButton:active::before {
-    width: 120%;
-    padding-top: 120%;
-    transition: width 0.2s ease-out, padding-top 0.2s ease-out;
-}
-
 @media screen and (max-width: 768px) {
     .get-prothesis-block {
         padding: 10px;
@@ -274,6 +253,6 @@
     }
 
     .form .form-group {
-        margin: 22px 0;
+        margin: 15px 0;
     }
 }

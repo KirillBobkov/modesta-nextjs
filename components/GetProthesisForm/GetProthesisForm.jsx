@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import styles from "./GetProthesisForm.module.css";
 import shadowStyles from '../../styles/shadow.module.css';
-import { useFormValidation } from "../../hooks/useFormValidation.jsx";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import formBack from "../../public/images/form_back.webp";
+import { useValidationFormProthesis } from "./useValidationFormProthesis.jsx";
 
 export const isText = RegExp(/^.{2,44}$$/i);
 export const isEmail = RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
@@ -71,7 +71,7 @@ const validateShcema = {
 };
 
 export function GetProthesisForm() {
-  const { state, disable, handleChange, handleSubmit } = useFormValidation(
+  const { state, disable, handleChange, handleSubmit } = useValidationFormProthesis(
     stateShcema,
     validateShcema,
     handleSend
@@ -103,7 +103,11 @@ export function GetProthesisForm() {
           }`,
         }),
       })
-        .then((response) => response.json())
+        .then(() => {
+          setResponseMessage(
+            "Спасибо, ваша заявка отправлена. Мы свяжемся с вами в ближайшее время."
+          );
+        })
         .catch((error) => {
           setResponseMessage(
             "Что-то пошло не так. Мы уже занимаемся решением проблемы."
@@ -112,9 +116,6 @@ export function GetProthesisForm() {
           console.error("Ошибка:", error);
         })
         .finally(() => {
-          setResponseMessage(
-            "Спасибо, ваша заявка отправлена. Мы свяжемся с вами в ближайшее время."
-          );
           setLoading(false);
         });
     };

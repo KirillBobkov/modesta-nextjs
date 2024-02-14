@@ -17,13 +17,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 120px;
 }
 
 .quiz-form {
-    padding: 60px 60px;
+    padding: 0;
     border-radius: 30px;
     background-color: var(--bg-color);
-    width: 500px;
+    width: 800px;
 }
 
 .quiz-form__title {
@@ -32,6 +33,11 @@
     margin-bottom: 30px;
     font-weight: bold;
     text-align: center;
+}
+
+.quiz-form__description {
+    margin-bottom: 40px;
+    color: var(--secondary-font-color);
 }
 
 .loader-button {
@@ -52,6 +58,11 @@
 .form .form-group {
     position: relative;
     margin: 25px 0;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
 }
 
 .form .form-group .form-control {
@@ -86,8 +97,6 @@
     border: none !important;
     outline: none !important;
 }
-
-
 
 .form .form-group .form-control::placeholder {
     color: var(--font-color) !important;
@@ -140,13 +149,12 @@
 }
 
 .form-checkbox {
-    font-size: 10px;
-    line-height: 12px;
     color: var(--font-color);
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .form-checkbox__input {
@@ -165,9 +173,6 @@
 }
 
 .form-checkbox__label {
-    font-size: 11px;
-    line-height: 12px;
-    font-weight: bold;
     color: var(--secondary-font-color);
 }
 
@@ -184,10 +189,10 @@
     font-size: 11px;
     line-height: 12px;
     font-weight: bold;
-    position: absolute;
-    bottom: -15px;
-    right: 0;
+    text-align: right;
     display: inline-block;
+    margin: 5px 0;
+    width: 100%;
 }
 
 .helper--green {
@@ -212,6 +217,7 @@
     text-align: center;
     white-space: pre-line;
     margin-top: 22px;
+    font-weight: bold;
 }
 
 .formSubmitButton:hover,
@@ -222,6 +228,7 @@
 .formSubmitButton:disabled {
     pointer-events: none;
     user-select: none;
+    opacity: 0.5;
 }
 
 .formSubmitButton>* {
@@ -255,7 +262,8 @@
 
 @media screen and (max-width: 768px) {
     .quiz-block {
-        padding: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
     }
 
     .quiz-form__title {
@@ -265,7 +273,7 @@
     }
 
     .quiz-form {
-        padding: 40px 30px;
+        padding: 40px 20px;
         border-radius: 30px;
         width: 100%;
         max-width: 500px;
