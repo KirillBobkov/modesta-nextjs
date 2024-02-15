@@ -210,8 +210,7 @@ export function QuizForm() {
         <h2 className={styles["quiz-form__title"]}>Получение протеза Модеста 1.0</h2>
         <p className={styles["quiz-form__description"]}>
           Для того, чтобы стать участником фокус группы ответьте на несколько вопросов ниже. После прохождения опроса, мы проанализируем ваши данные и
-          свяжемся с вами для уточнения необходимой информации. Спасибо! Все ответы хранятся в базе данных компании Модеста и не подлежат разглашению
-          третьим лицам
+          свяжемся с вами для уточнения необходимой информации. 
         </p>
         <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
           {Object.entries(state).map(([key, item]) => {
