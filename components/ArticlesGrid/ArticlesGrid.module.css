@@ -2,6 +2,7 @@
     display: flex;
     gap: 3%;
     align-items: flex-start;
+    align-items: center;
     position: relative;
     height: 100%;
 }
@@ -9,7 +10,7 @@
 .article-grid__img {
     margin-top: 7px;
     width: 7%;
-    
+    max-width: 30px;
 }
 
 .article-grid__img .article-grid__svg {
@@ -22,9 +23,7 @@
     font-size: 16px;
     line-height: 25px;
     text-align: left;
-    font-weight: bold;
     width: 100%;
-    margin-bottom: 5px;
     white-space: pre-line;
 }
 

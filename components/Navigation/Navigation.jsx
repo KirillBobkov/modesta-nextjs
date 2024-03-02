@@ -38,14 +38,14 @@ const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
         <div className={`${styles.navigation__submenu} ${hoverOpened ? styles["navigation__submenu--visible"] : ""} shadow`}>
           {item.childs.map((child) => (
             <Link
+              itemProp="url"
               prefetch={false}
               key={child.value}
               className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
               onClick={() => closeMenu(item.parent.path)}
               href={child.path}
             >
-              {" "}
-              {child.value}
+              <span itemProp="name">{child.value}</span>
             </Link>
           ))}
         </div>

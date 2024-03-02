@@ -25,19 +25,14 @@ const BookContent = ({ item }) => {
       };
 
   return (
-    <a
-      target="_blank"
-      className={styles["books__item-wrapper"]}
-      href={item.link}
-    >
-      <div className={styles["books__item-info"]}>
-        <h3
-          itemProp="disambiguatingDescription"
-          className={styles["books__item-name"]}
-        >
+    <a target="_blank" className={styles["books__item-wrapper"]} href={item.link}>
+      <div itemScope itemType="http://schema.org/CreativeWork" className={styles["books__item-info"]}>
+        <meta itemprop="learningResourceType" content="AcademicThesis" />
+        <h3 className={styles["books__item-name"]} itemProp="name">
           {item.name}
         </h3>
         <p
+          itemProp="description"
           className={`${styles["books__item-description"]} ${tooltipVisible ? styles["books__item-description--visible"] : ""}`}
         >
           {item.description}
@@ -45,12 +40,7 @@ const BookContent = ({ item }) => {
       </div>
       <div className={styles.books__img} {...handlers}>
         {!tooltipVisible ? (
-          <svg
-            className={styles.books__svg}
-            viewBox="0 0 128 128"
-            enableBackground="new 0 0 128 128"
-            xmlSpace="preserve"
-          >
+          <svg className={styles.books__svg} viewBox="0 0 128 128" enableBackground="new 0 0 128 128" xmlSpace="preserve">
             <g>
               <g>
                 <path
@@ -62,11 +52,7 @@ const BookContent = ({ item }) => {
             </g>
           </svg>
         ) : (
-          <svg
-            className={styles.books__svg}
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg className={styles.books__svg} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path d="m12 22c5.5228475 0 10-4.4771525 10-10s-4.4771525-10-10-10-10 4.4771525-10 10 4.4771525 10 10 10zm0 2c-6.627417 0-12-5.372583-12-12s5.372583-12 12-12 12 5.372583 12 12-5.372583 12-12 12z" />
               <path d="m9.20710678 16.2071068c-.39052429.3905243-1.02368927.3905243-1.41421356 0s-.39052429-1.0236893 0-1.4142136l6.99999998-6.99999998c.3905243-.39052429 1.0236893-.39052429 1.4142136 0s.3905243 1.02368927 0 1.41421356z" />
@@ -85,6 +71,8 @@ export const BooksBlock = () => {
       title={booksContent.title}
       id="books"
       clickable
+      hideButton
+      columns={2}
       description={booksContent.description}
       content={booksContent.blocks}
       renderItem={(item) => <BookContent item={item} />}

@@ -2,12 +2,14 @@
     display: flex;
     gap: 3%;
     align-items: flex-start;
+    justify-content: space-between;
     position: relative;
 }
 
 .books__img {
     margin-top: 7px;
     width: 7%;
+    max-width: 30px;
 }
 
 .books__img .books__svg {
@@ -24,6 +26,7 @@
 }
 
 .books__item-description {
+    margin-top: 0;
     font-size: 12px;
     line-height: 18px;
     text-align: left;
@@ -40,6 +43,7 @@
 .books__item-description--visible  {
     max-height: 200px;
     opacity: 1;
+    margin-top: 5px;
 }
 
 .books__item-name {
@@ -47,8 +51,6 @@
     line-height: 25px;
     text-align: left;
     width: 100%;
-    font-weight: bold;
-    margin-bottom: 5px;
     white-space: pre-line;
 }
 

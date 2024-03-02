@@ -68,10 +68,31 @@
     width: 100%;
     background: linear-gradient(180deg, #00000000 0%, var(--bg-color) 80%);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid__button-content {
+    padding-right: 10px;
 }
 
 .grid__button--opened {
     padding: 20px 20px 20px 20px;
+}
+
+.grid__button svg {
+    width: 16px;
+    height: 16px;
+    transform: rotate(180deg);
+}
+
+.grid__button--opened svg {
+    transform: rotate(0);
+}
+
+.grid__button svg path {
+    fill: var(--font-color);
 }
 
 @media screen and (max-width: 1080px) {
