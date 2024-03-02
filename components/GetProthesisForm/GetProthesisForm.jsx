@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 
 import styles from "./GetProthesisForm.module.css";
-import shadowStyles from '../../styles/shadow.module.css';
+import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import formBack from "../../public/images/form_back.webp";
 import { useValidationFormProthesis } from "./useValidationFormProthesis.jsx";
 
 export const isText = RegExp(/^.{2,44}$$/i);
 export const isEmail = RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
-export const isPhone = RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i
-);
+export const isPhone = RegExp(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i);
 export const isChecked = RegExp(/true/i);
 
 const stateShcema = {
@@ -71,11 +69,7 @@ const validateShcema = {
 };
 
 export function GetProthesisForm() {
-  const { state, disable, handleChange, handleSubmit } = useValidationFormProthesis(
-    stateShcema,
-    validateShcema,
-    handleSend
-  );
+  const { state, disable, handleChange, handleSubmit } = useValidationFormProthesis(stateShcema, validateShcema, handleSend);
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
   const { name, email, phone, message, checkbox } = state;
@@ -96,22 +90,16 @@ export function GetProthesisForm() {
         body: JSON.stringify({
           chat_id,
           parse_mode: "html",
-          text: `<b>Имя</b>: ${name.value}\n<b>email</b>: ${
-            email.value
-          }\n<b>Номер телефона</b>: ${phone.value}\n<b>Сообщение</b>: ${
+          text: `<b>Заявка на получние протеза</b>\n\n<b>Имя</b>: ${name.value}\n<b>E-mail</b>: ${email.value}\n<b>Номер телефона</b>: ${phone.value}\n<b>Сообщение</b>: ${
             message.value || "пусто"
           }`,
         }),
       })
         .then(() => {
-          setResponseMessage(
-            "Спасибо, ваша заявка отправлена. Мы свяжемся с вами в ближайшее время."
-          );
+          setResponseMessage("Спасибо, заявка отправлена");
         })
         .catch((error) => {
-          setResponseMessage(
-            "Что-то пошло не так. Мы уже занимаемся решением проблемы."
-          );
+          setResponseMessage("Произошла ошибка при отправке. Пожалуйста, свяжитесь с нами через контакты");
           setLoading(false);
           console.error("Ошибка:", error);
         })
@@ -123,21 +111,15 @@ export function GetProthesisForm() {
   }
 
   return (
-    <VisibilityManager className={styles['get-prothesis-block']} style={{ backgroundImage: `url(${formBack.src})` }} id="submit">
-      <VisibilityManager
-        as="div"
-        onInit={false}
-        className={`${styles['get-prothesis-form']} ${shadowStyles.shadow}`}
-      >
-        <h2 className={styles['get-prothesis-form__title']}>Оставить заявку</h2>
+    <VisibilityManager className={styles["get-prothesis-block"]} style={{ backgroundImage: `url(${formBack.src})` }} id="submit">
+      <VisibilityManager as="div" onInit={false} className={`${styles["get-prothesis-form"]} ${shadowStyles.shadow}`}>
+        <h2 className={styles["get-prothesis-form__title"]}>Оставить заявку</h2>
         <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
-          <div className={styles['form-group']}>
+          <div className={styles["form-group"]}>
             <input
               name="name"
               autoComplete="name"
-              className={`${styles['form-control']} ${
-                name.value ? styles['form-control--filled'] : ""
-              } ${shadowStyles.shadow}`}
+              className={`${styles["form-control"]} ${name.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
               value={name.value}
               onChange={handleChange}
               placeholder="Ваше имя"
@@ -146,20 +128,18 @@ export function GetProthesisForm() {
             {name.error ? (
               <div className={styles.helper}>{name.error}</div>
             ) : name.value ? (
-              <div className={`${styles.helper} ${styles['helper--green']}`}>Имя ✔</div>
+              <div className={`${styles.helper} ${styles["helper--green"]}`}>✔</div>
             ) : (
               ""
             )}
             <span className={styles.bar} />
           </div>
-          <div className={styles['form-group']}>
+          <div className={styles["form-group"]}>
             <input
               type="email"
               name="email"
               autoComplete="email"
-              className={`${styles['form-control']} ${
-                email.value ? styles['form-control--filled'] : ""
-              } ${shadowStyles.shadow}`}
+              className={`${styles["form-control"]} ${email.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
               value={email.value}
               onChange={handleChange}
               placeholder="E-mail"
@@ -168,19 +148,17 @@ export function GetProthesisForm() {
             {email.error ? (
               <div className={styles.helper}>{email.error}</div>
             ) : email.value ? (
-              <div className={`${styles.helper} ${styles['helper--green']}`}>E-mail ✔</div>
+              <div className={`${styles.helper} ${styles["helper--green"]}`}>✔</div>
             ) : (
               ""
             )}
             <span className={styles.bar} />
           </div>
-          <div className={styles['form-group']}>
+          <div className={styles["form-group"]}>
             <input
               name="phone"
               autoComplete="phone"
-              className={`${styles['form-control']}  ${
-                phone.value ? styles['form-control--filled'] : ""
-              } ${shadowStyles.shadow}`}
+              className={`${styles["form-control"]}  ${phone.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
               value={phone.value}
               onChange={handleChange}
               placeholder="Телефон 89xxxxxxxx"
@@ -189,19 +167,19 @@ export function GetProthesisForm() {
             {phone.error ? (
               <div className={styles.helper}>{phone.error}</div>
             ) : phone.value ? (
-              <div className={`${styles.helper} ${styles['helper--green']}`}>Телефон ✔</div>
+              <div className={`${styles.helper} ${styles["helper--green"]}`}>✔</div>
             ) : (
               ""
             )}
             <span className={styles.bar} />
           </div>
-          <div className={styles['form-group']}>
+          <div className={styles["form-group"]}>
             <textarea
               name="message"
               value={message.value}
-              className={`${styles['form-textarea']} ${styles['form-control']} ${
-                message.value ? styles["form-control--filled"] : ""
-              } ${shadowStyles.shadow}`}
+              className={`${styles["form-textarea"]} ${styles["form-control"]} ${message.value ? styles["form-control--filled"] : ""} ${
+                shadowStyles.shadow
+              }`}
               onChange={handleChange}
               disabled={!!responseMessage}
               placeholder="Напишите то, что нам важно знать"
@@ -209,11 +187,11 @@ export function GetProthesisForm() {
             {message.error && <div className={styles.helper}>{message.error}</div>}
             <span className={styles.bar} />
           </div>
-          <div className={styles['form-group']}>
-            <div className={styles['form-checkbox']}>
+          <div className={styles["form-group"]}>
+            <div className={styles["form-checkbox"]}>
               <input
                 name="checkbox"
-                className={styles['form-checkbox__input']}
+                className={`${styles["form-checkbox__input"]} ${checkbox.error ? styles["form-checkbox__input--error"] : ""}`}
                 type="checkbox"
                 id="form-checkbox"
                 onChange={(e) => {
@@ -223,30 +201,18 @@ export function GetProthesisForm() {
                 }}
                 value={checkbox.value === "true" ? true : false}
               />
-              <label
-                className={`${styles['form-checkbox__label']} ${checkbox.error ? styles['form-checkbox__label--error'] : ''}`}
-                htmlFor="form-checkbox"
-              >
-                Я ознакомлен (ознакомлена) с правилами обработки персональных данных
+              <label className={`${styles["form-checkbox__label"]}`} htmlFor="form-checkbox">
+                Я ознакомлен (ознакомлена) с{" "}
+                <a target="_blank" className={styles["form-doc"]} href="/agreement-data.pdf">
+                  правилами
+                </a>{" "}
+                обработки персональных данных
               </label>
             </div>
           </div>
-          <p className={styles['form-doc']}>
-            <a target="_blank" href="/agreement-data.pdf">
-              Согласие на обработку персональных данных
-            </a>
-          </p>
-          <button
-            type="submit"
-            className={`${styles.formSubmitButton} ${shadowStyles.shadow}`}
-            disabled={disable}
-          >
-            <span>
-              {responseMessage.length > 0
-                ? "Спасибо, заявка отправлена"
-                : "Отправить"}
-            </span>
-            {loading && <div className={styles['loader-button']} />}
+          <button type="submit" className={`${styles.formSubmitButton} ${shadowStyles.shadow}`} disabled={disable}>
+            <span>{responseMessage.length > 0 ? responseMessage : "Отправить"}</span>
+            {loading && <div className={styles["loader-button"]} />}
           </button>
         </form>
       </VisibilityManager>

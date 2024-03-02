@@ -20,7 +20,7 @@
 }
 
 .get-prothesis-form {
-    padding: 60px 60px;
+    padding: 50px 50px;
     border-radius: 30px;
     background-color: var(--bg-color);
     width: 500px;
@@ -51,7 +51,7 @@
 
 .form .form-group {
     position: relative;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .form .form-group .form-control {
@@ -64,7 +64,7 @@
     width: 100%;
     background: var(--card-bg-color);
     height: 35px;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -87,26 +87,24 @@
     outline: none !important;
 }
 
-
-
 .form .form-group .form-control::placeholder {
-    color: var(--font-color) !important;
+    color: var(--secondary-font-color) !important;
 }
 
 .form .form-group .form-control::-ms-input-placeholder {
-    color: var(--font-color) !important;
+    color: var(--secondary-font-color) !important;
 }
 
 .form .form-group .form-control:-ms-input-placeholder {
-    color: var(--font-color) !important;
+    color: var(--secondary-font-color) !important;
 }
 
 .form .form-group .form-control::-webkit-input-placeholder {
-    color: var(--font-color) !important;
+    color: var(--secondary-font-color) !important;
 }
 
 .form .form-group .form-control::-moz-placeholder {
-    color: var(--font-color) !important;
+    color: var(--secondary-font-color) !important;
 }
 
 .form .form-group select {
@@ -157,29 +155,30 @@
    flex-shrink: 0;
 }
 
+.form-checkbox__input--error {
+    border: 1px solid var(--helper-red);
+}
+
 .form-doc {
-    font-size: 11px;
-    line-height: 12px;
     cursor: pointer;
-    color: var(--secondary-font-color);
+    color:  var(--font-color);
 }
 
 .form-checkbox__label {
     font-size: 11px;
     line-height: 12px;
-    font-weight: bold;
     color: var(--secondary-font-color);
 }
 
-.form-checkbox__label--error {
-    color: var(--helper-red);
+.form-checkbox__input:checked {
+    border: 1px solid var(--font-color);
+    background-color: var(--secondary-font-color);
 }
 
-.form-checkbox__input:checked {
-    background-color: var(--font-color);
- }
-
 .helper {
+    position: absolute;
+    bottom: -15px;
+    right: 7px;
     color: var(--helper-red);
     font-size: 11px;
     line-height: 12px;
@@ -199,7 +198,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
     border: none;
     outline: none;
     width: 100%;
@@ -212,6 +211,7 @@
     margin-top: 22px;
     cursor: pointer;
     font-weight: bold;
+    line-height: 20px;
 }
 
 .formSubmitButton:hover,
@@ -250,9 +250,5 @@
         border-radius: 30px;
         width: 100%;
         max-width: 500px;
-    }
-
-    .form .form-group {
-        margin: 15px 0;
     }
 }
