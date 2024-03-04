@@ -19,6 +19,12 @@ export const videosContent = {
         thumbnailUrl: "https://i.ytimg.com/vi/3PvROXkoezI/sddefault.jpg",
         name: "Модеста. Гараж. Часть 1",
         uploadDate: new Date("December 13, 2023").toISOString(),
-      }
+      },
+      {
+        link: "https://www.youtube.com/embed/XVLG8qdDuCY?si=tmck_tLPApfPgWfA",
+        thumbnailUrl: "https://i.ytimg.com/vi/XVLG8qdDuCY/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGUoVTAP&rs=AOn4CLA9EKfOpiGMWvkRon5KLjYsd2fJOA",
+        name: "В чем отличие антропоморфного протеза от не антропоморфного?",
+        uploadDate: new Date("March 04, 2024").toISOString(),
+      },
     ],
   };
