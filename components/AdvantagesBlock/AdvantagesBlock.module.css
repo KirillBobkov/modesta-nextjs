@@ -64,7 +64,6 @@
 
 @media screen and (max-width: 768px) {
     .advantages__content {
-        max-width: 100%;
         width: 100%;
     }
 
@@ -73,6 +72,11 @@
         padding: 40px 20px;
         margin-bottom: 40px;
         justify-content: flex-end;
+    }
+
+    .advantages__item--right {
+        align-items: flex-start;
+        text-align: left;
     }
 
     .advantages__item--right {
