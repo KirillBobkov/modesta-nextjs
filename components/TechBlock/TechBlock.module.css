@@ -24,32 +24,36 @@
 }
 
 .tech__item {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     width: 49%;
     flex-shrink: 0;
     height: 300px;
     border-radius: 30px;
     padding: 40px;
     gap: 10px;
-    background-color: var(--card-bg-color-opacity);
+    background-color: #d8d7dc;
 }
 
 .tech__text {
+    color: #000000;
     font-size: 16px;
     line-height: 25px;
 }
 
 .tech__key-feature {
-    font-size: 90px;
+    color: #000000;
+    font-size: 100px;
     font-weight: bold;
-    line-height: 90px;
+    line-height: 100px;
     flex: 20%;
 }
 
 .tech__content {
-    text-align: center;
     flex: 80%;
 }
 
@@ -69,10 +73,9 @@
     }
 
     .tech__item {
-        height: 160px;
+        height: 250px;
         padding: 20px;
         width: 100%;
-        max-width: 500px;
     }
 
     .tech__key-feature {
