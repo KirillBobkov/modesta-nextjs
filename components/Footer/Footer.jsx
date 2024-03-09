@@ -19,9 +19,10 @@ export default React.memo(() => {
         itemType="http://schema.org/Organization"
         className={`${containerStyles.container} ${styles.footer}`}
       >
+        <div style={{ display: 'none' }} itemProp="name">Модеста</div>
         <div className={styles.footer__grid}>
           <div className={styles.footer__block} id="contacts">
-            <p itemProp="name" className={styles.footer__title}>
+            <p className={styles.footer__title}>
               Контакты
             </p>
             <p className={styles.footer__number}>
@@ -47,10 +48,10 @@ export default React.memo(() => {
               itemScope
               itemType="https://schema.org/PostalAddress"
             >
-              <p itemProp="name" className={styles.footer__address}>
+              <p className={styles.footer__address}>
                 ООО "МОДЕСТА" (ОГРН 1234500001603)
               </p>
-              <p itemProp="addressLocality" className={styles.footer__address}>
+              <p className={styles.footer__address}>
                 <span itemProp="postalCode"> 640002, </span>
                 <span itemProp="addressRegion">Курганская область, </span>
                 <span itemProp="addressLocality">г. Курган, </span>
@@ -105,7 +106,8 @@ export default React.memo(() => {
 
           <div className={styles.footer__block}>
             <p className={styles.footer__title}>Социальные сети</p>
-            <a target="_blank" href="https://vk.com/modestatech">
+            <link itemProp="url" href="https://modesta.tech" /> 
+            <a itemProp="sameAs" target="_blank" href="https://vk.com/modestatech">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -122,7 +124,7 @@ export default React.memo(() => {
                 />
               </svg>
             </a>
-            <a target="_blank" href="https://t.me/modestatech">
+            <a itemProp="sameAs" target="_blank" href="https://t.me/modestatech">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -149,7 +151,7 @@ export default React.memo(() => {
                 ></path>
               </svg>
             </a>
-            <a target="_blank" href="https://ok.ru/group/70000004855153">
+            <a itemProp="sameAs" target="_blank" href="https://ok.ru/group/70000004855153">
               <svg
                 width="48"
                 height="48"
