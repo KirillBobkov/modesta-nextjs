@@ -26,7 +26,7 @@ export const MozaicBlock = React.memo(({ images }) => {
             >
               <Image
                 onClick={() => handleFullScreenOpen(i)}
-                priority
+                
                 className={styles.mozaic__image}
                 key={i}
                 src={img}

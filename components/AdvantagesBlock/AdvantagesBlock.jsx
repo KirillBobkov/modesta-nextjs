@@ -30,7 +30,7 @@ export function AdvantagesBlock() {
             >
               {isMobile !== undefined && (
                 <Image
-                  priority
+                  
                   itemProp="contentUrl"
                   className={styles["advantage__item-image"]}
                   src={isMobile ? adv.mobileImg : adv.desktopImg}

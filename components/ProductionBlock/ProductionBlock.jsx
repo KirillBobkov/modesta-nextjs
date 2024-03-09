@@ -21,7 +21,7 @@ export function ProductionBlock() {
             id="production"
           >
             <Image
-              priority
+              
               itemProp="contentUrl"
               className={styles.production__image}
               src={production.img}
