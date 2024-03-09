@@ -28,7 +28,7 @@ export const ArticleBlock = ({ articleContent }) => {
                 return <p key={i} className={`${styles["article__content-container"]} ${styles.article__paragraph}`}>{value}</p>;
               }
               if (key.includes("image")) {
-                return <Image key={i} className={`${styles.article__img} ${shadowStyles.shadow}`}  alt={`Изображение статьи №${i}`} src={value} />;
+                return <Image key={i} className={`${styles.article__img} ${shadowStyles.shadow}`} priority alt={`Изображение статьи №${i}`} src={value} />;
               }
               return <></>;
             })}

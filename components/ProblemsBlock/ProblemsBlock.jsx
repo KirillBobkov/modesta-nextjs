@@ -27,7 +27,7 @@ export function ProblemsBlock() {
               id="problem"
             >
               <Image
-                
+                priority
                 itemProp="contentUrl"
                 className={styles.problem__image}
                 src={problem.img}
