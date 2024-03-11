@@ -28,9 +28,14 @@ const BookContent = ({ item }) => {
     <a target="_blank" className={styles["books__item-wrapper"]} href={item.link}>
       <div itemScope itemType="http://schema.org/CreativeWork" className={styles["books__item-info"]}>
         <meta itemprop="learningResourceType" content="AcademicThesis" />
-        <h3 className={styles["books__item-name"]} itemProp="name">
+        <p className={styles["books__item-name"]} itemProp="name">
           {item.name}
-        </h3>
+        </p>
+        {item.author && (
+          <p className={styles["books__item-author"]} itemProp="author">
+            {item.author}
+          </p>
+        )}
         <p
           itemProp="description"
           className={`${styles["books__item-description"]} ${tooltipVisible ? styles["books__item-description--visible"] : ""}`}

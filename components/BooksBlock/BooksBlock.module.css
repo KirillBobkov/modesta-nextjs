@@ -27,11 +27,11 @@
 
 .books__item-description {
     margin-top: 0;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 25px;
     text-align: left;
     width: 100%;
-    color: var(--secondary-font-color);
+    color: var(--font-color);
     height: auto;
     max-height: 0;
     opacity: 0;
@@ -50,8 +50,18 @@
     font-size: 16px;
     line-height: 25px;
     text-align: left;
+    font-weight: bold;
     width: 100%;
     white-space: pre-line;
+}
+
+.books__item-author {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: left;
+    width: 100%;
+    white-space: pre-line;
+    color: var(--secondary-font-color);
 }
 
 @media screen and (max-width: 768px) {
