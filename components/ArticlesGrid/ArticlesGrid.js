@@ -1,16 +1,24 @@
 import styles from "./ArticlesGrid.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
-import { howToGetProthesis } from '../../content/articles/howToGetProthesis'
-import { typesOfProthesis } from '../../content/articles/typesOfProthesis'
+import { howToGetProthesis } from "../../content/articles/howToGetProthesis";
+import { typesOfProthesis } from "../../content/articles/typesOfProthesis";
 import Link from "next/link";
+import { phantomPain } from "../../content/articles/phantomPain";
 
-const blocks = [{
-  title: howToGetProthesis.title,
-  link: '/how-to-get-prothesis',
-}, {
-  title:  typesOfProthesis.title,
-  link: '/types-of-prothesis'
-}];
+const blocks = [
+  {
+    title: howToGetProthesis.title,
+    link: "/how-to-get-prothesis",
+  },
+  {
+    title: typesOfProthesis.title,
+    link: "/types-of-prothesis",
+  },
+  {
+    title: phantomPain.title,
+    link: "/phantom-pain",
+  },
+];
 
 const ArticleContent = ({ item }) => {
   return (

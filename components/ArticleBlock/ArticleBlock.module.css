@@ -26,7 +26,7 @@
 
 .article__content-container {
     white-space: pre-line;
-    margin: 12px auto;
+    margin: 20px auto;
 }
 
 .article__paragraph {
@@ -51,6 +51,7 @@
 @media screen and (max-width: 768px) {
     .article-container {
         padding: 0;
+        margin: 12px auto;
     }
 
     .article__content-container {
