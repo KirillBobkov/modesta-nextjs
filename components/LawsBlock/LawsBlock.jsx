@@ -4,30 +4,24 @@ import { lawsContent } from "../../content/laws";
 
 const LawContent = ({ item }) => {
   return (
-    <a title="Скачать" target="_blank" className={styles["law__item"]} href={item.link}>
-   
+    <a
+      onClick={() => {
+        ym(96028442,'reachGoal','law-document');
+      }}
+      title="Скачать"
+      target="_blank"
+      className={styles["law__item"]}
+      href={item.link}
+    >
       <p className={styles.law__title}>{item.title}</p>
       <div className={styles.law__img}>
         <svg viewBox="0 0 48 48">
           <defs />
-          <g
-            stroke="none"
-            strokeWidth="1"
-            fill="none"
-            fillule="evenodd"
-            transform="translate(-160.000000, -124.000000)"
-          >
-            <g
-              id="Group-35"
-              transform="translate(-26.000000, 0.000000)"
-              fillRule="nonzero"
-            >
+          <g stroke="none" strokeWidth="1" fill="none" fillule="evenodd" transform="translate(-160.000000, -124.000000)">
+            <g id="Group-35" transform="translate(-26.000000, 0.000000)" fillRule="nonzero">
               <g id="Group-21" transform="translate(26.000000, 0.000000)">
                 <g id="Group-4">
-                  <g
-                    id="Group-15"
-                    transform="translate(160.000000, 120.000000)"
-                  >
+                  <g id="Group-15" transform="translate(160.000000, 120.000000)">
                     <g id="Group-25" transform="translate(0.000000, 4.000000)">
                       <path
                         className={styles.law__svg}
@@ -49,15 +43,15 @@ const LawContent = ({ item }) => {
 
 export const LawsBlock = () => {
   return (
-        <GridBlock
-          title={lawsContent.title}
-          description={lawsContent.description}
-          id="laws"
-          hideButton
-          columns={3}
-          clickable
-          content={lawsContent.blocks}
-          renderItem={(item) => <LawContent item={item} />}
-        />
+    <GridBlock
+      title={lawsContent.title}
+      description={lawsContent.description}
+      id="laws"
+      hideButton
+      columns={3}
+      clickable
+      content={lawsContent.blocks}
+      renderItem={(item) => <LawContent item={item} />}
+    />
   );
 };

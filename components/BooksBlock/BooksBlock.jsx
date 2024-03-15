@@ -25,7 +25,14 @@ const BookContent = ({ item }) => {
       };
 
   return (
-    <a target="_blank" className={styles["books__item-wrapper"]} href={item.link}>
+    <a
+      onClick={() => {
+        ym(96028442,'reachGoal','book-download')
+      }}
+      target="_blank"
+      className={styles["books__item-wrapper"]}
+      href={item.link}
+    >
       <div itemScope itemType="http://schema.org/CreativeWork" className={styles["books__item-info"]}>
         <meta itemprop="learningResourceType" content="AcademicThesis" />
         <p className={styles["books__item-name"]} itemProp="name">

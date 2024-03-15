@@ -10,6 +10,7 @@ export default function MetricsCode() {
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(96028442, "init", {
+                defer: true,
                 clickmap:true,
                 trackLinks:true,
                 accurateTrackBounce:true

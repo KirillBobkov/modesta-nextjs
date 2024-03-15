@@ -72,6 +72,9 @@ export default function Layout({ children, metaConfig }) {
           rel="stylesheet"
         />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+        <script type="text/javascript" src="/yandex-metrika.js"></script>
+
       </Head>
       <div style={{ display: "none" }}>
         <h1>{pageTitle}</h1>
