@@ -1,11 +1,19 @@
 import Layout from "../components/Layout/Layout.js";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
 import { ArticleBlock } from "../components/ArticleBlock/ArticleBlock.js";
 import { phantomPain } from '../content/articles/phantomPain.js'
+import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
+import { useRouter } from "next/router.js";
 export default () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    useYandexRobot(router.pathname);
+  }, []);
+
   useScrollToLocation();
   
   const metaConfig = {

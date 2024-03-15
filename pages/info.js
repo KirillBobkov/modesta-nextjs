@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 
@@ -7,8 +7,16 @@ import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
 import { BooksBlock } from "../components/BooksBlock/BooksBlock.jsx";
 import { LawsBlock } from "../components/LawsBlock/LawsBlock.jsx";
 import { ArticlesGrid } from "../components/ArticlesGrid/ArticlesGrid";
+import { useRouter } from "next/router.js";
+import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 
 export default function InfoPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    useYandexRobot(router.pathname);
+  }, []);
+
   const metaConfig = {
     pageTitle: "Законодательство, полезные статьи, и книги о протезировании",
     title: "Модеста — книги и статьи о протезировании",

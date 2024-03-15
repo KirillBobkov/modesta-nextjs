@@ -1,8 +1,7 @@
 import Layout from "../components/Layout/Layout";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { ProductionBlock } from "../components/ProductionBlock/ProductionBlock.jsx";
-import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";
 import { MozaicBlock } from "../components/MozaicBlock/MozaicBlock.jsx";
 import { QuoteBlock } from "../components/QuoteBlock/QuoteBlock.jsx";
@@ -29,6 +28,8 @@ import workingProcess8_2 from "../public/images/working_process_2_8.jpg";
 import workingProcess9_2 from "../public/images/working_process_2_9.jpg";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
 import { quoteContent } from "../content/quote.js";
+import { useRouter } from "next/router.js";
+import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 
 const secondMozaicImages = [
   workingProcess1,
@@ -63,6 +64,12 @@ const productionPageVideo = {
 }
 
 export default function ProductionPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    useYandexRobot(router.pathname);
+  }, []);
+
   const metaConfig= {
     pageTitle: "Разработка эффективного протеза",
     title: "Модеста — О технологии производства и разработке протезов",

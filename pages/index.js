@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Script from "next/script";
 import Layout from "../components/Layout/Layout";
 import rotate_poster from "../public/images/rotate__poster.jpg";
 import { VisibilityManager } from "../components/VisibilityManager";
@@ -11,6 +9,9 @@ import { Questions } from "../components/Questions/Questions";
 import { TechBlock } from "../components/TechBlock/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { headerContent } from "../content/header.js";
+import { useRouter } from "next/router.js";
+import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
+import { useEffect } from "react";
 
 const mainPageVideo = {
     link: "/images/rotate_5.mp4",
@@ -21,6 +22,12 @@ const mainPageVideo = {
 }
 
 export default function MainPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    useYandexRobot(router.pathname);
+  }, []);
+
   useScrollToLocation();
 
   const metaConfig = {

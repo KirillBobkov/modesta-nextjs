@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import RoadmapBlock from "../components/RoadmapBlock/RoadmapBlock.jsx";
 import Layout from "../components/Layout/Layout.js";
@@ -7,8 +7,16 @@ import { HistoryBlock } from "../components/HistoryBlock/HistoryBlock.jsx";
 import { SocialNetworkBlock } from "../components/SocialNetworkBlock/SocialNetworkBlock.jsx";
 import { VideosBlock } from "../components/VideosBlock/VideosBlock.jsx";
 import { missionContent } from "../content/mission.js";
+import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
+import { useRouter } from "next/router.js";
 
 export default function AboutUsPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    useYandexRobot(router.pathname);
+  }, []);
+
   const metaConfig = {
     pageTitle: "Откуда появилась компания Модеста? Когда попали в Сколково? Как давно производим протезы? Все ответы здесь",
     title: "Модеста — вдохновляющий и непредсказуемый путь в мире протезирования",
