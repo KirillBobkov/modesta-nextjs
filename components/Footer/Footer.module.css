@@ -82,6 +82,11 @@
     color: var(--secondary-font-color);
 }
 
+.footer__social-svg {
+    display: flex;
+    gap: 5px;
+}
+
 @media screen and (max-width: 900px) {
     .footer {
         display: block;

@@ -54,7 +54,7 @@
 }
 
 .grid__container--visible {
-    max-height: 2000px;
+    max-height: 2300px;
     padding-bottom: 80px;
 }
 
@@ -112,7 +112,7 @@
     }
 
     .grid__container--visible {
-        max-height: 4800px;
+        max-height: 5400px;
         padding-bottom: 80px;
     }
 

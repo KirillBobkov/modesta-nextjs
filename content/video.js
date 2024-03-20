@@ -26,5 +26,11 @@ export const videosContent = {
         name: "В чем отличие антропоморфного протеза от не антропоморфного?",
         uploadDate: new Date("March 04, 2024").toISOString(),
       },
+      {
+        link: "https://www.youtube.com/embed/jz05vQIT9Is",
+        thumbnailUrl: "https://i.ytimg.com/vi/jz05vQIT9Is/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDogSShyMA8=&rs=AOn4CLBwpSkoUxsf11QGlDiTB8yd2qkpow",
+        name: "Замороженный протез. Провал в ходе испытаний?",
+        uploadDate: new Date("March 20, 2024").toISOString(),
+      },
     ],
   };
