@@ -33,7 +33,7 @@ const Block = React.memo((props) => {
     forwardedRef,
     children,
     className,
-    side = "topmax",
+    side = "top",
     speed = 1.5,
     onClick
   } = props;
