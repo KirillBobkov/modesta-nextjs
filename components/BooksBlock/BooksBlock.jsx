@@ -34,7 +34,7 @@ const BookContent = ({ item }) => {
       href={item.link}
     >
       <div itemScope itemType="http://schema.org/CreativeWork" className={styles["books__item-info"]}>
-        <meta itemprop="learningResourceType" content="AcademicThesis" />
+        <meta itemProp="learningResourceType" content="AcademicThesis" />
         <p className={styles["books__item-name"]} itemProp="name">
           {item.name}
         </p>

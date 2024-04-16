@@ -135,7 +135,7 @@ export default React.memo(() => {
               </a>
               <a itemProp="sameAs" target="_blank" href="https://www.youtube.com/@modestatech">
                 <svg width="45" height="45" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
-                  <g fill="none" fill-rule="evenodd">
+                  <g fill="none" fillRule="evenodd">
                     <path
                       d="M36,72 L36,72 C55.882251,72 72,55.882251 72,36 L72,36 C72,16.117749 55.882251,-3.65231026e-15 36,0 L36,0 C16.117749,3.65231026e-15 -2.4348735e-15,16.117749 0,36 L0,36 C2.4348735e-15,55.882251 16.117749,72 36,72 Z"
                       fill="#FF0002"
