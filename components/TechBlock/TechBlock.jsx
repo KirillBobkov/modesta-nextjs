@@ -15,6 +15,7 @@ import styles from "./TechBlock.module.css";
 import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
+import Image from "next/image.js";
 
 const items = [
   {
@@ -71,7 +72,14 @@ export function TechBlock() {
       </h2>
       <ul className={styles.tech}>
         {items.map((item, i) => {
-          return  <VisibilityManager key={i} style={{ backgroundImage: `url(${item.img.src})` }} as="li" className={`${styles.tech__item} ${shadowStyles.shadow}`}>
+          return  <VisibilityManager key={i} as="li" className={`${styles.tech__item} ${shadowStyles.shadow}`}>
+                <Image        
+                  itemProp="contentUrl"
+                  className={styles["tech__item-image"]}
+                  src={item.img.src}
+                  alt={`Характеристика #${i}`}
+                  fill
+                />
           <div className={styles.tech__content}>
           <span className={styles.tech__text}>
               {item.text} <br />
