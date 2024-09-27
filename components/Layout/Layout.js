@@ -7,6 +7,14 @@ import { useTheme } from "../../hooks/useTheme";
 import Head from "next/head";
 import { GetProthesisForm } from "../GetProthesisForm/GetProthesisForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
+import { Montserrat } from 'next/font/google'
+ 
+const montseratt = Montserrat({
+  weight:  ['400', '800'],
+  variable: '--font-montseratt',
+  subsets: ['cyrillic'],
+  display: 'swap',
+})
 
 export default function Layout({ children, metaConfig }) {
   const router = useRouter();
@@ -64,25 +72,19 @@ export default function Layout({ children, metaConfig }) {
           href="/images/favicon180x180.png"
         />
         <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
-        {/* fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
-          rel="stylesheet"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 
       </Head>
-      <div style={{ display: "none" }}>
-        <h1>{pageTitle}</h1>
+      <div className={montseratt.className}>
+        <div style={{ display: "none" }}>
+          <h1>{pageTitle}</h1>
+        </div>
+        <Navigation />
+        <main>{children}</main>
+        <GetProthesisForm />
+        <Footer />
+        <ScrollTopButton />
+        <FeedbackButton />
       </div>
-      <Navigation />
-      <main>{children}</main>
-      <GetProthesisForm />
-      <Footer />
-      <ScrollTopButton />
-      <FeedbackButton />
     </>
   );
 }
