@@ -2,10 +2,10 @@ import React from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 
 import { useTheme } from "../../hooks/useTheme.jsx";
-import tech_background_white from "../../public/images/tech_background_white.webp";
-import tech_background_black from "../../public/images/tech_background_black.webp";
-import tech_background_white_mobile from "../../public/images/tech_background_white_mobile.webp";
-import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
+// import tech_background_white from "../../public/images/tech_background_white.webp";
+// import tech_background_black from "../../public/images/tech_background_black.webp";
+// import tech_background_white_mobile from "../../public/images/tech_background_white_mobile.webp";
+// import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
 import tech_block_img_1 from "../../public/images/tech_block_img_1.jpg";
 import tech_block_img_2 from "../../public/images/tech_block_img_2.jpg";
 import tech_block_img_3 from "../../public/images/tech_block_img_3.jpg";
@@ -49,24 +49,24 @@ export function TechBlock() {
 
   return (
     <VisibilityManager
-      style={
-        theme !== undefined && isMobile !== undefined
-          ? {
-              backgroundImage: `url(${
-                theme === "light"
-                  ? isMobile
-                    ? tech_background_white_mobile.src
-                    : tech_background_white.src
-                  : isMobile
-                  ? tech_background_black_mobile.src
-                  : tech_background_black.src
-              })`,
-            }
-          : {}
-      }
+      // style={
+      //   theme !== undefined && isMobile !== undefined
+      //     ? {
+      //         backgroundImage: `url(${
+      //           theme === "light"
+      //             ? isMobile
+      //               ? tech_background_white_mobile.src
+      //               : tech_background_white.src
+      //             : isMobile
+      //             ? tech_background_black_mobile.src
+      //             : tech_background_black.src
+      //         })`,
+      //       }
+      //     : {}
+      // }
       className={styles["tech-container"]}
     >
-      <h2 className={`${containerStyles.container__title} ${containerStyles["container__title--always-center"]}`} id="tech">
+      <h2 className={`${containerStyles.container__title}`} id="tech">
         Технические характеристики
       </h2>
       <ul className={styles.tech}>

@@ -84,7 +84,7 @@ export const BooksBlock = () => {
       id="books"
       clickable
       hideButton
-      columns={2}
+      columns={3}
       description={booksContent.description}
       content={booksContent.blocks}
       renderItem={(item) => <BookContent item={item} />}

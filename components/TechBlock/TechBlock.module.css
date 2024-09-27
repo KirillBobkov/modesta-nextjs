@@ -1,5 +1,4 @@
 .tech-container {
-    background-color: var(--bg-color);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -8,7 +7,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px;
 }
 
 .tech {
@@ -20,7 +18,7 @@
     flex-wrap: wrap;
     gap: 2%;
     row-gap: 20px;
-    padding: 40px 40px 80px 40px;
+    padding: 0px 40px 80px 40px;
 }
 
 .tech__item {
@@ -60,7 +58,7 @@
 @media screen and (max-width: 768px) {
     .tech-container {
         margin-bottom: 40px;
-        padding: 40px 15px;
+        padding: 0 15px 40px;
     }
 
     .tech__container--inverted-color {
@@ -73,7 +71,7 @@
     }
 
     .tech__item {
-        height: 250px;
+        height: 200px;
         padding: 20px;
         width: 100%;
     }

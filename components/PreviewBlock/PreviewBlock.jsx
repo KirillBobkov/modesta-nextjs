@@ -9,7 +9,7 @@ export const FullPageVideo = React.forwardRef(({ video }, ref) => {
       <meta itemProp="name" content={video.name} />
       <meta itemProp="uploadDate" content={video.uploadDate} />
       <link itemProp="thumbnailUrl" href={video.thumbnailUrl} />
-      <video ref={ref} className={styles["full-page-video__video"]} poster={video.poster} autoPlay loop muted playsInline>
+      <video loading="lazy" ref={ref} className={styles["full-page-video__video"]} poster={video.poster} autoPlay loop muted playsInline>
         <source src={video.link} type="video/mp4"></source>
       </video>
     </div>

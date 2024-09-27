@@ -29,8 +29,7 @@ export function AdvantagesBlock() {
               } ${shadowStyles.shadow}`}
             >
               {isMobile !== undefined && (
-                <Image
-                  priority
+                <Image         
                   itemProp="contentUrl"
                   className={styles["advantage__item-image"]}
                   src={isMobile ? adv.mobileImg : adv.desktopImg}
