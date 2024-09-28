@@ -33,7 +33,7 @@ const Block = React.memo((props) => {
     forwardedRef,
     children,
     className,
-    side = "top",
+    side = "topmax",
     speed = 1.5,
     onClick
   } = props;
@@ -53,7 +53,7 @@ const Block = React.memo((props) => {
   const animationStyles = {
     ...style,
     transition: `transform ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
-    opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
+    opacity: 1,
     transform: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
   }
 

@@ -16,6 +16,7 @@ import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import Image from "next/image.js";
+import AnimatedCounter from "../AnimatedCounter/AnimatedCounter.jsx";
 
 const items = [
   {
@@ -33,8 +34,8 @@ const items = [
   {
     img: tech_block_img_3,
     text: "Угол вращения кисти",
-    key: '180°',
-    key_param: ''
+    key: '180',
+    key_param: '°'
   },
   {
     img: tech_block_img_4,
@@ -83,7 +84,9 @@ export function TechBlock() {
           <div className={styles.tech__content}>
           <span className={styles.tech__text}>
               {item.text} <br />
-              <span className={styles["tech__key-feature"]}>{item.key}</span>{item.key_param}
+              <span className={styles["tech__key-feature"]}>
+              <AnimatedCounter start={0} end={item.key}></AnimatedCounter>
+                </span>{item.key_param}
             </span>
           </div>
         </VisibilityManager>

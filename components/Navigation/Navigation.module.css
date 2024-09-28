@@ -1,7 +1,7 @@
 .navigation {
     flex-grow: 0;
     position: relative;
-    background-color: var(--card-bg-color);
+    background-color: var(--bg-color);
 }
 
 .navigation__container {
@@ -46,7 +46,7 @@
     left: 0;
     flex-direction: column;
     gap: 10px;
-    background-color: var(--card-bg-color);
+    background-color: var(--bg-color);
     transition: all 500ms ease-in-out;
 }
 
@@ -60,7 +60,7 @@
     display: flex;
     align-items: center;
     color: var(--font-color);
-    background-color: var(--card-bg-color);
+    background-color: var(--bg-color);
     font-size: 12px;
     padding: 10px 20px;
     text-decoration: none;
