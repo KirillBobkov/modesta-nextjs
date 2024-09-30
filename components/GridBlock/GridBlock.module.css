@@ -20,6 +20,7 @@
     padding: 20px;
     background-color: var(--card-bg-color);
     border-radius: 30px;
+    overflow: hidden;
 }
 
 .grid__item--2-columns {

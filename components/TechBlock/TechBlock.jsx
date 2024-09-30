@@ -66,7 +66,7 @@ export function TechBlock() {
       //       }
       //     : {}
       // }
-      className={styles["tech-container"]}
+      className={containerStyles["container"]}
     >
       <h2 className={`${containerStyles.container__title}`} id="tech">
         Технические характеристики

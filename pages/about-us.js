@@ -27,7 +27,7 @@ export default function AboutUsPage() {
   return (
     <Layout metaConfig={metaConfig}>
       <VisibilityManager className="page-offset" side="opacity">
-        <HistoryBlock title={missionContent.title} description={missionContent.description} />
+        <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
         <VideosBlock />
         <RoadmapBlock />

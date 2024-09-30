@@ -19,6 +19,7 @@ export const GridBlock = React.memo(
     hideButton,
     columns = 3,
     id,
+    customItemStyles = {},
     clickable = false,
   }) => {
     const ref = useRef(null);
@@ -55,6 +56,7 @@ export const GridBlock = React.memo(
                 className={`${styles.grid__item} ${styles[`${columnsClass}`]} ${shadowStyles.shadow} ${
                   clickable ? styles["grid__item--clickable"] : ""
                 }`}
+                style={customItemStyles}
               >
                 {renderItem(item)}
               </VisibilityManager>

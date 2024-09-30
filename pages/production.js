@@ -87,8 +87,9 @@ export default function ProductionPage() {
           author={quoteContent.author}
           quote={quoteContent.quote}
         />
-        <MozaicBlock images={firstMozaicImages} />
+      
         <ProductionBlock />
+        <MozaicBlock images={firstMozaicImages} />
         <MozaicBlock images={secondMozaicImages} />
     </Layout>
   );
