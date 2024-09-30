@@ -1,13 +1,13 @@
 import Footer from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useRouter } from "next/router";
 import { useTheme } from "../../hooks/useTheme";
 import Head from "next/head";
-import { GetProthesisForm } from "../GetProthesisForm/GetProthesisForm";
+import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import { Montserrat } from 'next/font/google'
+import { useState } from "react";
  
 const montseratt = Montserrat({
   weight:  ['400', '800'],
@@ -19,6 +19,9 @@ const montseratt = Montserrat({
 export default function Layout({ children, metaConfig }) {
   const router = useRouter();
   const { title, description, keywords, pageTitle } = metaConfig;
+  const [popupOpened, setOpened] = useState(false);
+
+
   useTheme();
 
   return (
@@ -80,10 +83,10 @@ export default function Layout({ children, metaConfig }) {
         </div>
         <Navigation />
         <main>{children}</main>
-        <GetProthesisForm />
+        <NewForm popupOpened={popupOpened} setOpened={setOpened}/>
         <Footer />
         <ScrollTopButton />
-        <FeedbackButton />
+        <FeedbackButton onClick={() => { setOpened(true); document.documentElement.classList.add("mobile-menu-opened"); }} />
       </div>
     </>
   );

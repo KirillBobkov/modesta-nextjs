@@ -2,16 +2,7 @@ import React from "react";
 import styles from './FeedbackButton.module.css';
 import shadowStyles from '../../styles/shadow.module.css';
 
-export default function FeedbackButton() {
-
-    const onClick = () => {
-        const element = document.getElementById('submit');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            ym(96028442,'reachGoal','feedback');
-        }
-    }
-
+export default function FeedbackButton({ onClick }) {
     return (
         <button onClick={onClick} className={`${styles['feedback-button']} ${shadowStyles.shadow}`} id="feedback">
             <svg className={styles.svg} version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +23,6 @@ export default function FeedbackButton() {
 803 1618 1656 l1515 1550 350 -353 c199 -201 382 -377 425 -409z"/>
                 </g>
             </svg>
-            <span className={styles['feedback-button__text']}>Оставить заявку</span>
         </button>
     );
 }
