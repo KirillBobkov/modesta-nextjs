@@ -17,20 +17,33 @@ const MaskedInput = ({ field, form, ...props }) => (
   />
 );
 
+const xssCheck = (value) => {
+  const xssPattern = /(<([^>]+)>|javascript:|data:|eval\(|alert\(|document\.cookie|document\.write|<script>|<\/script>)/i;
+  return !xssPattern.test(value); // Вернет true, если нет XSS
+};
+
 const validationSchema = Yup.object({
   name: Yup.string()
-    .min(3, 'Имя должно содержать не менее 3 символов')
-    .required('Имя обязательно'),
+      .min(3, 'Имя должно содержать не менее 3 символов')
+      .required('Имя обязательно')
+      .test('no-xss', 'Недопустимый символ в имени', value => xssCheck(value)),
+      
   email: Yup.string()
-    .email('Некорректный email')
-    .required('Email обязателен'),
+      .email('Некорректный email')
+      .required('Email обязателен')
+      .test('no-xss', 'Недопустимый символ в email', value => xssCheck(value)),
+
   phone: Yup.string()
-    .matches(/^\+7 \(\d{3}\) \d{3}-\d{4}$/, 'Некорректный номер телефона')
-    .required('Телефон обязателен'),
-  message: Yup.string(),
+      .matches(/^\+7 \(\d{3}\) \d{3}-\d{4}$/, 'Некорректный номер телефона')
+      .required('Телефон обязателен')
+      .test('no-xss', 'Недопустимый символ в номере телефона', value => xssCheck(value)),
+
+  message: Yup.string()
+      .test('no-xss', 'Недопустимый символ в сообщении', value => xssCheck(value)),
+
   checkbox: Yup.boolean()
-    .oneOf([true], 'Необходимо согласиться с условиями')
-    .required('Необходимо согласиться с условиями'),
+      .oneOf([true], 'Необходимо согласиться с условиями')
+      .required('Необходимо согласиться с условиями'),
 });
 
 const RegistrationForm = ({ popupOpened, setOpened }) => {
