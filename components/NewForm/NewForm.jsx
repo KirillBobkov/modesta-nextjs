@@ -58,22 +58,19 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
       const chat_id = "-1002021633462";
       const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
 
-    //   fetch(url, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json;charset=UTF-8",
-    //     },
-    //     body: JSON.stringify({
-    //       chat_id,
-    //       parse_mode: "html",
-    //       text: `<b>Заявка на получние протеза</b>\n\n<b>Имя</b>: ${fields.name}\n<b>E-mail</b>: ${fields.email}\n<b>Номер телефона</b>: ${fields.phone}\n<b>Сообщение</b>: ${
-    //         fields.message || "-"
-    //       }`,
-    //     }),
-    //   })
-    new Promise((res, rej) => {
-        setTimeout(() => res("ok"), 3000);
-    })
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=UTF-8",
+        },
+        body: JSON.stringify({
+          chat_id,
+          parse_mode: "html",
+          text: `<b>Заявка на получние протеза</b>\n\n<b>Имя</b>: ${fields.name}\n<b>E-mail</b>: ${fields.email}\n<b>Номер телефона</b>: ${fields.phone}\n<b>Сообщение</b>: ${
+            fields.message || "-"
+          }`,
+        }),
+      })
         .then(() => {
           setResponseMessage("Спасибо, заявка отправлена!");
         })
