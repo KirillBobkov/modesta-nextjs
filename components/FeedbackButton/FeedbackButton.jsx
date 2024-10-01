@@ -2,11 +2,11 @@ import React from "react";
 import styles from './FeedbackButton.module.css';
 import shadowStyles from '../../styles/shadow.module.css';
 
-export default function FeedbackButton({ onClick }) {
+export default function FeedbackButton({ text = '', onClick, withIcon = true }) {
     return (
         <button onClick={onClick} className={`${styles['feedback-button']} ${shadowStyles.shadow}`} id="feedback">
-            <svg className={styles.svg} version="1.0" xmlns="http://www.w3.org/2000/svg"
-                width="32px" height="32px" viewBox="0 0 1280.000000 965.000000"
+            {withIcon && <svg className={styles.svg} version="1.0" xmlns="http://www.w3.org/2000/svg"
+                width="28px" height="28px" viewBox="0 0 1280.000000 965.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,965.000000) scale(0.100000,-0.100000)"
                     fill="#000000" stroke="none">
@@ -22,7 +22,8 @@ export default function FeedbackButton({ onClick }) {
 1608 -1646 -4882 -3 c-2685 -1 -4883 0 -4886 2 -2 3 43 52 100 110 56 58 785
 803 1618 1656 l1515 1550 350 -353 c199 -201 382 -377 425 -409z"/>
                 </g>
-            </svg>
+            </svg>}
+            {text && <span className={styles['feedback-button__text']}>{text}</span>}
         </button>
     );
 }

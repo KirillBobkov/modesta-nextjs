@@ -7,7 +7,8 @@ import Head from "next/head";
 import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import { Montserrat } from 'next/font/google'
-import { useState } from "react";
+import { useState, Children, cloneElement } from "react";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
  
 const montseratt = Montserrat({
   weight:  ['400', '800'],
@@ -16,11 +17,10 @@ const montseratt = Montserrat({
   display: 'swap',
 })
 
-export default function Layout({ children, metaConfig }) {
+export default function Layout({ children, metaConfig, setOpened, popupOpened }) {
   const router = useRouter();
   const { title, description, keywords, pageTitle } = metaConfig;
-  const [popupOpened, setOpened] = useState(false);
-
+  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
 
   useTheme();
 
@@ -86,7 +86,9 @@ export default function Layout({ children, metaConfig }) {
         <NewForm popupOpened={popupOpened} setOpened={setOpened}/>
         <Footer />
         <ScrollTopButton />
-        <FeedbackButton onClick={() => { setOpened(true); document.documentElement.classList.add("mobile-menu-opened"); }} />
+        <div style={{ zIndex: 1,  position: 'fixed',  bottom: isMobile ? '15px' : '30px',  right: isMobile ? '15px' : '30px',}}>
+        <FeedbackButton text="Оставить заявку" onClick={() => { setOpened(true); document.documentElement.classList.add("mobile-menu-opened"); }} />
+        </div>
       </div>
     </>
   );

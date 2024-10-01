@@ -2,10 +2,7 @@ import React from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 
 import { useTheme } from "../../hooks/useTheme.jsx";
-// import tech_background_white from "../../public/images/tech_background_white.webp";
-// import tech_background_black from "../../public/images/tech_background_black.webp";
-// import tech_background_white_mobile from "../../public/images/tech_background_white_mobile.webp";
-// import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
+
 import tech_block_img_1 from "../../public/images/tech_block_img_1.jpg";
 import tech_block_img_2 from "../../public/images/tech_block_img_2.jpg";
 import tech_block_img_3 from "../../public/images/tech_block_img_3.jpg";

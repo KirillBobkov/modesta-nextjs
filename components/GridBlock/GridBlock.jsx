@@ -10,6 +10,7 @@ const widthMapper = {
   4: 'grid__item--4-columns',
   5: 'grid__item--5-columns',
 }
+
 export const GridBlock = React.memo(
   ({
     content,
@@ -19,6 +20,7 @@ export const GridBlock = React.memo(
     hideButton,
     columns = 3,
     id,
+    customTitleStyles = {},
     customItemStyles = {},
     clickable = false,
   }) => {
@@ -28,7 +30,7 @@ export const GridBlock = React.memo(
     return (
       <section   itemScope itemType="https://schema.org/ItemList" ref={ref} className={`${containerStyles.container}`}>
         {title && (
-          <VisibilityManager itemProp="name" as="h2" className={`${styles.grid__title} ${containerStyles.container__title}`} id={id}>
+          <VisibilityManager itemProp="name" as="h2" className={`${styles.grid__title} ${containerStyles.container__title}`} style={customTitleStyles} id={id}>
             {title}
           </VisibilityManager>
         )}

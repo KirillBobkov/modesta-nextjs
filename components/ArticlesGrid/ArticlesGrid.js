@@ -5,23 +5,24 @@ import { typesOfProthesis } from "../../content/articles/typesOfProthesis";
 import Link from "next/link";
 import { phantomPain } from "../../content/articles/phantomPain";
 import phantomPainImage from "../../public/images/phantomPain_2.jpg";
-import typeOfProthesisImage from "../../public/images/typeOfProthesis_4.jpg";
-import workingProcess8_2 from "../../public/images/working_process_2_8.jpg";
+import typeOfProthesisImage4 from "../../public/images/typeOfProthesis_4.jpg";
+import getProthesisImage from "../../public/images/getProthesisImage.jpg"; 
+import Image from "next/image";
 
 const blocks = [
   {
     title: howToGetProthesis.title,
     link: "/how-to-get-prothesis",
-    image: "https://cdn.4stand.com/large/a4/6e/a46e0a7cac1b09929c941982ea41a0237f99563e.jpg"
+    image: getProthesisImage
   },
   {
     title: typesOfProthesis.title,
     link: "/types-of-prothesis",
-    image: typeOfProthesisImage.src
+    image: typeOfProthesisImage4
   },
   {
     title: phantomPain.title,
-    image: phantomPainImage.src,
+    image: phantomPainImage,
     link: "/phantom-pain",
   },
   
@@ -30,7 +31,7 @@ const blocks = [
 const ArticleContent = ({ item }) => {
   return (
     <Link title="Перейти к статье" className={styles["article-grid__item"]} href={item.link}>
-        <img className={styles["article-grid__img"]} src={item.image} alt={item.title} />
+        <Image className={styles["article-grid__img"]} src={item.image} alt={item.title} />
         <p className={styles["article-grid__title"]}>{item.title}</p>
     </Link>
   );

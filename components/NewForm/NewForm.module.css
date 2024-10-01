@@ -263,7 +263,7 @@
 @media screen and (max-width: 1080px) { 
   .close-button {
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     margin: 0 auto;
     display: block;
   }

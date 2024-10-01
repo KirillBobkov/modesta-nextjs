@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import RoadmapBlock from "../components/RoadmapBlock/RoadmapBlock.jsx";
 import Layout from "../components/Layout/Layout.js";
@@ -12,6 +12,7 @@ import { useRouter } from "next/router.js";
 
 export default function AboutUsPage() {
   const router = useRouter();
+  const [popupOpened, setOpened] = useState(false);
 
   useEffect(() => {
     useYandexRobot(router.pathname);
@@ -25,8 +26,8 @@ export default function AboutUsPage() {
     keywords: "время стартап протезирование протезы временной путь история компании развитие сколково телемедфорум резиденты",
   };
   return (
-    <Layout metaConfig={metaConfig}>
-      <VisibilityManager className="page-offset" side="opacity">
+    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
+      <VisibilityManager side="opacity">
         <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
         <VideosBlock />

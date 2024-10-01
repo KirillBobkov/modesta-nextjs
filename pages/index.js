@@ -11,7 +11,8 @@ import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { headerContent } from "../content/header.js";
 import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { ProductsGrid } from "../components/Products/Products.jsx";
 
 const mainPageVideo = {
     link: "/images/rotate_5.mp4",
@@ -23,6 +24,7 @@ const mainPageVideo = {
 
 export default function MainPage() {
   const router = useRouter();
+  const [popupOpened, setOpened] = useState(false);
 
   useEffect(() => {
     useYandexRobot(router.pathname);
@@ -38,11 +40,12 @@ export default function MainPage() {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
       <VisibilityManager side="opacity">
         <PreviewBlock video={mainPageVideo} subTitle={headerContent.subTitle} title={headerContent.title} />
         <AdvantagesBlock />
         <TechBlock />
+        <ProductsGrid setOpened={setOpened} />
         <ReplacementBlock />
         <ProblemsBlock />
         <Questions />

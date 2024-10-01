@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 
 import { useTheme } from "../hooks/useTheme";
@@ -14,6 +14,7 @@ export default function NotFound() {
     return () => document.documentElement.classList.remove("no-scroll-page");
   }, []);
 
+  const [popupOpened, setOpened] = useState(false);
   useTheme();
 
   const metaConfig = {
@@ -24,7 +25,7 @@ export default function NotFound() {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
     <section className={styles404["not-found"]}>
       <h1
         className={`${containerStyles.container__title} ${styles404["not-found__title"]} `}

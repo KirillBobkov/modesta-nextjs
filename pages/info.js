@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 
@@ -12,6 +12,7 @@ import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 
 export default function InfoPage() {
   const router = useRouter();
+  const [popupOpened, setOpened] = useState(false);
 
   useEffect(() => {
     useYandexRobot(router.pathname);
@@ -26,7 +27,7 @@ export default function InfoPage() {
   };
   useScrollToLocation();
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
       <VisibilityManager className="page-offset">
         <BooksBlock />
         <ArticlesGrid />

@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ProductionBlock } from "../components/ProductionBlock/ProductionBlock.jsx";
 import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";
@@ -65,6 +65,7 @@ const productionPageVideo = {
 
 export default function ProductionPage() {
   const router = useRouter();
+  const [popupOpened, setOpened] = useState(false);
 
   useEffect(() => {
     useYandexRobot(router.pathname);
@@ -80,7 +81,7 @@ export default function ProductionPage() {
   }
   useScrollToLocation();
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
         <PreviewBlock video={productionPageVideo} />
         <QuoteBlock
           title={quoteContent.title}

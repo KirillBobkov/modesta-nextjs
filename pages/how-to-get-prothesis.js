@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout.js";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
@@ -10,6 +10,7 @@ import { useRouter } from 'next/router'
 
 export default () => {
   const router = useRouter();
+  const [popupOpened, setOpened] = useState(false);
 
   useEffect(() => {
     useYandexRobot(router.pathname);
@@ -25,7 +26,7 @@ export default () => {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
       <VisibilityManager className="page-offset">
         <ArticleBlock articleContent={howToGetProthesis}/>
       </VisibilityManager>
