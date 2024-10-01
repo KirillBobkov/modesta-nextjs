@@ -17,17 +17,17 @@ export function ProductionBlock() {
             itemType="http://schema.org/ImageObject"
             as="li"
             key={i}
-            className={`${styles.production__item} ${shadowStyles.shadow}`}
+            className={`${styles.production__item}`}
             id="production"
           >
             <Image
               itemProp="contentUrl"
-              className={styles.production__image}
+              className={styles.production__image + " " + shadowStyles.shadow}
               src={production.img}
               alt={production.alt}
             />
            
-            <div className={styles.production__content}>
+            <div className={styles.production__content + ' ' + shadowStyles.shadow}>
               <h3 itemProp="name" className={styles.production__title}>
                 {production.title}
               </h3>

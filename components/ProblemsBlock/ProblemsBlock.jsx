@@ -23,16 +23,16 @@ export function ProblemsBlock() {
               as="li"
               key={i}
               itemType="http://schema.org/ImageObject"
-              className={`${styles.problem} ${shadowStyles.shadow}`}
+              className={`${styles.problem}`}
               id="problem"
             >
               <Image
                 itemProp="contentUrl"
-                className={styles.problem__image}
+                className={styles.problem__image + ' ' + shadowStyles.shadow}
                 src={problem.img}
                 alt={problem.alt}
               />
-              <div className={styles.problem__content}>
+              <div className={styles.problem__content + ' ' + shadowStyles.shadow}>
                 <h3 itemProp="name" className={styles.problem__title}>
                   {problem.title}
                 </h3>

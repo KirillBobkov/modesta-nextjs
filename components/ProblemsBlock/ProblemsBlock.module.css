@@ -7,7 +7,6 @@
     display: flex;
     min-height: 400px;
     margin-bottom: 40px;
-    overflow: hidden;
     border-radius: 30px;
     gap: 2%;
   }

@@ -44,8 +44,8 @@ export default function MainPage() {
       <VisibilityManager side="opacity">
         <PreviewBlock video={mainPageVideo} subTitle={headerContent.subTitle} title={headerContent.title} />
         <AdvantagesBlock />
-        <TechBlock />
         <ProductsGrid setOpened={setOpened} />
+        <TechBlock /> 
         <ReplacementBlock />
         <ProblemsBlock />
         <Questions />

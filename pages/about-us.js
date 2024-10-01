@@ -26,8 +26,8 @@ export default function AboutUsPage() {
     keywords: "время стартап протезирование протезы временной путь история компании развитие сколково телемедфорум резиденты",
   };
   return (
-    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <VisibilityManager side="opacity">
+    <Layout   metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
+      <VisibilityManager className="page-offset" side="opacity">
         <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
         <VideosBlock />
