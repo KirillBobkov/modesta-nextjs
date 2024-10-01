@@ -124,6 +124,7 @@
     grid-template-rows: repeat(20, 35px);
     grid-auto-flow: dense;
     margin: 0 auto;
+    margin-bottom: 10px;
   }
   
   .mozaic__item--1 {
