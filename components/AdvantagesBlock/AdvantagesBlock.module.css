@@ -39,6 +39,7 @@
     /* color: var(--font-color); */
     color: #000000;
     white-space: pre-line;
+    text-transform: uppercase;
 }
 
 .advantages__item-description {
@@ -85,7 +86,7 @@
     }
 
     .advantages__item-text {
-        font-size: 28px;
+        font-size: 25px;
         line-height: 32px;
         margin-bottom: 10px;
         max-width: 320px;

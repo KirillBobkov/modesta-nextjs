@@ -22,6 +22,7 @@
     margin-bottom: 30px;
     font-weight: bold;
     white-space: pre-line;
+    text-transform: uppercase;
 }
 
 .container__title--middle {
@@ -39,7 +40,7 @@
     .container__title {
         max-width: 350px;
         text-align: left;
-        font-size: 28px;
+        font-size: 25px;
         line-height: 32px;
         margin-bottom: 20px;
     }

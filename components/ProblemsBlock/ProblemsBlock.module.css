@@ -40,6 +40,7 @@
     font-weight: bold;
     text-align: left;
     white-space: pre-line;
+    text-transform: uppercase;
   }
   
   .problem__description {
@@ -51,7 +52,7 @@
 
   @media screen and (max-width: 1080px) {
     .problem__title {
-      font-size: 28px;
+      font-size: 25px;
       line-height: 32px;
       margin-bottom: 15px;
       text-align: left;
@@ -90,7 +91,7 @@
     }
   
     .problem__title {
-      font-size: 28px;
+      font-size: 25px;
       line-height: 32px;
       margin-bottom: 10px;
       text-align: left;

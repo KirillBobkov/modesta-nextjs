@@ -83,7 +83,8 @@ export function TechBlock() {
               {item.text} <br />
               <span className={styles["tech__key-feature"]}>
               <AnimatedCounter start={0} end={item.key}></AnimatedCounter>
-                </span>{item.key_param}
+                </span>
+                <span className={styles["tech__key-feature-param"]}>{item.key_param}</span>
             </span>
           </div>
         </VisibilityManager>

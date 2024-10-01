@@ -36,6 +36,7 @@
     max-width: 800px;
     margin-bottom: 15px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .preview__secondary-line {

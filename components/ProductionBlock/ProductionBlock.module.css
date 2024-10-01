@@ -38,6 +38,7 @@
   margin-bottom: 15px;
   font-weight: bold;
   white-space: pre-line;
+  text-transform: uppercase;
 }
 
 .production__description {
@@ -54,7 +55,7 @@
   
   .production__title {
     
-    font-size: 28px;
+    font-size: 25px;
     line-height: 32px;
     margin-bottom: 10px;
   }
@@ -95,7 +96,7 @@
   }
 
   .production__title {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 32px;
     margin-bottom: 10px;
     max-width: 350px;

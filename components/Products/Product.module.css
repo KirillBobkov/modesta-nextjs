@@ -10,7 +10,6 @@
     padding: 0;
     padding-bottom: 30px;
     gap: 20px;
-
 }
 
 .product-grid__img {
@@ -20,8 +19,20 @@
 }
 
 .product-grid__title {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 32px;
+    text-align: center;
+    color: var(--font-color);
+    font-weight: bold;
+    width: 100%;
+    white-space: pre-line;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.product-grid__description {
+    font-size: 16px;
+    line-height: 25px;
     text-align: center;
     color: var(--secondary-font-color);
     width: 100%;
@@ -29,15 +40,9 @@
     padding: 0 20px;
 }
 
-.product-grid__price {
-    font-size: 16px;
-    line-height: 25px;
-    text-align: center;
-    font-weight: bold;
+.product-grid__button {
+    background-color: var(--bg-color);
     color: var(--font-color);
-    width: 100%;
-    white-space: pre-line;
-    padding: 0 20px;
 }
 
 @media screen and (max-width: 768px) { 

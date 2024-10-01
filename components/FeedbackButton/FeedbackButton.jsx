@@ -2,9 +2,9 @@ import React from "react";
 import styles from './FeedbackButton.module.css';
 import shadowStyles from '../../styles/shadow.module.css';
 
-export default function FeedbackButton({ text = '', onClick, withIcon = true }) {
+export default function FeedbackButton({ classes = '', text = '', onClick, withIcon = true }) {
     return (
-        <button onClick={onClick} className={`${styles['feedback-button']} ${shadowStyles.shadow}`} id="feedback">
+        <button onClick={onClick} className={`${styles['feedback-button']} ${shadowStyles.shadow} ${classes}`} id="feedback">
             {withIcon && <svg className={styles.svg} version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="28px" height="28px" viewBox="0 0 1280.000000 965.000000"
                 preserveAspectRatio="xMidYMid meet">

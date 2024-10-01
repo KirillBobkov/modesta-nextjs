@@ -16,17 +16,17 @@ const blocks = [
   {
     title: "Кисть",
     image: product_1,
-    price: 'от 60 тыс. рублей'
+    price: 'Протез кисти в размере "XS", "S", "M", "L", может поставляться с фрикционным запястьем или без него. Резьбовое соединение 12х1.5 мм'
   },
   {
     title: "Тяговый протез",
     image: product_2,
-    price: '150 тыс. рублей'
+    price: 'Тяговый протез не похожий на руку человека, в дизайне "МОДЕСТА 1.0", внешней гильзой из полиамида'
   },
   {
     title: "Биоэлектрический протез",
     image: product_3,
-    price: '550 тыс. руб.'
+    price: 'Находится в стадии разработки, уже сейчас можно встать в очередь и вскоре стать одним из первых испытателей'
   },
   
 ];
@@ -36,8 +36,8 @@ const Product = ({ item, setOpened }) => {
     <div className={styles["product-grid__item"]} href={item.link}>
         <Image className={styles["product-grid__img"]} src={item.image} alt={item.title} />
         <p className={styles["product-grid__title"]}>{item.title}</p>
-        <p className={styles["product-grid__price"]}>{item.price}</p>
-        <FeedbackButton onClick={setOpened}  text={'Узнать подробнее'} withIcon={false}/>
+        <p className={styles["product-grid__description"]}>{item.price}</p>
+        <FeedbackButton classes={styles["product-grid__button"]} onClick={setOpened}  text={'Узнать подробнее'} withIcon={false}/>
     </div>
   );
 };

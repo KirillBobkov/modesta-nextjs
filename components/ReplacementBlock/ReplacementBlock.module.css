@@ -27,6 +27,7 @@
     line-height: 60px;
     padding: 20px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
   .replacement-parts__arrow--left {

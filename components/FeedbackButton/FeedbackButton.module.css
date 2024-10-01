@@ -1,7 +1,7 @@
 .feedback-button {
     gap: 10px;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 15px;
     font-size: 1rem;
     cursor: pointer;
     display: flex;
@@ -28,7 +28,6 @@
 
 .feedback-button .feedback-button__text {
     flex-grow: 1;
-    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
