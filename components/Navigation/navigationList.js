@@ -14,12 +14,12 @@ export const  navigationTree = [
                 value: 'Характеристики',
             },
             {
+                path: '/#products',
+                value: 'Продуктовая линейка',
+            }, 
+            {
                 path: '/#faq',
                 value: 'Ответы на вопросы',
-            },
-            {
-                path: '/#submit',
-                value: 'Оставить заявку',
             },
             {
                 path: '/#contacts',
