@@ -20,7 +20,7 @@ const items = [
     img: tech_block_img_1,
     text: "Вес кисти",
     key: '300',
-    key_param: 'грамм'
+    key_param: 'гр.'
   },
   {
     img: tech_block_img_2,
