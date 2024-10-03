@@ -7,9 +7,8 @@ import { GridBlock } from "../GridBlock/GridBlock.jsx";
 
 const VideoCard = ({ item }) => {
   return (
-    <VisibilityManager
+    <div
       itemScope
-      as="div"
       itemType="http://schema.org/VideoObject"
       className={`${styles.videos__item} ${shadowStyles.shadow}`}
     >
@@ -24,7 +23,7 @@ const VideoCard = ({ item }) => {
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-    </VisibilityManager>
+    </div>
   );
 };
 

@@ -104,7 +104,7 @@ const Roadmap = ({ points }) => {
 
   return (
     <div className={styles.roadmap}>
-      <svg viewBox="0 0 500 800" className={styles.roadmapSvg}>
+      <svg viewBox="0 0 400 800" className={styles.roadmapSvg}>
         {/* Линия с изгибами */}
         <path d={pathD} fill="none" strokeWidth="10" strokeLinecap="round" />
         {points.blocks.map((point, index) =>
