@@ -33,11 +33,36 @@ const blocks = [
 
 const Product = ({ item, setOpened }) => {
   return (
-    <div className={styles["product-grid__item"]} href={item.link}>
-        <Image className={styles["product-grid__img"]} src={item.image} alt={item.title} />
-        <p className={styles["product-grid__title"]}>{item.title}</p>
-        <p className={styles["product-grid__description"]}>{item.price}</p>
-        <FeedbackButton classes={styles["product-grid__button"]} onClick={setOpened}  text={'Узнать подробнее'} withIcon={false}/>
+    <div
+      itemScope
+      itemType="https://schema.org/Product"
+      className={styles["product-grid__item"]}
+      href={item.link}
+    >
+      <Image
+        className={styles["product-grid__img"]}
+        src={item.image}
+        alt={item.title}
+        itemProp="image"
+      />
+      <p
+        className={styles["product-grid__title"]}
+        itemProp="name"
+      >
+        {item.title}
+      </p>
+      <p
+        className={styles["product-grid__description"]}
+        itemProp="description"
+      >
+        {item.price}
+      </p>
+      <FeedbackButton
+        classes={styles["product-grid__button"]}
+        onClick={setOpened}
+        text={'Узнать подробнее'}
+        withIcon={false}
+      />
     </div>
   );
 };
@@ -45,8 +70,6 @@ const Product = ({ item, setOpened }) => {
 export const ProductsGrid = ({ setOpened }) => {
   const { theme } = useTheme();
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
-  
-
     return (
       <div style={{ padding: '60px 0 1px', marginBottom: '60px' , position: 'relative' }}>
       <Image

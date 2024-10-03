@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import RoadmapBlock from "../components/RoadmapBlock/RoadmapBlock.jsx";
+import { NewMap } from "../components/NewMap/NewMap.jsx";
 import Layout from "../components/Layout/Layout.js";
 import { TeamBlock } from "../components/TeamBlock/TeamBlock.jsx";
 import { HistoryBlock } from "../components/HistoryBlock/HistoryBlock.jsx";
@@ -31,7 +31,7 @@ export default function AboutUsPage() {
         <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
         <VideosBlock />
-        <RoadmapBlock />
+        <NewMap />
         <TeamBlock />
       </VisibilityManager>
     </Layout>
