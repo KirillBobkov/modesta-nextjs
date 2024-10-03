@@ -21,7 +21,7 @@ export const roadmapContent = {
         "Формирование концепции прототипов, а также проектирование пилотных версий изделий",
       image: roadmap_period1,
       cx: 200,
-      cy: 100,
+      cy: 50,
     },
     {
       title: "I квартал 2022",
@@ -29,7 +29,7 @@ export const roadmapContent = {
         'Старт проекта “Протез для Ксюши". Создание первого антропоморфного образца',
       image: roadmap_period2,
       cx: 50,
-      cy: 250,
+      cy: 150,
     },
     {
       title: "IV квартал 2022",
@@ -37,7 +37,7 @@ export const roadmapContent = {
         "Подготовка и выступление на “Телемедфоруме 2022” с готовыми прототипами",
       image: roadmap_period3,
       cx: 50,
-      cy: 400,
+      cy: 250,
     },
     {
       title: "I квартал 2023",
@@ -45,7 +45,7 @@ export const roadmapContent = {
         "Поиск эффективного вида захватного устройства. Пересмотр концепции протеза руки",
       image: roadmap_period4,
       cx: 200,
-      cy: 550,
+      cy: 350,
     },
     {
       title: "III квартал 2023",
@@ -53,7 +53,7 @@ export const roadmapContent = {
         "Получение статуса резидента ИЦ “Сколково” в кластере Биомед",
       image: roadmap_period5,
       cx: 200,
-      cy: 700,
+      cy: 450,
     },
   ],
 };
