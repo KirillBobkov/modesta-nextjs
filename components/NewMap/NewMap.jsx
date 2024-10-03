@@ -36,7 +36,7 @@ export const roadmapContent = {
       description:
         "Подготовка и выступление на “Телемедфоруме 2022” с готовыми прототипами",
       image: roadmap_period3,
-      cx: 50,
+      cx: 80,
       cy: 250,
     },
     {
@@ -44,7 +44,7 @@ export const roadmapContent = {
       description:
         "Поиск эффективного вида захватного устройства. Пересмотр концепции протеза руки",
       image: roadmap_period4,
-      cx: 200,
+      cx: 180,
       cy: 350,
     },
     {
@@ -55,12 +55,28 @@ export const roadmapContent = {
       cx: 200,
       cy: 450,
     },
+    {
+      title: "II квартал 2024",
+      description:
+        "Участиев акселераторе",
+      image: roadmap_period5,
+      cx: 50,
+      cy: 550,
+    },
+    {
+      title: "III квартал 2024",
+      description:
+        "Вручение первого детского протеза",
+      image: roadmap_period5,
+      cx: 80,
+      cy: 650,
+    },
   ],
 };
 
 const Roadmap = ({ points }) => {
   const [activePoint, setActivePoint] = useState(null);
-  const isMobile = useMediaQuery("max-width: 767.98px");
+  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
 
   const handlePointMouseEnter = (e, index) => {
     setActivePoint({ index, y: e.pageY, x: e.pageX });
