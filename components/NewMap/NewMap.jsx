@@ -90,7 +90,7 @@ const Roadmap = ({ points }) => {
 
   return (
     <div className={styles.roadmap}>
-      <svg viewBox="0 0 600 800" className={styles.roadmapSvg}>
+      <svg viewBox="0 0 500 800" className={styles.roadmapSvg}>
         {/* Линия с изгибами */}
         <path
           d={pathD}
@@ -111,7 +111,7 @@ const Roadmap = ({ points }) => {
               <circle
                 cx={point.cx}
                 cy={point.cy}
-                r={activePoint?.index === index ? "15" : "12"}
+                r={activePoint?.index === index ? "20" : "17"}
                 fill="var(--font-color)"
                 className={styles.roadmapCircle}
               />
@@ -135,7 +135,8 @@ const Roadmap = ({ points }) => {
             position: "absolute",
             zIndex: 1,
             top: activePoint.y - 20,
-            left: isMobile ? 0 : activePoint.x,
+            left: activePoint.x,
+            ...(isMobile ? { left: '20px', right: '20px' } : {})
           }}
         >
           <PeriodComponent
