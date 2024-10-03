@@ -152,22 +152,12 @@ const Roadmap = ({ points }) => {
 
 export function NewMap() {
   return (
-    <>
+    <div className={`${containerStyles.container}`}>
       <h2 className={`${containerStyles.container__title}`} id="roadmap">
         {roadmapContent.title}
       </h2>
       <Roadmap points={roadmapContent} />
-    </>
+    </div>
   );
 }
 
-function PeriodImageComponent({ img }) {
-  return (
-    <Image
-      alt={`Период времени №${1}`}
-      itemProp="contentUrl"
-      className={`${styles.period__img} ${shadowStyles.shadow}`}
-      src={img}
-    />
-  );
-}
