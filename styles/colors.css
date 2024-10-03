@@ -10,13 +10,9 @@
     --card-bg-color: #1b1b1b;
     --card-bg-color-opacity: rgba(0, 0, 0, 0.52);
     --secondary-card-bg-color: #2d2d2d;
-    --tooltip: #3c3c3c;
 
     --box-shadow: rgba(0, 0, 0, 0.20);
     --accent:  #DCE359;
-
-    --helper-green: #48d156;
-    --helper-red: #e93636;
 }
 
 :root[theme='light'] {
@@ -31,10 +27,7 @@
     --card-bg-color: #ecececfc;
     --card-bg-color-opacity: rgba(255,255,255,0.6);
     --secondary-card-bg-color: #e8e8e8;
-    --tooltip: #939393;
 
     --box-shadow: rgba(0, 0, 0, 0.155);
     --accent: #DCE359;
-    --helper-green: #219e2d;
-    --helper-red: #9d2222;
 }

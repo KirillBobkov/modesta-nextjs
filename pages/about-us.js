@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout.js";
 import { TeamBlock } from "../components/TeamBlock/TeamBlock.jsx";
 import { HistoryBlock } from "../components/HistoryBlock/HistoryBlock.jsx";
 import { SocialNetworkBlock } from "../components/SocialNetworkBlock/SocialNetworkBlock.jsx";
-import { VideosBlock } from "../components/VideosBlock/VideosBlock.jsx";
+import { VideosGrid } from "../components/VideosGrid/VideosGrid.jsx";
 import { missionContent } from "../content/mission.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
@@ -30,7 +30,7 @@ export default function AboutUsPage() {
       <VisibilityManager className="page-offset" side="opacity">
         <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
-        <VideosBlock />
+        <VideosGrid />
         <NewMap />
         <TeamBlock />
       </VisibilityManager>

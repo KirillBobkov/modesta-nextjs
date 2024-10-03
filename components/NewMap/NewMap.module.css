@@ -10,13 +10,20 @@
   }
   
   .roadmapSvg path {
-    stroke: var(--secondary-font-color);
-    stroke-width: 4;
+    stroke: var(--accent);
+    stroke-width: 15;
     fill: none;
   }
   
   .roadmapCircle {
-    fill: var(--accent);
+    stroke: var(--accent);    
+    stroke-width: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .roadmapCircle2 {
+    stroke: var(--accent);
+    stroke: var(--bg-color);
     transition: all 0.2s ease-in-out;
   }
 
@@ -24,10 +31,9 @@
   .textLabel {
     margin-bottom: 10px;
     text-align: left;
-    font-size: 25px;
-    line-height: 32px;
-    font-weight: bold;
-    fill: var(--font-color);
+    font-size: 20px;
+    line-height: 25px;
+    fill: var(--secondary-font-color);
     white-space: pre-line;
   }
   

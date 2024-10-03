@@ -36,7 +36,7 @@ export const roadmapContent = {
       description:
         "Подготовка и выступление на “Телемедфоруме 2022” с готовыми прототипами",
       image: roadmap_period3,
-      cx: 80,
+      cx: 50,
       cy: 250,
     },
     {
@@ -44,7 +44,7 @@ export const roadmapContent = {
       description:
         "Поиск эффективного вида захватного устройства. Пересмотр концепции протеза руки",
       image: roadmap_period4,
-      cx: 180,
+      cx: 200,
       cy: 350,
     },
     {
@@ -57,18 +57,16 @@ export const roadmapContent = {
     },
     {
       title: "II квартал 2024",
-      description:
-        "Участиев акселераторе",
+      description: "Участиев акселераторе",
       image: roadmap_period5,
       cx: 50,
       cy: 550,
     },
     {
       title: "III квартал 2024",
-      description:
-        "Вручение первого детского протеза",
+      description: "Вручение первого детского протеза",
       image: roadmap_period5,
-      cx: 80,
+      cx: 50,
       cy: 650,
     },
   ],
@@ -108,41 +106,43 @@ const Roadmap = ({ points }) => {
     <div className={styles.roadmap}>
       <svg viewBox="0 0 500 800" className={styles.roadmapSvg}>
         {/* Линия с изгибами */}
-        <path
-          d={pathD}
-          fill="none"
-          strokeWidth="4"
-          stroke-dasharray="10"
-          stroke-linecap="round"
-        />
-        {points.blocks.map((point, index) => (
-          <Fragment key={index}>
-            <g
-              key={index}
-              onMouseEnter={(e) => {
-                handlePointMouseEnter(e, index);
-              }}
-              onMouseLeave={handlePointMouseLeave}
-            >
-              <circle
-                cx={point.cx}
-                cy={point.cy}
-                r={activePoint?.index === index ? "20" : "17"}
-                fill="var(--font-color)"
-                className={styles.roadmapCircle}
-              />
-            </g>
-            <text
+        <path d={pathD} fill="none" strokeWidth="10" strokeLinecap="round" />
+        {points.blocks.map((point, index) =>
+          !point.nopoint ? (
+            <Fragment key={index}>
+              <g
+                key={index}
+                onMouseEnter={(e) => {
+                  handlePointMouseEnter(e, index);
+                }}
+                onMouseLeave={handlePointMouseLeave}
+              >
+                <circle
+                  cx={point.cx}
+                  cy={point.cy}
+                  className={styles.roadmapCircle}
+                  r={activePoint?.index === index ? "17" : "15"}
+                  fill="none"
+                />
+                <circle
+                  cx={point.cx}
+                  cy={point.cy}
+                  className={styles.roadmapCircle2}
+                  r={activePoint?.index === index ? "17" : "15"}
+                />
+              </g>
+              <text
                 style={{ zIndex1: 1 }}
-                x={point.cx + 30}
-                y={point.cy + 5}
+                x={point.cx + 40}
+                y={point.cy + 8}
                 className={styles.textLabel}
                 textAnchor="start"
               >
                 {point.title}
               </text>
-          </Fragment>
-        ))}
+            </Fragment>
+          ) : null
+        )}
       </svg>
       {activePoint !== null && (
         <div
@@ -152,7 +152,7 @@ const Roadmap = ({ points }) => {
             zIndex: 1,
             top: activePoint.y - 20,
             left: activePoint.x,
-            ...(isMobile ? { left: '20px', right: '20px' } : {})
+            ...(isMobile ? { left: "20px", right: "20px" } : {}),
           }}
         >
           <PeriodComponent
@@ -176,4 +176,3 @@ export function NewMap() {
     </div>
   );
 }
-
