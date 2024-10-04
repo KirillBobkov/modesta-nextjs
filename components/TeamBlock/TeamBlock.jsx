@@ -14,11 +14,11 @@ export const TeamBlock = () => {
       customItemStyles={{ padding: 0, background: "transparent" }}
       content={teamContent.blocks}
       renderItem={(person) => (
-        <VisibilityManager
+        <div
           itemScope
           itemType="http://schema.org/Person"
           key={person.name}
-          as="li"
+          as="div"
           className={styles.person}
         >
           <div className={styles["person__avatar-container"]}>
@@ -40,7 +40,7 @@ export const TeamBlock = () => {
             </span>
             <span className={styles["person__bio"]}>{person.bio}</span>
           </p>
-        </VisibilityManager>
+        </div>
       )}
     />
   );

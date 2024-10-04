@@ -46,4 +46,9 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
       <lastmod>2024-04-11</lastmod>
       <changefreq>weekly</changefreq>
 </url>
+<url> 
+      <loc>https://modesta.tech/history</loc> 
+      <lastmod>2024-04-11</lastmod>
+      <changefreq>weekly</changefreq>
+</url>
 </urlset>
