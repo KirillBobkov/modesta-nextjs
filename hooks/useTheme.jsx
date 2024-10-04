@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import  { useCallback, useEffect, useState } from "react";
 
 export function useTheme() {
     const [theme, setTheme] = useState(undefined);

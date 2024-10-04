@@ -7,7 +7,6 @@ import Head from "next/head";
 import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import { Montserrat } from 'next/font/google'
-import { useState, Children, cloneElement } from "react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
  
 const montseratt = Montserrat({
@@ -75,7 +74,6 @@ export default function Layout({ children, metaConfig, setOpened, popupOpened })
           href="/images/favicon180x180.png"
         />
         <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
-
       </Head>
       <div className={montseratt.className}>
         <div style={{ display: "none" }}>

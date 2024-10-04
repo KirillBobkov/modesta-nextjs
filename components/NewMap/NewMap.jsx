@@ -162,14 +162,15 @@ const Roadmap = ({ points }) => {
               </text>
               {!hoveredOnce.current && (
                 <svg
-                  width="62"
-                  height="62"
-                  stroke-width="1.5"
+                  width="42"
+                  height="42"
+                  stroke-width="2"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  x={points.blocks[0].cx - 25}
-                  y={points.blocks[0].cy}
+                  x={points.blocks[0].cx - 10}
+                  y={points.blocks[0].cy + 10}
+                  className={styles.finger}
                 >
                   {" "}
                   <path

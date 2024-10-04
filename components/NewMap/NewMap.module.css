@@ -22,8 +22,8 @@
   }
 
   .roadmapCircle2 {
+    fill: var(--card-bg-color);
     stroke: var(--accent);
-    stroke: var(--bg-color);
     transition: all 0.2s ease-in-out;
   }
 
@@ -71,4 +71,8 @@
 .period__description {
     color: var(--secondary-font-color);
     white-space: pre-line;
+}
+
+.finger {
+  stroke: var(--font-color);
 }
