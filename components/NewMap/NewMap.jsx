@@ -1,14 +1,14 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import styles from "./NewMap.module.css";
 import roadmap_period1 from "../../public/images/roadmap1.jpg";
 import roadmap_period2 from "../../public/images/roadmap2.jpg";
 import roadmap_period3 from "../../public/images/roadmap3.jpg";
 import roadmap_period4 from "../../public/images/roadmap4.jpg";
 import roadmap_period5 from "../../public/images/roadmap5.jpg";
-import shadowStyles from "../../styles/shadow.module.css";
+import roadmap_period6 from "../../public/images/roadmap6.jpg";
+import roadmap_period7 from "../../public/images/roadmap7.jpg";
+import roadmap_period8 from "../../public/images/roadmap8.jpg";
 import containerStyles from "../../styles/container.module.css";
-import Image from "next/image";
-import { VisibilityManager } from "../VisibilityManager";
 import { PeriodComponent } from "./Period";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
@@ -57,17 +57,26 @@ export const roadmapContent = {
     },
     {
       title: "II квартал 2024",
-      description: "Участиев акселераторе",
-      image: roadmap_period5,
+      description:
+        "Участие в Национальном форуме реабилитационной индустрии и универсального дизайна «Надежда на технологии 2024» в качестве экспонента",
+      image: roadmap_period7,
       cx: 50,
       cy: 550,
     },
     {
       title: "III квартал 2024",
-      description: "Вручение первого детского протеза",
-      image: roadmap_period5,
+      description:
+        "Участие в финале акселератора «Инновации в реАбилитации» от Фонда «Сколково» и лидеров в индустрии ассистивных технологий.",
+      image: roadmap_period8,
       cx: 50,
       cy: 650,
+    },
+    {
+      title: "III квартал 2024",
+      description: "Выдача нового размера протеза XS Дмитрию (3 года)",
+      image: roadmap_period6,
+      cx: 50,
+      cy: 750,
     },
   ],
 };
@@ -75,8 +84,12 @@ export const roadmapContent = {
 const Roadmap = ({ points }) => {
   const [activePoint, setActivePoint] = useState(null);
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
+  const hoveredOnce = useRef(false);
 
   const handlePointMouseEnter = (e, index) => {
+    if (!hoveredOnce.current) {
+      hoveredOnce.current = true;
+    }
     setActivePoint({ index, y: e.pageY, x: e.pageX });
   };
   const handlePointMouseLeave = () => setActivePoint(null);
@@ -106,9 +119,16 @@ const Roadmap = ({ points }) => {
     <div className={styles.roadmap}>
       <svg viewBox="0 0 400 800" className={styles.roadmapSvg}>
         {/* Линия с изгибами */}
-        <path d={pathD} fill="none" strokeWidth="10" strokeLinecap="round" />
-        {points.blocks.map((point, index) =>
-          !point.nopoint ? (
+        <path
+          className={styles.roadmapSvgPath}
+          d={pathD}
+          roadmapSvgPathd={pathD}
+          fill="none"
+          strokeWidth="10"
+          strokeLinecap="round"
+        />
+        {points.blocks.map((point, index) => (
+          <>
             <Fragment key={index}>
               <g
                 key={index}
@@ -140,9 +160,53 @@ const Roadmap = ({ points }) => {
               >
                 {point.title}
               </text>
+              {!hoveredOnce.current && (
+                <svg
+                  width="62"
+                  height="62"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x={points.blocks[0].cx - 25}
+                  y={points.blocks[0].cy}
+                >
+                  {" "}
+                  <path
+                    d="M7.5 12L5.49591 14.6721C4.91845 15.4421 4.97127 16.5141 5.6216 17.2236L9.4055 21.3515C9.78431 21.7647 10.3183 22 10.8789 22C11.9651 22 13.7415 22 15.5 22C17.9 22 19.5 20 19.5 18C19.5 18 19.5 18 19.5 18C19.5 18 19.5 11.1429 19.5 9.42859"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />{" "}
+                  <path
+                    d="M16.5 9.99995C16.5 9.99995 16.5 9.87483 16.5 9.42852C16.5 7.1428 19.5 7.1428 19.5 9.42852"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />{" "}
+                  <path
+                    d="M13.5 9.99998C13.5 9.99998 13.5 9.17832 13.5 8.2857C13.5 5.99998 16.5 5.99998 16.5 8.2857C16.5 8.50885 16.5 9.2054 16.5 9.42855C16.5 9.87487 16.5 9.99998 16.5 9.99998"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />{" "}
+                  <path
+                    d="M10.5 10.0001C10.5 10.0001 10.5 8.61584 10.5 7.50005C10.5 5.21434 13.5 5.21434 13.5 7.50005C13.5 7.50005 13.5 7.50005 13.5 7.50005C13.5 7.50005 13.5 8.06261 13.5 8.28577C13.5 9.17839 13.5 10.0001 13.5 10.0001"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />{" "}
+                  <path
+                    d="M10.5 10C10.5 10 10.5 8.61578 10.5 7.5C10.5 6.34156 10.5 4.68968 10.5 3.49899C10.5 2.67056 9.82843 2 9 2V2C8.17157 2 7.5 2.67157 7.5 3.5V12V15"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />{" "}
+                </svg>
+              )}
             </Fragment>
-          ) : null
-        )}
+          </>
+        ))}
       </svg>
       {activePoint !== null && (
         <div

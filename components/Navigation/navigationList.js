@@ -60,7 +60,7 @@ export const  navigationTree = [
         },
         childs: [
             {
-                path: '/about-us#history',
+                path: '/about-us#mission',
                 value: 'О компании',
             },
             {
@@ -71,8 +71,20 @@ export const  navigationTree = [
                 path: '/about-us#videos',
                 value: 'Видео',
             },
+        ]
+    },
+    {
+        parent: {
+            path: '/history',
+            value: 'История',
+        },
+        childs: [
             {
-                path: '/about-us#team',
+                path: '/history#roadmap',
+                value: 'Дорожная карта',
+            },
+            {
+                path: '/history#team',
                 value: 'Наша команда',
             },
         ]

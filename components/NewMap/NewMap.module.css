@@ -9,7 +9,7 @@
     overflow: visible;
   }
   
-  .roadmapSvg path {
+  .roadmapSvgPath {
     stroke: var(--accent);
     stroke-width: 15;
     fill: none;

@@ -8,7 +8,6 @@
 }
 
 .person {
-    width: 49%;
     min-height: 170px;
     padding: 0;
     display: flex;
