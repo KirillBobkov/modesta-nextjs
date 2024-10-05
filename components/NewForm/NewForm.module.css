@@ -133,11 +133,12 @@
 
 /* Сообщения об ошибках */
 .error-message {
-  color: red;
+  color: var(--helper-red);
   font-size: 10px;
   text-align: right;
   line-height: 14px;
   margin-top: 0px;
+  margin-right: 5px;
 }
 
 .form-textarea {

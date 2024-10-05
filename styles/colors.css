@@ -13,6 +13,8 @@
 
     --box-shadow: rgba(0, 0, 0, 0.20);
     --accent:  #DCE359;
+    --helper-red: red;
+    --helper-green: rgb(0, 184, 0);
 }
 
 :root[theme='light'] {
@@ -30,4 +32,6 @@
 
     --box-shadow: rgba(0, 0, 0, 0.155);
     --accent: #DCE359;
+    --helper-red: red;
+    --helper-green: rgb(0, 184, 0);
 }

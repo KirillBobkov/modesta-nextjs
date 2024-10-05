@@ -4,7 +4,6 @@ import styles from "./QuizForm.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import { useFormValidation } from "../../hooks/useFormValidation.jsx";
 import { VisibilityManager } from "../VisibilityManager.jsx";
-import formBack from "../../public/images/form_back.webp";
 
 export const isText = RegExp(/^.{2,200}$$/i);
 export const isEmail = RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
