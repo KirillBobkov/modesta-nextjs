@@ -8,7 +8,6 @@
 }
 
 .person {
-    min-height: 170px;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -19,11 +18,12 @@
 .person__avatar-container {
     display: flex;
     width: 25%;
+    height: 100%;
+    justify-content: flex-end;
 }
 
 .person__avatar {
     border-radius: 50%;
-    width: 100%;
     background-color: var(--secondary-card-bg-color);
     align-self: flex-end;
 }
@@ -41,8 +41,8 @@
 .person__name {
     margin-bottom: 10px;
     text-align: left;
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 32px;
     width: 100%;
     font-weight: bold;
     white-space: pre-line;
@@ -84,6 +84,11 @@
     .person__profession {
         margin-bottom: 5px;
     }
+
+    .person__avatar-container {
+        width: auto;
+    }
+    
 
     .person__info {
         padding: 0px 0px 0px 15px;

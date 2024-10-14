@@ -8,47 +8,47 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> 
       <loc>https://modesta.tech/</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-14</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/production</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/info</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/phantom-pain</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/how-to-get-prothesis</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/types-of-prothesis</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/about-us</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-14</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/quiz</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/history</loc> 
-      <lastmod>2024-04-11</lastmod>
+      <lastmod>2024-10-05</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 </urlset>

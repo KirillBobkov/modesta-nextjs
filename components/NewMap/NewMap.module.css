@@ -10,20 +10,20 @@
   }
   
   .roadmapSvgPath {
-    stroke: var(--accent);
+    stroke: var(--font-color);
     stroke-width: 15;
     fill: none;
   }
   
   .roadmapCircle {
-    stroke: var(--accent);    
+    stroke: var(--font-color);    
     stroke-width: 10px;
     transition: all 0.2s ease-in-out;
   }
 
   .roadmapCircle2 {
     fill: var(--card-bg-color);
-    stroke: var(--accent);
+    stroke: var(--font-color);
     transition: all 0.2s ease-in-out;
   }
 
@@ -33,7 +33,7 @@
     text-align: left;
     font-size: 20px;
     line-height: 25px;
-    fill: var(--secondary-font-color);
+    fill: var(--font-color);
     white-space: pre-line;
   }
   

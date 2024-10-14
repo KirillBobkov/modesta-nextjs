@@ -4,13 +4,14 @@ import styles from "./TeamBlock.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import { teamContent } from "../../content/team.js";
 import { GridBlock } from "../GridBlock/GridBlock.jsx";
+import Image from "next/image.js";
 
 export const TeamBlock = () => {
   return (
     <GridBlock
       title={teamContent.title}
       id="team"
-      columns={2}
+      columns={3}
       customItemStyles={{ padding: 0, background: "transparent", boxShadow: "none", overflow: "visible" }}
       content={teamContent.blocks}
       renderItem={(person) => (
@@ -22,10 +23,12 @@ export const TeamBlock = () => {
           className={styles.person}
         >
           <div className={styles["person__avatar-container"]}>
-            <img
+            <Image
               alt="Портрет члена команды"
               className={`${styles["person__avatar"]} ${shadowStyles.shadow}`}
               src={person.image}
+              width={100}
+              height={100}
             />
           </div>
           <p className={styles["person__info"]}>

@@ -38,5 +38,11 @@ export const videosContent = {
         name: "Разработка протезов рук",
         uploadDate: new Date("October 03, 2024").toISOString(),
       },
-    ],
+      {
+        link: "https://vk.com/video_ext.php?oid=-131964440&id=456239061&hash=5b13f9b42b508b22",
+        thumbnailUrl: "https://i.mycdn.me/getVideoPreview?id=7078997265029&idx=4&type=39&tkn=t3lborNlES0gSgm7eZl4SGVwQlI&fn=vid_u",
+        name: "Впечатления от I регионального молодёжного профориентационного форума Моя профессия — IT",
+        uploadDate: new Date("October 14, 2024").toISOString(),
+      },
+        ],
   };

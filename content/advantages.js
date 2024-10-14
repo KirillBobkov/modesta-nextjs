@@ -1,9 +1,6 @@
 import advantage_1 from "../public/images/advantage_1.webp";
-import advantage_1_mobile from "../public/images/advantage_1_mobile.webp";
 import advantage_2 from "../public/images/advantage_2.webp";
-import advantage_2_mobile from "../public/images/advantage_2_mobile.webp";
 import advantage_3 from "../public/images/advantage_3.webp";
-import advantage_3_mobile from "../public/images/advantage_3_mobile.webp";
 
 /* В данном объекте находятся следующие поля:
 title: “Наши преимущества” - общее название преимуществ.
@@ -20,7 +17,6 @@ export const advantagesContent = {
         title: "Эффективность",
         description:
           "Роботизированный захват, обеспечивающий возможность управлять объектами разнообразных форм",
-        mobileImg: advantage_1_mobile.src,
         desktopImg: advantage_1.src,
         right: false,
       },
@@ -28,7 +24,6 @@ export const advantagesContent = {
         title: "Сменные конечности",
         description:
           "Удобство в использовании в различных местах: на улице, дома или в мастерской",
-        mobileImg: advantage_2_mobile.src,
         desktopImg: advantage_2.src,
         right: true,
       },
@@ -36,7 +31,6 @@ export const advantagesContent = {
         title: "Простое обслуживание",
         description:
           "Произвести ремонт можно самостоятельно либо через наш сервис оперативного устранения неполадок",
-        mobileImg: advantage_3_mobile.src,
         desktopImg: advantage_3.src,
         right: false,
       },
