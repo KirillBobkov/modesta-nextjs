@@ -52,7 +52,143 @@ function formatSeconds(seconds) {
   ).slice(-2)}`;
 }
 
-export default Analytics = () => {
+
+// interface ChartComponentProps {
+//   title: string;
+//   data: number[];
+// }
+const ChartComponent = ({ title, data }) => (
+  <div className={styles.container_chart}>
+    <h1 className={styles.secondary_title}>{title}</h1>
+    <LineChart
+      margin={{
+        left: 40,
+        right: 10,
+        top: 0,
+        bottom: 20,
+      }}
+      series={[
+        {
+          data: data,
+          showMark: false,
+          disableHighlight: true,
+          connectNulls: true,
+          color: "#DCE359",
+        },
+      ]}
+    />
+  </div>
+);
+
+const Profile = ({ connected }) => (
+  <div>
+    <div className={styles.person}>
+      <div className={styles["person__avatar-container"]}>
+        <img
+          alt="Портрет члена команды"
+          className={styles["person__avatar"]}
+          src={
+            connected
+              ? avatar
+              : "https://raw.githubusercontent.com/Mikescher/CS_GO_Avatars/master/question%20mark.png"
+          }
+        />
+        <p itemProp="name" className={styles["person__name"]}>
+          {connected ? "Ксения Ситоленко" : "-"}
+        </p>
+      </div>
+    </div>
+
+    <table className={styles.table}>
+      <tr>
+        <td>Дата рождения</td>
+        <td className={styles["person__profession"]}>
+          {connected ? "22.02.1994" : "-"}
+        </td>
+      </tr>
+      <tr>
+        <td>Телефон</td>
+        <td>
+          <p className={styles["person__profession"]}>
+            <a href="tel:+79991202332">
+              {connected ? "+7 999 120 23 32" : "-"}
+            </a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td>
+          <p className={styles["person__profession"]}>
+            <a href="mailto:test@mail.ru">{connected ? "test@mail.ru" : "-"}</a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Статус</td>
+        <td>
+          <p className={styles["person__profession"]}>
+            {connected ? "Новичок (Меньше 100 часов использования)" : "-"}
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Идентификатор</td>
+        <td>
+          <p className={styles["person__profession"]}>
+            {connected ? "XF-434" : "-"}
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+);
+
+function GaugePointer() {
+  const { valueAngle, outerRadius, cx, cy } = useGaugeState();
+
+  if (valueAngle === null) {
+    // No value to display
+    return null;
+  }
+
+  const target = {
+    x: cx + outerRadius * Math.sin(valueAngle),
+    y: cy - outerRadius * Math.cos(valueAngle),
+  };
+  return (
+    <g>
+      <circle cx={cx} cy={cy} r={5} fill="red" />
+      <path
+        d={`M ${cx} ${cy} L ${target.x} ${target.y}`}
+        stroke="red"
+        strokeWidth={3}
+      />
+    </g>
+  );
+}
+
+function CompositionExample({ val }) {
+  return (
+    <Gauge
+      value={val}
+      startAngle={-110}
+      endAngle={110}
+      sx={{
+        [`& .${gaugeClasses.valueText}`]: {
+          fontSize: 30,
+          transform: "translate(0px, 0px)",
+        },
+        [`& .${gaugeClasses.valueArc}`]: {
+          fill: "#DCE359",
+        },
+      }}
+      text={({ value, valueMax }) => `${value}%`}
+    />
+  );
+}
+
+export function AnalyticsBlock() {
   const [subscription, setSubscription] = useState(undefined);
   const [counterSub, setCounterSub] = useState(undefined);
   const [trainingData, setTrainingData] = useState([]);
@@ -350,137 +486,3 @@ export default Analytics = () => {
     </ThemeProvider>
   );
 };
-// interface ChartComponentProps {
-//   title: string;
-//   data: number[];
-// }
-const ChartComponent = ({ title, data }) => (
-  <div className={styles.container_chart}>
-    <h1 className={styles.secondary_title}>{title}</h1>
-    <LineChart
-      margin={{
-        left: 40,
-        right: 10,
-        top: 0,
-        bottom: 20,
-      }}
-      series={[
-        {
-          data: data,
-          showMark: false,
-          disableHighlight: true,
-          connectNulls: true,
-          color: "#DCE359",
-        },
-      ]}
-    />
-  </div>
-);
-
-const Profile = ({ connected }) => (
-  <div>
-    <div className={styles.person}>
-      <div className={styles["person__avatar-container"]}>
-        <img
-          alt="Портрет члена команды"
-          className={styles["person__avatar"]}
-          src={
-            connected
-              ? avatar
-              : "https://raw.githubusercontent.com/Mikescher/CS_GO_Avatars/master/question%20mark.png"
-          }
-        />
-        <p itemProp="name" className={styles["person__name"]}>
-          {connected ? "Ксения Ситоленко" : "-"}
-        </p>
-      </div>
-    </div>
-
-    <table className={styles.table}>
-      <tr>
-        <td>Дата рождения</td>
-        <td className={styles["person__profession"]}>
-          {connected ? "22.02.1994" : "-"}
-        </td>
-      </tr>
-      <tr>
-        <td>Телефон</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            <a href="tel:+79991202332">
-              {connected ? "+7 999 120 23 32" : "-"}
-            </a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>E-mail</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            <a href="mailto:test@mail.ru">{connected ? "test@mail.ru" : "-"}</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>Статус</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            {connected ? "Новичок (Меньше 100 часов использования)" : "-"}
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>Идентификатор</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            {connected ? "XF-434" : "-"}
-          </p>
-        </td>
-      </tr>
-    </table>
-  </div>
-);
-
-function GaugePointer() {
-  const { valueAngle, outerRadius, cx, cy } = useGaugeState();
-
-  if (valueAngle === null) {
-    // No value to display
-    return null;
-  }
-
-  const target = {
-    x: cx + outerRadius * Math.sin(valueAngle),
-    y: cy - outerRadius * Math.cos(valueAngle),
-  };
-  return (
-    <g>
-      <circle cx={cx} cy={cy} r={5} fill="red" />
-      <path
-        d={`M ${cx} ${cy} L ${target.x} ${target.y}`}
-        stroke="red"
-        strokeWidth={3}
-      />
-    </g>
-  );
-}
-
-function CompositionExample({ val }) {
-  return (
-    <Gauge
-      value={val}
-      startAngle={-110}
-      endAngle={110}
-      sx={{
-        [`& .${gaugeClasses.valueText}`]: {
-          fontSize: 30,
-          transform: "translate(0px, 0px)",
-        },
-        [`& .${gaugeClasses.valueArc}`]: {
-          fill: "#DCE359",
-        },
-      }}
-      text={({ value, valueMax }) => `${value}%`}
-    />
-  );
-}

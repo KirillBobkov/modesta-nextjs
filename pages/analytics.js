@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
-import Analytics from "../components/Analytics/Analytics.jsx";
+import {AnalyticsBlock}  from "../components/Analytics/Analytics.jsx";
 
 export default function AnalyticsPage() {
   const router = useRouter();
@@ -21,7 +21,7 @@ export default function AnalyticsPage() {
 
   return (
     <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <Analytics />
+      <AnalyticsBlock />
     </Layout>
   );
 }
