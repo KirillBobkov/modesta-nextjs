@@ -28,7 +28,7 @@ import avatar from "../../public/images/avatar.png";
 const INITIAL_COUNT = 0;
 
 // Функция для создания Observable счётчика
-export function createCounterObservable() {
+function createCounterObservable() {
   // Создаём поток интервалов, который будет увеличивать значение счётчика каждую секунду
   const counter$ = interval(1000).pipe(
     // Используем scan для накопления значений
@@ -52,7 +52,7 @@ function formatSeconds(seconds) {
   ).slice(-2)}`;
 }
 
-export const Analytics = () => {
+export default Analytics = () => {
   const [subscription, setSubscription] = useState(undefined);
   const [counterSub, setCounterSub] = useState(undefined);
   const [trainingData, setTrainingData] = useState([]);
