@@ -6,15 +6,6 @@ import shadowStyles from "../styles/shadow.module.css";
 import containerStyles from "../styles/container.module.css";
 import styles404 from "../styles/404.module.css";
 import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
-import Link from "next/link";
 
 export default function NotFound() {
   useEffect(() => {
