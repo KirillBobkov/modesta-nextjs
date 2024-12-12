@@ -11,6 +11,7 @@
     background-color: #dedbde;
     z-index: 0;
     align-items: center;
+   
 }
 
 .advantages__item--right {
@@ -51,7 +52,12 @@
    width: auto!important;
    z-index: -1;
    left: auto!important;
-   transition: transform 800ms ease-in-out;
+   transition: all 800ms ease-in-out;
+   opacity: 0;
+}
+
+.loaded {
+    opacity: 1;
 }
 
 .advantages__item:hover .advantage__item-image {

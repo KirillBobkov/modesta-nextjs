@@ -90,7 +90,8 @@ export default function ProductionPage() {
         />
       
         <ProductionBlock />
-        <MozaicBlock images={firstMozaicImages} />
+       
+       <MozaicBlock images={firstMozaicImages} />
         <MozaicBlock images={secondMozaicImages} />
     </Layout>
   );

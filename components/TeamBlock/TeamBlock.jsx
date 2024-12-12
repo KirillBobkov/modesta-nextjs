@@ -1,5 +1,4 @@
 import React from "react";
-import { VisibilityManager } from "../VisibilityManager.jsx";
 import styles from "./TeamBlock.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import { teamContent } from "../../content/team.js";
@@ -38,6 +37,7 @@ export const TeamBlock = () => {
             <span
               itemProp="disambiguatingDescription"
               className={styles["person__profession"]}
+              style={{ display: "none", paddings: "20px" }}
             >
               {person.profession}
             </span>
