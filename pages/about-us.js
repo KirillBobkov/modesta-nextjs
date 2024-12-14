@@ -7,6 +7,7 @@ import { VideosGrid } from "../components/VideosGrid/VideosGrid.jsx";
 import { missionContent } from "../content/mission.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
+import { VideoWidget } from "../components/VideoWidget/VideoWidget.jsx";
 
 export default function AboutUsPage() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function AboutUsPage() {
       <VisibilityManager className="page-offset" side="opacity">
         <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
         <SocialNetworkBlock />
-        <VideosGrid />
+        <VideoWidget />
       </VisibilityManager>
     </Layout>
   );

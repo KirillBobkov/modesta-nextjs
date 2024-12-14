@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ProblemsBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
@@ -18,35 +18,39 @@ export function ProblemsBlock() {
       </VisibilityManager>
       <VisibilityManager as="ul">
         {problemsContent.blocks.map((problem, i) => {
-          return (
-            <VisibilityManager
-              as="li"
-              key={i}
-              itemType="http://schema.org/ImageObject"
-              className={`${styles.problem}`}
-              id="problem"
-            >
-              <Image
-                itemProp="contentUrl"
-                className={styles.problem__image + ' ' + shadowStyles.shadow}
-                src={problem.img}
-                alt={problem.alt}
-              />
-              <div className={styles.problem__content + ' ' + shadowStyles.shadow}>
-                <h3 itemProp="name" className={styles.problem__title}>
-                  {problem.title}
-                </h3>
-                <p
-                  itemProp="description"
-                  className={styles.problem__description}
-                >
-                  {problem.description}
-                </p>
-              </div>
-            </VisibilityManager>
-          );
+          return <Problem problem={problem} i={i} />;
         })}
       </VisibilityManager>
     </div>
   );
 }
+
+const Problem = ({ problem, i }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <VisibilityManager
+      as="li"
+      key={i}
+      itemType="http://schema.org/ImageObject"
+      className={`${styles.problem}`}
+      id="problem"
+    >
+      <Image
+        itemProp="contentUrl"
+        className={styles.problem__image + " " + shadowStyles.shadow  + ' ' + (loaded ? styles.loaded : '')}
+        src={problem.img}
+        alt={problem.alt}
+        onLoad={() => setLoaded(true)}
+      />
+      <div className={styles.problem__content + " " + shadowStyles.shadow}>
+        <h3 itemProp="name" className={styles.problem__title}>
+          {problem.title}
+        </h3>
+        <p itemProp="description" className={styles.problem__description}>
+          {problem.description}
+        </p>
+      </div>
+    </VisibilityManager>
+  );
+};

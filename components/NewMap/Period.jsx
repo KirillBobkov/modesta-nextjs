@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image.js";
 import styles from "./Period.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
@@ -23,12 +23,16 @@ export function PeriodComponent({ title, description, image }) {
 }
 
 function PeriodImageComponent({ img }) {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <Image
+      key={img}
       alt={`Период времени №${1}`}
       itemProp="contentUrl"
-      className={`${styles.period__img} ${shadowStyles.shadow}`}
+      className={`${styles.period__img} ${shadowStyles.shadow}`   + ' ' + (loaded ? styles.loaded : '')}
       src={img}
+      onLoad={() => setLoaded(true)}
     />
   );
 }

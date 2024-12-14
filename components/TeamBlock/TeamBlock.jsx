@@ -10,7 +10,7 @@ export const TeamBlock = () => {
     <GridBlock
       title={teamContent.title}
       id="team"
-      columns={3}
+      columns={2}
       customItemStyles={{ padding: 0, background: "transparent", boxShadow: "none", overflow: "visible" }}
       content={teamContent.blocks}
       renderItem={(person) => (

@@ -83,7 +83,7 @@
   box-sizing: border-box;
   font-size: 16px;
   line-height: 25px;
-  padding: 5px 15px;
+  padding: 7px 15px;
   display: block;
   background: var(--card-bg-color);
   border-radius: 20px;
@@ -202,7 +202,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 7px;
+  text-transform: uppercase;
   border: none;
   outline: none;
   width: 100%;
@@ -210,6 +211,7 @@
   color: #000000;
   transition: all 0.3s;
   border-radius: 30px;
+  font-weight: 700;
   text-align: center;
   white-space: pre-line;
   margin-top: 5px;

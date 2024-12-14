@@ -11,6 +11,7 @@ import tech_background_white_mobile from "../../public/images/tech_background_wh
 import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
 import { useTheme } from "../../hooks/useTheme";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useState } from "react";
 
 const blocks = [
   {
@@ -31,6 +32,8 @@ const blocks = [
 ];
 
 const Product = ({ item, setOpened }) => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div
       itemScope
@@ -39,10 +42,11 @@ const Product = ({ item, setOpened }) => {
       href={item.link}
     >
       <Image
-        className={styles["product-grid__img"]}
+        className={styles["product-grid__img"] + ' ' + (loaded ? styles.loaded : '')}
         src={item.image}
         alt={item.title}
         itemProp="image"
+        onLoad={() => setLoaded(true)}
       />
       <p
         className={styles["product-grid__title"]}

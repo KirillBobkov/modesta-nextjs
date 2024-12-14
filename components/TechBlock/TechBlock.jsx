@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 
 import { useTheme } from "../../hooks/useTheme.jsx";
@@ -19,28 +19,28 @@ const items = [
   {
     img: tech_block_img_1,
     text: "Вес кисти",
-    key: '300',
-    key_param: 'гр.'
+    key: "300",
+    key_param: "гр.",
   },
   {
     img: tech_block_img_2,
     text: "Сила хвата",
-    key: '25',
-    key_param: 'кг'
+    key: "25",
+    key_param: "кг",
   },
   {
     img: tech_block_img_3,
     text: "Угол вращения кисти",
-    key: '180',
-    key_param: '°'
+    key: "180",
+    key_param: "°",
   },
   {
     img: tech_block_img_4,
     text: "Ширина хвата",
-    key: '115',
-    key_param: 'мм'
+    key: "115",
+    key_param: "мм",
   },
-]
+];
 
 export function TechBlock() {
   const { theme } = useTheme();
@@ -70,26 +70,40 @@ export function TechBlock() {
       </h2>
       <ul className={styles.tech}>
         {items.map((item, i) => {
-          return  <VisibilityManager key={i} as="li" className={`${styles.tech__item} ${shadowStyles.shadow}`}>
-                <Image        
-                  itemProp="contentUrl"
-                  className={styles["tech__item-image"]}
-                  src={item.img.src}
-                  alt={`Характеристика #${i}`}
-                  fill
-                />
-          <div className={styles.tech__content}>
-          <span className={styles.tech__text}>
-              {item.text} <br />
-              <span className={styles["tech__key-feature"]}>
-              <AnimatedCounter start={0} end={item.key}></AnimatedCounter>
-                </span>
-                <span className={styles["tech__key-feature-param"]}>{item.key_param}</span>
-            </span>
-          </div>
-        </VisibilityManager>
+          return <Block key={i} item={item} i={i} />;
         })}
       </ul>
     </VisibilityManager>
   );
 }
+
+const Block = ({ item, i }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <VisibilityManager
+      as="li"
+      className={`${styles.tech__item} ${shadowStyles.shadow}`}
+    >
+      <Image
+        itemProp="contentUrl"
+        className={styles["tech__item-image"]  + ' ' + (loaded ? styles.loaded : '')}
+        src={item.img.src}
+        alt={`Характеристика #${i}`}
+        fill
+        onLoad={() => setLoaded(true)}
+      />
+      <div className={styles.tech__content}>
+        <span className={styles.tech__text}>
+          {item.text} <br />
+          <span className={styles["tech__key-feature"]}>
+            <AnimatedCounter start={0} end={item.key}></AnimatedCounter>
+          </span>
+          <span className={styles["tech__key-feature-param"]}>
+            {item.key_param}
+          </span>
+        </span>
+      </div>
+    </VisibilityManager>
+  );
+};

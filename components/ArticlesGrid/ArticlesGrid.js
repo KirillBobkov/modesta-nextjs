@@ -6,33 +6,44 @@ import Link from "next/link";
 import { phantomPain } from "../../content/articles/phantomPain";
 import phantomPainImage from "../../public/images/phantomPain_2.jpg";
 import typeOfProthesisImage4 from "../../public/images/typeOfProthesis_4.jpg";
-import getProthesisImage from "../../public/images/getProthesisImage.jpg"; 
+import getProthesisImage from "../../public/images/getProthesisImage.jpg";
 import Image from "next/image";
+import { useState } from "react";
 
 const blocks = [
   {
     title: howToGetProthesis.title,
     link: "/how-to-get-prothesis",
-    image: getProthesisImage
+    image: getProthesisImage,
   },
   {
     title: typesOfProthesis.title,
     link: "/types-of-prothesis",
-    image: typeOfProthesisImage4
+    image: typeOfProthesisImage4,
   },
   {
     title: phantomPain.title,
     image: phantomPainImage,
     link: "/phantom-pain",
   },
-  
 ];
 
 const ArticleContent = ({ item }) => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
-    <Link title="Перейти к статье" className={styles["article-grid__item"]} href={item.link}>
-        <Image className={styles["article-grid__img"]} src={item.image} alt={item.title} />
-        <p className={styles["article-grid__title"]}>{item.title}</p>
+    <Link
+      title="Перейти к статье"
+      className={styles["article-grid__item"]}
+      href={item.link}
+    >
+      <Image
+        className={styles["article-grid__img"]  + ' ' + (loaded ? styles.loaded : '')}
+        src={item.image}
+        alt={item.title}
+        onLoad={() => setLoaded(true)}
+      />
+      <p className={styles["article-grid__title"]}>{item.title}</p>
     </Link>
   );
 };

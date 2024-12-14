@@ -209,22 +209,24 @@ const Roadmap = ({ points }) => {
           </>
         ))}
       </svg>
-      {activePoint !== null && (
+      { (
         <div
           style={{
             visibility: activePoint === null ? "hidden" : "visible",
             position: "absolute",
             zIndex: 1,
-            top: activePoint.y - 20,
-            left: activePoint.x,
+            opacity: activePoint ? 1 : 0,
+            transition: "opacity 800ms ease-in-out",
+            top: activePoint ? activePoint.y - 20 : 0,
+            left: activePoint ? activePoint.x : 0,
             ...(isMobile ? { left: "20px", right: "20px" } : {}),
           }}
         >
-          <PeriodComponent
-            title={points.blocks[activePoint.index].title}
-            description={points.blocks[activePoint.index].description}
-            image={points.blocks[activePoint.index].image}
-          />
+          {activePoint ? <PeriodComponent
+            title={points.blocks[activePoint.index].title ?? ''}
+            description={points.blocks[activePoint.index].description ?? ''}
+            image={points.blocks[activePoint.index].image ?? ''}
+          /> : null}
         </div>
       )}
     </div>
