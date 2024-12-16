@@ -137,18 +137,12 @@ const Roadmap = ({ points }) => {
                 }}
                 onMouseLeave={handlePointMouseLeave}
               >
-                <circle
-                  cx={point.cx}
-                  cy={point.cy}
-                  className={styles.roadmapCircle}
-                  r={activePoint?.index === index ? "17" : "15"}
-                  fill="none"
-                />
+
                 <circle
                   cx={point.cx}
                   cy={point.cy}
                   className={styles.roadmapCircle2}
-                  r={activePoint?.index === index ? "17" : "15"}
+                  r={activePoint?.index === index ? "15" : "10"}
                 />
               </g>
               <text

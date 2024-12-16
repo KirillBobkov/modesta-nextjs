@@ -12,12 +12,13 @@ export function PeriodComponent({ title, description, image }) {
       itemType="http://schema.org/ImageObject"
       className={`${styles.period} ${shadowStyles.shadow}`}
     >
+            <PeriodImageComponent img={image} />
       <div className={styles.period__content}>
         <p itemProp="description" className={styles.period__description}>
           {description}
         </p>
       </div>
-      <PeriodImageComponent img={image} />
+
     </VisibilityManager>
   );
 }

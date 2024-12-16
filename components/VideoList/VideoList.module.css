@@ -42,7 +42,7 @@
 
 .item {
   width: 100%;
-  padding: 30px 30px;
+  padding: 20px 30px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -51,6 +51,7 @@
   cursor: pointer;
   text-align: left;
   transition: all 0.5s;
+  color: var(--secondary-font-color);
 }
 
 .item:hover {
@@ -58,7 +59,7 @@
 }
 
 .selected .videoTitle {
-  color: #fff;
+  color: var(--font-color);
 }
 
 .thumbnail {
@@ -73,7 +74,7 @@
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
-  background-color: #000000;
+  background-color: var(--bg-color);
 }
 
 .info {
