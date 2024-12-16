@@ -76,8 +76,8 @@
   .period__img {
     width: 100% !important;
     border-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .roadmap__line-container {
