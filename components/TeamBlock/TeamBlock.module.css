@@ -22,8 +22,13 @@
     padding: 0;
     position: relative;
     aspect-ratio: 1/ 1.1;
+    opacity: 0;
+    transition: all 800ms ease-in-out;
 }
 
+.loaded {
+    opacity: 1;
+}
 
 
 .person__avatar {
