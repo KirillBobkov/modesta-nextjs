@@ -1,5 +1,4 @@
 .fullwidth {
-    background-color: var(--card-bg-color);
     padding-top: 100px;
     padding-bottom: 50px;
 }
@@ -61,7 +60,8 @@
     transition: all 0.8s ease;
     flex-wrap: nowrap;
     height: 50%;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 62%);
+    
+    background: linear-gradient(180deg, transparent 0%, var(--bg-color-opacity) 38%);
 }
 
 .person:hover .person__info {
@@ -74,35 +74,35 @@
 }
 
 .person_background_1 {
-    background: linear-gradient(45deg, var(--bg-color-gradient-2), var(--bg-color));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_2 {
-    background: linear-gradient(90deg, var(--bg-color-gradient-2), var(--bg-color-gradient-1));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_3 {
-    background: linear-gradient(60deg, var(--bg-color-gradient-2), var(--bg-color));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_5 {
-    background: linear-gradient(76deg, var(--bg-color), var(--card-bg-color));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_4 {
-    background:  linear-gradient(0deg, var(--bg-color-gradient-1), var(--bg-color));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_6 {
-    background: linear-gradient(90deg, var(--bg-color-gradient-2), var(--bg-color-gradient-1));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_7 {
-    background: linear-gradient(60deg, var(--bg-color-gradient-2), var(--bg-color));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person_background_8 {
-    background:  linear-gradient(0deg, var(--bg-color-gradient-1), var(--bg-color));
+    background: linear-gradient(60deg, var(--bg-color-gradient-2) 0%, var(--bg-color-gradient-1) 47%);
 }
 
 .person__name {

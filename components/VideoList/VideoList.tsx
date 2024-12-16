@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./VideoList.module.css";
 import Image from "next/image";
 import { VisibilityManager } from "../VisibilityManager";
-
+import shadowStyles from '../../styles/shadow.module.css';
 interface VideoListProps {
   videos: any[];
   selectedVideo: any;
@@ -15,7 +15,7 @@ export const VideoList: React.FC<VideoListProps> = ({
   onVideoSelect,
 }) => {
   return (
-    <VisibilityManager className={styles.container}>
+    <VisibilityManager className={styles.container + ' ' + shadowStyles.shadow}>
       <div className={styles.listWrapper}>
         <ul className={styles.list}>
           {videos.map((video, i) => (
