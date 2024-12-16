@@ -60,7 +60,7 @@ export const GridBlock = React.memo(
                 }`}
                 style={customItemStyles}
               >
-                {renderItem(item)}
+                {renderItem(item, i)}
               </VisibilityManager>
             );
           })}

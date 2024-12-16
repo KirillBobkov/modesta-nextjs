@@ -7,21 +7,22 @@ import Image from "next/image.js";
 
 export const TeamBlock = () => {
   return (
+    <div className={styles.fullwidth}>
     <GridBlock
       title={teamContent.title}
       id="team"
-      columns={2}
+      columns={3}
       customItemStyles={{ padding: 0, background: "transparent", boxShadow: "none", overflow: "visible" }}
       content={teamContent.blocks}
-      renderItem={(person) => (
+      renderItem={(person, i) => (
         <div
           itemScope
           itemType="http://schema.org/Person"
           key={person.name}
           as="div"
-          className={styles.person}
+          className={styles.person + ' ' + styles[`person_background_${i + 1}`]}
         >
-          <div className={styles["person__avatar-container"]}>
+   
             <Image
               alt="Портрет члена команды"
               className={`${styles["person__avatar"]} ${shadowStyles.shadow}`}
@@ -29,7 +30,7 @@ export const TeamBlock = () => {
               width={100}
               height={100}
             />
-          </div>
+
           <p className={styles["person__info"]}>
             <span itemProp="name" className={styles["person__name"]}>
               {person.name}
@@ -46,5 +47,6 @@ export const TeamBlock = () => {
         </div>
       )}
     />
+    </div>
   );
 };
