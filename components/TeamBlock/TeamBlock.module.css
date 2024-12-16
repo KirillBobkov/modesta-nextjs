@@ -61,7 +61,7 @@
     transition: all 0.8s ease;
     flex-wrap: nowrap;
     height: 50%;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 62%);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 62%);
 }
 
 .person:hover .person__info {
@@ -78,7 +78,7 @@
 }
 
 .person_background_2 {
-    background: linear-gradient(90deg, var(--bg-color-gradient-1), var(--bg-color-gradient-2));
+    background: linear-gradient(90deg, var(--bg-color-gradient-2), var(--bg-color-gradient-1));
 }
 
 .person_background_3 {
@@ -135,10 +135,6 @@
         gap: 20px;
     }
 
-    .fullwidth > section {
-        max-width: 400px;
-    }
-
     
     .person {
         width: 100%;
@@ -173,7 +169,3 @@
         opacity: 1;
     }
 }
-
-@media (pointer: coarse) {
-
- }
