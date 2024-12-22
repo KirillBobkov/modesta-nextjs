@@ -3,6 +3,7 @@ import styles from "./NewsFeed.module.css";
 export function MediaGrid({ attachments }) {
   const photos = attachments.filter((a) => a.type === "photo");
   const videos = attachments.filter((a) => a.type === "video");
+  const link = attachments.filter((a) => a.type === "link");
 
   return (
     <div className={styles.mediaContainer}>
@@ -31,6 +32,21 @@ export function MediaGrid({ attachments }) {
                 allowFullScreen
               ></iframe>
             </div>
+          ))}
+        </div>
+      )}
+      {link.length > 0 && (
+        <div className={styles.mediaGrid}>
+          {link.map((link, index) => (
+            <a className={styles.link}>
+              <img
+                key={`link-photo-${index}`}
+                src={link.image}
+                alt={`Link Photo ${index + 1}`}
+                className={styles.link_image}
+              />
+              <p href={link.url}>{link.title}</p>
+            </a>
           ))}
         </div>
       )}

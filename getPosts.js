@@ -1,7 +1,8 @@
 const { VK } = require('vk-io');
 const fs = require('fs');
 
-const token = "vk1.a.serUVfZr9hvs5nMvOxdTDQZpdUxku4wRz7u7ZSfzpRCW_VOQEgPJcXfiM2v2ELZUQWvSkiTHA6ZT6EERk6O_6_x0jB4VT5pdlHQ3TXA8McO228akUREHCHIkMMq6CPIc-EgO9nX0upuVOtezFyM8f3i5SaOlYrmMY3u5IE7Zf7ZgZI33xxR97c5tdUZc2DjkOaaNPDoa1wvuRpMrqVxDCQ"
+const token = "vk1.a.wGH5VQpYVmnBlaHFF6IRolmHQx0KVB76L2ExgWCvFivTuYNBrYlYjMfXb6EZjKVYxOjytuZnmhNZB-vOmntDpBWA_DpL_Co96VKmr8gg0JyQcVsog7tmejaVa4JiuYxun5rJJd9VRSkj1nvFZET0pxWT53PvTm-i-N5Iv6jcaN0LtRXtvYbsjO8MZl0s7l3FOcAcf6_ype2kDRn-30NpLw"
+
 const groupId = -131964440; // Replace with the ID of your group (note the negative sign)
 
 const vk = new VK({
@@ -28,7 +29,7 @@ async function getPosts() {
   try {
     const response = await vk.api.wall.get({
       owner_id: groupId,
-      count: 10, // Number of posts to retrieve
+      count: 200, // Number of posts to retrieve
       offset: 0, // Offset for pagination
       filter: 'owner',
     });
@@ -74,6 +75,14 @@ async function getPosts() {
                             type: 'video',
                             title: attachment.video.title,
                             iframe: `https://vk.com/video_ext.php?oid=${attachment.video.owner_id}&id=${attachment.video.id}`
+                        });
+                    }
+                    if (attachment.type === 'link') {
+                        processedPost.attachments.push({
+                            type: 'link',
+                            title: attachment.link.title,
+                            url: attachment.link.url,
+                            image: attachment.link.photo.sizes[0].url
                         });
                     }
                 })
