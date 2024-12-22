@@ -29,6 +29,12 @@ export const  navigationTree = [
     },
     {
         parent: {
+            path: '/news',
+            value: 'Новости',
+        },
+    },
+    {
+        parent: {
             path: '/production',
             value: 'Разработка',
         },

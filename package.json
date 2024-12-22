@@ -20,6 +20,8 @@
     "react-intersection-observer": "^9.13.1",
     "react-responsive-carousel": "^3.2.23",
     "rxjs": "^7.8.1",
+    "telegram": "^2.26.8",
+    "vk-io": "^4.9.1",
     "yup": "^1.4.0"
   },
   "engines": {
