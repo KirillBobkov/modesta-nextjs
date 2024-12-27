@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./Navigation.module.css";
 import { navigationTree } from "./navigationList.js";
 import { useRouter } from "next/router.js";
+import snowStyles from './Snow.module.css';
 
 const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
   const [hoverOpened, setHoverOpened] = useState(false);
@@ -83,6 +84,7 @@ export const Navigation = React.memo(() => {
   return (
     <header className={styles.navigation}>
       <nav itemScope itemType="http://schema.org/SiteNavigationElement" className={styles.navigation__container}>
+      <Snow />
         <Link prefetch={false} className={styles.navigation__logo} onClick={() => handleMobileMenu(false)} href={"/"} itemProp="url">
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 462 800" height={25} xmlnsXlink="http://www.w3.org/1999/xlink">
             <g>
@@ -174,3 +176,60 @@ export const Navigation = React.memo(() => {
     </header>
   );
 });
+
+
+const Snow = () => (
+<div className={snowStyles.main}>
+	<div className={snowStyles.initial_snow}>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+		<div className={snowStyles.snow}>&#10052;</div>
+	</div>
+</div>)

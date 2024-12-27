@@ -38,7 +38,7 @@ export function MediaGrid({ attachments }) {
       {link.length > 0 && (
         <div className={styles.mediaGrid}>
           {link.map((link, index) => (
-            <a className={styles.link}>
+            <a className={styles.link} target="_blank" href={link.url}>
               <img
                 key={`link-photo-${index}`}
                 src={link.image}
