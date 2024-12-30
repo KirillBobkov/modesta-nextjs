@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import { NewMap } from "../components/NewMap/NewMap.jsx";
 import Layout from "../components/Layout/Layout.js";
-import { TeamBlock } from "../components/TeamBlock/TeamBlock.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import { NewsFeed } from "../components/NewsFeed/NewsFeed.jsx";
+import { PreviewBlock } from '../components/PreviewBlock/PreviewBlock.jsx';
+import newsBack from '../public/images/news.webp';
 
 export default function NewsPage() {
   const router = useRouter();
@@ -28,7 +28,9 @@ export default function NewsPage() {
   };
   return (
     <Layout  metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <VisibilityManager className="page-offset" side="opacity">
+      <VisibilityManager side="opacity">
+      <PreviewBlock img={newsBack.src} title={'Новости'} />
+
         <NewsFeed />
       </VisibilityManager>
     </Layout>

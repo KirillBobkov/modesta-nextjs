@@ -14,7 +14,7 @@
 
 .loader-icon-1 {
 	font-size: 80px;
-	color: rgb(200, 241, 255, 0.8);
+	color: var(--snow);
 	text-shadow: 1px 1px 1px rgba(71, 196, 255, 1), -1px -1px 1px white;
 	animation: snow-loader 0.5s 9 linear alternate-reverse forwards,
 		snow-loader-zoom 5s forwards;
@@ -45,7 +45,7 @@
 
 .loader-text {
 	font-size: 25px;
-	color: rgb(200, 241, 255);
+	color: var(--snow);
 }
 
 .main {
@@ -93,7 +93,7 @@
 
 .initial_snow > * {
 	font-size: 50px;
-	color: white;
+	color: var(--snow);
 	position: absolute;
 	top: -5vh;
 }

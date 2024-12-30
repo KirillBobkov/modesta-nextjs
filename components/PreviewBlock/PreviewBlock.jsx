@@ -20,14 +20,14 @@ export function PreviewBlock({ img, video, title, subTitle }) {
   const videoRef = useRef();
   if (img) {
     return (
-      <section className={styles.preview} style={{ backgroundImage: `url(${img})` }}>
+      <VisibilityManager className={styles.preview} style={{ backgroundImage: `url(${img})` }}>
         {title || subTitle ? (
-          <VisibilityManager as="div" className={styles.preview__title}>
+          <div className={styles.preview__title}>
             {title ? <h2 className={styles["preview__main-line"]}>{title}</h2> : null}
             {subTitle ? <p className={styles["preview__secondary-line"]}>{subTitle}</p> : null}
-          </VisibilityManager>
+          </div>
         ) : null}
-      </section>
+      </VisibilityManager>
     );
   }
 

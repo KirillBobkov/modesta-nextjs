@@ -15,6 +15,7 @@
     --accent:  #DCE359;
     --helper-red: red;
     --helper-green: rgb(0, 184, 0);
+    --snow: #b5e5ff;
 }
 
 :root[theme='light'] {
@@ -34,4 +35,5 @@
     --accent: #DCE359;
     --helper-red: red;
     --helper-green: rgb(0, 184, 0);
+    --snow: #89daff;
 }

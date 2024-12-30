@@ -7,8 +7,8 @@ import shadowStyles from '../../styles/shadow.module.css';
 
 export function NewsItem({ item }) {
   return (
-    <VisibilityManager as='article' className={styles.newsItem + ' ' + shadowStyles.shadow}>
-      <div className={styles.header}>
+    <VisibilityManager as='article' className={styles.newsItem}>
+           <div className={styles.header}>
         <time className={styles.date}>{item.date}</time>
         <NewsStats
           views={item.viewsCount}
@@ -16,10 +16,8 @@ export function NewsItem({ item }) {
           comments={item.commentsCount}
         />
       </div>
-      
-      <p className={styles.text}>{item.text}</p>
-      
       <MediaGrid attachments={item.attachments} />
+      <p className={styles.text}>{item.text}</p>
     </VisibilityManager>
   );
 }

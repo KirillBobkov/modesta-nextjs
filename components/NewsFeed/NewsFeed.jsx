@@ -10,7 +10,6 @@ export function NewsFeed() {
 
   return (
     <div className={styles.container}>
-      <h2 className={containerStyles.container__title}>Новости</h2>
       {news.map(item => (
         <NewsItem key={item.id} item={item} />
       ))}     
