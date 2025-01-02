@@ -47,7 +47,8 @@
 }
 
 .product-grid__button {
-    background-color: var(--bg-color);
+    background-color:  transparent;
+    box-shadow: none;
     color: var(--font-color);
 }
 

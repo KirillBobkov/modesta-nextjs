@@ -5,10 +5,6 @@ import product_2 from "../../public/images/product_2.webp";
 import product_3 from "../../public/images/product_3.webp";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import Image from "next/image";
-import tech_background_white from "../../public/images/tech_background_white.webp";
-import tech_background_black from "../../public/images/tech_background_black.webp";
-import tech_background_white_mobile from "../../public/images/tech_background_white_mobile.webp";
-import tech_background_black_mobile from "../../public/images/tech_background_black_mobile.webp";
 import { useTheme } from "../../hooks/useTheme";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { useState } from "react";
@@ -75,21 +71,6 @@ export const ProductsGrid = ({ setOpened }) => {
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
     return (
       <div style={{ padding: '60px 0 1px', marginBottom: '60px' , position: 'relative' }}>
-      <Image
-        src={
-          theme === "light"
-            ? isMobile
-              ? tech_background_white_mobile.src
-              : tech_background_white.src
-            : isMobile
-            ? tech_background_black_mobile.src
-            : tech_background_black.src
-        }
-        layout="fill"
-        objectFit="cover"
-        alt="Background image"
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: -1 }}
-      />
         <GridBlock
           title={"Продуктовая линейка"}
           id="products"
