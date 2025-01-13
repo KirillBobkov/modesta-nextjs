@@ -6,6 +6,7 @@ import avatar5 from "../public/images/avatar_5.webp";
 import avatar6 from "../public/images/avatar_6.webp";
 import avatar7 from "../public/images/avatar_7.webp";
 import avatar8 from "../public/images/avatar_8.webp";
+import avatar9 from "../public/images/avatar_9.webp";
 
 /* объект teamContent содержит информацию о команде, работающей над определенным проектом. В данном случае, речь идет о команде, занимающейся разработкой протезов. Информация о каждом члене команды включает следующие параметры:
 name: имя члена команды
@@ -51,6 +52,12 @@ export const teamContent = {
         profession: "Маркетолог",
         bio: "Опыт в сфере организации рекламных кампаний более 5 лет",
         image: avatar6.src,
+      },
+      {
+        name: "Натур Адам",
+        profession: "Инженер-конструктор",
+        bio: `Обладатель международного сертификата САПР SolidWorks (CSWP). Активный участник WorldSkills, победитель конкурса BRICS FutureSkills, финалист конкурса "ЮНИТИ: Молодежь. Талант. Инновации."`,
+        image: avatar9.src,
       },
       {
         name: "Бобков Кирилл",
