@@ -48,12 +48,12 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 </url>
 <url> 
       <loc>https://modesta.tech/history</loc> 
-      <lastmod>2025-01-13</lastmod>
+      <lastmod>2025-01-14</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 <url> 
       <loc>https://modesta.tech/news</loc> 
-      <lastmod>2025-01-13</lastmod>
+      <lastmod>2025-01-14</lastmod>
       <changefreq>weekly</changefreq>
 </url>
 </urlset>
