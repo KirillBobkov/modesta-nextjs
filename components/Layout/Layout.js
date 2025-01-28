@@ -8,7 +8,10 @@ import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import { Montserrat } from 'next/font/google'
 import { useMediaQuery } from "../../hooks/useMediaQuery";
- 
+import favicon32x32 from '../../public/images/favicon32x32.png';
+import favicon180x180 from '../../public/images/favicon180x180.png';
+import favicon from '../../public/images/favicon.ico';
+
 const montseratt = Montserrat({
   weight:  ['400', '800'],
   variable: '--font-montseratt',
@@ -18,7 +21,7 @@ const montseratt = Montserrat({
 
 export default function Layout({ children, metaConfig, setOpened, popupOpened }) {
   const router = useRouter();
-  const { title, description, keywords, pageTitle } = metaConfig;
+  const { title, description, keywords, seoContent } = metaConfig;
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
 
   useTheme();
@@ -61,23 +64,23 @@ export default function Layout({ children, metaConfig, setOpened, popupOpened })
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/favicon32x32.png" />
+        <link rel="icon" href={favicon.src} />
+        <link rel="apple-touch-icon" href={favicon32x32.src} />
         <link
           rel="apple-touch-icon"
           sizes="32x32"
-          href="/images/favicon32x32.png"
+          href={favicon32x32.src}
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/images/favicon180x180.png"
+          href={favicon180x180.src}
         />
-        <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
+        <link rel="apple-touch-startup-image" href={favicon32x32.src} />
       </Head>
       <div className={montseratt.className}>
         <div style={{ display: "none" }}>
-          <h1>{pageTitle}</h1>
+          <p>{seoContent}</p>
         </div>
         <Navigation />
         <main>{children}</main>

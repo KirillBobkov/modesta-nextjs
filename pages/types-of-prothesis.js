@@ -20,7 +20,7 @@ export default () => {
   useScrollToLocation();
 
   const metaConfig = {
-    pageTitle: typesOfProthesis.title,
+    seoContent: typesOfProthesis.title,
     title: `${typesOfProthesis.title} — Модеста`,
     description: "Какие виды протезов бывают: биоэлектрические, косметические, детские протезы",
     keywords: "биоэлектрические, косметические, детские протезы протез руки разработка дизайн сколково курган модеста",

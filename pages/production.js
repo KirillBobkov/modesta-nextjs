@@ -60,8 +60,8 @@ const productionPageVideo = {
   thumbnailUrl: process__poster.src,
   name: "Процесс создания протеза руки",
   uploadDate: new Date("February 12, 2024").toISOString(),
-  poster: process__poster.src
-}
+  poster: process__poster.src,
+};
 
 export default function ProductionPage() {
   const router = useRouter();
@@ -71,28 +71,54 @@ export default function ProductionPage() {
     useYandexRobot(router.pathname);
   }, []);
 
-  const metaConfig= {
-    pageTitle: "Разработка эффективного протеза",
+  const metaConfig = {
+    seoContent: `
+    ### Философия дизайна
+• Дизайн вдохновлен формами автомобилей и бионическими структурами природы.
+• Модель "Модеста" объединяет практичность, высокое качество и эстетическую привлекательность.
+• Выразительные элементы формы делают дизайн особенно заметным и стильным.
+
+### Функциональность протеза
+• Протез верхней конечности "Модеста" предлагает новаторский взгляд на замену руки.
+• Основной акцент сделан на способность захватывать и удерживать предметы.
+
+### Надежность использования
+• Компоненты произведены из материалов, обеспечивающих длительный срок службы устройства.
+   
+### Современные технологические решения
+• Использование 3D-печати для производства.
+• Прототипы и компоненты создаются в лаборатории, затем проверяются и отправляются на финальную промышленную печать.
+
+### Индивидуальный подход
+• Корпусные части производятся непосредственно в лаборатории.
+• Вкладыши или культевые гильзы создаются с учетом индивидуальных размеров пользователя.
+
+### Обслуживание
+• Быстрая доставка запасных частей для замены изношенных элементов протеза.`,
     title: "Технология производства и разработка — протезов Модеста",
     description:
       "При разработке протезов рук мы сталкиваемся с множеством трудностей, связанных с обеспечением их функциональности, способности захвата, удобства использования и долговечности, и успешно их решаем.",
     keywords:
       "разработка технологии 3Д печать 3D печать дизайн сколково курган культеприёмная гильза клешня",
-  }
+  };
   useScrollToLocation();
   return (
-    <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-        <PreviewBlock video={productionPageVideo} />
-        <QuoteBlock
-          title={quoteContent.title}
-          author={quoteContent.author}
-          quote={quoteContent.quote}
-        />
-      
-        <ProductionBlock />
-       
-       <MozaicBlock images={firstMozaicImages} />
-        <MozaicBlock images={secondMozaicImages} />
+    <Layout
+      metaConfig={metaConfig}
+      popupOpened={popupOpened}
+      setOpened={setOpened}
+    >
+      <PreviewBlock video={productionPageVideo} />
+      <QuoteBlock
+        title={quoteContent.title}
+        author={quoteContent.author}
+        quote={quoteContent.quote}
+      />
+
+      <ProductionBlock />
+
+      <MozaicBlock images={firstMozaicImages} />
+      <MozaicBlock images={secondMozaicImages} />
     </Layout>
   );
 }
