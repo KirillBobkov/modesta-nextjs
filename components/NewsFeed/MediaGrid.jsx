@@ -41,11 +41,12 @@ export function MediaGrid({ attachments }) {
             <a className={styles.link} target="_blank" href={link.url}>
               <img
                 key={`link-photo-${index}`}
-                src={link.image}
+                src={link.image || 'https://cache3.youla.io/files/images/720_720_out/5d/e3/5de3cf0866fb070cf1104855.jpg'}
                 alt={`Link Photo ${index + 1}`}
                 className={styles.link_image}
               />
-              <p href={link.url}>{link.title}</p>
+              <p>Просмотр по ссылке:</p>
+              <p>{link.title}</p>
             </a>
           ))}
         </div>

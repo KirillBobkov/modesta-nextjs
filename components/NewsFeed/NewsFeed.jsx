@@ -2,8 +2,6 @@ import { NewsItem } from './NewsItem';
 import { LoadMoreButton } from './LoadMoreButton';
 import { useNews } from '../../hooks/useNews';
 import styles from './NewsFeed.module.css';
-import containerStyles from "../../styles/container.module.css";
-
 
 export function NewsFeed() {
   const { news, hasMore, loadMore } = useNews();
