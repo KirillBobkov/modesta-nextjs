@@ -2,7 +2,7 @@ const { VK } = require("vk-io");
 const fs = require("fs");
 
 const token =
-"vk1.a.MHXU6emIuEUpD3XwYaXKf3b6VlPjdlAOq-fDlYrF8RGDQJO3BZFIVFfTaUAnkR2_yOR8GK3ye7rC43C1GX70iNRACsobDUJ7c8js0uI8WCtTt1fNdMlYPrpon13BgDlF9fT1w73-8nW00XZ1AC8cagcxdsXTUxVGdiLX94ZIb8ndsnSZ244U5v2yttFPNCm79GjRtGXiPLTkWQYd9Z_i1Q"
+"vk1.a.SFReUTwHhXjqsCEVyfswUsxvodSeZN8FcLq1PQoWepZxVLijQl-gyQiXv_juUuz31nGl1LlcLkdGj25w-Y46aAYnTO-UlwYl0V8m9yXDXdipJmK0Gi1XmYwGIN54DJqDQCKLM4VjlXdC50lhA3wyhRmTgr_I9UuOaECGB6vaBTntq7x4f2W8a_JLeSv_mhXqogWq38290SnxuRH_JHcnhw"
 
 const groupId = -131964440; // Replace with the ID of your group (note the negative sign)
 
