@@ -48,7 +48,7 @@ const ArticleContent = ({ item }) => {
   );
 };
 
-export const ArticlesGrid = () => {
+export const  ArticlesGrid = () => {
   return (
     <GridBlock
       title={"Полезные статьи"}

@@ -5,8 +5,37 @@ import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
-import { advantagesContent } from '../../content/advantages.js';
 import { useState } from "react";
+import advantage_1 from "../../public/images/advantage_1.webp";
+import advantage_2 from "../../public/images/advantage_2.webp";
+import advantage_3 from "../../public/images/advantage_3.webp";
+
+export const advantagesContent = {
+  title: "Наши преимущества",
+  blocks: [
+    {
+      title: "Эффективность",
+      description:
+        "Роботизированный захват, обеспечивающий возможность управлять объектами разнообразных форм",
+      desktopImg: advantage_1.src,
+      right: false,
+    },
+    {
+      title: "Сменные конечности",
+      description:
+        "Удобство в использовании в различных местах: на улице, дома или в мастерской",
+      desktopImg: advantage_2.src,
+      right: true,
+    },
+    {
+      title: "Простое обслуживание",
+      description:
+        "Произвести ремонт можно самостоятельно либо через наш сервис оперативного устранения неполадок",
+      desktopImg: advantage_3.src,
+      right: false,
+    },
+  ],
+};
 
 export function AdvantagesBlock() {
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import data from '../content/news.json';
 
-const COUNT = 10;
+const COUNT = 5;
 const LOAD_COUNT = 5;
 export function useNews() {
   const [news, setNews] = useState(data.slice(0, COUNT));
@@ -11,7 +11,6 @@ export function useNews() {
   const loadMore = () => {
     const nextShown = news.length + LOAD_COUNT;
 
-    console.log(data.length, news.length)
     if (data.length <= news.length) {
         setHasMore(false);
     } else {

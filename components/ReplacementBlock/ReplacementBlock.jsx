@@ -66,7 +66,7 @@ export function ReplacementBlock() {
                 replacementPart5,
               ]
           ).map((src, i) => (
-            <BlockImage src={src} i={i} isMobile={isMobile} />
+            <BlockImage key={i} src={src} i={i} isMobile={isMobile} />
           ))}
         </Carousel>
       </div>

@@ -1,12 +1,12 @@
-import { MediaGrid } from './MediaGrid';
-import { NewsStats } from './NewsStats';
-import styles from './NewsFeed.module.css';
-import { VisibilityManager } from '../VisibilityManager';
+import { MediaGrid } from "./MediaGrid";
+import { NewsStats } from "./NewsStats";
+import styles from "./NewsFeed.module.css";
+import { VisibilityManager } from "../VisibilityManager";
 
 export function NewsItem({ item }) {
   return (
-    <VisibilityManager as='article' className={styles.newsItem}>
-           <div className={styles.header}>
+    <VisibilityManager as="article" className={styles.newsItem}>
+      <div className={styles.header}>
         <time className={styles.date}>{item.date}</time>
         <NewsStats
           views={item.viewsCount}
@@ -19,7 +19,6 @@ export function NewsItem({ item }) {
     </VisibilityManager>
   );
 }
-
 
 function formatTextWithLinks(text) {
   // Регулярное выражение для поиска ссылок вида [URL|текст]
@@ -43,7 +42,13 @@ function formatTextWithLinks(text) {
           const url = match[1]; // URL
           const title = match[2]; // Текст ссылки
           return (
-            <a style={{ cursor: 'pointer', color: 'var(--accent)' }} key={index} href={url} target="_blank" rel="noopener noreferrer">
+            <a
+              style={{ cursor: "pointer", color: "var(--accent)" }}
+              key={index}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {title}
             </a>
           );

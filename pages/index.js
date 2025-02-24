@@ -8,7 +8,6 @@ import { ProblemsBlock } from "../components/ProblemsBlock/ProblemsBlock";
 import { Questions } from "../components/Questions/Questions";
 import { TechBlock } from "../components/TechBlock/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { headerContent } from "../content/header.js";
 import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useEffect, useState } from "react";
@@ -20,6 +19,12 @@ const mainPageVideo = {
   name: "Превью протеза руки человека",
   uploadDate: new Date("February 12, 2024").toISOString(),
   poster: rotate_poster.src,
+};
+
+export const headerContent = {
+  title: "Протез для жизни",
+  subTitle: `Разрабатываем протезы верхних конечностей,
+    позволяющие восстановить утерянную функциональность`,
 };
 
 export default function MainPage() {
@@ -36,17 +41,17 @@ export default function MainPage() {
     pageTitle: "Инновационные протезы верхних конечностей от Модеста",
     seoContent: `Передовые протезы рук
 
-Достоинства протезов:
-✓ Передовые разработки
-✓ Максимальная функциональность
-✓ Актуальный дизайн
+Преимущества протезов:
+✓ Современные разработки
+✓ Высокая функциональность
+✓ Современный дизайн
 
 Характеристики изделий:
-• Комфорт использования
-• Стабильная работа
-• Оптимальная стоимость
+• Удобство использования
+• Надежная работа
+• Оптимальная цена
 
-Российская компания МОДЕСТА создает инновационные протезы рук, объединяющие практичность и современный дизайн. Наши бионические протезы разработаны для улучшения повседневной жизни людей после ампутации.
+Российская компания МОДЕСТА создает инновационные протезы рук, которые объединяют практичность и современный стиль. Наши бионические протезы разработаны для улучшения повседневной жизни людей после ампутации.
 
 Ключевые преимущества:
 ✓ Удобная конструкция

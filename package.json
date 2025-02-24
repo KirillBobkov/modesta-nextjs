@@ -3,7 +3,8 @@
   "scripts": {
     "build": "node getPosts.js & next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "parse": "node getPosts.js"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
