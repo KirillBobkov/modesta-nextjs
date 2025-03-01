@@ -46,14 +46,18 @@ export const ChatWidget: React.FC = () => {
         method: "POST",
         headers: {
           "Authorization": "Bearer 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",
-          "HTTP-Referer": "https://starlit-malasada-bcb2b0.netlify.app/",
-          "X-Title": "starlit-malasada-bcb2b0.netlify.app",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "HTTP-Referer": `${window.location.origin}`,
+          "X-Title": `${window.location.origin}`,
         },
         signal: controller.signal,
         body: JSON.stringify({
           "model": "openchat/openchat-7b:free",
           "messages": [
+            {
+              "role": "system",
+              "content": "You are a helpful assistant."
+            },
             {
               "role": "user",
               "content": userMessage
