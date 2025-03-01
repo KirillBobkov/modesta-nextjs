@@ -46,8 +46,8 @@ export const ChatWidget: React.FC = () => {
         method: "POST",
         headers: {
           "Authorization": "Bearer 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",
-          "HTTP-Referer": "https://alexandrvasilev.ru/",
-          "X-Title": "alexandrvasilev.ru",
+          "HTTP-Referer": "https://starlit-malasada-bcb2b0.netlify.app/",
+          "X-Title": "starlit-malasada-bcb2b0.netlify.app",
           "Content-Type": "application/json"
         },
         signal: controller.signal,
