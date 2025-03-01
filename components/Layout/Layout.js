@@ -6,20 +6,25 @@ import { useTheme } from "../../hooks/useTheme";
 import Head from "next/head";
 import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
-import { Montserrat } from 'next/font/google'
+import { Montserrat } from "next/font/google";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-import favicon32x32 from '../../public/images/favicon32x32.png';
-import favicon180x180 from '../../public/images/favicon180x180.png';
-import favicon from '../../public/images/favicon.ico';
-
+import favicon32x32 from "../../public/images/favicon32x32.png";
+import favicon180x180 from "../../public/images/favicon180x180.png";
+import favicon from "../../public/images/favicon.ico";
+import { ChatWidget } from "../ChatWidget/ChatWidget";
 const montseratt = Montserrat({
-  weight:  ['400', '800'],
-  variable: '--font-montseratt',
-  subsets: ['cyrillic'],
-  display: 'swap',
-})
+  weight: ["400", "800"],
+  variable: "--font-montseratt",
+  subsets: ["cyrillic"],
+  display: "swap",
+});
 
-export default function Layout({ children, metaConfig, setOpened, popupOpened }) {
+export default function Layout({
+  children,
+  metaConfig,
+  setOpened,
+  popupOpened,
+}) {
   const router = useRouter();
   const { title, description, keywords, seoContent } = metaConfig;
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
@@ -66,11 +71,7 @@ export default function Layout({ children, metaConfig, setOpened, popupOpened })
         />
         <link rel="icon" href={favicon.src} />
         <link rel="apple-touch-icon" href={favicon32x32.src} />
-        <link
-          rel="apple-touch-icon"
-          sizes="32x32"
-          href={favicon32x32.src}
-        />
+        <link rel="apple-touch-icon" sizes="32x32" href={favicon32x32.src} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -84,11 +85,24 @@ export default function Layout({ children, metaConfig, setOpened, popupOpened })
         </div>
         <Navigation />
         <main>{children}</main>
-        <NewForm popupOpened={popupOpened} setOpened={setOpened}/>
+        <NewForm popupOpened={popupOpened} setOpened={setOpened} />
         <Footer />
         <ScrollTopButton />
-        <div style={{ zIndex: 1,  position: 'fixed',  bottom: isMobile ? '15px' : '30px',  right: isMobile ? '15px' : '30px',}}>
-        <FeedbackButton text="Оставить заявку" onClick={() => { setOpened(true); document.documentElement.classList.add("mobile-menu-opened"); }} />
+        <div
+          style={{
+            zIndex: 1,
+            position: "fixed",
+            bottom: "20px",
+            right: "80px",
+          }}
+        >
+          <FeedbackButton
+            onClick={() => {
+              setOpened(true);
+              document.documentElement.classList.add("mobile-menu-opened");
+            }}
+          />
+          <ChatWidget />
         </div>
       </div>
     </>

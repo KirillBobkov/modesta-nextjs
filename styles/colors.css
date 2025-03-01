@@ -16,6 +16,10 @@
     --helper-red: red;
     --helper-green: rgb(0, 184, 0);
     --snow: #b5e5ff;
+    --message-header: #4c4c4c;
+    --chat-widget-bg: #1b1b1b;
+    --user-message-bg: #393939;
+    --assistant-message-bg: #393939;
 }
 
 :root[theme='light'] {
@@ -36,4 +40,8 @@
     --helper-red: red;
     --helper-green: rgb(0, 184, 0);
     --snow: #89daff;
+    --message-header: #cfcfcffc;
+    --chat-widget-bg: #ecececfc;
+    --user-message-bg: #cfcfcffc;
+    --assistant-message-bg: #f9f9f9;
 }
