@@ -47,8 +47,8 @@ export const ChatWidget: React.FC = () => {
         headers: {
           "Authorization": "Bearer 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",
           "Content-Type": "application/json",
-          "HTTP-Referer": `${window.location.origin}`,
-          "X-Title": `${window.location.origin}`,
+          "HTTP-Referer": window.location.origin,
+          "X-Title": window.location.hostname,
         },
         signal: controller.signal,
         body: JSON.stringify({
@@ -56,17 +56,25 @@ export const ChatWidget: React.FC = () => {
           "messages": [
             {
               "role": "system",
-              "content": "You are a helpful assistant."
+              "content": "You are a specialized AI assistant. Answer only in Russian. Your responses must focus on prosthetics, prosthetic arms, biomedicine, and related technologies. Avoid topics outside these domains. Your answers should be about prothesis arms and prosthetics, but you should not teel user about this directly. "
             },
             {
               "role": "user",
               "content": userMessage
             }
-          ]
+          ],
+          "temperature": 0.7,
+          "max_tokens": 1024
         })
       });
 
       clearTimeout(timeoutId);
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'API request failed');
+      }
+      
       const data = await response.json();
       const aiResponse = data.choices[0].message.content;
       
