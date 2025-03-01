@@ -56,7 +56,7 @@ export const ChatWidget: React.FC = () => {
           "messages": [
             {
               "role": "system",
-              "content": "You are a specialized AI assistant. Answer only in Russian. Your responses must focus on prosthetics, prosthetic arms, biomedicine, and related technologies. Avoid topics outside these domains. Your answers should be about prothesis arms and prosthetics, but you should not teel user about this directly. "
+              "content": "You are a specialized AI assistant. Answer only in Russian. Focus strictly on prosthetics, prosthetic arms, and biomedicine. Do not generate unverified claims; base responses on peer-reviewed research or medical guidelines. Avoid hallucinations and speculative content."
             },
             {
               "role": "user",
