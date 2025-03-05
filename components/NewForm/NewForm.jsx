@@ -1,49 +1,42 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import InputMask from 'react-input-mask';
-import * as Yup from 'yup';
+import { z } from 'zod';
 import styles from './NewForm.module.css'; // Импортируем стили из модуля
 import shadowStyles from "../../styles/shadow.module.css";
 import { ArrowButton } from '../ScrollTopButton/ScrollTopButton';
-
 
 // Компонент для форматирования поля телефона
 const MaskedInput = ({ field, form, ...props }) => (
   <InputMask
     {...field}
     {...props}
-    mask="+7 (999) 999-9999"
+    mask="+7 (999) 999-99-99"
     maskChar=" "
   />
 );
 
-const xssCheck = (value) => {
-  const xssPattern = /(<([^>]+)>|javascript:|data:|eval\(|alert\(|document\.cookie|document\.write|<script>|<\/script>)/i;
-  return !xssPattern.test(value); // Вернет true, если нет XSS
-};
+const xssPattern = /(<([^>]+)>|javascript:|data:|eval\(|alert\(|document\.cookie|document\.write|<script>|<\/script>)/i;
 
-const validationSchema = Yup.object({
-  name: Yup.string()
-      .min(3, 'Имя должно содержать не менее 3 символов')
-      .required('Имя обязательно')
-      .test('no-xss', 'Недопустимый символ в имени', value => xssCheck(value)),
-      
-  email: Yup.string()
-      .email('Некорректный email')
-      .required('Email обязателен')
-      .test('no-xss', 'Недопустимый символ в email', value => xssCheck(value)),
-
-  phone: Yup.string()
-      .matches(/^\+7 \(\d{3}\) \d{3}-\d{4}$/, 'Некорректный номер телефона')
-      .required('Телефон обязателен')
-      .test('no-xss', 'Недопустимый символ в номере телефона', value => xssCheck(value)),
-
-  message: Yup.string()
-      .test('no-xss', 'Недопустимый символ в сообщении', value => xssCheck(value)),
-
-  checkbox: Yup.boolean()
-      .oneOf([true], 'Необходимо согласиться с условиями')
-      .required('Необходимо согласиться с условиями'),
+const formSchema = z.object({
+  name: z.string()
+    .min(3, 'Имя должно содержать не менее 3 символов')
+    .refine(val => !xssPattern.test(val), 'Недопустимый символ в имени'),
+    
+  email: z.string()
+    .email('Некорректный email')
+    .refine(val => !xssPattern.test(val), 'Недопустимый символ в email'),
+    
+  phone: z.string()
+    .regex(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, 'Некорректный номер телефона')
+    .refine(val => !xssPattern.test(val), 'Недопустимый символ в номере телефона'),
+    
+  message: z.string()
+    .refine(val => !xssPattern.test(val), 'Недопустимый символ в сообщении')
+    .optional(),
+    
+  checkbox: z.boolean()
+    .refine(val => val === true, 'Необходимо согласиться с условиями')
 });
 
 const RegistrationForm = ({ popupOpened, setOpened }) => {
@@ -100,7 +93,18 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
               checkbox: false,
             }}
             autoComplete='off'
-            validationSchema={validationSchema}
+            validate={values => {
+              try {
+                formSchema.parse(values)
+                return {}
+              } catch (error) {
+                console.log(error.errors)
+                return error.errors.reduce((acc, curr) => {
+                  acc[curr.path[0]] = curr.message
+                  return acc
+                }, {})
+              }
+            }}
             onSubmit={handleSend}
           >
             {({ isValid, dirty, errors }) => (
