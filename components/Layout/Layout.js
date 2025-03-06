@@ -93,7 +93,7 @@ export default function Layout({
             zIndex: 1,
             position: "fixed",
             bottom: "20px",
-            right: "80px",
+            right: "15px",
           }}
         >
           <FeedbackButton
@@ -102,8 +102,9 @@ export default function Layout({
               document.documentElement.classList.add("mobile-menu-opened");
             }}
           />
-          {/* <ChatWidget /> */}
+        
         </div>
+          <ChatWidget />
       </div>
     </>
   );

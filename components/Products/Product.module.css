@@ -49,7 +49,8 @@
 .product-grid__button {
     background-color:  transparent;
     box-shadow: none;
-    color: var(--font-color);
+    color: var(--accent);
+    width: auto;
 }
 
 @media screen and (max-width: 768px) { 

@@ -1,13 +1,13 @@
 .widgetWrapper {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  z-index: 1000;
+  right: 80px;
+  z-index: 1;
 }
 
 .widgetContainer {
   width: 400px;
-  max-width: 90%;
+  max-width: 100%;
   height: 500px;
   background: var(--chat-widget-bg);
   border-radius: 12px;
@@ -29,14 +29,13 @@
   .widgetContainer {
     width: 100%;
     height: calc(100dvh - 100px);
-    max-width: 100%;
     border-radius: 12px;
   }
 
   .toggleButton {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 80px;
   }
 }
 

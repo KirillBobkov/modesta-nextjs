@@ -1,8 +1,10 @@
 .arrow-button {
     display: flex;
-    height: 60px;
     border: none;
-    width: 60px;
+    height: 50px;
+    width: 50px;
+    bottom: 15px;
+    left: 15px;
     padding: 10px;
     font-size: 1rem;
     cursor: pointer;
@@ -30,29 +32,16 @@
     fill: var(--font-color);
 }
 
+
 .scroll-top-button {
     position: fixed;
     visibility: hidden;
-    bottom: 30px;
-    left: 30px;
+    bottom: 15px;
+    left: 15px;
     opacity: 0;
 }
 
 .scroll-top-button--visible {
     visibility: visible;
     opacity: 1;
-}
-
-
-@media screen and (max-width: 768px) {
-    .arrow-button {
-        height: 50px;
-        width: 50px;
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .arrow-button svg {
-        padding: 5px;
-    }
 }
