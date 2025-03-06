@@ -1,8 +1,8 @@
 import styles from "./Product.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
-import product_1 from "../../public/images/product_1.webp";
-import product_2 from "../../public/images/product_2.webp";
-import product_3 from "../../public/images/product_3.webp";
+import product_1 from "../../assets/images/product_1.webp";
+import product_2 from "../../assets/images/product_2.webp";
+import product_3 from "../../assets/images/product_3.webp";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import Image from "next/image";
 import { useTheme } from "../../hooks/useTheme";

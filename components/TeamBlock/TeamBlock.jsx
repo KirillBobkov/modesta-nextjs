@@ -3,14 +3,14 @@ import styles from "./TeamBlock.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import { GridBlock } from "../GridBlock/GridBlock.jsx";
 import Image from "next/image.js";
-import avatar1 from "../../public/images/avatar_1.webp";
-import avatar2 from "../../public/images/avatar_2.webp";
-import avatar3 from "../../public/images/avatar_3.webp";
-import avatar4 from "../../public/images/avatar_4.webp";
-import avatar5 from "../../public/images/avatar_5.webp";
-import avatar6 from "../../public/images/avatar_6.webp";
-import avatar7 from "../../public/images/avatar_7.webp";
-import avatar8 from "../../public/images/avatar_8.webp";
+import avatar1 from "../../assets/images/avatar_1.webp";
+import avatar2 from "../../assets/images/avatar_2.webp";
+import avatar3 from "../../assets/images/avatar_3.webp";
+import avatar4 from "../../assets/images/avatar_4.webp";
+import avatar5 from "../../assets/images/avatar_5.webp";
+import avatar6 from "../../assets/images/avatar_6.webp";
+import avatar7 from "../../assets/images/avatar_7.webp";
+import avatar8 from "../../assets/images/avatar_8.webp";
 
 /* объект teamContent содержит информацию о команде, работающей над определенным проектом. В данном случае, речь идет о команде, занимающейся разработкой протезов. Информация о каждом члене команды включает следующие параметры:
 name: имя члена команды

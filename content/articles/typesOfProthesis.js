@@ -1,7 +1,7 @@
-import image1 from "../../public/images/typeOfProthesis_1.jpg";
-import image2 from "../../public/images/typeOfProthesis_2.jpg";
-import image3 from "../../public/images/typeOfProthesis_3.jpg";
-import image4 from "../../public/images/typeOfProthesis_4.jpg";
+import image1 from "../../assets/images/typeOfProthesis_1.jpg";
+import image2 from "../../assets/images/typeOfProthesis_2.jpg";
+import image3 from "../../assets/images/typeOfProthesis_3.jpg";
+import image4 from "../../assets/images/typeOfProthesis_4.jpg";
 
 export const typesOfProthesis = {
   title: "Разновидности протезов рук",

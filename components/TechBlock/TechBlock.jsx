@@ -3,10 +3,10 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 
 import { useTheme } from "../../hooks/useTheme.jsx";
 
-import tech_block_img_1 from "../../public/images/tech_block_img_1.jpg";
-import tech_block_img_2 from "../../public/images/tech_block_img_2.jpg";
-import tech_block_img_3 from "../../public/images/tech_block_img_3.jpg";
-import tech_block_img_4 from "../../public/images/tech_block_img_4.jpg";
+import tech_block_img_1 from "../../assets/images/tech_block_img_1.jpg";
+import tech_block_img_2 from "../../assets/images/tech_block_img_2.jpg";
+import tech_block_img_3 from "../../assets/images/tech_block_img_3.jpg";
+import tech_block_img_4 from "../../assets/images/tech_block_img_4.jpg";
 
 import styles from "./TechBlock.module.css";
 import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";

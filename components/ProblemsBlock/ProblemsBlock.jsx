@@ -4,10 +4,10 @@ import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
-import problem1 from "../../public/images/problem1.jpg";
-import problem2 from "../../public/images/problem2.jpg";
-import problem3 from "../../public/images/problem3.jpg";
-import problem4 from "../../public/images/problem4.jpg";
+import problem1 from "../../assets/images/problem1.jpg";
+import problem2 from "../../assets/images/problem2.jpg";
+import problem3 from "../../assets/images/problem3.jpg";
+import problem4 from "../../assets/images/problem4.jpg";
 
 /* problemsContent содержит информацию о задачах, решаемых в конкретной сфере. В данном случае, это задачи, связанные с производством и использованием протезов. В объекте содержатся следующие параметры:
 title: “Решаемые задачи” - общее название списка задач.

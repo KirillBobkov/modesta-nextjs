@@ -8,9 +8,9 @@ import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import { Montserrat } from "next/font/google";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-import favicon32x32 from "../../public/images/favicon32x32.png";
-import favicon180x180 from "../../public/images/favicon180x180.png";
-import favicon from "../../public/images/favicon.ico";
+import favicon32x32 from "../../assets/images/favicon32x32.png";
+import favicon180x180 from "../../assets/images/favicon180x180.png";
+import favicon from "../../assets/images/favicon.ico";
 import { ChatWidget } from "../ChatWidget/ChatWidget";
 const montseratt = Montserrat({
   weight: ["400", "800"],

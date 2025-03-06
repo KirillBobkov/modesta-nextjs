@@ -6,12 +6,12 @@ import containerStyles from "../../styles/container.module.css";
 import shadowStyles from "../../styles/shadow.module.css";
 import Image from "next/image.js";
 
-import socialNetwork1 from "../../public/images/article_1.jpg";
-import socialNetwork2 from "../../public/images/article_2.jpg";
-import socialNetwork3 from "../../public/images/article_3.jpg";
-import socialNetwork4 from "../../public/images/article_4.jpg";
-import socialNetwork5 from "../../public/images/article_5.jpg";
-import socialNetwork6 from "../../public/images/article_6.jpg";
+import socialNetwork1 from "../../assets/images/article_1.jpg";
+import socialNetwork2 from "../../assets/images/article_2.jpg";
+import socialNetwork3 from "../../assets/images/article_3.jpg";
+import socialNetwork4 from "../../assets/images/article_4.jpg";
+import socialNetwork5 from "../../assets/images/article_5.jpg";
+import socialNetwork6 from "../../assets/images/article_6.jpg";
 
 export const socialNetworkContent = {
     title: "Читайте нас на удобной вам площадке",

@@ -6,11 +6,11 @@ import Image from "next/image.js";
 
 import { useState } from "react";
 
-import production1 from "../../public/images/production1.jpg";
-import production2 from "../../public/images/production2.jpg";
-import production3 from "../../public/images/production3.jpg";
-import production4 from "../../public/images/production4.jpg";
-import production5 from "../../public/images/production5.jpg";
+import production1 from "../../assets/images/production1.jpg";
+import production2 from "../../assets/images/production2.jpg";
+import production3 from "../../assets/images/production3.jpg";
+import production4 from "../../assets/images/production4.jpg";
+import production5 from "../../assets/images/production5.jpg";
 
 /* Массив productionContent содержит информацию о производственном процессе конкретного продукта. В данном случает, это протезы. Массив состоит из трех элементов, каждый из которых содержит следующие данные:
 img: ссылка на изображение производственного процесса

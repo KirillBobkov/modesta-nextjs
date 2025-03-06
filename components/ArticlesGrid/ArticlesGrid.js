@@ -4,9 +4,9 @@ import { howToGetProthesis } from "../../content/articles/howToGetProthesis";
 import { typesOfProthesis } from "../../content/articles/typesOfProthesis";
 import Link from "next/link";
 import { phantomPain } from "../../content/articles/phantomPain";
-import phantomPainImage from "../../public/images/phantomPain_2.jpg";
-import typeOfProthesisImage4 from "../../public/images/typeOfProthesis_4.jpg";
-import getProthesisImage from "../../public/images/getProthesisImage.jpg";
+import phantomPainImage from "../../assets/images/phantomPain_2.jpg";
+import typeOfProthesisImage4 from "../../assets/images/typeOfProthesis_4.jpg";
+import getProthesisImage from "../../assets/images/getProthesisImage.jpg";
 import Image from "next/image";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
-import iconSK from "../../public/images/iconSK.png";
-import icon45ru from "../../public/images/45ru.png";
+import iconSK from "../../assets/images/iconSK.png";
+import icon45ru from "../../assets/images/45ru.png";
 import containerStyles from "../../styles/container.module.css";
 import styles from "./Footer.module.css";
 import Image from "next/image";

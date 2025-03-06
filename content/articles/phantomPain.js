@@ -1,5 +1,5 @@
-import image1 from "../../public/images/phantomPain_1.jpg";
-import image2 from "../../public/images/phantomPain_2.jpg";
+import image1 from "../../assets/images/phantomPain_1.jpg";
+import image2 from "../../assets/images/phantomPain_2.jpg";
 
 export const phantomPain = {
   title: "Фантомная боль в конечности после ампутации",

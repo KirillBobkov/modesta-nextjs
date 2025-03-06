@@ -7,7 +7,7 @@ import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget.jsx";
 
-import aboutRender from "../public/images/aboutRender.webp";
+import aboutRender from "../assets/images/aboutRender.webp";
 
 export const missionContent = {
     title: "Создаём качественные функциональные протезы",

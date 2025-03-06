@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import rotate_poster from "../public/images/rotate__poster.jpg";
+import rotate_poster from "../assets/images/rotate__poster.jpg";
 import { VisibilityManager } from "../components/VisibilityManager";
 import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock";
 import { AdvantagesBlock } from "../components/AdvantagesBlock/AdvantagesBlock";

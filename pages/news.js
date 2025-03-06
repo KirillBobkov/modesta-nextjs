@@ -5,7 +5,7 @@ import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import { NewsFeed } from "../components/NewsFeed/NewsFeed.jsx";
 import { PreviewBlock } from '../components/PreviewBlock/PreviewBlock.jsx';
-import newsBack from '../public/images/news.webp';
+import newsBack from '../assets/images/news.webp';
 
 export default function NewsPage() {
   const router = useRouter();

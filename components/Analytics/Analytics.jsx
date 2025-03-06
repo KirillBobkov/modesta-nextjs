@@ -23,7 +23,7 @@ import { mapTo, scan, startWith, tap } from "rxjs/operators";
 import BluetoothRoundedIcon from "@mui/icons-material/BluetoothRounded";
 import BluetoothDisabledRoundedIcon from "@mui/icons-material/BluetoothDisabledRounded";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
-import avatar from "../../public/images/avatar.png";
+import avatar from "../../assets/images/avatar.png";
 
 const INITIAL_COUNT = 0;
 

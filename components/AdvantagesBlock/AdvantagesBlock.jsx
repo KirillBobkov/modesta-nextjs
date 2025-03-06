@@ -6,9 +6,9 @@ import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import { useState } from "react";
-import advantage_1 from "../../public/images/advantage_1.webp";
-import advantage_2 from "../../public/images/advantage_2.webp";
-import advantage_3 from "../../public/images/advantage_3.webp";
+import advantage_1 from "../../assets/images/advantage_1.webp";
+import advantage_2 from "../../assets/images/advantage_2.webp";
+import advantage_3 from "../../assets/images/advantage_3.webp";
 
 export const advantagesContent = {
   title: "Наши преимущества",
