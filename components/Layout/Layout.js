@@ -102,7 +102,7 @@ export default function Layout({
               document.documentElement.classList.add("mobile-menu-opened");
             }}
           />
-          <ChatWidget />
+          {/* <ChatWidget /> */}
         </div>
       </div>
     </>
