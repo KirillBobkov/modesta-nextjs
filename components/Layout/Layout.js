@@ -104,7 +104,7 @@ export default function Layout({
           />
         
         </div>
-          <ChatWidget />
+          {/* <ChatWidget /> */}
       </div>
     </>
   );
