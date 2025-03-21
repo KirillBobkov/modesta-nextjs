@@ -55,6 +55,7 @@ const Block = React.memo((props) => {
     transition: `transform ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
     opacity: 1,
     transform: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
+    contentVisibility: "auto",
   }
 
   return (

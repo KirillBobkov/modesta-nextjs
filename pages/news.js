@@ -99,7 +99,6 @@ export default function NewsPage() {
     <Layout  metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
       <VisibilityManager side="opacity">
       <PreviewBlock img={newsBack.src} title={'Новости'} />
-
         <NewsFeed />
       </VisibilityManager>
     </Layout>

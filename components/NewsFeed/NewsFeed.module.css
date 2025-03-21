@@ -2,6 +2,8 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  background-color: var(--card-bg-color);
+  border-radius: 20px;
 }
 
 .newsItem {
@@ -156,6 +158,13 @@
 }
 
 @media screen and (max-width: 1080px) {
+
+  .container {
+        background-color: var(--bg-color);
+    border-radius: 0;
+  }
+  
+
     .newsItem {
         margin-bottom: 60px;
       }
