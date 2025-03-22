@@ -82,7 +82,6 @@ return (<VisibilityManager
       src={adv.desktopImg}
       alt={`Изображение протеза #${i}`}
       fill
-      priority
       onLoad={() => setLoaded(true)}
     />
   )}

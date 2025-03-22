@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 
 import styles from "./PreviewBlock.module.css";
@@ -9,8 +9,17 @@ export const FullPageVideo = React.forwardRef(({ video }, ref) => {
       <meta itemProp="name" content={video.name} />
       <meta itemProp="uploadDate" content={video.uploadDate} />
       <link itemProp="thumbnailUrl" href={video.thumbnailUrl} />
-      <video loading="lazy" ref={ref} className={styles["full-page-video__video"]} preload="none" poster={video.poster} autoPlay loop muted playsInline>
-        <source src={video.link} type="video/mp4"></source>
+      <video 
+        ref={ref} 
+        className={styles["full-page-video__video"]} 
+        preload="metadata"
+        poster={video.poster} 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+      >
+        <source src={video.link} type="video/mp4" />
       </video>
     </div>
   );
