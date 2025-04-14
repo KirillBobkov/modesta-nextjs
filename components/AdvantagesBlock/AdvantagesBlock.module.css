@@ -7,11 +7,10 @@
     margin-bottom: 40px;
     border-radius: 30px;
     flex-direction: row;
-    overflow: hidden;
     background-color: #dedbde;
     z-index: 0;
     align-items: center;
-   
+    overflow: hidden;
 }
 
 .advantages__item--right {

@@ -27,16 +27,16 @@
     --secondary-font-color: #313131;
 
     --bg-color: #f9f9f9;
-    --bg-color-opacity: rgba(255, 255, 255, 0.674);
+    --bg-color-opacity: rgba(255, 255, 255, 0.51);
     --bg-color-gradient-1: #eaeaea;
     --bg-color-gradient-2: #acacac;
 
-    --card-bg-color: #ecececfc;
+    --card-bg-color: #dbdbdbfc;
     --card-bg-color-opacity: rgba(255,255,255,0.6);
     --secondary-card-bg-color: #e8e8e8;
 
     --box-shadow: rgba(0, 0, 0, 0.155);
-    --accent: #DCE359;
+    --accent: #cbd252;
     --helper-red: red;
     --helper-green: rgb(0, 184, 0);
     --snow: #89daff;

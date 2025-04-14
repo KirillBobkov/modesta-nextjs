@@ -1,14 +1,12 @@
 .preview {
     position: relative;
-    background-repeat: no-repeat;
-    background-position: 40% center;
-    background-size: cover;
     width: 100%;
-    height: 600px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 60px;
+    min-height: 600px;
+    height: 60dvh;
 }
 
 .preview__row {
@@ -20,8 +18,9 @@
 
 .preview__title {
     color: var(--font-color);
-    padding:  40px 80px 40px;
+    padding: 80px;
     margin: 0;
+    min-height: 600px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -41,7 +40,7 @@
 
 .preview__secondary-line {
     font-size: 16px;
-    max-width: 600px;
+    max-width: 800px;
     line-height: 25px;
     white-space: pre-line;
     text-indent: 0;
@@ -60,9 +59,18 @@
     z-index: -1;
 }
 
+.preview__image {
+    z-index: -1;
+    transition: all 800ms ease-in-out;
+    opacity: 0;
+}
+
+.loaded {
+    opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
     .preview {
-        height: 400px;
         margin-bottom: 40px;
     }
 
@@ -86,6 +94,5 @@
 
     .full-page-video__video {
         object-position: 50% 50%;
-        height: 400px;
     }
 }

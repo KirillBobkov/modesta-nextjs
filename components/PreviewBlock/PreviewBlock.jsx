@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
+import Image from "next/image";
 
 import styles from "./PreviewBlock.module.css";
 
@@ -26,17 +27,29 @@ export const FullPageVideo = React.forwardRef(({ video }, ref) => {
 });
 
 export function PreviewBlock({ img, video, title, subTitle }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const videoRef = useRef();
   if (img) {
     return (
-      <VisibilityManager className={styles.preview} style={{ backgroundImage: `url(${img})` }}>
+      <section className={styles.preview}>
+        <Image
+          src={img}
+          alt={title || "Preview image"}
+          fill
+          className={`${styles.preview__image} ${isLoaded ? styles.loaded : ''}`}
+          onLoad={() => setIsLoaded(true)}
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: '40% center' }}
+        />
         {title || subTitle ? (
           <div className={styles.preview__title}>
             {title ? <h2 className={styles["preview__main-line"]}>{title}</h2> : null}
             {subTitle ? <p className={styles["preview__secondary-line"]}>{subTitle}</p> : null}
           </div>
         ) : null}
-      </VisibilityManager>
+      </section>
     );
   }
 

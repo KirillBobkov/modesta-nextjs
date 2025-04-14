@@ -7,7 +7,8 @@ import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget.jsx";
 
-import aboutRender from "../assets/images/aboutRender.webp";
+import aboutRender from "../assets/images/aboutus.webp";
+import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";
 
 export const missionContent = {
     title: "Создаём качественные функциональные протезы",
@@ -67,8 +68,9 @@ export default function AboutUsPage() {
   };
   return (
     <Layout  metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <VisibilityManager className="page-offset" side="opacity">
-        <HistoryBlock image={missionContent.image} title={missionContent.title} description={missionContent.description} />
+      <VisibilityManager side="opacity">
+        <PreviewBlock img={missionContent.image} title={missionContent.title} />
+        <HistoryBlock />
         <SocialNetworkBlock />
         <VideoWidget />
       </VisibilityManager>
