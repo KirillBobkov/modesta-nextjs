@@ -12,10 +12,10 @@ import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useEffect, useState } from "react";
 import { ProductsGrid } from "../components/Products/Products.jsx";
-import rotate from "../assets/images/rotate_new.mp4";
+import main_preview from "../assets/images/main_preview.mp4";
 
 const mainPageVideo = {
-  link: rotate,
+  link: main_preview,
   thumbnailUrl: rotate_poster.src,
   name: "Превью протеза руки человека",
   uploadDate: new Date("February 12, 2024").toISOString(),
