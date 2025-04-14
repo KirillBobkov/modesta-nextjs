@@ -72,6 +72,9 @@
 @media screen and (max-width: 768px) {
     .preview {
         margin-bottom: 40px;
+        min-height: auto;
+        height: 90dvh;
+        
     }
 
     .preview__title {
