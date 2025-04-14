@@ -13,7 +13,6 @@ export const FullPageVideo = React.forwardRef(({ video }, ref) => {
       <video 
         ref={ref} 
         className={styles["full-page-video__video"]} 
-        preload="metadata"
         poster={video.poster} 
         autoPlay 
         loop 
