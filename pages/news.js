@@ -55,10 +55,8 @@ export default function NewsPage() {
   };
   return (
     <Layout  metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <VisibilityManager side="opacity">
       <PreviewBlock img={newsBack.src} title={'Новости'} />
         <NewsFeed />
-      </VisibilityManager>
     </Layout>
   );
 }

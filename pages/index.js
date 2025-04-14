@@ -89,7 +89,6 @@ export default function MainPage() {
       popupOpened={popupOpened}
       setOpened={setOpened}
     >
-      <VisibilityManager side="opacity">
         <PreviewBlock
           video={mainPageVideo}
           subTitle={headerContent.subTitle}
@@ -101,7 +100,6 @@ export default function MainPage() {
         <ReplacementBlock />
         <ProblemsBlock />
         <Questions />
-      </VisibilityManager>
     </Layout>
   );
 }
