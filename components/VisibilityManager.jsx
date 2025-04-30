@@ -53,7 +53,7 @@ const Block = React.memo((props) => {
   const animationStyles = {
     ...style,
     transition: `transform ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
-    opacity: 1,
+    opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
     transform: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
   }
 

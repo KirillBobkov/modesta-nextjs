@@ -3,7 +3,7 @@
   <!-- Главная страница -->
   <url>
     <loc>https://modesta.tech/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- О нас -->
   <url>
     <loc>https://modesta.tech/about-us</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,7 +19,7 @@
   <!-- История -->
   <url>
     <loc>https://modesta.tech/history</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -27,7 +27,7 @@
   <!-- Производство -->
   <url>
     <loc>https://modesta.tech/production</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,7 +35,7 @@
   <!-- Новости -->
   <url>
     <loc>https://modesta.tech/news</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -43,7 +43,7 @@
   <!-- Информация -->
   <url>
     <loc>https://modesta.tech/info</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -51,7 +51,7 @@
   <!-- Как получить протез -->
   <url>
     <loc>https://modesta.tech/how-to-get-prothesis</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -59,7 +59,7 @@
   <!-- Фантомные боли -->
   <url>
     <loc>https://modesta.tech/phantom-pain</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -67,7 +67,7 @@
   <!-- Аналитика -->
   <url>
     <loc>https://modesta.tech/analytics</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -75,7 +75,7 @@
   <!-- Опросник -->
   <url>
     <loc>https://modesta.tech/quiz</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

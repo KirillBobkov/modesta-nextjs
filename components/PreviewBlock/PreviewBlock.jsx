@@ -43,10 +43,10 @@ export function PreviewBlock({ img, video, title, subTitle }) {
           style={{ objectFit: 'cover', objectPosition: '40% center' }}
         />
         {title || subTitle ? (
-          <div className={styles.preview__title}>
+          <VisibilityManager as="div" side={"opacity"} className={styles.preview__title}>
             {title ? <h2 className={styles["preview__main-line"]}>{title}</h2> : null}
             {subTitle ? <p className={styles["preview__secondary-line"]}>{subTitle}</p> : null}
-          </div>
+          </VisibilityManager>
         ) : null}
       </section>
     );
@@ -62,10 +62,10 @@ export function PreviewBlock({ img, video, title, subTitle }) {
         className={styles["preview"]}
       >
         {title || subTitle ? (
-          <div className={styles.preview__title}>
+          <VisibilityManager as="div" side={"opacity"} className={styles.preview__title}>
             {title ? <h1 className={styles["preview__main-line"]}>{title}</h1> : null}
             {subTitle ? <p className={styles["preview__secondary-line"]}>{subTitle}</p> : null}
-          </div>
+          </VisibilityManager>
         ) : null}
         <FullPageVideo ref={videoRef} video={video} />
       </VisibilityManager>
