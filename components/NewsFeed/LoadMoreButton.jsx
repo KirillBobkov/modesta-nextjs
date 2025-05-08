@@ -1,6 +1,7 @@
-import styles from './NewsFeed.module.css';
+import React from 'react';
+import styles from './styles/LoadMoreButton.module.css';
 
-export function LoadMoreButton({ onClick, disabled }) {
+const LoadMoreButton = ({ onClick, disabled }) => {
   return (
     <button
       className={styles.loadMore}
@@ -10,4 +11,6 @@ export function LoadMoreButton({ onClick, disabled }) {
       Читать дальше
     </button>
   );
-}
+};
+
+export default LoadMoreButton; 

@@ -1,11 +1,13 @@
-import { MediaGrid } from "./MediaGrid";
-import { NewsStats } from "./NewsStats";
-import styles from "./NewsFeed.module.css";
-import { VisibilityManager } from "../VisibilityManager";
+import React from 'react';
+import { VisibilityManager } from '../VisibilityManager';
+import MediaGrid from './MediaGrid';
+import NewsStats from './NewsStats';
+import styles from './styles/NewsItem.module.css';
+import shadowStyles from '../../styles/shadow.module.css';
 
-export function NewsItem({ item }) {
+const NewsItem = ({ item }) => {
   return (
-    <VisibilityManager as="article" className={styles.newsItem}>
+    <VisibilityManager as="article" className={styles.newsItem + " " + shadowStyles.shadow}>
       <div className={styles.header}>
         <time className={styles.date}>{item.date}</time>
         <NewsStats
@@ -18,29 +20,32 @@ export function NewsItem({ item }) {
       <p className={styles.text}>{formatTextWithLinks(item.text)}</p>
     </VisibilityManager>
   );
-}
+};
 
-function formatTextWithLinks(text) {
-  // Регулярное выражение для поиска ссылок вида [URL|текст]
+/**
+ * Formats text and converts links of format [URL|text] into actual link elements
+ */
+const formatTextWithLinks = (text) => {
+  // Regex for finding links in format [URL|text]
   const regex = /\[([^\]|]+)\|([^\]]+)\]/g;
 
-  // Функция для проверки, является ли строка исключением (#alias)
+  // Function to check if string is an alias (#alias)
   const isAlias = (str) => str.startsWith("[#alias");
 
-  // Заменяем только те части текста, которые соответствуют формату [URL|текст]
+  // Split text by potential link markers and process each part
   return (
     <>
       {text.split(/(\[[^\]]+\])/).map((part, index) => {
-        // Если часть текста является исключением (#alias), оставляем её как есть
+        // If part is an alias, return as is
         if (isAlias(part)) {
           return <span key={index}>{part}</span>;
         }
 
-        // Если часть текста соответствует формату [URL|текст], преобразуем её в ссылку
+        // If part matches link format, convert to link
         const match = part.match(/^\[([^\]|]+)\|([^\]]+)\]$/);
         if (match) {
           const url = match[1]; // URL
-          const title = match[2]; // Текст ссылки
+          const title = match[2]; // Link text
           return (
             <a
               style={{ cursor: "pointer", color: "var(--accent)" }}
@@ -54,9 +59,11 @@ function formatTextWithLinks(text) {
           );
         }
 
-        // Возвращаем обычный текст
+        // Return regular text
         return <span key={index}>{part}</span>;
       })}
     </>
   );
-}
+};
+
+export default NewsItem; 

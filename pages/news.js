@@ -3,7 +3,7 @@ import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import Layout from "../components/Layout/Layout.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
-import { NewsFeed } from "../components/NewsFeed/NewsFeed.jsx";
+import NewsFeed from "../components/NewsFeed";
 import { PreviewBlock } from '../components/PreviewBlock/PreviewBlock.jsx';
 import newsBack from '../assets/images/news.webp';
 

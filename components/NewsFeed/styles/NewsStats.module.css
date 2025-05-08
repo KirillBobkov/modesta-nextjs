@@ -1,0 +1,31 @@
+.statsContainer {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.925rem;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--secondary-font-color);
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .statsContainer {
+    font-size: 0.875rem;
+    gap: 1.25rem;
+  }
+  
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+} 

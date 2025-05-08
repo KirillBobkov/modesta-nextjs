@@ -1,0 +1,68 @@
+.pageWrapper {
+  display: flex;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 0 40px;
+}
+
+.container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.desktopSearchContainer {
+  display: none; /* По умолчанию скрыт */
+}
+
+.mobileSearchContainer {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* Стили для десктопа */
+@media screen and (min-width: 768px) {
+  .desktopSearchContainer {
+    display: block; /* Показываем на десктопе */
+    width: 300px;
+  }
+  
+  .mobileSearchContainer {
+    display: none; /* Скрываем на десктопе */
+  }
+}
+
+.noResults {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg-color);
+  border-radius: 30px;
+  color: var(--secondary-font-color);
+  font-size: 1.1rem;
+}
+
+.searchResults {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--card-bg-color);
+  border-radius: 30px;
+  color: var(--secondary-font-color);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    background-color: var(--bg-color);
+    border-radius: 0;
+    margin-right: 0;
+  }
+  .pageWrapper {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+}

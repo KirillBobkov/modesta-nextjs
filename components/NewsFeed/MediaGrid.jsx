@@ -1,12 +1,20 @@
-import styles from "./NewsFeed.module.css";
+import React from 'react';
+import styles from './styles/MediaGrid.module.css';
 
-export function MediaGrid({ attachments }) {
+const MediaGrid = ({ attachments }) => {
+  // Filter attachments by type for easier rendering
   const photos = attachments.filter((a) => a.type === "photo");
   const videos = attachments.filter((a) => a.type === "video");
-  const link = attachments.filter((a) => a.type === "link");
+  const links = attachments.filter((a) => a.type === "link");
+
+  // No media to show
+  if (attachments.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.mediaContainer}>
+      {/* Photo Gallery */}
       {photos.length > 0 && (
         <div className={styles.mediaGrid}>
           {photos.map((photo, index) => (
@@ -20,6 +28,7 @@ export function MediaGrid({ attachments }) {
         </div>
       )}
 
+      {/* Video Gallery */}
       {videos.length > 0 && (
         <div className={styles.mediaGrid}>
           {videos.map((video, index) => (
@@ -35,14 +44,21 @@ export function MediaGrid({ attachments }) {
           ))}
         </div>
       )}
-      {link.length > 0 && (
+
+      {/* Link Previews */}
+      {links.length > 0 && (
         <div className={styles.mediaGrid}>
-          {link.map((link, index) => (
-            <a className={styles.link} target="_blank" href={link.url}>
+          {links.map((link, index) => (
+            <a 
+              key={`link-${index}`}
+              className={styles.link} 
+              target="_blank" 
+              href={link.url}
+              rel="noopener noreferrer"
+            >
               <img
-                key={`link-photo-${index}`}
                 src={link.image || 'https://cache3.youla.io/files/images/720_720_out/5d/e3/5de3cf0866fb070cf1104855.jpg'}
-                alt={`Link Photo ${index + 1}`}
+                alt={`Link Preview ${index + 1}`}
                 className={styles.link_image}
               />
               <p>Просмотр по ссылке:</p>
@@ -53,4 +69,6 @@ export function MediaGrid({ attachments }) {
       )}
     </div>
   );
-}
+};
+
+export default MediaGrid; 
