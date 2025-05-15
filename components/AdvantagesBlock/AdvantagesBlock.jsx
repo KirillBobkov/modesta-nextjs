@@ -1,8 +1,4 @@
 
-
-import styles from "./AdvantagesBlock.module.css";
-import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 import { useState } from "react";
@@ -38,17 +34,17 @@ export const advantagesContent = {
 };
 
 export function AdvantagesBlock() {
-
   return (
-    <VisibilityManager className={containerStyles.container}>
-      <h2 className={containerStyles.container__title} id="advantages">
+    <VisibilityManager className="max-w-[1280px] w-full mx-auto px-[40px] mb-[120px] max-3xl:px-[15px] max-3xl:mb-[60px]">
+      <h2
+        className="text-center text-[52px] leading-[60px] mb-[30px] font-[900] whitespace-pre-line uppercase max-3xl:max-w-[350px] max-3xl:max-w-full max-3xl:text-left max-3xl:text-[25px] max-3xl:text-center max-3xl:leading-[32px] max-3xl:mb-5"
+        id="advantages"
+      >
         {advantagesContent.title}
       </h2>
-      <ul className={styles["advantages"]}>
+      <ul>
         {advantagesContent.blocks.map((adv, i) => {
-          return (
-            <Item key={i} adv={adv} i={i} />
-          );
+          return <Item key={i} adv={adv} i={i} />;
         })}
       </ul>
     </VisibilityManager>
@@ -58,33 +54,48 @@ export function AdvantagesBlock() {
 const Item = ({ adv, i }) => {
   const [loaded, setLoaded] = useState(false);
 
-return (<VisibilityManager
-  itemScope
-  itemType="http://schema.org/ImageObject"
-  as="li"
-  key={i}
-  className={`${styles["advantages__item"]} ${
-    adv.right ? styles["advantages__item--right"] : ""
-  } ${shadowStyles.shadow}`}
->
-  <div className={styles["advantages__content"]}>
-    <h3 itemProp="name" className={styles["advantages__item-text"]}>
-      {adv.title}
-    </h3>
-    <p className={styles["advantages__item-description"]}>
-      {adv.description}
-    </p>
-  </div>
-  {(
-    <Image         
-      itemProp="contentUrl"
-      className={styles["advantage__item-image"] + ' ' + (loaded ? styles.loaded : '')}
-      src={adv.desktopImg}
-      alt={`Изображение протеза #${i}`}
-      fill
-      onLoad={() => setLoaded(true)}
-    />
-  )}
-</VisibilityManager> )
-
-}
+  return (
+    <VisibilityManager
+      itemScope
+      itemType="http://schema.org/ImageObject"
+      as="li"
+      key={i}
+      className={`group relative flex justify-between min-h-[350px] w-full mb-[40px] rounded-[30px] overflow-hidden flex-row bg-[#dedbde] z-[0] align-center last:mb-0 
+  max-3xl:align-end max-3xl:min-h-[400px] max-3xl:mb-[40px]
+  shadow-[var(--box-shadow)_0px_6px_20px_0px]
+  ${
+    adv.right
+      ? "justify-end text-right max-3xl:text-left max-3xl:justify-start"
+      : ""
+  } 
+  `}
+    >
+      <div
+        className={`flex flex-col justify-center max-w-[500px] p-[50px] max-3xl:p-[40px_20px] max-3xl:w-full max-3xl:justify-end max-3xl:justify-end`}
+      >
+        <h3 itemProp="name" className={`w-full align-middle mb-[15px] text-[40px] leading-[40px] font-[800] text-[#000] whitespace-pre-line uppercase max-3xl:text-[25px] max-3xl:leading-[32px] max-3xl:mb-[10px] max-3xl:max-w-[320px]`}>
+          {adv.title}
+        </h3>
+        <p className={`w-full text-[#313131] whitespace-pre-line`}>
+          {adv.description}
+        </p>
+      </div>
+      {
+        <Image
+          itemProp="contentUrl"
+          className={
+            `group-hover:scale-[1.03] w-auto! z-[-1] transition-all duration-800 opacity-0 
+            max-3xl:w-full! max-3xl:h-auto! max-3xl:z-[-1] max-3xl:left-0!
+            ` +
+            " " + (loaded ? "opacity-100" : "") +
+            " " + (adv.right ? "left-0!" : "left-auto! max-3xl:left-0!")
+          }
+          src={adv.desktopImg}
+          alt={`Изображение протеза #${i}`}
+          fill
+          onLoad={() => setLoaded(true)}
+        />
+      }
+    </VisibilityManager>
+  );
+};
