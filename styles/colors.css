@@ -1,4 +1,4 @@
-:root[theme='light'] {
+:root {
     --font-color: #ffffff;
     --secondary-font-color: #9e9e9e;
     
@@ -22,7 +22,7 @@
     --assistant-message-bg: #393939;
 }
 
-:root {
+:root[theme='light'] {
     --font-color: #000000;
     --secondary-font-color: #313131;
 
