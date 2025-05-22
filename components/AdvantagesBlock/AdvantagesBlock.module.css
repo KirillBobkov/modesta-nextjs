@@ -1,0 +1,113 @@
+.advantages__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-height: 350px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    flex-direction: row;
+    background-color: #dedbde;
+    z-index: 0;
+    align-items: center;
+    overflow: hidden;
+}
+
+.advantages__item--right {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.advantages__item:last-child {
+    margin-bottom: 0;
+}
+
+.advantages__content {
+    max-width: 500px;
+    padding: 50px;
+}
+
+.advantages__item-text {
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    /* color: var(--font-color); */
+    color: #000000;
+    white-space: pre-line;
+    text-transform: uppercase;
+}
+
+.advantages__item-description {
+    width: 100%;
+    /* color: var(--secondary-font-color); */
+    color: #313131;
+    white-space: pre-line;
+}
+
+.advantage__item-image {
+   width: auto!important;
+   z-index: -1;
+   left: auto!important;
+   transition: all 800ms ease-in-out;
+   opacity: 0;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+.advantages__item:hover .advantage__item-image {
+    transform: scale(1.03);
+}
+
+.advantages__item--right .advantage__item-image {
+   width: auto!important;
+   z-index: -1;
+   left: 0!important;
+}
+
+@media screen and (max-width: 1080px) {
+    .advantages__content {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .advantages__item {
+        min-height: 400px;
+        margin-bottom: 40px;
+        align-items: flex-end;
+    }
+
+    .advantages__item--right {
+        text-align: left;
+    }
+
+    .advantages__item--right {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .advantages__item-text {
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 10px;
+        max-width: 320px;
+    }
+
+    
+    .advantage__item-image {
+        width: 100%!important;
+        z-index: -1;
+        height: auto!important;
+        left: 0!important;
+     }
+     
+     .advantages__item--right .advantage__item-image {
+        width: 100%!important;
+        z-index: -1;
+        left: 0!important;
+     }
+}
