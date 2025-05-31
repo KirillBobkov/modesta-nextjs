@@ -57,6 +57,7 @@
     object-position: center center;
     overflow: hidden;
     z-index: -1;
+    filter: hue-rotate(12deg);
 }
 
 .preview__image {
