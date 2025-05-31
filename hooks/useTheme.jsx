@@ -1,31 +1,34 @@
-import  { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export function useTheme() {
-    const [theme, setTheme] = useState(undefined);
-  
-    useEffect(() => {
-      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const [theme, setTheme] = useState(undefined);
 
-      if (!prefersDarkScheme.matches) {
-        document.documentElement.setAttribute("theme", "light");
-        setTheme("light");
-      } else {
-        if (document.documentElement.hasAttribute("theme")) {
-          document.documentElement.removeAttribute("theme");
-        }
-        setTheme("dark");
-      }
-    }, [theme]);
-  
-    const changeTheme = useCallback(() => {
-      if (theme === "light") {
-        setTheme("dark");
-      }
-      if (theme === "dark") {
-        setTheme("light");
-      }
-    }, []);
-  
-    return { theme, changeTheme };
-  }
+  useEffect(() => {
+    const root = document.documentElement;
+    const prefersDarkScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      root.classList.toggle("dark", savedTheme === "dark");
+      setTheme(savedTheme);
+    } else {
+      const newTheme = prefersDarkScheme.matches ? "dark" : "light";
+      root.classList.toggle("dark", newTheme === "dark");
+      setTheme(newTheme);
+    }
+  }, []);
+
+  const changeTheme = useCallback(() => {
+    const root = document.documentElement;
+    const newTheme = theme === "light" ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    root.classList.toggle("dark", newTheme === "dark");
+    setTheme(newTheme);
+  }, [theme]);
+
+  return { theme, changeTheme };
+}
   
