@@ -1,7 +1,7 @@
 import styles from "./ProductionBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
-import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
+
 import Image from "next/image.js";
 
 import { useState } from "react";
@@ -58,7 +58,7 @@ export const productionContent = [
 export function ProductionBlock() {
   return (
     <section
-      className={`${styles.production__container} ${containerStyles.container}`}
+      className={`${styles.production__container} max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30`}
     >
       <ul>
         {productionContent.map((production, i) => (
@@ -83,13 +83,13 @@ const Production = ({ production, i }) => {
   >
     <Image
       itemProp="contentUrl"
-      className={styles.production__image + " " + shadowStyles.shadow  + ' ' + (loaded ? styles.loaded : '')}
+                      className={styles.production__image + " shadow-lg " + (loaded ? styles.loaded : '')}
       src={production.img}
       alt={production.alt}
       onLoad={() => setLoaded(true)}
     />
    
-    <div className={styles.production__content + ' ' + shadowStyles.shadow}>
+                <div className={styles.production__content + ' shadow-lg'}>
       <h3 itemProp="name" className={styles.production__title}>
         {production.title}
       </h3>

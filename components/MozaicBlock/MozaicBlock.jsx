@@ -7,7 +7,7 @@ export const MozaicBlock = React.memo(({ images }) => {
   const [openedImageIndex, setOpenedImageIndex] = useState(undefined);
   const handleFullScreenOpen = (i) => {
     setOpenedImageIndex(i);
-    document.documentElement.classList.add("mobile-menu-opened");
+    document.documentElement.classList.add("overflow-hidden");
   };
 
   return (
@@ -19,7 +19,7 @@ export const MozaicBlock = React.memo(({ images }) => {
               className={`${styles["mozaic__image-container"]} ${i === openedImageIndex ? styles["mozaic__image-container--opened"] : ""}`}
               onClick={() => {
                 if (i === openedImageIndex) {
-                  document.documentElement.classList.remove("mobile-menu-opened");
+                  document.documentElement.classList.remove("overflow-hidden");
                   setOpenedImageIndex(undefined);
                 }
               }}

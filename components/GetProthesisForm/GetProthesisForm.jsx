@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import styles from "./GetProthesisForm.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import { useValidationFormProthesis } from "./useValidationFormProthesis.jsx";
 
@@ -111,14 +111,14 @@ export function GetProthesisForm() {
 
   return (
     <VisibilityManager className={styles["get-prothesis-block"]} style={{ backgroundImage: `url(${formBack.src})` }} id="submit">
-      <VisibilityManager as="div" onInit={false} className={`${styles["get-prothesis-form"]} ${shadowStyles.shadow}`}>
+              <VisibilityManager as="div" onInit={false} className={`${styles["get-prothesis-form"]} shadow-lg`}>
         <h2 className={styles["get-prothesis-form__title"]}>Оставить заявку</h2>
         <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
           <div className={styles["form-group"]}>
             <input
               name="name"
               autoComplete="name"
-              className={`${styles["form-control"]} ${name.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
+                              className={`${styles["form-control"]} ${name.value ? styles["form-control--filled"] : ""} shadow-lg`}
               value={name.value}
               onChange={handleChange}
               placeholder="Ваше имя"
@@ -138,7 +138,7 @@ export function GetProthesisForm() {
               type="email"
               name="email"
               autoComplete="email"
-              className={`${styles["form-control"]} ${email.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
+                              className={`${styles["form-control"]} ${email.value ? styles["form-control--filled"] : ""} shadow-lg`}
               value={email.value}
               onChange={handleChange}
               placeholder="E-mail"
@@ -157,7 +157,7 @@ export function GetProthesisForm() {
             <input
               name="phone"
               autoComplete="phone"
-              className={`${styles["form-control"]}  ${phone.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
+                              className={`${styles["form-control"]}  ${phone.value ? styles["form-control--filled"] : ""} shadow-lg`}
               value={phone.value}
               onChange={handleChange}
               placeholder="Телефон 89xxxxxxxx"
@@ -177,7 +177,7 @@ export function GetProthesisForm() {
               name="message"
               value={message.value}
               className={`${styles["form-textarea"]} ${styles["form-control"]} ${message.value ? styles["form-control--filled"] : ""} ${
-                shadowStyles.shadow
+  shadow-lg
               }`}
               onChange={handleChange}
               disabled={!!responseMessage}
@@ -209,7 +209,7 @@ export function GetProthesisForm() {
               </label>
             </div>
           </div>
-          <button type="submit" className={`${styles.formSubmitButton} ${shadowStyles.shadow}`} disabled={disable}>
+                      <button type="submit" className={`${styles.formSubmitButton} shadow-lg`} disabled={disable}>
             <span>{responseMessage.length > 0 ? responseMessage : "Отправить"}</span>
             {loading && <div className={styles["loader-button"]} />}
           </button>

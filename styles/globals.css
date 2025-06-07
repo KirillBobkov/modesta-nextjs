@@ -1,9 +1,7 @@
+@import "./colors.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "./reset.css";
-@import "./colors.css";
 
 
 *::-webkit-scrollbar {
@@ -34,22 +32,4 @@ body {
 html, 
 body {
     overflow-x: hidden;
-}
-
-.no-scroll-page  {
-    overflow: hidden;
-}
-
-.mobile-menu-opened  {
-    overflow: hidden;
-}
-
-.page-offset {
-    padding-top: 150px;
-}
-
-@media screen and (max-width: 768px) {
-    .page-offset {
-        padding-top: 40px;
-    }
 }

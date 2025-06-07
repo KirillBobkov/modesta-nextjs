@@ -4,9 +4,9 @@ import "./Loader.css";
 
 export function Loader() {
     useEffect(() => {
-        document.documentElement.classList.add("no-scroll-page")
+        document.documentElement.classList.add("overflow-hidden")
         
-    return () => document.documentElement.classList.remove("no-scroll-page");
+    return () => document.documentElement.classList.remove("overflow-hidden");
     }, []);
 
     return (

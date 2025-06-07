@@ -17,13 +17,13 @@ import replacementPart3_mobile from "../../assets/images/replacement_part_3_mobi
 import replacementPart4_mobile from "../../assets/images/replacement_part_4_mobile.webp";
 import { useMediaQuery } from "../../hooks/useMediaQuery.jsx";
 import Image from "next/image.js";
-import containerStyles from "../../styles/container.module.css";
+
 
 export function ReplacementBlock() {
   const isMobile = useMediaQuery(`(max-width: 767.98px)`);
   return (
     <VisibilityManager
-      className={`${containerStyles.container} ${containerStyles["container--full-width"]} ${styles["replacement-parts__container"]}`}
+      className={`max-w-full w-full mx-auto p-0 mb-15 md:mb-30 ${styles["replacement-parts__container"]}`}
     >
       <div className={styles["replacement-parts"]} id="replacement-parts">
         <VisibilityManager className={styles["replacement-parts__title"]}>

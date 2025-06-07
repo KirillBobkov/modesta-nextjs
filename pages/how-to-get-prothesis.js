@@ -65,7 +65,7 @@ export default () => {
 
   return (
     <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <VisibilityManager className="page-offset">
+      <VisibilityManager className="pt-[40px] md:pt-[150px]">
         <ArticleBlock articleContent={howToGetProthesis}/>
       </VisibilityManager>
     </Layout>

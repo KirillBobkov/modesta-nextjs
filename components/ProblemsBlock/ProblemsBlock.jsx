@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./ProblemsBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
-import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
+
 import problem1 from "../../assets/images/problem1.jpg";
 import problem2 from "../../assets/images/problem2.jpg";
 import problem3 from "../../assets/images/problem3.jpg";
@@ -54,10 +54,10 @@ export const problemsContent = {
   
 export function ProblemsBlock() {
   return (
-    <div className={containerStyles.container}>
+    <div className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
       <VisibilityManager
         as="h2"
-        className={containerStyles.container__title}
+        className="max-w-sm text-left text-2xl leading-8 mb-5 font-bold whitespace-pre-line uppercase md:max-w-none md:text-center md:text-5xl md:leading-[60px] md:mb-7.5"
         id="problems"
       >
         {problemsContent.title}
@@ -84,12 +84,12 @@ const Problem = ({ problem, i }) => {
     >
       <Image
         itemProp="contentUrl"
-        className={styles.problem__image + " " + shadowStyles.shadow  + ' ' + (loaded ? styles.loaded : '')}
+                        className={styles.problem__image + " shadow-lg " + (loaded ? styles.loaded : '')}
         src={problem.img}
         alt={problem.alt}
         onLoad={() => setLoaded(true)}
       />
-      <div className={styles.problem__content + " " + shadowStyles.shadow}>
+                  <div className={styles.problem__content + " shadow-lg"}>
         <h3 itemProp="name" className={styles.problem__title}>
           {problem.title}
         </h3>

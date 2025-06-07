@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import styles from "./VideoWidget.module.css";
 import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
 import { VideoList } from "../VideoList/VideoList";
 import { VisibilityManager } from "../VisibilityManager";
-import containerStyles from "../../styles/container.module.css";
 
 export const videosContent = {
   title: "Оценить красоту момента помогает кино",
@@ -53,31 +51,31 @@ export const VideoWidget = () => {
   const [selectedVideo, setSelectedVideo] = useState(videosContent.videos[0]);
 
   return (
-    <div className={styles.container} id="videos">
+    <div className="w-full max-w-7xl mx-auto px-5 md:px-8 mb-16 md:mb-32" id="videos">
       <VisibilityManager
         itemProp="name"
         as="h2"
-        className={`${styles.grid__title} ${containerStyles.container__title}`}
+        className="text-2xl md:text-5xl leading-8 md:leading-tight font-bold mb-5 md:mb-8 text-left md:text-center uppercase"
       >
         {videosContent.title}
       </VisibilityManager>
 
       <VisibilityManager
         as="p"
-        className={`${styles.grid__description}`}
+        className="w-full md:w-1/2 mx-auto text-left md:text-center text-[var(--secondary-font-color)] mb-10"
       >
         {videosContent.description}
       </VisibilityManager>
 
-      <div className={styles.content}>
-        <div className={styles.listSection}>
+      <div className="flex flex-col-reverse md:flex-row mx-auto gap-8">
+        <div className="w-full md:w-[35%] md:min-w-[350px]">
           <VideoList
             videos={videosContent.videos}
             selectedVideo={selectedVideo}
             onVideoSelect={setSelectedVideo}
           />
         </div>
-        <VisibilityManager className={styles.playerSection}>
+        <VisibilityManager className="w-full md:w-[65%]">
           <VideoPlayer video={selectedVideo} />
         </VisibilityManager>
       </div>

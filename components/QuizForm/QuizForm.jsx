@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import styles from "./QuizForm.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { useFormValidation } from "../../hooks/useFormValidation.jsx";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 
@@ -219,7 +219,7 @@ export function QuizForm() {
                   <div key={key} className={styles["form-group"]}>
                     <label className={styles['form-label']}>{item.label}</label>
                     <input
-                      className={`${styles["form-control"]} ${item.value ? styles["form-control--filled"] : ""} ${shadowStyles.shadow}`}
+                      className={`${styles["form-control"]} ${item.value ? styles["form-control--filled"] : ""} shadow-lg`}
                       value={item.value}
                       onChange={(e) => {
                         handleChange({
@@ -282,7 +282,7 @@ export function QuizForm() {
               Согласие на обработку персональных данных
             </a>
           </p>
-          <button type="submit" className={`${styles.formSubmitButton} ${shadowStyles.shadow}`} disabled={disable}>
+                          <button type="submit" className={`${styles.formSubmitButton} shadow-lg`} disabled={disable}>
             <span>{responseMessage.length > 0 ? responseMessage : "Отправить"}</span>
             {loading && <div className={styles["loader-button"]} />}
           </button>

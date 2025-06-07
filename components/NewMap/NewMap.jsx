@@ -8,7 +8,7 @@ import roadmap_period5 from "../../assets/images/roadmap5.jpg";
 import roadmap_period6 from "../../assets/images/roadmap6.jpg";
 import roadmap_period7 from "../../assets/images/roadmap7.jpg";
 import roadmap_period8 from "../../assets/images/roadmap8.jpg";
-import containerStyles from "../../styles/container.module.css";
+
 import { PeriodComponent } from "./Period";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
@@ -229,8 +229,8 @@ const Roadmap = ({ points }) => {
 
 export function NewMap() {
   return (
-    <div className={`${containerStyles.container}`}>
-      <h2 className={`${containerStyles.container__title}`} id="roadmap">
+            <div className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
+          <h2 className="max-w-sm text-left text-2xl leading-8 mb-5 font-bold whitespace-pre-line uppercase md:max-w-none md:text-center md:text-5xl md:leading-[60px] md:mb-7.5" id="roadmap">
         {roadmapContent.title}
       </h2>
       <Roadmap points={roadmapContent} />

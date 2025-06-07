@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import InputMask from 'react-input-mask';
 import * as Yup from 'yup';
 import styles from './NewForm.module.css'; // Импортируем стили из модуля
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { ArrowButton } from '../ScrollTopButton/ScrollTopButton';
 
 
@@ -88,7 +88,7 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
   }
   
     return (
-      <div onClick={(e) => { setOpened(false); document.documentElement.classList.remove("mobile-menu-opened"); }} className={styles['popup-overlay'] + ' ' + (popupOpened ? styles['popup-overlay--opened'] : '')}>
+      <div onClick={(e) => { setOpened(false); document.documentElement.classList.remove("overflow-hidden"); }} className={styles['popup-overlay'] + ' ' + (popupOpened ? styles['popup-overlay--opened'] : '')}>
         <div  onClick={(e) => e.stopPropagation()} className={styles.popup}>
         <h2 className={styles["popup__title"]}>Оставить заявку</h2>
           <Formik
@@ -146,14 +146,14 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
                 обработки персональных данных
                   </label>
                 </div>
-                <button type="submit" className={`${styles.formSubmitButton} ${shadowStyles.shadow}`}  disabled={!(isValid && dirty) || responseMessage.length > 0}>
+                <button type="submit" className={`${styles.formSubmitButton} shadow-lg`}  disabled={!(isValid && dirty) || responseMessage.length > 0}>
             <span>{responseMessage.length > 0 ? responseMessage : "Отправить"}</span>
             {loading && <div className={styles["loader-button"]} />}
           </button>
               </Form>
             )}
           </Formik>
-        <ArrowButton  classes={styles['close-button']} onClick={() => { setOpened(false); document.documentElement.classList.remove("mobile-menu-opened"); }} />
+        <ArrowButton  classes={styles['close-button']} onClick={() => { setOpened(false); document.documentElement.classList.remove("overflow-hidden"); }} />
         </div>
  
       </div>

@@ -3,11 +3,11 @@ import { VisibilityManager } from '../VisibilityManager';
 import MediaGrid from './MediaGrid';
 import NewsStats from './NewsStats';
 import styles from './styles/NewsItem.module.css';
-import shadowStyles from '../../styles/shadow.module.css';
+
 
 const NewsItem = ({ item }) => {
   return (
-    <VisibilityManager as="article" className={styles.newsItem + " " + shadowStyles.shadow}>
+            <VisibilityManager as="article" className={styles.newsItem + " shadow-lg"}>
       <div className={styles.header}>
         <time className={styles.date}>{item.date}</time>
         <NewsStats

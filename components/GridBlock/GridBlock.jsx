@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import styles from "./GridBlock.module.css";
-import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
+
 
 const widthMapper = {
   2: 'grid__item--2-columns',
@@ -28,9 +28,9 @@ export const GridBlock = React.memo(
     const [opened, setOpened] = useState(false);
 
     return (
-      <section   itemScope itemType="https://schema.org/ItemList" ref={ref} className={`${containerStyles.container}`}>
+      <section   itemScope itemType="https://schema.org/ItemList" ref={ref} className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
         {title && (
-          <VisibilityManager itemProp="name" as="h2" className={`${styles.grid__title} ${containerStyles.container__title}`} style={customTitleStyles} id={id}>
+          <VisibilityManager itemProp="name" as="h2" className={`${styles.grid__title} max-w-sm text-left text-2xl leading-8 mb-5 font-bold whitespace-pre-line uppercase md:max-w-none md:text-center md:text-5xl md:leading-[60px] md:mb-7.5`} style={customTitleStyles} id={id}>
             {title}
           </VisibilityManager>
         )}
@@ -55,7 +55,7 @@ export const GridBlock = React.memo(
                 key={i}
                 as="li"
                 itemProp="itemListElement" itemType="https://schema.org/ListItem"
-                className={`${styles.grid__item} ${styles[`${columnsClass}`]} ${shadowStyles.shadow} ${
+                className={`${styles.grid__item} ${styles[`${columnsClass}`]} shadow-lg ${
                   clickable ? styles["grid__item--clickable"] : ""
                 }`}
                 style={customItemStyles}

@@ -63,7 +63,7 @@ export default function InfoPage() {
       popupOpened={popupOpened}
       setOpened={setOpened}
     >
-      <VisibilityManager className="page-offset">
+      <VisibilityManager className="pt-[40px] md:pt-[150px]">
         <ArticlesGrid />
         <BooksBlock />
         <LawsBlock />

@@ -1,15 +1,19 @@
 import React from "react";
-import styles from "./ArticleBlock.module.css";
 import Image from "next/image.js";
-import shadowStyles from "../../styles/shadow.module.css";
-import containerStyles from "../../styles/container.module.css";
 
 export const ArticleBlock = ({ articleContent }) => {
   return (
-    <div className={`${styles["article-container"]} ${containerStyles.container}`}>
-      <article itemScope itemType="http://schema.org/Article" className={`${styles.article}`}>
+    <div className="max-w-screen-xl w-full mx-auto px-0 mb-15 md:px-10 md:mb-30">
+      <article
+        itemScope
+        itemType="http://schema.org/Article"
+        className="overflow-hidden max-w-full md:max-w-[700px] mx-auto"
+      >
         {articleContent?.title && (
-          <h2 itemProp="headline" className={`${styles["article__head-title"]}`}>
+          <h2
+            itemProp="headline"
+            className="text-left font-bold whitespace-pre-line px-[15px] text-[25px] leading-[32px] md:px-0 md:text-[36px] md:leading-[42px]"
+          >
             {articleContent.title}
           </h2>
         )}
@@ -19,16 +23,45 @@ export const ArticleBlock = ({ articleContent }) => {
           {articleContent?.content &&
             Object.entries(articleContent.content).map(([key, value], i) => {
               if (key.includes("title")) {
-                return <h3 key={i} className={`${styles["article__content-container"]} ${styles.article__title}`}>{value}</h3>;
+                return (
+                  <h3
+                    key={i}
+                    className="text-left font-bold whitespace-pre-line px-[15px] text-[20px] leading-[24px] my-5 md:px-0 md:text-[24px] md:leading-[30px]"
+                  >
+                    {value}
+                  </h3>
+                );
               }
               if (key.includes("subheading")) {
-                return <p key={i} className={`${styles["article__content-container"]} ${styles.article__subheading}`}>{value}</p>;
+                return (
+                  <p
+                    key={i}
+                    className="font-bold whitespace-pre-line px-[15px] my-5 md:px-0"
+                  >
+                    {value}
+                  </p>
+                );
               }
               if (key.includes("paragraph")) {
-                return <p key={i} className={`${styles["article__content-container"]} ${styles.article__paragraph}`}>{value}</p>;
+                return (
+                  <p
+                    key={i}
+                    className="text-[var(--secondary-font-color)] whitespace-pre-line px-[15px] mb-5 md:px-0"
+                  >
+                    {value}
+                  </p>
+                );
               }
               if (key.includes("image")) {
-                return <Image key={i} className={`${styles.article__img} ${shadowStyles.shadow}`} priority alt={`Изображение статьи №${i}`} src={value} />;
+                return (
+                  <Image
+                    key={i}
+                    className="w-full h-auto object-contain block mt-[30px] mb-[20px] rounded-none md:mb-[30px] md:rounded-[30px] shadow-lg"
+                    priority
+                    alt={`Изображение статьи №${i}`}
+                    src={value}
+                  />
+                );
               }
               return <></>;
             })}

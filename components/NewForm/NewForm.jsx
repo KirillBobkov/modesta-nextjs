@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import InputMask from "react-input-mask";
 import { z } from "zod";
 import styles from "./NewForm.module.css"; // Импортируем стили из модуля
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { ArrowButton } from "../ScrollTopButton/ScrollTopButton";
 
 // Компонент для форматирования поля телефона
@@ -92,7 +92,7 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
     <div
       onClick={(e) => {
         setOpened(false);
-        document.documentElement.classList.remove("mobile-menu-opened");
+        document.documentElement.classList.remove("overflow-hidden");
       }}
       className={
         styles["popup-overlay"] +
@@ -212,7 +212,7 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
               </div>
               <button
                 type="submit"
-                className={`${styles.formSubmitButton} ${shadowStyles.shadow}`}
+                className={`${styles.formSubmitButton} shadow-lg`}
                 disabled={!(isValid && dirty) || responseMessage.length > 0}
               >
                 <span>
@@ -227,7 +227,7 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
           classes={styles["close-button"]}
           onClick={() => {
             setOpened(false);
-            document.documentElement.classList.remove("mobile-menu-opened");
+            document.documentElement.classList.remove("overflow-hidden");
           }}
         />
       </div>

@@ -46,7 +46,7 @@ const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
         <div
           className={`${styles.navigation__submenu} ${
             hoverOpened ? styles["navigation__submenu--visible"] : ""
-          } shadow`}
+          } shadow-lg`}
         >
           {item.childs.map((child) => (
             <Link
@@ -90,8 +90,8 @@ export const Navigation = React.memo(() => {
   const handleMobileMenu = useCallback((opened) => {
     setMobileMenuOpened(opened);
     opened
-      ? document.documentElement.classList.add("mobile-menu-opened")
-      : document.documentElement.classList.remove("mobile-menu-opened");
+      ? document.documentElement.classList.add("overflow-hidden")
+      : document.documentElement.classList.remove("overflow-hidden");
   }, []);
 
   const handleBurgerClick = useCallback((newState) => {

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./HistoryBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
-import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
+
 import history1 from "../../assets/images/history1.jpg";
 import history2 from "../../assets/images/history2.jpg";
 import history3 from "../../assets/images/history3.jpg";
@@ -33,7 +33,7 @@ export const historyContent = {
 
 export function HistoryBlock() {
   return (
-    <div className={containerStyles.container}>
+          <div className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
       <VisibilityManager as="ul" style={{ marginTop: "100px" }}>
         {historyContent.blocks.map((item, i) => {
           return <HistoryItem key={i} item={item} i={i} />;
@@ -56,12 +56,12 @@ const HistoryItem = ({ item, i }) => {
     >
       <Image
         itemProp="contentUrl"
-        className={styles.history__image + " " + shadowStyles.shadow + ' ' + (loaded ? styles.loaded : '')}
+                        className={styles.history__image + " shadow-lg " + (loaded ? styles.loaded : '')}
         src={item.img}
         alt={item.alt}
         onLoad={() => setLoaded(true)}
       />
-      <div className={styles.history__content + " " + shadowStyles.shadow}>
+                  <div className={styles.history__content + " shadow-lg"}>
         <h3 itemProp="name" className={styles.history__title}>
           {item.title}
         </h3>

@@ -1,7 +1,7 @@
 import React from "react";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import styles from "./VideosGrid.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { videosContent } from "../../content/video.js";
 import { GridBlock } from "../GridBlock/GridBlock.jsx";
 
@@ -10,7 +10,7 @@ const VideoCard = ({ item }) => {
     <div
       itemScope
       itemType="http://schema.org/VideoObject"
-      className={`${styles.videos__item} ${shadowStyles.shadow}`}
+                  className={`${styles.videos__item} shadow-lg`}
     >
       <meta itemProp="name" content={item.name} />
       <meta itemProp="uploadDate" content={item.uploadDate} />

@@ -12,6 +12,7 @@ import favicon32x32 from "../../assets/images/favicon32x32.png";
 import favicon180x180 from "../../assets/images/favicon180x180.png";
 import favicon from "../../assets/images/favicon.ico";
 import { ChatWidget } from "../ChatWidget/ChatWidget";
+
 const montseratt = Montserrat({
   weight: ["400", "800"],
   variable: "--font-montseratt",
@@ -99,7 +100,7 @@ export default function Layout({
           <FeedbackButton
             onClick={() => {
               setOpened(true);
-              document.documentElement.classList.add("mobile-menu-opened");
+              document.documentElement.classList.add("overflow-hidden");
             }}
           />
         

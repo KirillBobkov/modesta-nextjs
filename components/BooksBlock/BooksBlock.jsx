@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import styles from "./BooksBlock.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export const booksContent = {
   title: "Библиотека",
-  description: "Мы собрали для вас полезные материалы о протезировании, доступные для скачивания",
+  description:
+    "Мы собрали для вас полезные материалы о протезировании, доступные для скачивания",
   blocks: [
     {
       name: "“Протезирование конечности” (2021)",
@@ -16,19 +16,23 @@ export const booksContent = {
     },
     {
       name: "“Абилитация в формировании навыков ручной деятельности у детей с дефектами кисти”",
-      description: "Оценка эффективности предложенной системы реабилитации детей с дефектами кисти.",
+      description:
+        "Оценка эффективности предложенной системы реабилитации детей с дефектами кисти.",
       author: "А.А. Корюков, Н.Л. Климон, Н.Л. Лосева, Е.М. Старобина",
       link: "https://disk.yandex.ru/i/lLyqnD95kjBRHw",
     },
     {
       name: "“Автоматизированный комплекс регуляции двигательной активности в реабилитации с помощью вибротактильной обратной связи”",
-      description: "В работе представлена методика использования вибротактильной обратной связи для реабилитации после операции на сухожилиях.",
-      author: "Д.В. Кутьина, Д.Г. Наконечный, А. Мотайло, Я.И. Пигарева, А.Н. Киселева, В.Б. Казанцев, С.Ю. Гордлеева, А.Я. Каплан, А.С. Пимашкин",
+      description:
+        "В работе представлена методика использования вибротактильной обратной связи для реабилитации после операции на сухожилиях.",
+      author:
+        "Д.В. Кутьина, Д.Г. Наконечный, А. Мотайло, Я.И. Пигарева, А.Н. Киселева, В.Б. Казанцев, С.Ю. Гордлеева, А.Я. Каплан, А.С. Пимашкин",
       link: "https://disk.yandex.ru/i/1HLDKk4-Sltb9g",
     },
     {
       name: "“Бионические протезы верхних конечностей: сравнительный анализ и перспективы использования”",
-      description: "Данная статья содержит в себе классификации по различным параметрам протезов руки.",
+      description:
+        "Данная статья содержит в себе классификации по различным параметрам протезов руки.",
       author: "Уразбахтина Ю.О., Камалова К.Р., Морозова Е.С.",
       link: "https://disk.yandex.ru/i/kJRAAGhvGsiKbA",
     },
@@ -55,19 +59,22 @@ export const booksContent = {
     },
     {
       name: "“Силиконовые приемные гильзы функциональных протезов кисти” (2018)",
-      description: "Разработка технологии изготовления силиконовой приемной гильзы функционального протеза кисти.",
+      description:
+        "Разработка технологии изготовления силиконовой приемной гильзы функционального протеза кисти.",
       author: "А.В. Круглов",
       link: "https://disk.yandex.ru/i/zqDyzJoLZTGnOQ",
     },
     {
       name: "“Совершенствование технологии изготовления полноконтактных приемных гильз при сложном протезировании инвалидов с дефектами верхних конечностей на уровне предплечья” (2016)",
-      description: "Цель - разработать технологию изготовления индивидуальной полноконтактной приемной гильзы протезов предплечья.",
+      description:
+        "Цель - разработать технологию изготовления индивидуальной полноконтактной приемной гильзы протезов предплечья.",
       author: "P.P. Гайнуллина, Ю.И. Замилацкий, М.Г. Гусев",
       link: "https://disk.yandex.ru/i/7PfatNDp3NZCaw",
     },
     {
       name: "“Сравнительный анализ распределения удельного давления по внутренней поверхности приемных гильз протезов предплечья”",
-      description: "Проведены биомеханические исследования по изучению распределения удельного давления по внутренней поверхности приемной гильзы.",
+      description:
+        "Проведены биомеханические исследования по изучению распределения удельного давления по внутренней поверхности приемной гильзы.",
       author: "С. Ф. Курдыбайло, Ю. И. Замилацкий, Р. Р. Гайнуллина",
       link: "https://disk.yandex.ru/i/Al8Z1kb5G2vn_g",
     },
@@ -101,7 +108,8 @@ export const booksContent = {
     },
     {
       name: "“Вот они – роботы” (1972 год)",
-      description: "Описание некого симбиоза человека и робота, который рождает такие продукты как современные биоэлектрические протезы.",
+      description:
+        "Описание некого симбиоза человека и робота, который рождает такие продукты как современные биоэлектрические протезы.",
       author: "А. Е. Кабринский",
       link: "https://sheba.spb.ru/za/vot-roboty-1972.htm",
     },
@@ -121,7 +129,8 @@ export const booksContent = {
     },
     {
       name: "Рука Юты",
-      description: "Оригинальная статья с подробным математическим описанием принципа работы. Полезно для начинающих протезостроителей.",
+      description:
+        "Оригинальная статья с подробным математическим описанием принципа работы. Полезно для начинающих протезостроителей.",
       author: "S.C. Jacobsen R.B. Jerard",
       link: "https://dl.acm.org/doi/pdf/10.1145/800182.810395",
     },
@@ -164,13 +173,13 @@ export const booksContent = {
     },
     {
       name: "“Методы управления протезами верхних конечностей при разных видах ампутации” (2023)",
-      description: 'Проанализированы методы управления протезами верхних конечностей.',
+      description:
+        "Проанализированы методы управления протезами верхних конечностей.",
       author: "Каххаров А. А., Махмудова Ш. Ё.",
       link: "https://disk.yandex.ru/i/uG5HKAVjvhn9zQ",
     },
   ],
 };
-
 
 const BookContent = ({ item }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -195,32 +204,49 @@ const BookContent = ({ item }) => {
   return (
     <a
       onClick={() => {
-        ym(96028442,'reachGoal','book-download')
+        ym(96028442, "reachGoal", "book-download");
       }}
       target="_blank"
-      className={styles["books__item-wrapper"]}
+      className="flex gap-[4%] md:gap-[3%] items-start justify-between relative"
       href={item.link}
     >
-      <div itemScope itemType="http://schema.org/CreativeWork" className={styles["books__item-info"]}>
+      <div
+        itemScope
+        itemType="http://schema.org/CreativeWork"
+        className="w-[87%] md:w-[90%] flex flex-col justify-start flex-nowrap"
+      >
         <meta itemProp="learningResourceType" content="AcademicThesis" />
-        <p className={styles["books__item-name"]} itemProp="name">
+        <p
+          className="text-base leading-[25px] text-left font-bold w-full whitespace-pre-line"
+          itemProp="name"
+        >
           {item.name}
         </p>
         {item.author && (
-          <p className={styles["books__item-author"]} itemProp="author">
+          <p
+            className="text-base leading-[25px] text-left w-full whitespace-pre-line text-[var(--secondary-font-color)]"
+            itemProp="author"
+          >
             {item.author}
           </p>
         )}
         <p
           itemProp="description"
-          className={`${styles["books__item-description"]} ${tooltipVisible ? styles["books__item-description--visible"] : ""}`}
+          className={`mt-0 text-base leading-[25px] text-left w-full text-[var(--font-color)] h-auto max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out whitespace-pre-line ${
+            tooltipVisible ? "max-h-[200px] opacity-100 mt-[5px]" : ""
+          }`}
         >
           {item.description}
         </p>
       </div>
-      <div className={styles.books__img} {...handlers}>
+      <div className="mt-[7px] w-[9%] md:w-[7%] max-w-[30px]" {...handlers}>
         {!tooltipVisible ? (
-          <svg className={styles.books__svg} viewBox="0 0 128 128" enableBackground="new 0 0 128 128" xmlSpace="preserve">
+          <svg
+            className="flex fill-[var(--font-color)]"
+            viewBox="0 0 128 128"
+            enableBackground="new 0 0 128 128"
+            xmlSpace="preserve"
+          >
             <g>
               <g>
                 <path
@@ -232,7 +258,11 @@ const BookContent = ({ item }) => {
             </g>
           </svg>
         ) : (
-          <svg className={styles.books__svg} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="flex fill-[var(--font-color)]"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g>
               <path d="m12 22c5.5228475 0 10-4.4771525 10-10s-4.4771525-10-10-10-10 4.4771525-10 10 4.4771525 10 10 10zm0 2c-6.627417 0-12-5.372583-12-12s5.372583-12 12-12 12 5.372583 12 12-5.372583 12-12 12z" />
               <path d="m9.20710678 16.2071068c-.39052429.3905243-1.02368927.3905243-1.41421356 0s-.39052429-1.0236893 0-1.4142136l6.99999998-6.99999998c.3905243-.39052429 1.0236893-.39052429 1.4142136 0s.3905243 1.02368927 0 1.41421356z" />

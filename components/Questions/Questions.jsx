@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import styles from "./Questions.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
-import containerStyles from "../../styles/container.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
+
 
 export const questionsContent = {
   title: "Вопросы и ответы",
@@ -111,11 +111,11 @@ export const Questions = () => {
   
   return (
     <VisibilityManager
-      className={`${containerStyles.container}`}
+      className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30"
       itemScope
       itemType="https://schema.org/FAQPage"
     >
-      <h2 className={containerStyles.container__title} id="faq">
+      <h2 className="max-w-sm text-left text-2xl leading-8 mb-5 font-bold whitespace-pre-line uppercase md:max-w-none md:text-center md:text-5xl md:leading-[60px] md:mb-7.5" id="faq">
         {questionsContent.title}
       </h2>
       <ul>
@@ -139,7 +139,7 @@ const Question = ({ title, answer }) => {
       className={styles.question}
     >
       <div
-        className={`${styles.question__title} ${shadowStyles.shadow}`}
+                        className={`${styles.question__title} shadow-lg`}
         onClick={() => setIsActive(!isActive)}
       >
         <h3 itemProp="name">{title}</h3>

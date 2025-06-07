@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./VideoList.module.css";
 import Image from "next/image";
 import { VisibilityManager } from "../VisibilityManager";
-import shadowStyles from '../../styles/shadow.module.css';
+
 interface VideoListProps {
   videos: any[];
   selectedVideo: any;
@@ -15,32 +14,35 @@ export const VideoList: React.FC<VideoListProps> = ({
   onVideoSelect,
 }) => {
   return (
-    <VisibilityManager className={styles.container + ' ' + shadowStyles.shadow}>
-      <div className={styles.listWrapper}>
-        <ul className={styles.list}>
-          {videos.map((video, i) => (
-            <button
-              key={video.link + i}
-              onClick={() => onVideoSelect(video)}
-              className={`${styles.item} ${
-                selectedVideo.link === video.link ? styles.selected : ""
-              }`}
-            >
-              <div className={styles.thumbnail}>
-                <Image
-                  width={50}
-                  height={50}
-                  src={video.thumbnailUrl}
-                  alt={""}
-                  className={styles.image}
-                />
-              </div>
-              <div className={styles.info}>
-                <p className={styles.videoTitle}>{video.name}</p>
-              </div>
-            </button>
-          ))}
-        </ul>
+    <VisibilityManager>
+                  <div className={`h-full flex flex-col overflow-hidden rounded-[20px] bg-[var(--card-bg-color)] shadow-lg`}>
+        <div className="bg-[var(--card-bg-color)] overflow-hidden">
+          <ul className="h-[300px] md:h-[400px] overflow-y-auto">
+            {videos.map((video, i) => (
+              <li key={video.link + i}>
+                <button
+                  onClick={() => onVideoSelect(video)}
+                  className={`w-full p-5 md:p-[20px_30px] flex items-center gap-5 bg-none border-none cursor-pointer text-left transition-all duration-500 text-[var(--secondary-font-color)] hover:text-[var(--accent)] ${
+                    selectedVideo.link === video.link ? "selected" : ""
+                  }`}
+                >
+                  <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                    <Image
+                      width={50}
+                      height={50}
+                      src={video.thumbnailUrl}
+                      alt={""}
+                      className="w-full h-full rounded-[10px] object-cover bg-[var(--bg-color)]"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <p className={`line-clamp-2 ${selectedVideo.link === video.link ? 'font-bold text-[var(--font-color)]' : ''}`}>{video.name}</p>
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </VisibilityManager>
   );

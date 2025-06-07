@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import styles from "./TeamBlock.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { GridBlock } from "../GridBlock/GridBlock.jsx";
 import Image from "next/image.js";
 import avatar1 from "../../assets/images/avatar_1.webp";
@@ -74,7 +73,7 @@ export const teamContent = {
 
 export const TeamBlock = () => {
   return (
-    <div className={styles.fullwidth}>
+    <div className="pt-[100px] pb-[50px]">
     <GridBlock
       title={teamContent.title}
       id="team"
@@ -98,31 +97,31 @@ const Person = ({ person, i }) => {
     itemType="http://schema.org/Person"
     key={person.name}
     as="div"
-    className={styles.person + ' ' + styles[`person_background_${i + 1}`]  + ' ' + (loaded ? styles.loaded : '')}
+    className={`group rounded-[20px] overflow-hidden p-0 relative aspect-[1/1.1] transition-all duration-800 ease-in-out w-full lg:w-auto bg-[linear-gradient(60deg,var(--bg-color-gradient-2)_0%,var(--bg-color-gradient-1)_47%)] ${loaded ? 'opacity-100' : 'opacity-0'}`}
   >
-    <div className={styles["person__avatar-container"]}>
+    <div className="w-auto after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-full after:h-1/2 after:transition-all after:duration-800 after:ease-in-out after:opacity-100 after:bg-gradient-to-t after:from-70% after:from-black/70 after:to-transparent fine:after:opacity-0 fine:group-hover:after:opacity-100">
       <Image
         alt="Портрет члена команды"
-        className={`${styles["person__avatar"]} ${shadowStyles.shadow}`}
+                        className={`w-full h-auto object-cover object-center shadow-lg`}
         src={person.image}
         width={100}
         height={100}
         onLoad={() => setLoaded(true)}
       />
     </div>
-    <p className={styles["person__info"]}>
-      <span itemProp="name" className={styles["person__name"]}>
+    <div className="absolute text-center bottom-0 left-0 w-full flex flex-col justify-center flex-nowrap p-5 z-[1] transition-all duration-400 ease-in-out opacity-100 translate-y-0 lg:p-[50px_20px_30px] fine:opacity-0 fine:translate-y-full fine:group-hover:opacity-100 fine:group-hover:translate-y-0">
+      <span itemProp="name" className="w-full font-bold whitespace-pre-line text-2xl leading-[30px] mb-[5px] lg:text-[28px] lg:leading-[32px] lg:mb-[10px]">
         {person.name}
       </span>
       <span
         itemProp="disambiguatingDescription"
-        className={styles["person__profession"]}
+        className="w-full text-base leading-[25px] whitespace-pre-line mb-[5px] lg:mb-[10px]"
         style={{ display: "none", paddings: "20px" }}
       >
         {person.profession}
       </span>
-      <span className={styles["person__bio"]}>{person.bio}</span>
-    </p>
+      <span className="text-xs leading-[18px] w-full text-[var(--secondary-font-color)] whitespace-pre-line">{person.bio}</span>
+    </div>
   </div>
   )
 }

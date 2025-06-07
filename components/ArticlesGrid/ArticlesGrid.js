@@ -1,4 +1,3 @@
-import styles from "./ArticlesGrid.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
 import { howToGetProthesis } from "../../content/articles/howToGetProthesis";
 import { typesOfProthesis } from "../../content/articles/typesOfProthesis";
@@ -34,16 +33,16 @@ const ArticleContent = ({ item }) => {
   return (
     <Link
       title="Перейти к статье"
-      className={styles["article-grid__item"]}
+      className="flex flex-col items-center relative h-full p-0"
       href={item.link}
     >
       <Image
-        className={styles["article-grid__img"]  + ' ' + (loaded ? styles.loaded : '')}
+        className={`w-full max-h-[200px] object-cover self-end opacity-0 transition-all duration-700 ease-in-out ${loaded ? 'opacity-100' : ''}`}
         src={item.image}
         alt={item.title}
         onLoad={() => setLoaded(true)}
       />
-      <p className={styles["article-grid__title"]}>{item.title}</p>
+      <p className="text-base leading-[25px] text-left font-bold w-full whitespace-pre-line p-5">{item.title}</p>
     </Link>
   );
 };

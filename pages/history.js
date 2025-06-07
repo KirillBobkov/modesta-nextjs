@@ -54,7 +54,7 @@ export default function HistoryPage() {
   };
   return (
     <Layout  metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-      <VisibilityManager className="page-offset" side="opacity">
+      <VisibilityManager className="pt-[40px] md:pt-[150px]" side="opacity">
         <NewMap />
         <TeamBlock />
       </VisibilityManager>

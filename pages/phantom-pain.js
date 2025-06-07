@@ -70,7 +70,7 @@ export default () => {
       popupOpened={popupOpened}
       setOpened={setOpened}
     >
-      <VisibilityManager className="page-offset">
+      <VisibilityManager className="pt-[40px] md:pt-[150px]">
         <ArticleBlock articleContent={phantomPain} />
       </VisibilityManager>
     </Layout>

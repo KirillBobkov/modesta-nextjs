@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image.js";
 import styles from "./Period.module.css";
-import shadowStyles from "../../styles/shadow.module.css";
+
 import { VisibilityManager } from "../VisibilityManager";
 
 export function PeriodComponent({ title, description, image }) {
@@ -10,7 +10,7 @@ export function PeriodComponent({ title, description, image }) {
       itemScope
       side="top"
       itemType="http://schema.org/ImageObject"
-      className={`${styles.period} ${shadowStyles.shadow}`}
+              className={`${styles.period} shadow-lg`}
     >
             <PeriodImageComponent img={image} />
       <div className={styles.period__content}>
@@ -31,7 +31,7 @@ function PeriodImageComponent({ img }) {
       key={img}
       alt={`Период времени №${1}`}
       itemProp="contentUrl"
-      className={`${styles.period__img} ${shadowStyles.shadow}`   + ' ' + (loaded ? styles.loaded : '')}
+                      className={`${styles.period__img} shadow-lg ` + (loaded ? styles.loaded : '')}
       src={img}
       onLoad={() => setLoaded(true)}
     />

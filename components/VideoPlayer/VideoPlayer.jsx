@@ -1,20 +1,18 @@
 import React from "react";
-import styles from "./VideoPlayer.module.css";
-import { Video } from "../VideoWidget/VideoWidget";
-import shadowStyles from "../../styles/shadow.module.css";
+
 
 export const VideoPlayer = ({ video }) => {
   return (
     <div
       itemScope
       itemType="http://schema.org/VideoObject"
-      className={`${styles.container} ${shadowStyles.shadow}`}
+      className={`w-full relative bg-[var(--card-bg-color)] h-full rounded-[20px] overflow-hidden aspect-[5/6] md:aspect-auto shadow-lg`}
     >
       <meta itemProp="name" content={video.name} />
       <meta itemProp="uploadDate" content={video.uploadDate} />
       <link itemProp="thumbnailUrl" href={video.thumbnailUrl} />
       <iframe
-        className={styles.video__frame}
+        className="w-full h-full"
         src={video.link}
         title="YouTube video player"
         frameBorder="0"
