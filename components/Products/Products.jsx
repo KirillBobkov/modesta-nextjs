@@ -1,12 +1,9 @@
-import styles from "./Product.module.css";
 import { GridBlock } from "../GridBlock/GridBlock";
 import product_1 from "../../assets/images/product_1.webp";
 import product_2 from "../../assets/images/product_2.webp";
 import product_3 from "../../assets/images/product_3.webp";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import Image from "next/image";
-import { useTheme } from "../../hooks/useTheme";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { useState } from "react";
 
 const blocks = [
@@ -34,30 +31,30 @@ const Product = ({ item, setOpened }) => {
     <div
       itemScope
       itemType="https://schema.org/Product"
-      className={styles["product-grid__item"]}
+      className="flex flex-col items-center justify-between relative h-full p-0 pb-[10px] md:pb-[30px] gap-[10px]"
       href={item.link}
     >
       <Image
-        className={styles["product-grid__img"] + ' ' + (loaded ? styles.loaded : '')}
+        className={`w-full h-auto self-end opacity-0 transition-all duration-[800ms] ease-in-out ${loaded ? 'opacity-100' : ''}`}
         src={item.image}
         alt={item.title}
         itemProp="image"
         onLoad={() => setLoaded(true)}
       />
       <p
-        className={styles["product-grid__title"]}
+        className="text-[25px] leading-8 text-center font-bold w-full whitespace-pre-line p-0 uppercase"
         itemProp="name"
       >
         {item.title}
       </p>
       <p
-        className={styles["product-grid__description"]}
+        className="text-base leading-[25px] text-center text-font-secondary w-full whitespace-pre-line p-0"
         itemProp="description"
       >
         {item.price}
       </p>
       <FeedbackButton
-        classes={styles["product-grid__button"]}
+        classes="bg-transparent shadow-none !text-accent w-auto"
         onClick={setOpened}
         text={'Узнать подробнее'}
         withIcon={false}
@@ -67,10 +64,9 @@ const Product = ({ item, setOpened }) => {
 };
 
 export const ProductsGrid = ({ setOpened }) => {
-  const { theme } = useTheme();
-  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
+
     return (
-      <div style={{ padding: '60px 0 1px', marginBottom: '60px' , position: 'relative' }}>
+      <div className="py-[60px] mb-[60px] relative">
         <GridBlock
           title={"Продуктовая линейка"}
           id="products"

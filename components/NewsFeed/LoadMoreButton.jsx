@@ -1,10 +1,9 @@
 import React from 'react';
-import styles from './styles/LoadMoreButton.module.css';
 
 const LoadMoreButton = ({ onClick, disabled }) => {
   return (
     <button
-      className={styles.loadMore}
+      className="border-none py-2.5 px-7.5 text-base font-bold uppercase rounded-3xl text-black fill-black bg-accent transition-all duration-500 ease-out hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
       onClick={onClick}
       disabled={disabled}
     >

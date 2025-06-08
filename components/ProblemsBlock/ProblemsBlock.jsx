@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./ProblemsBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
 
@@ -10,7 +9,7 @@ import problem3 from "../../assets/images/problem3.jpg";
 import problem4 from "../../assets/images/problem4.jpg";
 
 /* problemsContent содержит информацию о задачах, решаемых в конкретной сфере. В данном случае, это задачи, связанные с производством и использованием протезов. В объекте содержатся следующие параметры:
-title: “Решаемые задачи” - общее название списка задач.
+title: "Решаемые задачи" - общее название списка задач.
 blocks: Массив объектов, каждый из которых представляет одну задачу. Каждый объект состоит из следующих данных:
 img: ссылка на изображение, иллюстрирующее задачу
 alt: альтернативное описание изображения
@@ -64,36 +63,43 @@ export function ProblemsBlock() {
       </VisibilityManager>
       <VisibilityManager as="ul">
         {problemsContent.blocks.map((problem, i) => {
-          return <Problem key={i} problem={problem} i={i} />;
+          return <Problem key={i} problem={problem} />;
         })}
       </VisibilityManager>
     </div>
   );
 }
 
-const Problem = ({ problem, i }) => {
+const Problem = ({ problem }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <VisibilityManager
       as="li"
-      key={i}
       itemType="http://schema.org/ImageObject"
-      className={`${styles.problem}`}
+      className="flex flex-col gap-[30px] mb-[30px] rounded-[30px] md:flex-row md:min-h-[400px] md:mb-10 md:gap-[2%] md:even:flex-row-reverse"
       id="problem"
     >
       <Image
         itemProp="contentUrl"
-                        className={styles.problem__image + " shadow-lg " + (loaded ? styles.loaded : '')}
+        className={`shadow-lg transition-all duration-[800ms] ease-in-out w-full h-[230px] object-cover rounded-[30px] md:w-[38%] md:h-auto ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
         src={problem.img}
         alt={problem.alt}
         onLoad={() => setLoaded(true)}
       />
-                  <div className={styles.problem__content + " shadow-lg"}>
-        <h3 itemProp="name" className={styles.problem__title}>
+      <div className="shadow-lg w-full py-10 px-5 text-left bg-card rounded-[30px] flex flex-col justify-center md:w-[60%] md:p-10">
+        <h3
+          itemProp="name"
+          className="text-[25px] leading-[32px] mb-[10px] font-bold text-left whitespace-pre-line uppercase md:mb-[15px] lg:text-[40px] lg:leading-[40px]"
+        >
           {problem.title}
         </h3>
-        <p itemProp="description" className={styles.problem__description}>
+        <p
+          itemProp="description"
+          className="text-base leading-[25px] text-font-secondary whitespace-pre-line text-left"
+        >
           {problem.description}
         </p>
       </div>

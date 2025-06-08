@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
+import Head from "next/head";
 
 import { useTheme } from "../hooks/useTheme";
-
-
 
 import Link from "next/link";
 
@@ -28,31 +27,43 @@ export default function NotFound() {
 
 #модеста #протезирование #инновации #медицина`,
     title: "404 - Страница не существует | Модеста",
-    description: "К сожалению, запрашиваемая страница не найдена. Модеста - ведущий производитель инновационных протезов верхних конечностей в России.",
-    keywords: "404, страница не найдена, протезы рук, модеста, инновационные протезы, протезирование конечностей",
+    description:
+      "К сожалению, запрашиваемая страница не найдена. Модеста - ведущий производитель инновационных протезов верхних конечностей в России.",
+    keywords:
+      "404, страница не найдена, протезы рук, модеста, инновационные протезы, протезирование конечностей",
   };
 
   return (
-        <Layout metaConfig={metaConfig} popupOpened={popupOpened} setOpened={setOpened}>
-    <section className="fixed top-0 w-full h-full flex justify-center items-center flex-col bg-[var(--bg-color)] z-10">
-      <h1 className="text-6xl leading-[60px] mb-10 font-bold text-center md:text-[80px] md:leading-[80px]">
-        404
-      </h1>
-      <p className="text-[var(--secondary-font-color)] w-[90%] text-center mb-10 md:w-1/2">
-        Такой страницы не существует. Возможно, ссылка по которой вы перешли —
-        неправильная.
-      </p>
-      <Link
-        prefetch={false}
-        href={"/"}
-        className="h-10 gap-2.5 border-none px-5 text-sm cursor-pointer flex items-center justify-between rounded-[30px] text-black fill-black bg-[var(--accent)] transition-all duration-300 ease-out z-[1] shadow-lg md:h-12 md:text-base"
-        id="not-found"
+    <main>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <Layout
+        metaConfig={metaConfig}
+        popupOpened={popupOpened}
+        setOpened={setOpened}
       >
-        <span className="flex-grow font-bold">
-          НА ГЛАВНУЮ
-        </span>
-      </Link>
-    </section>
-    </Layout>
+        <div className="h-screen w-screen bg-background">
+          <section className="fixed top-0 z-10 flex h-full w-full flex-col items-center justify-center bg-background">
+            <h1 className="mb-5 text-center text-5xl font-bold uppercase leading-[60px] md:text-8xl">
+              404
+            </h1>
+            <p className="mb-10 w-[90%] text-center text-font-secondary md:w-1/2">
+              Страница не найдена. Возможно, она была удалена или перенесена на
+              другой адрес.
+            </p>
+
+            <Link
+              prefetch={false}
+              href={"/"}
+              className="h-10 gap-2.5 border-none px-5 text-sm cursor-pointer flex items-center justify-between rounded-[30px] text-black fill-black bg-[var(--accent)] transition-all duration-300 ease-out z-[1] shadow-lg md:h-12 md:text-base"
+              id="not-found"
+            >
+              <span className="flex-grow font-bold">НА ГЛАВНУЮ</span>
+            </Link>
+          </section>
+        </div>
+      </Layout>
+    </main>
   );
 }

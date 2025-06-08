@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-import styles from "./QuizForm.module.css";
+import Link from "next/link";
 
 import { useFormValidation } from "../../hooks/useFormValidation.jsx";
 import { VisibilityManager } from "../VisibilityManager.jsx";
@@ -203,88 +202,87 @@ export function QuizForm() {
     sendMessage();
   }
 
+  const helperBaseClasses = "mt-[5px] inline-block w-full text-right text-[11px] leading-[12px]";
+
   return (
-    <VisibilityManager className={styles["quiz-block"]} id="quiz-submit">
-      <VisibilityManager as="div" onInit={false} className={`${styles["quiz-form"]}`}>
-        <h2 className={styles["quiz-form__title"]}>Получение протеза Модеста 1.0</h2>
-        <p className={styles["quiz-form__description"]}>
+    <VisibilityManager className="mb-[20px] flex w-full items-center justify-center bg-cover bg-center bg-no-repeat p-[15px] md:min-h-[800px] md:mb-[120px] md:p-0" id="quiz-submit">
+      <VisibilityManager as="div" onInit={false} className="w-full max-w-[500px] rounded-[30px] bg-background p-[40px_20px] md:w-[800px] md:max-w-none md:p-0">
+        <h2 className="mb-[20px] text-left text-[25px] font-bold leading-[36px] md:mb-[30px] md:text-center md:text-[42px] md:leading-[52px]">Получение протеза Модеста 1.0</h2>
+        <p className="mb-[40px] text-font-secondary">
           Для того, чтобы стать участником фокус группы ответьте на несколько вопросов ниже. После прохождения опроса, мы проанализируем ваши данные и
           свяжемся с вами для уточнения необходимой информации. 
         </p>
-        <form className={styles.form} onSubmit={handleSubmit} method="POST" noValidate>
+        <form className="w-full" onSubmit={handleSubmit} method="POST" noValidate>
           {Object.entries(state).map(([key, item]) => {
-            return (
-              <>
-                {item.type.includes("question") && (
-                  <div key={key} className={styles["form-group"]}>
-                    <label className={styles['form-label']}>{item.label}</label>
-                    <input
-                      className={`${styles["form-control"]} ${item.value ? styles["form-control--filled"] : ""} shadow-lg`}
-                      value={item.value}
-                      onChange={(e) => {
-                        handleChange({
-                          target: { type: "question", key, value: e.target.value },
-                        });
-                      }}
-                      placeholder={item.placeholder}
-                      disabled={Boolean(responseMessage)}
-                    />
-                    {item.error ? (
-                      <div className={styles.helper}>{item.error}</div>
-                    ) : item.value ? (
-                      <div className={`${styles.helper} ${styles["helper--green"]}`}>✔</div>
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                )}
-                {item.type.includes("checkbox") && (
-                  <div key={key} className={styles["form-group"]}>
-                    <label className={styles['form-label']}>{item.label}</label>
-                    {item.values.map((checkboxItem, i) => {
-                      return (
-                        <div key={key + checkboxItem + i} className={styles["form-checkbox"]}>
-                          <input
-                            name="checkbox"
-                            className={styles["form-checkbox__input"]}
-                            type="checkbox"
-                            id={key + checkboxItem + i}
-                            onChange={(e) => {
-                              handleChange({
-                                target: { type: "checkbox", selected: e.target.checked ? i : undefined, key},
-                              });
-                            }}
-                            checked={item.selected === i}
-                          />
-                          <label
-                            className={`${styles["form-checkbox__label"]}`}
-                            htmlFor={key + checkboxItem + i}
-                          >
-                            {checkboxItem}
-                          </label>
-                        </div>
-                      );
-                    })}
-                    {item.error ? (
-                      <div className={styles.helper}>{item.error}</div>
-                    ) : item.selected !== undefined ? (
-                      <div className={`${styles.helper} ${styles["helper--green"]}`}>✔</div>
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                )}
-              </>
-            );
+            if (item.type.includes("question")) {
+              return (
+                <div key={key} className="relative my-[22px] md:my-[25px]">
+                  <label className="mb-[5px] block font-bold">{item.label}</label>
+                  <input
+                    className="shadow-lg block h-[35px] w-full rounded-[30px] border-none bg-card py-[10px] px-[15px] text-base leading-[25px] transition-all duration-300 ease-in-out focus:outline-none focus:bg-card placeholder:text-font! [&:-webkit-autofill]:!text-font [&:-webkit-autofill]:!shadow-[inset_0_0_0_50px_var(--card-bg-color)]"
+                    value={item.value}
+                    onChange={(e) => {
+                      handleChange({
+                        target: { type: "question", key, value: e.target.value },
+                      });
+                    }}
+                    placeholder={item.placeholder}
+                    disabled={Boolean(responseMessage)}
+                  />
+                  {item.error ? (
+                    <div className={`${helperBaseClasses} text-helper-red`}>{item.error}</div>
+                  ) : item.value ? (
+                    <div className={`${helperBaseClasses} text-helper-green`}>✔</div>
+                  ) : null}
+                </div>
+              );
+            }
+            if (item.type.includes("checkbox")) {
+              return (
+                <div key={key} className="relative my-[22px] md:my-[25px]">
+                  <label className="mb-[5px] block font-bold">{item.label}</label>
+                  {item.values.map((checkboxItem, i) => {
+                    return (
+                      <div key={key + checkboxItem + i} className="mb-[3px] flex cursor-pointer items-center gap-[10px] text-font">
+                        <input
+                          name="checkbox"
+                          className="h-[15px] w-[15px] shrink-0 rounded-[3px] border border-font checked:bg-font"
+                          type="checkbox"
+                          id={key + checkboxItem + i}
+                          onChange={(e) => {
+                            handleChange({
+                              target: { type: "checkbox", selected: e.target.checked ? i : undefined, key },
+                            });
+                          }}
+                          checked={item.selected === i}
+                        />
+                        <label
+                          className="text-font-secondary"
+                          htmlFor={key + checkboxItem + i}
+                        >
+                          {checkboxItem}
+                        </label>
+                      </div>
+                    );
+                  })}
+                  {item.error ? (
+                    <div className={`${helperBaseClasses} text-helper-red`}>{item.error}</div>
+                  ) : item.selected !== undefined ? (
+                    <div className={`${helperBaseClasses} text-helper-green`}>✔</div>
+                  ) : null}
+                </div>
+              );
+            }
+            return null;
           })}
-          <p className={styles["form-doc"]}>
-            <a target="_blank" href="/agreement-data.pdf">
+          <p className="cursor-pointer text-[11px] leading-[12px] text-font-secondary">
+            <Link href="/agreement-data.pdf">
               Согласие на обработку персональных данных
-            </a>
+            </Link>
           </p>
-                          <button type="submit" className={`${styles.formSubmitButton} shadow-lg`} disabled={disable}>
-            <span>{responseMessage.length > 0 ? responseMessage : "Отправить"}</span>
-            {loading && <div className={styles["loader-button"]} />}
+          <button type="submit" className="shadow-lg relative mt-[22px] flex w-full cursor-pointer items-center justify-center rounded-[30px] border-none bg-accent px-[10px] text-center font-bold text-black outline-none transition-all duration-300 whitespace-pre-line hover:opacity-80 focus:opacity-80 disabled:pointer-events-none disabled:select-none disabled:opacity-50" disabled={disable}>
+            <span className="inline-block py-[10px] px-[20px]">{responseMessage.length > 0 ? responseMessage : "Отправить"}</span>
+            {loading && <div className="box-border inline-block h-5 w-5 animate-spin rounded-full border-t-[3px] border-r-[3px] border-t-font border-r-transparent" />}
           </button>
         </form>
       </VisibilityManager>

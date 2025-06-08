@@ -7,15 +7,13 @@ import Head from "next/head";
 import NewForm from "../NewForm/NewForm";
 import FeedbackButton from "../FeedbackButton/FeedbackButton";
 import { Montserrat } from "next/font/google";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
 import favicon32x32 from "../../assets/images/favicon32x32.png";
 import favicon180x180 from "../../assets/images/favicon180x180.png";
 import favicon from "../../assets/images/favicon.ico";
-import { ChatWidget } from "../ChatWidget/ChatWidget";
+// import { ChatWidget } from "../ChatWidget/ChatWidget";
 
-const montseratt = Montserrat({
+const montserrat = Montserrat({
   weight: ["400", "800"],
-  variable: "--font-montseratt",
   subsets: ["cyrillic"],
   display: "swap",
 });
@@ -28,7 +26,6 @@ export default function Layout({
 }) {
   const router = useRouter();
   const { title, description, keywords, seoContent } = metaConfig;
-  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
 
   useTheme();
 
@@ -80,7 +77,7 @@ export default function Layout({
         />
         <link rel="apple-touch-startup-image" href={favicon32x32.src} />
       </Head>
-      <div className={montseratt.className}>
+      <div className={montserrat.className}>
         <div style={{ display: "none" }}>
           <p>{seoContent}</p>
         </div>

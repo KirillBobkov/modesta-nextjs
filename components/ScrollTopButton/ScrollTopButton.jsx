@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-export function ArrowButton({ onClick, classes }) {
+export const ArrowButton = ({ onClick, classes }) => {
     return (
         <button
             onClick={onClick}
-            className={`flex items-center justify-center h-[50px] w-[50px] rounded-full cursor-pointer bg-[var(--card-bg-color)] p-[10px] text-[var(--font-color)] fill-[var(--font-color)] hover:bg-[var(--secondary-card-bg-color)] transition-all duration-500 ease-out z-10 shadow-lg ${classes}`}
+            className={`z-10 flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full bg-card p-[10px] text-font fill-font shadow-lg transition-all duration-500 ease-out hover:bg-card-secondary ${classes}`}
+            aria-label="Наверх"
         >
             <svg className="w-full h-full p-[5px] pt-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" version="1.1">
                 <path d="" stroke="none" fillRule="evenodd" />

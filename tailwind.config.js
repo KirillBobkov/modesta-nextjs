@@ -1,12 +1,49 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
+      colors: {
+        font: {
+          DEFAULT: "var(--font-color)",
+          secondary: "var(--secondary-font-color)",
+        },
+        background: {
+          DEFAULT: "var(--bg-color)",
+          opacity: "var(--bg-color-opacity)",
+          "gradient-1": "var(--bg-color-gradient-1)",
+          "gradient-2": "var(--bg-color-gradient-2)",
+        },
+        card: {
+          DEFAULT: "var(--card-bg-color)",
+          opacity: "var(--card-bg-color-opacity)",
+          secondary: "var(--secondary-card-bg-color)",
+        },
+        "box-shadow": "var(--box-shadow)",
+        accent: "var(--accent)",
+        helper: {
+          red: "var(--helper-red)",
+          green: "var(--helper-green)",
+        },
+        snow: "var(--snow)",
+        message: {
+          header: "var(--message-header)",
+        },
+        chat: {
+          widget: "var(--chat-widget-bg)",
+        },
+        user: {
+          message: "var(--user-message-bg)",
+        },
+        assistant: {
+          message: "var(--assistant-message-bg)",
+        },
+      },
       spacing: {
         2.5: "0.625rem", // 10px
         7.5: "1.875rem", // 30px

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import styles from "./HistoryBlock.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
 import Image from "next/image.js";
-
 
 import history1 from "../../assets/images/history1.jpg";
 import history2 from "../../assets/images/history2.jpg";
@@ -33,7 +31,7 @@ export const historyContent = {
 
 export function HistoryBlock() {
   return (
-          <div className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
+    <div id="mission" className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
       <VisibilityManager as="ul" style={{ marginTop: "100px" }}>
         {historyContent.blocks.map((item, i) => {
           return <HistoryItem key={i} item={item} i={i} />;
@@ -51,21 +49,21 @@ const HistoryItem = ({ item, i }) => {
       as="li"
       key={i}
       itemType="http://schema.org/ImageObject"
-      className={`${styles.history}`}
+      className={`flex flex-col gap-7 rounded-[30px] min-h-[300px] mb-7 md:flex-row md:gap-[2%] md:mb-10 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
       id="history-item"
     >
       <Image
         itemProp="contentUrl"
-                        className={styles.history__image + " shadow-lg " + (loaded ? styles.loaded : '')}
+        className={`w-full h-[230px] object-cover rounded-[30px] opacity-0 transition-all duration-800 ease-in-out md:w-[38%] md:h-auto shadow-lg ${loaded ? 'opacity-100' : ''}`}
         src={item.img}
         alt={item.alt}
         onLoad={() => setLoaded(true)}
       />
-                  <div className={styles.history__content + " shadow-lg"}>
-        <h3 itemProp="name" className={styles.history__title}>
+      <div className="w-full h-auto p-10 pt-10 pb-10 text-left bg-[var(--card-bg-color)] rounded-[30px] flex flex-col justify-center shadow-lg md:w-[60%] md:p-10">
+        <h3 itemProp="name" className="text-[25px] leading-8 mb-2.5 text-left font-bold whitespace-pre-line uppercase md:text-[40px] md:leading-[40px] md:mb-4">
           {item.title}
         </h3>
-        <p itemProp="description" className={styles.history__description}>
+        <p itemProp="description" className="text-[16px] leading-[25px] text-[var(--secondary-font-color)] whitespace-pre-line text-left">
           {item.description}
         </p>
       </div>

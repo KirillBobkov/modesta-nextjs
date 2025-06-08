@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { BurgerButton } from "../BurgerButton/BurgerButton.jsx";
 import Link from "next/link";
-import styles from "./Navigation.module.css";
 import { navigationTree } from "./navigationList.js";
 import { useRouter } from "next/router.js";
 
@@ -9,11 +8,14 @@ const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
   const [hoverOpened, setHoverOpened] = useState(false);
   const router = useRouter();
 
-  const closeMenu = useCallback((path) => {
-    setMobileMenuOpened(false);
-    window?.scrollTo(0, 0);
-    ym(96028442, "reachGoal", path);
-  }, []);
+  const closeMenu = useCallback(
+    (path) => {
+      setMobileMenuOpened(false);
+      window?.scrollTo(0, 0);
+      ym(96028442, "reachGoal", path);
+    },
+    [setMobileMenuOpened]
+  );
 
   const handleMouseEnter = useCallback(() => {
     setHoverOpened(true);
@@ -23,37 +25,39 @@ const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
     setHoverOpened(false);
   }, []);
 
+  const linkClasses = `flex items-center no-underline transition-opacity duration-200 border-none cursor-pointer uppercase font-bold leading-5 text-left text-base py-[5px] px-[10px] lg:text-xs lg:py-[10px] lg:px-5 lg:text-center hover:opacity-80 ${
+    router.pathname === item.parent.path
+      ? "text-[var(--accent)]"
+      : "text-[var(--font-color)]"
+  }`;
+
   if (item.childs) {
     return (
       <li
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={styles.navigation__parent}
+        className="relative z-[2] flex flex-col lg:list-item"
       >
         <Link
           itemProp="url"
           prefetch={false}
-          className={`${
-            router.pathname === item.parent.path
-              ? styles["navigation__item--active"]
-              : ""
-          } ${styles.navigation__item}`}
+          className={linkClasses}
           onClick={() => closeMenu(item.parent.path)}
           href={item.parent.path}
         >
           <span itemProp="name">{item.parent.value}</span>
         </Link>
         <div
-          className={`${styles.navigation__submenu} ${
-            hoverOpened ? styles["navigation__submenu--visible"] : ""
-          } shadow-lg`}
+          className={`shadow-lg hidden flex-col transition-all duration-500 ease-in-out lg:flex  lg:w-auto lg:absolute lg:rounded-b-[15px] lg:z-[-1]  lg:p-[10px_20px_20px] lg:left-0 lg:gap-[10px] lg:bg-background ${
+            hoverOpened ? "lg:visible lg:opacity-100 lg:top-10" : "lg:invisible lg:opacity-0 lg:top-5"
+          }`}
         >
           {item.childs.map((child) => (
             <Link
               itemProp="url"
               prefetch={false}
               key={child.value}
-              className={`${styles.navigation__item} ${styles["navigation__item--child"]}`}
+              className="flex items-center text-[var(--font-color)] no-underline transition-opacity duration-200 border-none cursor-pointer uppercase font-bold leading-5 text-left text-base hover:opacity-80 p-0 pl-10 whitespace-nowrap lg:text-xs lg:p-0 lg:text-center"
               onClick={() => closeMenu(item.parent.path)}
               href={child.path}
             >
@@ -65,15 +69,11 @@ const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
     );
   } else {
     return (
-      <li className={styles.navigation__parent}>
+      <li className="relative z-[2] flex flex-col lg:list-item">
         <Link
           itemProp="url"
           prefetch={false}
-          className={`${
-            router.pathname === item.parent.path
-              ? styles["navigation__item--active"]
-              : ""
-          } ${styles.navigation__item}`}
+          className={linkClasses}
           onClick={() => closeMenu(item.parent.path)}
           href={item.parent.path}
         >
@@ -83,6 +83,7 @@ const NavLinkComponent = React.memo(({ item, setMobileMenuOpened }) => {
     );
   }
 });
+NavLinkComponent.displayName = "NavLinkComponent";
 
 export const Navigation = React.memo(() => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
@@ -94,25 +95,29 @@ export const Navigation = React.memo(() => {
       : document.documentElement.classList.remove("overflow-hidden");
   }, []);
 
-  const handleBurgerClick = useCallback((newState) => {
-    handleMobileMenu(newState);
-  }, []);
+  const handleBurgerClick = useCallback(
+    (newState) => {
+      handleMobileMenu(newState);
+    },
+    [handleMobileMenu]
+  );
 
   return (
-    <header className={styles.navigation}>
+    <header className="relative flex-grow-0 min-h-[55px] bg-[var(--bg-color)] lg:min-h-0">
       <nav
         itemScope
         itemType="http://schema.org/SiteNavigationElement"
-        className={styles.navigation__container}
+        className="fixed top-0 left-0 z-[11] flex w-full items-center justify-between gap-[30px] bg-[var(--bg-color)] p-[15px] lg:static lg:w-auto lg:py-2 lg:px-5"
       >
         <Link
           prefetch={false}
-          className={styles.navigation__logo}
+          className="cursor-pointer leading-none"
           onClick={() => handleMobileMenu(false)}
           href={"/"}
           itemProp="url"
         >
           <svg
+            className="fill-[var(--font-color)]"
             xmlns="http://www.w3.org/2000/svg"
             version="1.0"
             height={30}
@@ -136,8 +141,8 @@ export const Navigation = React.memo(() => {
           </svg>
         </Link>
         <ul
-          className={`${styles.navigation__list} ${
-            mobileMenuOpened ? styles["navigation__list--visible"] : ""
+          className={`fixed top-[55px] left-0 bottom-0 z-[4] flex w-full transform flex-col items-start justify-start gap-[10px] bg-[var(--bg-color-opacity)] p-[50px_25px] transition-transform duration-500 supports-[backdrop-filter]:bg-[var(--bg-color-opacity)] supports-[backdrop-filter]:backdrop-blur-[20px] lg:static lg:w-auto lg:transform-none lg:flex-row lg:items-center lg:gap-0 lg:bg-transparent lg:p-0 lg:transition-none lg:supports-[backdrop-filter]:backdrop-blur-none ${
+            mobileMenuOpened ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {navigationTree.map((item, i) => {
@@ -154,7 +159,7 @@ export const Navigation = React.memo(() => {
           <Link
             itemProp="url"
             prefetch={false}
-            className={`${styles.navigation__item} ${styles["navigation__item--mobile-alone"]}`}
+            className="block flex items-center no-underline transition-opacity duration-200 border-none cursor-pointer uppercase font-bold leading-5 text-left text-[var(--font-color)] text-base py-[5px] px-[10px] hover:opacity-80 lg:hidden"
             onClick={() => {
               handleMobileMenu(false);
               window?.scrollTo(0, 0);
@@ -171,11 +176,11 @@ export const Navigation = React.memo(() => {
           onClick={() => {
             ym(96028442, "reachGoal", "skolkovo");
           }}
-          className={styles["navigation__item--external"]}
+          className="flex items-center border-none cursor-pointer"
           itemProp="url"
         >
           <svg
-            className={styles.navigation__imgSK}
+            className="mr-[5px] fill-[var(--font-color)]"
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
             width="20px"
@@ -212,9 +217,11 @@ export const Navigation = React.memo(() => {
               />
             </g>
           </svg>
-          <span>Участник</span>
+          <span className="text-xs leading-6 text-[var(--font-color)] align-middle">
+            Участник
+          </span>
         </a>
-        <div className={styles.navigation__burger}>
+        <div className="block lg:hidden">
           <BurgerButton
             menuOpened={mobileMenuOpened}
             onClick={handleBurgerClick}
@@ -224,3 +231,4 @@ export const Navigation = React.memo(() => {
     </header>
   );
 });
+Navigation.displayName = "Navigation";

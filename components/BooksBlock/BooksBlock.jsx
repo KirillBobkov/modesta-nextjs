@@ -183,21 +183,21 @@ export const booksContent = {
 
 const BookContent = ({ item }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);
-  const isMobile = useMediaQuery(`(max-width: 767.98px)`);
+  const isDesktop = useMediaQuery(`(min-width: 768px)`);
 
-  const handlers = isMobile
+  const handlers = isDesktop
     ? {
-        onClick: (e) => {
-          e?.preventDefault();
-          setTooltipVisible(!tooltipVisible);
-        },
-      }
-    : {
         onMouseEnter: () => {
           setTooltipVisible(true);
         },
         onMouseLeave: () => {
           setTooltipVisible(false);
+        },
+      }
+    : {
+        onClick: (e) => {
+          e?.preventDefault();
+          setTooltipVisible(!tooltipVisible);
         },
       };
 

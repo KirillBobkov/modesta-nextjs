@@ -62,7 +62,7 @@ export const VideoWidget = () => {
 
       <VisibilityManager
         as="p"
-        className="w-full md:w-1/2 mx-auto text-left md:text-center text-[var(--secondary-font-color)] mb-10"
+        className="w-full md:w-1/2 mx-auto text-left md:text-center text-font-secondary mb-10"
       >
         {videosContent.description}
       </VisibilityManager>

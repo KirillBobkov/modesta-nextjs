@@ -64,7 +64,7 @@ export function SocialNetworkBlock() {
         >
           {socialNetworkContent.title}
         </h2>
-        <p className="text-left md:text-center w-full md:w-1/2 mx-auto text-secondary-font-color whitespace-pre-line">
+        <p className="text-left md:text-center w-full md:w-1/2 mx-auto text-font-secondary whitespace-pre-line">
           {socialNetworkContent.description}
         </p>
       </div>

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import styles from './ChatWidget.module.css';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -97,82 +96,109 @@ export const ChatWidget: React.FC = () => {
   };
 
   return (
-    <div className={styles.widgetWrapper}>
-      {isOpen ? (
-        <div className={styles.widgetContainer}>
-          <div className={styles.header}>
-            Вертер-ассистент
-            <button 
-              className={styles.closeButton}
-              onClick={() => setIsOpen(false)}
-              aria-label="Закрыть чат"
-            >
-              ✕
-            </button>
-          </div>
-          <div className={styles.messagesContainer}>
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={message.role === 'user' ? styles.userMessage : styles.assistantMessage}
+    <>
+      <style jsx>{`
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .slide-in {
+          animation: slideIn 0.3s ease-out;
+        }
+      `}</style>
+      <div className="fixed bottom-0 right-0 p-5 w-full z-10 md:bottom-5 md:right-20 md:p-0 md:w-auto">
+        {isOpen ? (
+          <div className="slide-in w-full h-[calc(100dvh-100px)] bg-[var(--chat-widget-bg)] rounded-xl shadow-lg flex flex-col overflow-hidden md:w-96 md:max-w-full md:h-[500px]">
+            <div className="bg-[var(--message-header)] text-[var(--font-color)] p-4 font-black flex justify-between items-center">
+              Вертер-ассистент
+              <button 
+                className="bg-transparent border-none text-[var(--font-color)] text-lg cursor-pointer p-1 leading-none opacity-80 transition-opacity duration-200 hover:opacity-100"
+                onClick={() => setIsOpen(false)}
+                aria-label="Закрыть чат"
               >
-                {message.content}
-              </div>
-            ))}
-            {isLoading && <div className={styles.loadingSpinner} />}
-            {error && <div className={styles.errorMessage}>{error}</div>}
-            <div ref={messagesEndRef} />
-          </div>
-          <div className={styles.inputContainer}>
-            <textarea
-              className={styles.input}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder="Задайте любой вопрос"
-              maxLength={300}
-            />
-            <button 
-              className={styles.sendButton}
-              onClick={handleSubmit}
-              disabled={isLoading || !input.trim() || input.length > 300}
-            >
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                stroke="currentColor"
-                strokeWidth="2"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                ✕
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-4 bg-[var(--chat-widget-bg)]">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`p-2 px-2.5 rounded-2xl my-1 max-w-[80%] break-words text-[var(--font-color)] ${
+                    message.role === 'user' 
+                      ? 'bg-[var(--user-message-bg)] ml-auto' 
+                      : 'bg-[var(--assistant-message-bg)]'
+                  }`}
+                >
+                  {message.content}
+                </div>
+              ))}
+              {isLoading && (
+                <div className="w-5 h-5 my-2.5 mx-auto border-2 border-[var(--secondary-card-bg-color)] border-t-[var(--accent)] rounded-full animate-spin" />
+              )}
+              {error && (
+                <div className="text-[var(--helper-red)] text-center p-2.5 my-1 bg-[var(--card-bg-color)] rounded-lg">
+                  {error}
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+            <div className="p-4 border-t border-[var(--secondary-card-bg-color)] flex items-center gap-2.5 bg-[var(--card-bg-color)]">
+              <textarea
+                className="flex-1 border border-[var(--secondary-card-bg-color)] rounded-lg p-2 px-3 resize-none h-25 font-inherit bg-[var(--bg-color)] text-[var(--font-color)] placeholder:text-[var(--secondary-font-color)] focus:outline-none focus:border-[var(--accent)]"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Задайте любой вопрос"
+                maxLength={300}
+              />
+              <button 
+                className="w-10 h-10 rounded-full border-none bg-[var(--accent)] text-black cursor-pointer flex items-center justify-center transition-colors duration-200 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={handleSubmit}
+                disabled={isLoading || !input.trim() || input.length > 300}
               >
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
-            </button>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-      ) : (
-        <button 
-          className={styles.toggleButton}
-          onClick={() => setIsOpen(true)}
-          aria-label="Открыть чат"
-        >
-          <svg 
-            viewBox="0 0 24 24" 
-            width="24" 
-            height="24" 
-            stroke="currentColor" 
-            strokeWidth="2.5" 
-            fill="none" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
+        ) : (
+          <button 
+            className="w-12 h-12 rounded-[28px] bg-[var(--accent)] border-none text-black cursor-pointer flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-105 hover:opacity-90 absolute bottom-5 right-20 md:relative md:bottom-auto md:right-auto"
+            onClick={() => setIsOpen(true)}
+            aria-label="Открыть чат"
           >
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-          </svg>
-        </button>
-      )}
-    </div>
+            <svg 
+              viewBox="0 0 24 24" 
+              width="24" 
+              height="24" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              fill="none" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </button>
+        )}
+      </div>
+    </>
   );
 }; 

@@ -9,7 +9,7 @@ export default function FeedbackButton({
   return (
     <button
       onClick={onClick}
-      className={`gap-[10px] border-none w-[50px] h-[50px] p-[10px] text-base cursor-pointer font-bold uppercase flex items-center justify-center rounded-[30px] text-black fill-black bg-[var(--accent)] transition-all duration-500 shadow-lg ${classes}`}
+      className={`gap-[10px] border-none w-[50px] h-[50px] p-[10px] text-base cursor-pointer font-bold uppercase flex items-center justify-center rounded-[30px] text-black fill-black bg-accent transition-all duration-500 shadow-lg ${classes}`}
       id="feedback"
     >
       {withIcon && (

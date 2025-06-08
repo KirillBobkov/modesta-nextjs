@@ -2,14 +2,13 @@ import React from 'react';
 import { VisibilityManager } from '../VisibilityManager';
 import MediaGrid from './MediaGrid';
 import NewsStats from './NewsStats';
-import styles from './styles/NewsItem.module.css';
 
 
 const NewsItem = ({ item }) => {
   return (
-            <VisibilityManager as="article" className={styles.newsItem + " shadow-lg"}>
-      <div className={styles.header}>
-        <time className={styles.date}>{item.date}</time>
+    <VisibilityManager as="article" className="mb-15 lg:mb-25 text-left bg-[var(--card-bg-color)] py-5 rounded-3xl w-full shadow-lg">
+      <div className="flex justify-between items-center mb-5">
+        <time className="text-base text-[var(--secondary-font-color)] leading-5 uppercase ml-5 lg:text-xl lg:leading-6">{item.date}</time>
         <NewsStats
           views={item.viewsCount}
           likes={item.likesCount}
@@ -17,7 +16,7 @@ const NewsItem = ({ item }) => {
         />
       </div>
       <MediaGrid attachments={item.attachments} />
-      <p className={styles.text}>{formatTextWithLinks(item.text)}</p>
+      <p className="whitespace-pre-wrap leading-relaxed mb-4 text-[var(--secondary-font-color)] px-5 w-full">{formatTextWithLinks(item.text)}</p>
     </VisibilityManager>
   );
 };
@@ -48,7 +47,7 @@ const formatTextWithLinks = (text) => {
           const title = match[2]; // Link text
           return (
             <a
-              style={{ cursor: "pointer", color: "var(--accent)" }}
+              className="cursor-pointer text-accent"
               key={index}
               href={url}
               target="_blank"
