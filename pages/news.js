@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import Layout from "../components/Layout/Layout.js";
+import Layout from "../components/Layout.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import NewsFeed from "../components/NewsFeed";
-import { PreviewBlock } from '../components/PreviewBlock/PreviewBlock.jsx';
+import { PreviewBlock } from '../components/PreviewBlock.jsx';
 import newsBack from '../assets/images/news.webp';
 
 export default function NewsPage() {

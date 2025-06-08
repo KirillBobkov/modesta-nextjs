@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout/Layout.js";
+import Layout from "../components/Layout.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import {AnalyticsBlock}  from "../components/Analytics/Analytics.jsx";

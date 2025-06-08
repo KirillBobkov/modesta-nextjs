@@ -1,9 +1,9 @@
-import Layout from "../components/Layout/Layout.js";
+import Layout from "../components/Layout.js";
 import React, { useEffect, useState } from "react";
 
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
-import { ArticleBlock } from "../components/ArticleBlock/ArticleBlock.js";
+import { ArticleBlock } from "../components/ArticleBlock.js";
 import { howToGetProthesis } from '../content/articles/howToGetProthesis.js'
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from 'next/router'

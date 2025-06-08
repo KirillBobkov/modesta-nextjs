@@ -100,46 +100,48 @@ const Profile = ({ connected }) => (
     </div>
 
     <table className={styles.table}>
-      <tr>
-        <td>Дата рождения</td>
-        <td className={styles["person__profession"]}>
-          {connected ? "22.02.1994" : "-"}
-        </td>
-      </tr>
-      <tr>
-        <td>Телефон</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            <a href="tel:+79991202332">
-              {connected ? "+7 999 120 23 32" : "-"}
-            </a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>E-mail</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            <a href="mailto:test@mail.ru">{connected ? "test@mail.ru" : "-"}</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>Статус</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            {connected ? "Новичок (Меньше 100 часов использования)" : "-"}
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>Идентификатор</td>
-        <td>
-          <p className={styles["person__profession"]}>
-            {connected ? "XF-434" : "-"}
-          </p>
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td>Дата рождения</td>
+          <td className={styles["person__profession"]}>
+            {connected ? "22.02.1994" : "-"}
+          </td>
+        </tr>
+        <tr>
+          <td>Телефон</td>
+          <td>
+            <p className={styles["person__profession"]}>
+              <a href="tel:+79991202332">
+                {connected ? "+7 999 120 23 32" : "-"}
+              </a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td>
+            <p className={styles["person__profession"]}>
+              <a href="mailto:test@mail.ru">{connected ? "test@mail.ru" : "-"}</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Статус</td>
+          <td>
+            <p className={styles["person__profession"]}>
+              {connected ? "Новичок (Меньше 100 часов использования)" : "-"}
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Идентификатор</td>
+          <td>
+            <p className={styles["person__profession"]}>
+              {connected ? "XF-434" : "-"}
+            </p>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 );

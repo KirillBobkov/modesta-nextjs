@@ -1,10 +1,10 @@
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
 import React, { useEffect, useState } from "react";
 
-import { ProductionBlock } from "../components/ProductionBlock/ProductionBlock.jsx";
-import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";
-import { MozaicBlock } from "../components/MozaicBlock/MozaicBlock.jsx";
-import { QuoteBlock } from "../components/QuoteBlock/QuoteBlock.jsx";
+import { ProductionBlock } from "../components/ProductionBlock.jsx";
+  import { PreviewBlock } from "../components/PreviewBlock.jsx";
+import { MozaicBlock } from "../components/MozaicBlock.jsx";
+import { QuoteBlock } from "../components/QuoteBlock.jsx";
 
 import process__poster from "../assets/images/process__poster.webp";
 import workingProcess1 from "../assets/images/working_process1.jpg";

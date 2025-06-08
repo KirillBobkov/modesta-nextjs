@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import Layout from "../components/Layout/Layout.js";
-import { QuizForm } from "../components/QuizForm/QuizForm.jsx";
+import Layout from "../components/Layout.js";
+import { QuizForm } from "../components/QuizForm.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 

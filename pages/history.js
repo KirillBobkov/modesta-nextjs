@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import { NewMap } from "../components/NewMap/NewMap.jsx";
-import Layout from "../components/Layout/Layout.js";
-import { TeamBlock } from "../components/TeamBlock/TeamBlock.jsx";
+import { NewMap } from "../components/NewMap.jsx";
+import Layout from "../components/Layout.js";
+import { TeamBlock } from "../components/TeamBlock.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 

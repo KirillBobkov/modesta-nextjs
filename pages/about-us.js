@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import Layout from "../components/Layout/Layout.js";
-import { HistoryBlock } from "../components/HistoryBlock/HistoryBlock.jsx";
-import { SocialNetworkBlock } from "../components/SocialNetworkBlock/SocialNetworkBlock.jsx";
+import Layout from "../components/Layout.js";
+import { HistoryBlock } from "../components/HistoryBlock.jsx";
+import { SocialNetworkBlock } from "../components/SocialNetworkBlock.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
-import { VideoWidget } from "../components/VideoWidget/VideoWidget.jsx";
+import { VideoWidget } from "../components/VideoWidget.jsx";
 
 import aboutRender from "../assets/images/aboutus.webp";
-import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";
+import { PreviewBlock } from "../components/PreviewBlock.jsx";
 
 export const missionContent = {
     title: "Создаём качественные функциональные протезы",

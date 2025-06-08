@@ -1,12 +1,12 @@
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
 import React, { useEffect, useState } from "react";
 
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
-import { BooksBlock } from "../components/BooksBlock/BooksBlock.jsx";
-import { LawsBlock } from "../components/LawsBlock/LawsBlock.jsx";
-import { ArticlesGrid } from "../components/ArticlesGrid/ArticlesGrid";
+import { BooksBlock } from "../components/BooksBlock.jsx";
+import { LawsBlock } from "../components/LawsBlock.jsx";
+import { ArticlesGrid } from "../components/ArticlesGrid.js";
 import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 

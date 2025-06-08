@@ -1,17 +1,16 @@
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
 import rotate_poster from "../assets/images/rotate__poster.jpg";
-import { VisibilityManager } from "../components/VisibilityManager";
-import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock";
-import { AdvantagesBlock } from "../components/AdvantagesBlock/AdvantagesBlock";
-import { ReplacementBlock } from "../components/ReplacementBlock/ReplacementBlock";
-import { ProblemsBlock } from "../components/ProblemsBlock/ProblemsBlock";
-import { Questions } from "../components/Questions/Questions";
-import { TechBlock } from "../components/TechBlock/TechBlock";
+import { PreviewBlock } from "../components/PreviewBlock";
+import { AdvantagesBlock } from "../components/AdvantagesBlock";
+import { ReplacementBlock } from "../components/ReplacementBlock";
+import { ProblemsBlock } from "../components/ProblemsBlock";
+import { Questions } from "../components/Questions";
+import { TechBlock } from "../components/TechBlock";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useEffect, useState } from "react";
-import { ProductsGrid } from "../components/Products/Products.jsx";
+import { ProductsGrid } from "../components/Products.jsx";
 import main_preview from "../assets/images/main_preview.mp4";
 
 const mainPageVideo = {

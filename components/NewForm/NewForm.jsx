@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import InputMask from "react-input-mask";
 import { z } from "zod";
-import { ArrowButton } from "../ScrollTopButton/ScrollTopButton";
+import { ArrowButton } from "../ScrollTopButton.jsx";
 
 // Компонент для форматирования поля телефона
 const MaskedInput = ({ field, form, ...props }) => (

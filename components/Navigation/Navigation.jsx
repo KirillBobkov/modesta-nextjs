@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { BurgerButton } from "../BurgerButton/BurgerButton.jsx";
+import { BurgerButton } from "../BurgerButton.jsx";
 import Link from "next/link";
 import { navigationTree } from "./navigationList.js";
 import { useRouter } from "next/router.js";
