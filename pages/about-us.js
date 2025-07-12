@@ -6,6 +6,8 @@ import { SocialNetworkBlock } from "../components/SocialNetworkBlock.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import { VideoWidget } from "../components/VideoWidget.jsx";
+import { NewMap } from "../components/NewMap.jsx";
+import { TeamBlock } from "../components/TeamBlock.jsx";
 
 import aboutRender from "../assets/images/aboutus.webp";
 import { PreviewBlock } from "../components/PreviewBlock.jsx";
@@ -79,6 +81,8 @@ export default function AboutUsPage() {
         <HistoryBlock />
         <SocialNetworkBlock />
         <VideoWidget />
+        <NewMap />
+        <TeamBlock />
       </VisibilityManager>
     </Layout>
   );

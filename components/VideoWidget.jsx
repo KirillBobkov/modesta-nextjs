@@ -47,8 +47,13 @@ export const videosContent = {
       ],
 };
 
-export const VideoWidget = () => {
-  const [selectedVideo, setSelectedVideo] = useState(videosContent.videos[0]);
+export const VideoWidget = ({ title, description, videos }) => {
+  // Используем переданные пропсы или дефолтные значения
+  const widgetTitle = title || videosContent.title;
+  const widgetDescription = description || videosContent.description;
+  const widgetVideos = videos || videosContent.videos;
+  
+  const [selectedVideo, setSelectedVideo] = useState(widgetVideos[0]);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-5 md:px-8 mb-16 md:mb-32" id="videos">
@@ -57,20 +62,20 @@ export const VideoWidget = () => {
         as="h2"
         className="text-2xl md:text-5xl leading-8 md:leading-tight font-bold mb-5 md:mb-8 text-left md:text-center uppercase"
       >
-        {videosContent.title}
+        {widgetTitle}
       </VisibilityManager>
 
       <VisibilityManager
         as="p"
         className="w-full md:w-1/2 mx-auto text-left md:text-center text-font-secondary mb-10"
       >
-        {videosContent.description}
+        {widgetDescription}
       </VisibilityManager>
 
       <div className="flex flex-col-reverse md:flex-row mx-auto gap-8">
         <div className="w-full md:w-[35%] md:min-w-[350px]">
           <VideoList
-            videos={videosContent.videos}
+            videos={widgetVideos}
             selectedVideo={selectedVideo}
             onVideoSelect={setSelectedVideo}
           />
