@@ -214,7 +214,7 @@ export default function NewForm({ popupOpened, setOpened }) {
               </div>
               <button
                 type="submit"
-                className="relative flex items-center justify-content-center mx-auto p-[7px] uppercase no-underline w-full bg-accent text-black rounded-[30px] font-bold text-center whitespace-pre-line mt-[5px] cursor-pointer leading-5 transition-all duration-300 hover:opacity-80 focus:opacity-80 disabled:pointer-events-none disabled:select-none disabled:opacity-50 shadow-lg"
+                className="relative flex items-center justify-center mx-auto p-[7px] uppercase no-underline w-full bg-accent text-black rounded-[30px] font-bold text-center whitespace-pre-line mt-[5px] cursor-pointer leading-5 transition-all duration-300 hover:opacity-80 focus:opacity-80 disabled:pointer-events-none disabled:select-none disabled:opacity-50 shadow-lg"
                 disabled={!(isValid && dirty) || responseMessage.length > 0}
               >
                 <span className="inline-block py-[10px] px-[20px]">

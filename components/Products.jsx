@@ -54,7 +54,7 @@ const Product = ({ item, setOpened }) => {
         {item.price}
       </p>
       <FeedbackButton
-        classes="bg-transparent shadow-none !text-accent w-auto"
+        classes="px-[30px] shadow-none w-auto"
         onClick={setOpened}
         text={'Узнать подробнее'}
         withIcon={false}
