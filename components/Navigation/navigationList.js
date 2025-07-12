@@ -29,6 +29,12 @@ export const  navigationTree = [
     },
     {
         parent: {
+            path: '/robotics',
+            value: 'Робототехника',
+        },
+    },
+    {
+        parent: {
             path: '/news',
             value: 'Новости',
         },
@@ -39,6 +45,7 @@ export const  navigationTree = [
             value: 'Разработка',
         },
     },
+
     {
         parent: {
             path: '/info',
@@ -77,20 +84,12 @@ export const  navigationTree = [
                 path: '/about-us#videos',
                 value: 'Видео',
             },
-        ]
-    },
-    {
-        parent: {
-            path: '/history',
-            value: 'История',
-        },
-        childs: [
             {
-                path: '/history#roadmap',
+                path: '/about-us#roadmap',
                 value: 'Дорожная карта',
             },
             {
-                path: '/history#team',
+                path: '/about-us#team',
                 value: 'Наша команда',
             },
         ]

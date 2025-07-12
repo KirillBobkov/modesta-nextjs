@@ -49,8 +49,13 @@ export const videosContent = {
       ],
 };
 
-export const VideoWidget = () => {
-  const [selectedVideo, setSelectedVideo] = useState(videosContent.videos[0]);
+export const VideoWidget = ({ title, description, videos }) => {
+  // Используем переданные пропсы или дефолтные значения
+  const widgetTitle = title || videosContent.title;
+  const widgetDescription = description || videosContent.description;
+  const widgetVideos = videos || videosContent.videos;
+  
+  const [selectedVideo, setSelectedVideo] = useState(widgetVideos[0]);
 
   return (
     <div className={styles.container} id="videos">
@@ -59,20 +64,20 @@ export const VideoWidget = () => {
         as="h2"
         className={`${styles.grid__title} ${containerStyles.container__title}`}
       >
-        {videosContent.title}
+        {widgetTitle}
       </VisibilityManager>
 
       <VisibilityManager
         as="p"
         className={`${styles.grid__description}`}
       >
-        {videosContent.description}
+        {widgetDescription}
       </VisibilityManager>
 
       <div className={styles.content}>
         <div className={styles.listSection}>
           <VideoList
-            videos={videosContent.videos}
+            videos={widgetVideos}
             selectedVideo={selectedVideo}
             onVideoSelect={setSelectedVideo}
           />
