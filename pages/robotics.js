@@ -3,6 +3,7 @@ import Layout from "../components/Layout.js";
 import { VideoWidget } from "../components/VideoWidget.jsx";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
 import { PreviewBlock } from "../components/PreviewBlock.jsx";
+import { PhotoSliderBlock } from "../components/PhotoSliderBlock.jsx";
 import Image from "next/image";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
@@ -23,6 +24,13 @@ import robot_tech_img_1 from "../assets/images/robot_tech_img_1.jpg";
 import robot_tech_img_2 from "../assets/images/robot_tech_img_2.jpg";
 import robot_tech_img_3 from "../assets/images/robot_tech_img_3.jpg";
 import robot_tech_img_4 from "../assets/images/robot_tech_img_4.jpg";
+
+import robotics_slider_1 from "../assets/images/robotics_slider_1.jpg";
+import robotics_slider_2 from "../assets/images/robotics_slider_2.jpg";
+import robotics_slider_3 from "../assets/images/robotics_slider_3.jpg";
+import robotics_slider_4 from "../assets/images/robotics_slider_4.jpg";
+import robotics_slider_5 from "../assets/images/robotics_slider_5.jpg";
+import robotics_slider_6 from "../assets/images/robotics_slider_6.jpg";
 
 const robotTechSpecs = [
   {
@@ -353,18 +361,39 @@ export default function Robotics() {
         <RobotCapabilitiesBlock />
 
         <div className="flex justify-center mb-[80px]">
-        <FeedbackButton
-          classes="px-[30px] shadow-none w-auto"
-          onClick={setOpened}
-          text={"Оформить Предзаказ"}
-          withIcon={false}
-        />
+          <FeedbackButton
+            classes="px-[30px] shadow-none w-auto"
+            onClick={setOpened}
+            text={"Оформить Предзаказ"}
+            withIcon={false}
+          />
         </div>
-   
 
         {/* Технические характеристики */}
         <RobotTechBlock />
         {/* Видео блок */}
+
+        <PhotoSliderBlock
+          title="Выставка «Надежда на технологии»"
+          desktopImages={[
+            robotics_slider_1,
+            robotics_slider_2,
+            robotics_slider_3,
+            robotics_slider_4,
+            robotics_slider_5,
+            robotics_slider_6,
+          ]}
+          mobileImages={[
+            robotics_slider_1,
+            robotics_slider_2,
+            robotics_slider_3,
+            robotics_slider_4,
+            robotics_slider_5,
+            robotics_slider_6,
+          ]}
+          id="photo-gallery"
+        />
+
         <VideoWidget
           title="Робототехнические разработки"
           description="Видео о процессе создания и возможностях наших роботов"

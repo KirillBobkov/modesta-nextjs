@@ -1,13 +1,68 @@
 [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    "id": 231,
+    "date": "14.07.2025 06:00",
+    "ownerId": 514366938,
+    "likesCount": 43,
+    "commentsCount": 2,
+    "viewsCount": 638,
+    "text": "Замечательные новости с Х Национального форума реабилитационной индустрии \"Надежда на технологии\". С приветственным письмом к участникам форума обратился Президент Российской Федерации В.В. Путин.\n\nПосле мероприятий Вертер с ребятами полюбовался вечерней Москвой.\n\n#НадеждаНаТехнологии",
+    "attachments": [
+      {
+        "type": "video",
+        "title": "Video by Sergey Sakhatsky",
+        "iframe": "https://vk.com/video_ext.php?oid=514366938&id=456239131"
+      },
+      {
+        "type": "photo",
+        "photoUrl": "https://sun9-58.userapi.com/s/v1/if2/StK4fhlrPGeN15G8m1PWrkkSKFqEkvcPMnDWv1GnebjTOcFRspN92oz-AfEstupsjsMCK9BjucKmQwjBA8jFTYw9.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu"
+      },
+      {
+        "type": "video",
+        "title": "Video by Sergey Sakhatsky",
+        "iframe": "https://vk.com/video_ext.php?oid=514366938&id=456239129"
+      },
+      {
+        "type": "photo",
+        "photoUrl": "https://sun9-50.userapi.com/s/v1/if2/jhHUV3hfsZyq3Kjp449ttN-69Ff3MpCfapLDjXxUeijzds4Ajm4lkRZomK3tLTQy-qkg4FMgZHydFCU-ZEqH4CBy.jpg?quality=95&as=32x31,48x47,72x70,108x105,160x156,240x233,360x350,480x467,540x525,640x622,720x700,1080x1050,1108x1077&from=bu"
+      },
+      {
+        "type": "video",
+        "title": "Video by Sergey Sakhatsky",
+        "iframe": "https://vk.com/video_ext.php?oid=514366938&id=456239128"
+      },
+      {
+        "type": "video",
+        "title": "Video by Sergey Sakhatsky",
+        "iframe": "https://vk.com/video_ext.php?oid=514366938&id=456239130"
+      },
+      {
+        "type": "video",
+        "title": "Video by Sergey Sakhatsky",
+        "iframe": "https://vk.com/video_ext.php?oid=514366938&id=456239132"
+      },
+      {
+        "type": "photo",
+        "photoUrl": "https://sun9-17.userapi.com/s/v1/if2/ScaYsBnDVeUCSekuMf0X_-jbPBE3EkVYWvf6p3tFqg1X9n70f2eqYUz9Et52b7FqxNnzBI2vMChUAgfl_nNKRScB.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu"
+      },
+      {
+        "type": "photo",
+        "photoUrl": "https://sun9-52.userapi.com/s/v1/if2/BPJ11t-pplWo1UmobqVm_jWiRTE27eXgttnGY2ms4MoeeoqGJvu4s9R91MNcTfYiNWk_DtUO8cWNJsrE8NMI430w.jpg?quality=95&as=32x25,48x37,72x55,108x83,160x123,240x185,360x277,480x369,540x416,640x492,720x554,1080x831,1280x985&from=bu"
+      }
+    ]
+  },
+  {
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "id": 208,
     "date": "10.07.2025 23:56",
     "ownerId": -131964440,
-    "likesCount": 20,
+    "likesCount": 27,
     "commentsCount": 0,
-    "viewsCount": 188,
+    "viewsCount": 273,
     "text": "🔗 Некоторые моменты с первого дня Форума \"Надежда на технологии\".\n\n🫡  Наш робот Вертер сегодня приятно порадовал не только посетителей и коллег по выставке, но и нас самих, став полноценным участником команды, хорошо себя проявив в работе на выставке! \n\n🦾 Завтра продолжаем с новыми силами, всех ждём в гости к нам на стенд!",
     "attachments": [
       {
@@ -35,9 +90,9 @@
     "id": 207,
     "date": "09.07.2025 20:30",
     "ownerId": -131964440,
-    "likesCount": 17,
+    "likesCount": 19,
     "commentsCount": 0,
-    "viewsCount": 228,
+    "viewsCount": 287,
     "text": "⚡️МОДЕСТА на Форуме-выставке \"Надежда на технологии 2025\"\n\n🫡 В этом году выставляемся на стенде не только с протезами, но и с роботом-помощником младшего и среднего мед. персонала Вертером. С ним можно будет лично пообщаться и посмотреть демонстрацию работы захватов.\n\n➡️Кластер \"Ломоносов\", Раменский бульвар, 1.\n10 июля (ЧТ): 9:00 - 16:30\n11 июля (ПТ): 9:00 - 18:00\n\nДо встречи! 🤝",
     "attachments": [
       {
@@ -61,7 +116,7 @@
     "ownerId": -131964440,
     "likesCount": 10,
     "commentsCount": 0,
-    "viewsCount": 184,
+    "viewsCount": 196,
     "text": "Итоги марафона \"РОБОТ ЗА 100 ДНЕЙ\". Ожидание VS реальность.\n\n🔥 10-й выпуск, ЮБИЛЕЙНЫЙ обзор МАРАФОНА: Создание робота-реАбилитолога Вертера.🔥 \n \n🌟 Это видео — итоги и мысли по окончанию нашего масштабного 100-дневного челленджа по созданию робота-реАбилитолога. Присоединяйтесь к нашему путешествию, чтобы узнать, как рождаются инновации, и вдохновиться на собственные проекты и увидеть вместе с нами что будет дальше! Предыдущие выпуски можно посмотреть в нашем плей-листе. \n \n💡 Поделимся своими мыслями, как ожидания пересекались с реальностью, выводами и задачами, с которыми столкнулись на протяжении всей дистанции. Какие решения нашли, а чего не хватило? Какие вызовы ждут нас дальше? Где можно будет увидеть робота. \n \n🚀 Почему это стоит посмотреть? \n- Узнайте, как создать робота с нуля своими руками. \n- Углубитесь в мир робототехники, IT и реабилитационных технологий. \n- Получите мотивацию для реализации своих идей в области стартапов и инженерии. \n \n🎯 Для кого это видео? \nДля энтузиастов робототехники, стартаперов, инженеров, родителей, которые хотят вдохновить детей на техническое творчество, и всех, кто интересуется будущим технологий! \n \n📌 Приятного просмотра, следите за новостями и до скорых встреч! \n \n#робототехника #стартап #инновации #робот #своимируками #модеста #itтехнологии #инженерия #робототехникадетям #челлендж #будущеетехнологий #проектывжизнь",
     "attachments": [
       {
@@ -77,7 +132,7 @@
     "ownerId": -131964440,
     "likesCount": 8,
     "commentsCount": 0,
-    "viewsCount": 188,
+    "viewsCount": 197,
     "text": "Финальный запуск РОБОТА! Даём команды роботу после десятков НЕУДАЧНЫХ попыток. \n \nПолное видео смотрите ниже на стене, также все длинные видео-обзоры челленджа и не только доступны в [https://vkvideo.ru/playlist/-131964440_2| плей-листе марафона] ! Там весело!)) \n \n#робототехника #робот #своимируками #сделайсам #модеста #тесты #запуск #голос #управление #голосовойпомощник #команды #программирование",
     "attachments": [
       {
@@ -95,10 +150,14 @@
     "likesCount": 8,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 56,
 =======
     "viewsCount": 167,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 175,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "🚀День 96-100. \nС кровью и потом врываемся в 100-й день нашего челленджа. Вы, наконец, увидите, какой у нас получился робот за прошедший срок. \n \nСнова столкнулись с \"сюрпризами\", в самом конце марафона. Как пошло не по плану, как решали и исправляли проблемы в последние дни, смотрите в 9-м выпуске. \n\nПриятного просмотра!\n\n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям #it #челлендж",
     "attachments": [
       {
@@ -115,10 +174,14 @@
     "likesCount": 12,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 109,
 =======
     "viewsCount": 175,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 183,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "🔥 8-й выпуск МАРАФОНА: Создание робота-реАбилитолога Вертера (День 91–95)🔥  \n\n💥 В этом выпуске мы наконец-то собираем покрашенный корпус Вертера! Вы увидите, как выглядят его плечи, руки и захваты на текущий момент. Расскажем о сложностях и особенностях их конструкции.  \n\n⚡️ Электроника: без неё никуда! Поговорим о том, как она интегрируется в проект, какие технологии используем и почему это так важно для функциональности робота.  \n\n💡 Поделимся своими мыслями, выводами и задачами, с которыми столкнулись на этой неделе. Какие решения нашли? Какие вызовы ждут нас дальше?  \n\n🌟 Это видео — часть нашего масштабного 100-дневного челленджа по созданию робота-реАбилитолога. Присоединяйтесь к нашему путешествию, чтобы узнать, как рождаются инновации, и вдохновиться на собственные проекты!  \n\n🚀 Почему это стоит посмотреть? \n• Узнайте, как создать робота с нуля своими руками.  \n• Углубитесь в мир робототехники, IT и реабилитационных технологий.  \n• Получите мотивацию для реализации своих идей в области стартапов и инженерии.",
     "attachments": [
       {
@@ -135,10 +198,14 @@
     "likesCount": 9,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 143,
 =======
     "viewsCount": 172,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 178,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Создание эффективных рук — важнейший этап в разработке автономных роботов. Именно манипуляторы позволяют им взаимодействовать с окружающим миром: собирать объекты, выполнять точные операции, помогать в производстве и даже спасать жизни. \n\nПредставьте робота, способного аккуратно собрать хрупкий прибор на заводе, помочь хирургу в сложной операции или передать бутылку воды пострадавшему. Продуманная конструкция рук делает такие сценарии возможными. Без них робот остаётся лишь набором алгоритмов, а не настоящим помощником — умелым, точным и надёжным.",
     "attachments": [
       {
@@ -163,10 +230,14 @@
     "likesCount": 15,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 160,
 =======
     "viewsCount": 185,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 190,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Что мы поняли за 90 дней о роботах.\n\nВ 7-м обзоре-выпуске за 86-90 день нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера: \n \nСобираем покрашенный корпус, расскажем поподробнее про плечи и руки-захваты Вертера и как они выглядят на данный момент. \nЭлектроника! Как же без неё, отдельная тема, которую затронем.)) \nПоделимся мыслями, выводами, задачами, с которыми столкнулись на этой неделе. \n \nПриятного просмотра! \n \n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям #it #челлендж",
     "attachments": [
       {
@@ -183,10 +254,14 @@
     "likesCount": 15,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 331,
 =======
     "viewsCount": 395,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 406,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Делаем робота за 100 дней. Сборка, пайка, программирование. #челлендж\n\nВ выпуске за 81-85 день нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера:\n\nТехнический контент подъехал. Пилим, сверлим, паяем, разбираемся дальше с электроникой и всё остальное.)) \n\n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям #it",
     "attachments": [
       {
@@ -203,10 +278,14 @@
     "likesCount": 6,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 134,
 =======
     "viewsCount": 151,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 156,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "В преддверии Юбилея Победы побывали в Библиотеке им. В.Маяковского на праздничных мероприятиях.\n\nНаписали письма-обращения бойцам на СВО, посмотрели экспозицию и послушали концерт с фронтовыми песнями!\n\n#ДеньПобеды",
     "attachments": [
       {
@@ -226,10 +305,14 @@
     "likesCount": 10,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 150,
 =======
     "viewsCount": 167,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 172,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "МИР, ТРУД, РОБОТОТЕХНИКА. Как команда МОДЕСТА собирает робота\n\nВ выпуске за 75-80 день нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера: \n \nЗабираем первые детали из покраски, разбираемся с Raspberry Pi, знакомимся с системой ROS (Robot Operating System), а также как работаем с электроникой. \n \n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям",
     "attachments": [
       {
@@ -247,6 +330,7 @@
     "commentsCount": 0,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 112,
 =======
     "viewsCount": 154,
@@ -254,6 +338,9 @@
 =======
     "viewsCount": 170,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 174,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "⚡️Для чего мы снимаем видео о постройке робота? \n \n1. Популяризация технологического предпринимательства. \nПоказываем, что создание робота — это не только научный проект, но и потенциальный стартап с реальными примерами реализации инженерных решений. \n \n2. Вовлечение в эксперименты и исследования. \nЛюди смогут участвовать в реальных разработках, таких как наш робот-реабилитолог, получить практический опыт и, возможно, стать частью команды, которая внедряет инновации в медицину или же реализовывать инициативы в своём проекте! \n \nОдной из своих задач видим формирование инновационной экосистемы в родном городе Кургане. Сообщества, где можно делиться опытом в открытом формате. Всегда рады единомышленникам! \n \nP.S. Скоро некоторые узлы робота и протезов можно будет бесплатно скачать с нашего сайта! \nЭто будет наш начальный вклад в развитие робототехники в России. 🤖\n\n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям",
     "attachments": [
       {
@@ -270,10 +357,14 @@
     "likesCount": 5,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 141,
 =======
     "viewsCount": 157,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 161,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Как создать робота-помощника за 100 дней \n \nВыпуск 70-75 дня нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера. В данном обзоре расскажем, как проходит работа над созданием рук робота, погрузимся также немного в теорию и не только.\n \nБудем рады любой обратной связи по нашей деятельности и упомянутым темам, пишите и следите за новостями в нашей группе [https://vk.com/modestatech|ВК] , телеграме и др. соц.сетях! Там мы выкладываем статьи о создании робота и делимся всем, что происходит в нашей лабе.\n\nНаш телеграм-канал: \nt.me/modestatech \nСайт: \nmodesta.tech/ \n \n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям",
     "attachments": [
       {
@@ -290,10 +381,14 @@
     "likesCount": 10,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 165,
 =======
     "viewsCount": 176,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 180,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "🙏🦾",
     "attachments": [
       {
@@ -325,10 +420,14 @@
     "likesCount": 6,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 136,
 =======
     "viewsCount": 145,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 148,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Робототехника — это здорово, но одна из главных целей в 2025 году: расширение линейки протезов и усовершенствование предыдущих версий.\n\n🦾 На видео фрагмент с одним из первых набросков протеза кисти. Будет сделан в нашем стиле и с интересной, полезной начинкой.\n\n#протезы #протезирование #стартап #медтех #модеста #абилитация #реабилитация",
     "attachments": [
       {
@@ -345,10 +444,14 @@
     "likesCount": 12,
     "commentsCount": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 357,
 =======
     "viewsCount": 382,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 387,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Как создать робота-помощника за 100 дней \n \nВыпуск 64-69 дня нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера. Предыдущие серии в формате клипов можно посмотреть в наших клипах и на стене ниже. В данном расширенном выпуске рассказываем, что делали последние 5 дней и вы увидите на каком этапе мы находимся, перевалив немного за экватор пути. \n \nБудем рады любой обратной связи по нашей деятельности и упомянутым темам, пишите и следите за новостями в нашем телеграме и соц.сетях! Там мы выкладываем статьи о создании робота и делимся всем, что происходит в нашей лабе. \n \nНаш телеграм-канал: \nt.me/modestatech \nСайт: \nmodesta.tech/ \n \n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям",
     "attachments": [
       {
@@ -365,10 +468,14 @@
     "likesCount": 7,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 168,
 =======
     "viewsCount": 176,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 180,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Как создать робота-помощника за 100 дней\n\nВыпуск 58-63 дня нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера. Предыдущие серии в формате клипов можно посмотреть в наших клипах и на стене ниже. В данном расширенном выпуске рассказываем, что делали последние 5 дней и вы увидите на каком этапе мы находимся, перевалив немного за экватор пути. \n \nБудем рады любой обратной связи по нашей деятельности и упомянутым темам, пишите и следите за новостями в нашем телеграме и соц.сетях! Там мы выкладываем статьи о создании робота и делимся всем, что происходит в нашей лабе. \n \nНаш телеграм-канал: \nt.me/modestatech \nСайт: \nmodesta.tech/\n\n#робототехника #стартап #робот #своимируками #модеста #реабилитация #робототехникадетям",
     "attachments": [
       {
@@ -385,10 +492,14 @@
     "likesCount": 6,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 168,
 =======
     "viewsCount": 175,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 178,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Немного внутрянки и то, как Вертер будет выражать эмоции. Подробнее расскажем в завтрашнем ролике. ⚡\n\n#робототехника #стартап #робот #своимируками #модеста #реабилитация #абилитация",
     "attachments": [
       {
@@ -405,10 +516,14 @@
     "likesCount": 5,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 163,
 =======
     "viewsCount": 171,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 175,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Как [club131964440|МОДЕСТА — функциональные протезы рук] проводит время [club200185613|НМИЦ ТО им. акад. Г.А. Илизарова Минздрава РФ].\n \n#робототехника #стартап #робот #своимируками #модеста #реабилитация #абилитация #ЦентрИлизарова",
     "attachments": [
       {
@@ -425,10 +540,14 @@
     "likesCount": 11,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 205,
 =======
     "viewsCount": 213,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 216,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Сегодня посетили [club200185613|НМИЦ ТО им. акад. Г.А. Илизарова Минздрава РФ]. \nОтрывок-анонс для следующего выпуска о нашей работе над роботом-реАбилитолом Вертером. Спасибо отделению медицинской реабилитации за гостеприимство, консультации, а также [club146860759|Судницыну |Травматологу-ортопеду| Остеомиелит].\n\n#робототехника #стартап #робот #своимируками #модеста #реабилитация #абилитация #ЦентрИлизарова",
     "attachments": [
       {
@@ -445,10 +564,14 @@
     "likesCount": 7,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 127,
 =======
     "viewsCount": 132,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 135,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "🙏",
     "attachments": [
       {
@@ -465,10 +588,14 @@
     "likesCount": 7,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 138,
 =======
     "viewsCount": 143,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 146,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Сегодня компании МОДЕСТА исполнилось 2 года.🦾🚀\n\nПосмотрите в подборке, как это видят разные нейросетки.))",
     "attachments": [
       {
@@ -504,10 +631,14 @@
     "likesCount": 5,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 114,
 =======
     "viewsCount": 119,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 122,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Как создать робота-помощника: от чертежей до первых шагов.\n\nВыпуск 52-57 дня нашего 100-дневного МАРАФОНА по созданию робота-реАбилитолога Вертера. Предыдущие серии в формате клипов можно посмотреть в наших клипах и на стене ниже. В данном расширенном выпуске рассказываем, что делали последние 5 дней и вы увидите на каком этапе мы находимся, перевалив немного за экватор пути. \n \nБудем рады любой обратной связи по нашей деятельности и упомянутым темам, пишите и следите за новостями в нашем телеграме и соц.сетях! Там мы выкладываем статьи о создании робота и делимся всем, что происходит в нашей лабе. \n \nНаш телеграм-канал: \nhttps://t.me/modestatech \nСайт: \nhttps://modesta.tech/ \n \n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -524,10 +655,14 @@
     "likesCount": 7,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 132,
 =======
     "viewsCount": 137,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 140,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "51/100 ДЕНЬ МАРАФОНА СОЗДАНИЯ РОБОТА МОДЕСТА. \n \nСегодня узнаете, почему мы потеряли много времени. Наверное, это первый раз, когда увидев промежуточный результат, остались прямо совсем им не удовлетворены. Наверное, вы уже догадались, что это связано с шеей и лицом робота. \n \nДавайте разберём ошибки вместе в новом выпуске. \n \nP.S. \n⚡️Небольшое объявление: последний видос в таком формате, когда практически каждый рабочий день — выпуск, дальше будем снимать длинные ролики сразу за 5 дней. Работа началась более детальная и глубокая, соответственно и выпуски будут чуть другие, поэтому, ждите продолжение сериала к концу следующей недели, а мы попробуем не подкачать.)) \n \n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -544,10 +679,14 @@
     "likesCount": 4,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 115,
 =======
     "viewsCount": 120,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 122,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Пока ждём ответа от Маска, мы решили поэкспериментировать с механической передачей в шее, которая отвечает за повороты влево и вправо.)) Везде до этого мы делали зубчатые передачи, а тут установим ременную. Попробовали подобрать ремень, но его можно сделать только на заказ или выбирать из готовых решений. \n \nПока ждём заказанный ремень, не будем терять времени и давайте соберем всё вместе, чтобы посмотреть промежуточный результат. Повторюсь ещё раз, даже без полной сборки, видно что дизайн лица необходимо будет менять. Если есть крутые дизайнеры, свяжитесь с нами! \n \nНу а день подходит к концу, в конце дня заметили кучу косяков, которые срочно нужно исправлять. \n \n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -564,10 +703,14 @@
     "likesCount": 4,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 114,
 =======
     "viewsCount": 119,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 122,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Кто первый отправится на Марс? 😄 \n \nИнформация для Илона Маска, который наверняка смотрит наши ролики: \"Илон, как думаешь кто первым окажется на Марсе, твой Оптимус или наш Вертер?\".)) Так как следующие 100 дней мы планируем строить ракету. 🚀😂 \n \n#робот #сделайсам #юмор #маск #3дмоделирование #3дпечать #илонмаск #марс #модеста",
     "attachments": [
       {
@@ -584,10 +727,14 @@
     "likesCount": 5,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 92,
 =======
     "viewsCount": 97,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 100,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Пока остальные детали шеи печатаются, давайте мы покажем вам изготовление и сборку механизма наклона головы вниз и вверх. Сначала вытачиваем ось под подшипник. Иногда выточить очень маленькую ось гораздо сложнее, чем большую.)) \n \nСборка самое интересное и волнительное, так как не понятно, всё ли смоделировано правильно, всё ли сойдётся и будет ли этот механизм работать. \n \nБольшая чёрная площадка — это низ головы Вертера. Она содержит все элементы крепления и на неё одевается остальная корпусная оболочка головы. \n \nВ видео покажем, как всё выглядит в сборе, всё работает, люфт отсутствует и идём дальше. А ты пока напиши в комментариях стоит ли снимать длинные ролики сразу за 5 дней вперёд? \n \n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -604,10 +751,14 @@
     "likesCount": 4,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 86,
 =======
     "viewsCount": 91,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 93,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Почему так долго происходит разработка? Сегодня второй день плотного моделирования и мы решили показать данный процесс как есть, чтобы наглядно было видно насколько он рутинный, сложный и не всегда интересный. \n \nЗа сегодня мы закончим проектировать механизм шеи, а именно повороты головы влево и право. На самом деле, данный процесс у нас занял 3 дня, но мы собрали материал воедино. На видео можно заметить, как выглядит ключица робота, как будто на рентгене. \n \nВ некоторых местах появляется ощущение, что конструкция усложнена, но в реальности она сильно упрощена и адаптирована под 3д печать. Позже, когда мы будем прорабатывать все узлы детально, то мы будем изменять конструкцию под другие методы производства. \n \n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -624,10 +775,14 @@
     "likesCount": 3,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 86,
 =======
     "viewsCount": 91,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 93,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Сегодня моделим голову, задача в том, чтобы продумать все крепления для тех модулей, которые будут находиться внутри корпуса самой головы. \n \nЧто же будет устанавливаться внутри? \n \nГлаза, которые отвечают за внешний вид – это LED панели, каждая из которых будет содержать по 4 белых светодиода. Их задача создать более дружелюбный вид лица Вертера. \n \nСамо зрение будет осуществляться ToF камерой с 70 гр. обзором, глубиной до 4 метров. Подробнее о камере и как мы будем обрабатывать данные с неё, сможете скоро прочитать в нашем ТГ-канале или в статье на Хабре, опубликуем её в ближайшие дни. \n \nСобственно, когда всё смоделировали, теперь можно ставить на печать, она у нас снова будет длиться больше суток.\n\n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -644,10 +799,14 @@
     "likesCount": 5,
     "commentsCount": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 77,
 =======
     "viewsCount": 82,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 83,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "Параллельно делаем ремонт в помещениях, чуть позже больше покажем, что происходит вне челленджа. \n \nА теперь про Вертера. Ситуация в том, что на руки у нас не получается полностью перейти, пока не сделаем шею. Логическая цепочка такая, чтобы перейти на руки, необходимо закончить с туловищем, а именно с проводкой. Чтобы закончить с проводкой необходимо, чтобы все провода были протянуты, а так как мы ещё не делали шею и голову, то соответственно нужно начать с них. \n \nПоэтому, возвращаемся к изначальному плану, давайте эти 5 дней посвятим голове, а остальное время до конца челленджа потратим на руки. Напоминаем, что остаётся меньше 7 недель, а самое сложное впереди. \n \n#робототехника #стартап #робот #своимируками #модеста",
     "attachments": [
       {
@@ -1602,7 +1761,7 @@
     "ownerId": -131964440,
     "likesCount": 16,
     "commentsCount": 0,
-    "viewsCount": 395,
+    "viewsCount": 402,
     "text": "📌Фотоотчёт с прошедшего мероприятия «Межрегионального Форума \"Про-IT» в Кургане 12.12.2024. \n\n📍За 3 года деятельности вдвойне приятно впервые продемонстрировать наши новые наработки и изделия в родном городе.\n\n#Курган #форум #ПроIT #стартап #модеста #промобот #робототехника #медтех #сколково",
     "attachments": [
       {
@@ -1787,7 +1946,7 @@
     "ownerId": -131964440,
     "likesCount": 16,
     "commentsCount": 1,
-    "viewsCount": 758,
+    "viewsCount": 762,
     "text": "🦾\"Модеста\" в Уфе!\n24-25 октября находимся на III Всероссийском форуме-выставке «Ломая барьеры». В этом году форум посвящен развитию системы комплексной реабилитации взрослых с инвалидностью.\n\nВ форуме примут участие 159 спикеров и модераторов, из них 84 человека из 27 регионов, 20 спикеров примут участие онлайн, в  том числе из Узбекистана, Германии, ОАЭ.\n\nПрисутствует гендиректор АСИ Светлана Чупшева, замминистр обороны, председатель Фонда «Защитники Отечества» Анна Цивилева, замминистр промышленности и торговли РФ Екатерина Приезжева, директор департамента по делам инвалидов минтруда РФ Дмитрий Лигомин, руководитель Главного бюро МСЭ минтруда РФ Михаил Дымочка, член СПЧ Ольга Демичева, председатель правления Центра лечебной педагогики Анна Битова, а также другие уважаемые гости.\n\n📍 Конгресс-Холл «Торатау», г. Уфа, ул. Заки Валиди, 2\n🗓 24-25 октября 2024\nОф. сайт мероприятия\n\n#ЛомаяБарьеры #ломая_барьеры2024\n#реабилитация #минтрудРБ  #аси\n#Протезирование #Уфа #Инклюзия #стартап #модеста",
     "attachments": [
       {
@@ -1834,10 +1993,14 @@
     "likesCount": 43,
     "commentsCount": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "viewsCount": 1287,
 =======
     "viewsCount": 1325,
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+    "viewsCount": 1333,
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
     "text": "🥳 Наступил долгожданный, волнительный и ответственный для нашей команды момент. Вчера состоялось вручение детского протеза — Дмитрию! Парень, не смотря на совсем юный возраст, не растерялся и сразу начал вникать в тонкости использования новым девайсом. 🦾\n\n🙏🏻Спасибо за полное вовлечение всем близким Димы, будем продолжать в том же духе, все вместе! Начнём постепенно знакомить молодого пользователя с протезом в формате игры, а также договорились встретиться и получить первую обратную связь уже через неделю!\n\n🤩А мы, скоро вернёмся с подробностями и расскажем так же, что уже давно обещали.))\n\n#протезруки #протезы #протезирование #модеста #абилитация #стартап #медтех",
     "attachments": [
       {
@@ -1952,6 +2115,7 @@
         "photoUrl": "https://sun9-5.userapi.com/s/v1/if2/vHQv-Yu1lGwWRCjoRkQo3Mlew_UWUQ2H7JgMjBrnjGOa7ZG14Ypl8IS0MttUYItWyzSVDViu1tIBpjyW-Cqwdz58.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x426,720x480,1080x720,1280x853&from=bu"
       }
     ]
+<<<<<<< HEAD
   },
   {
     "id": 79,
@@ -2048,5 +2212,7 @@
     ]
 =======
 >>>>>>> 8dfdb2a (Add new robotics page and update assets: Created a new robotics page featuring technical specifications and capabilities of the robot, integrated video content, and added new image assets. Removed the history page to streamline navigation.)
+=======
+>>>>>>> 281ec31 (Update image assets and implement PhotoSliderBlock component: Replaced several robot feature images with updated versions and added a new PhotoSliderBlock to the robotics page, showcasing images from the exhibition "Надежда на технологии" for enhanced visual presentation.)
   }
 ]
