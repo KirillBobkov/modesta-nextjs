@@ -52,9 +52,7 @@ export default function NewForm({ popupOpened, setOpened }) {
     setLoading(true);
 
     const sendMessage = () => {
-      const token = "6684032618:AAG1TLXZ0dgsm0ippB4OrMffxJPTzj4N5oE";
-      const chat_id = "-1002021633462";
-      const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
+      const url = `https://telegram-proxy.servemp3.com:4444/api/prosthesis/send-request`; // The url to request
 
       fetch(url, {
         method: "POST",
