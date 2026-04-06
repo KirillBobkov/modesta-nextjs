@@ -28,7 +28,7 @@ const formSchema = z.object({
     .regex(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, "Некорректный номер телефона")
     .refine(
       (val) => !xssPattern.test(val),
-      "Недопустимый символ в номере телефона"
+      "Недопустимый символ в номере телефона",
     ),
 
   message: z
@@ -47,12 +47,11 @@ export default function NewForm({ popupOpened, setOpened }) {
 
   const inputFieldClasses =
     "w-full text-base border-2 border-card box-border leading-[25px] py-[7px] px-[15px] block bg-card rounded-[20px] transition-all duration-300 ease-in-out focus:border-accent focus:outline-none placeholder:text-font-secondary autofill:shadow-[inset_0_0_5px_50px_var(--card-bg-color)] autofill:!text-font autofill:![border-color:var(--card-bg-color)]";
-
   function handleSend(fields, helpers) {
     setLoading(true);
 
     const sendMessage = () => {
-      const url = `https://telegram-proxy.servemp3.com:4444/api/prosthesis/send-request`; // The url to request
+      const url = `https://telegram-proxy.servemp3.com:4444/api/prosthesis/send-request`;
 
       fetch(url, {
         method: "POST",
@@ -60,12 +59,10 @@ export default function NewForm({ popupOpened, setOpened }) {
           "Content-Type": "application/json;charset=UTF-8",
         },
         body: JSON.stringify({
-          parse_mode: "html",
-          text: `<b>Заявка на получние протеза</b>\n\n<b>Имя</b>: ${
-            fields.name
-          }\n<b>E-mail</b>: ${fields.email}\n<b>Номер телефона</b>: ${
-            fields.phone
-          }\n<b>Сообщение</b>: ${fields.message || "-"}`,
+          name: fields.name,
+          email: fields.email,
+          phone: fields.phone,
+          message: fields.message || "-",
         }),
       })
         .then(() => {
@@ -73,7 +70,7 @@ export default function NewForm({ popupOpened, setOpened }) {
         })
         .catch((error) => {
           setResponseMessage(
-            "Произошла ошибка при отправке. Пожалуйста, свяжитесь с нами через контакты"
+            "Произошла ошибка при отправке. Пожалуйста, свяжитесь с нами через контакты",
           );
           setLoading(false);
           console.error("Ошибка:", error);
@@ -189,9 +186,7 @@ export default function NewForm({ popupOpened, setOpened }) {
                   disabled={responseMessage.length > 0}
                   name="checkbox"
                   className={`w-[15px] h-[15px] rounded-[3px] border flex-shrink-0 checked:bg-font checked:border-font ${
-                    errors.checkbox
-                      ? "border-helper-red"
-                      : "border-font"
+                    errors.checkbox ? "border-helper-red" : "border-font"
                   }`}
                 />
                 <label
@@ -234,4 +229,4 @@ export default function NewForm({ popupOpened, setOpened }) {
       </div>
     </div>
   );
-};
+}
