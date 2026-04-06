@@ -60,7 +60,6 @@ export default function NewForm({ popupOpened, setOpened }) {
           "Content-Type": "application/json;charset=UTF-8",
         },
         body: JSON.stringify({
-          chat_id,
           parse_mode: "html",
           text: `<b>Заявка на получние протеза</b>\n\n<b>Имя</b>: ${
             fields.name
