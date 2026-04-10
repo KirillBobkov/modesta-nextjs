@@ -46,12 +46,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 @media (min-width: 768px) {
   .techBlockList {
     gap: 2%;
+    row-gap: 20px;
   }
 }
 
@@ -195,8 +196,10 @@
   }
 }
 
-.capabilityEven {
-  flex-direction: row-reverse;
+@media (min-width: 768px) {
+  .capabilityEven {
+    flex-direction: row-reverse;
+  }
 }
 
 .capabilityImage {
@@ -225,7 +228,7 @@
   width: 100%;
   padding: 40px 20px;
   text-align: left;
-  background-color: var(--card-color);
+  background-color: var(--card-bg-color);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -259,7 +262,7 @@
 .capabilityDescription {
   font-size: 16px;
   line-height: 25px;
-  color: var(--font-secondary-color);
+  color: var(--secondary-font-color);
   white-space: pre-line;
   text-align: left;
 }
