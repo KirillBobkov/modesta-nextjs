@@ -5,6 +5,8 @@ import { z } from "zod";
 import { ArrowButton } from "../ScrollTopButton/ScrollTopButton.jsx";
 import styles from "./NewForm.module.css";
 
+import shadowStyles from "../../styles/shadow.module.css";
+
 // Компонент для форматирования поля телефона
 const MaskedInput = ({ field, form, ...props }) => (
   <InputMask {...field} {...props} mask="+7 (999) 999-99-99" maskChar=" " />
@@ -90,17 +92,16 @@ export default function NewForm({ popupOpened, setOpened }) {
     <div
       onClick={(e) => {
         setOpened(false);
-        document.documentElement.classList.remove("overflow-hidden");
+        document.documentElement.classList.remove("mobile-menu-opened");
       }}
-      className={overlayClassName}
+      className={
+        styles["popup-overlay"] +
+        " " +
+        (popupOpened ? styles["popup-overlay--opened"] : "")
+      }
     >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className={styles.popup}
-      >
-        <h2 className={styles.popupTitle}>
-          Оставить заявку
-        </h2>
+      <div onClick={(e) => e.stopPropagation()} className={styles.popup}>
+        <h2 className={styles["popup__title"]}>Оставить заявку</h2>
         <Formik
           initialValues={{
             name: "",
@@ -126,76 +127,82 @@ export default function NewForm({ popupOpened, setOpened }) {
         >
           {({ isValid, dirty, errors }) => (
             <Form className={styles.form}>
-              <div className={styles.formGroup}>
+              <div className={styles["form-group"]}>
                 <Field
                   type="text"
                   disabled={responseMessage.length > 0}
                   placeholder="Ваше имя"
                   name="name"
-                  className={styles.inputField}
+                  className={styles["input-field"]}
                 />
                 <ErrorMessage
                   name="name"
                   component="div"
-                  className={styles.errorMessage}
+                  className={styles["error-message"]}
                 />
               </div>
-              <div className={styles.formGroup}>
+              <div className={styles["form-group"]}>
                 <Field
                   type="email"
                   disabled={responseMessage.length > 0}
                   placeholder="E-mail"
                   name="email"
-                  className={styles.inputField}
+                  className={styles["input-field"]}
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className={styles.errorMessage}
+                  className={styles["error-message"]}
                 />
               </div>
 
-              <div className={styles.formGroup}>
+              <div className={styles["form-group"]}>
                 <Field
                   name="phone"
                   disabled={responseMessage.length > 0}
                   placeholder="+7 (999) 999-9999"
                   component={MaskedInput}
-                  className={styles.inputField}
+                  className={styles["input-field"]}
                 />
                 <ErrorMessage
                   name="phone"
                   component="div"
-                  className={styles.errorMessage}
+                  className={styles["error-message"]}
                 />
               </div>
 
-              <div className={styles.formGroup}>
+              <div className={styles["form-group"]}>
                 <Field
                   placeholder="Напишите то, что нам важно знать"
                   disabled={responseMessage.length > 0}
                   as="textarea"
                   name="message"
-                  className={styles.formTextarea}
+                  className={
+                    styles["input-field"] + " " + styles["form-textarea"]
+                  }
                 />
               </div>
 
-              <div className={styles.formCheckbox}>
+              <div
+                className={styles["form-group"] + " " + styles["form-checkbox"]}
+              >
                 <Field
                   id="id-form-checkbox"
                   type="checkbox"
                   disabled={responseMessage.length > 0}
                   name="checkbox"
-                  className={errors.checkbox ? styles.formCheckboxInput + " " + styles.formCheckboxInputError : styles.formCheckboxInput}
+                  className={`${styles["form-checkbox__input"]} ${
+                    errors.checkbox ? styles["form-checkbox__input--error"] : ""
+                  }`}
                 />
                 <label
                   htmlFor="id-form-checkbox"
-                  className={styles.formCheckboxLabel}
+                  className={`${styles["form-checkbox__label"]}`}
                 >
                   Я ознакомлен (ознакомлена) с{" "}
                   <a
                     target="_blank"
-                    className={styles.formDoc}
+                    className={styles["form-doc"]}
                     href="/agreement-data.pdf"
                   >
                     правилами
@@ -205,27 +212,25 @@ export default function NewForm({ popupOpened, setOpened }) {
               </div>
               <button
                 type="submit"
-                className={styles.formSubmitButton}
+                className={`${styles.formSubmitButton} ${shadowStyles.shadow}`}
                 disabled={!(isValid && dirty) || responseMessage.length > 0}
               >
                 <span>
                   {responseMessage.length > 0 ? responseMessage : "Отправить"}
                 </span>
-                {loading && (
-                  <div className={styles.loaderButton} />
-                )}
+                {loading && <div className={styles["loader-button"]} />}
               </button>
             </Form>
           )}
         </Formik>
         <ArrowButton
-          classes={styles.closeButton}
+          classes={styles["close-button"]}
           onClick={() => {
             setOpened(false);
-            document.documentElement.classList.remove("overflow-hidden");
+            document.documentElement.classList.remove("mobile-menu-opened");
           }}
         />
       </div>
     </div>
   );
-}
+};
