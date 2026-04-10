@@ -25,6 +25,7 @@ import robot_tech_img_1 from "../assets/images/robot_tech_img_1.jpg";
 import robot_tech_img_2 from "../assets/images/robot_tech_img_2.jpg";
 import robot_tech_img_3 from "../assets/images/robot_tech_img_3.jpg";
 import robot_tech_img_4 from "../assets/images/robot_tech_img_4.jpg";
+import robot_tech_img_5 from "../assets/images/robot_tech_img_5.jpg";
 import robot_tech_img_6 from "../assets/images/robot_tech_img_6.jpg";
 import robot_tech_img_7 from "../assets/images/robot_tech_img_7.jpg";
 import robot_tech_img_8 from "../assets/images/robot_tech_img_8.jpg";
@@ -71,7 +72,7 @@ const robotTechSpecs = [
     key_param: "см",
   },
   {
-    img: robot_tech_img_2,
+    img: robot_tech_img_5,
     text: "Время работы",
     key: "10-12",
     key_param: "ч",
@@ -82,6 +83,9 @@ const robotTechSpecs = [
     key: "5",
     key_param: "ч",
   },
+
+
+  
   {
     img: robot_tech_img_8,
     text: "Степеней свободы",
