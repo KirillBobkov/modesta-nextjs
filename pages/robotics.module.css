@@ -1,0 +1,278 @@
+/* robotics.module.css */
+.main {
+  width: 100%;
+}
+
+/* RobotTechBlock */
+.techBlock {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .techBlock {
+    padding: 40px;
+    margin-bottom: 120px;
+  }
+}
+
+.techBlockTitle {
+  max-width: 256px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  white-space: pre-line;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .techBlockTitle {
+    max-width: none;
+    text-align: center;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+.techBlockList {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .techBlockList {
+    gap: 2%;
+  }
+}
+
+.techBlockItem {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  flex-shrink: 0;
+  height: 200px;
+  border-radius: 30px;
+  padding: 20px;
+  gap: 10px;
+  background-color: #d8d7dc;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .techBlockItem {
+    width: 49%;
+    height: 300px;
+    padding: 40px;
+  }
+}
+
+.techBlockItemImage {
+  position: absolute;
+  object-fit: cover;
+  object-position: center top;
+  z-index: -10;
+  transition: all 700ms ease-in-out;
+  opacity: 0;
+}
+
+.techBlockItemImageLoaded {
+  opacity: 1;
+}
+
+.techBlockItemContent {
+  flex: 0 0 80%;
+}
+
+.techBlockItemText {
+  white-space: pre-wrap;
+  text-align: left;
+  color: #000;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .techBlockItemText {
+    font-size: 20px;
+  }
+}
+
+.techBlockItemValue {
+  margin-right: 5px;
+  color: #000;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .techBlockItemValue {
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+
+.techBlockItemParam {
+  color: #000;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .techBlockItemParam {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+/* RobotCapabilitiesBlock */
+.capabilitiesBlock {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .capabilitiesBlock {
+    padding: 40px;
+    margin-bottom: 120px;
+  }
+}
+
+.capabilitiesTitle {
+  max-width: 256px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  white-space: pre-line;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .capabilitiesTitle {
+    max-width: none;
+    text-align: center;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+.capability {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+@media (min-width: 768px) {
+  .capability {
+    flex-direction: row;
+    min-height: 400px;
+    margin-bottom: 40px;
+    gap: 2%;
+  }
+}
+
+.capabilityEven {
+  flex-direction: row-reverse;
+}
+
+.capabilityImage {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 800ms ease-in-out;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 30px;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .capabilityImage {
+    width: 38%;
+    height: auto;
+  }
+}
+
+.capabilityImageLoaded {
+  opacity: 1;
+}
+
+.capabilityContent {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 40px 20px;
+  text-align: left;
+  background-color: var(--card-color);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .capabilityContent {
+    width: 60%;
+    padding: 40px;
+  }
+}
+
+.capabilityTitle {
+  font-size: 25px;
+  line-height: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+  white-space: pre-line;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .capabilityTitle {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.capabilityDescription {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--font-secondary-color);
+  white-space: pre-line;
+  text-align: left;
+}
+
+/* FeedbackButtonWrapper */
+.feedbackButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.feedbackButton {
+  padding: 30px;
+  box-shadow: none;
+  width: auto;
+}

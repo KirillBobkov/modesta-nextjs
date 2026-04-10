@@ -6,8 +6,8 @@ import { SocialNetworkBlock } from "../components/SocialNetworkBlock/SocialNetwo
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget.jsx";
-import { NewMap } from "../components/NewMap.jsx";
-import { TeamBlock } from "../components/TeamBlock.jsx";
+import { NewMap } from "../components/NewMap/NewMap.jsx";
+import { TeamBlock } from "../components/TeamBlock/TeamBlock.jsx";
 
 import aboutRender from "../assets/images/aboutus.webp";
 import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { VisibilityManager } from "./VisibilityManager.jsx";
+import styles from "./PhotoSliderBlock.module.css";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { ArrowButton } from "./ScrollTopButton.jsx";
+import { ArrowButton } from "./ScrollTopButton/ScrollTopButton.jsx";
 import { useMediaQuery } from "../hooks/useMediaQuery.jsx";
 import Image from "next/image.js";
 
-export function PhotoSliderBlock({ 
-  title, 
-  desktopImages = [], 
-  mobileImages = [], 
+export function PhotoSliderBlock({
+  title,
+  desktopImages = [],
+  mobileImages = [],
   id,
   className = "",
   showArrows = true,
@@ -21,21 +22,25 @@ export function PhotoSliderBlock({
   const images = isDesktop ? desktopImages : (mobileImages.length > 0 ? mobileImages : desktopImages);
   const shouldShowIndicators = showIndicators !== null ? showIndicators : !isDesktop;
 
+  const containerClassName = className
+    ? styles.container + " " + className
+    : styles.container;
+
   return (
     <VisibilityManager
-      className={`max-w-full w-full mx-auto p-0 mb-15 md:mb-30  ${className}`}
+      className={containerClassName}
     >
-      <div 
-        className="w-auto pb-8 md:pt-15 relative overflow-hidden flex flex-col items-center justify-center" 
+      <div
+        className={styles.contentWrapper}
         id={id}
       >
         {title && (
-          <VisibilityManager className="text-[var(--font-color)] w-full text-center text-[32px] leading-[38px] px-5 py-10 mt-0 mb-0 md:w-auto md:text-[52px] md:leading-[60px] md:p-5 md:mb-[40px] font-bold uppercase">
+          <VisibilityManager className={styles.title}>
             {title}
           </VisibilityManager>
         )}
         <Carousel
-          className=" [&_.control-dots]:bottom-[-10px] md:[&_.control-dots]:bottom-auto [&_.carousel.carousel-slider]:h-full [&_.slider-wrapper]:h-full [&_.slider]:h-full [&_.slider]:items-center lign-middle [&_.slide]:h-full"
+          className={styles.carousel + " " + styles.carouselControlDots + " " + styles.carouselSlider + " " + styles.sliderWrapper + " " + styles.slider + " " + styles.slide}
           showArrows={showArrows}
           showStatus={false}
           showIndicators={shouldShowIndicators}
@@ -45,12 +50,12 @@ export function PhotoSliderBlock({
           transitionTime={800}
           infiniteLoop={true}
           renderArrowPrev={(clickHandler) => (
-            <div className="absolute z-[2] left-5 top-[calc(50%-30px)] -rotate-90">
+            <div className={styles.arrowPrev}>
               <ArrowButton onClick={clickHandler} />
             </div>
           )}
           renderArrowNext={(clickHandler) => (
-            <div className="absolute z-[2] right-5 top-[calc(50%-30px)] rotate-90">
+            <div className={styles.arrowNext}>
               <ArrowButton onClick={clickHandler} />
             </div>
           )}
@@ -67,12 +72,16 @@ export function PhotoSliderBlock({
 const SliderImage = ({ src, i, altText }) => {
   const [loaded, setLoaded] = useState(false);
 
+  const imageClassName = loaded
+    ? styles.image + " " + styles.imageLoaded
+    : styles.image;
+
   return (
     <Image
-      className={`w-auto h-full max-h-[700px] object-contain opacity-0 transition-all duration-[800ms] ease-in-out ${loaded ? 'opacity-100' : ''}`}
+      className={imageClassName}
       src={src}
       alt={altText || `Изображение №${i + 1}`}
       onLoad={() => setLoaded(true)}
     />
   );
-}; 
+};

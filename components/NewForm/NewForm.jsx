@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import InputMask from "react-input-mask";
 import { z } from "zod";
-import styles from "./NewForm.module.css"; // Импортируем стили из модуля
-import shadowStyles from "../../styles/shadow.module.css";
-import { ArrowButton } from "../ScrollTopButton/ScrollTopButton";
+import { ArrowButton } from "../ScrollTopButton/ScrollTopButton.jsx";
+import styles from "./NewForm.module.css";
 
 // Компонент для форматирования поля телефона
 const MaskedInput = ({ field, form, ...props }) => (
@@ -30,7 +29,7 @@ const formSchema = z.object({
     .regex(/^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/, "Некорректный номер телефона")
     .refine(
       (val) => !xssPattern.test(val),
-      "Недопустимый символ в номере телефона"
+      "Недопустимый символ в номере телефона",
     ),
 
   message: z
@@ -43,17 +42,19 @@ const formSchema = z.object({
     .refine((val) => val === true, "Необходимо согласиться с условиями"),
 });
 
-const RegistrationForm = ({ popupOpened, setOpened }) => {
+export default function NewForm({ popupOpened, setOpened }) {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+
+  const overlayClassName = popupOpened
+    ? styles.popupOverlay + " " + styles.popupOverlayOpened
+    : styles.popupOverlay;
 
   function handleSend(fields, helpers) {
     setLoading(true);
 
     const sendMessage = () => {
-      const token = "6684032618:AAG1TLXZ0dgsm0ippB4OrMffxJPTzj4N5oE";
-      const chat_id = "-1002021633462";
-      const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
+      const url = `https://telegram-proxy.servemp3.com:4444/api/prosthesis/send-request`;
 
       fetch(url, {
         method: "POST",
@@ -61,13 +62,10 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
           "Content-Type": "application/json;charset=UTF-8",
         },
         body: JSON.stringify({
-          chat_id,
-          parse_mode: "html",
-          text: `<b>Заявка на получние протеза</b>\n\n<b>Имя</b>: ${
-            fields.name
-          }\n<b>E-mail</b>: ${fields.email}\n<b>Номер телефона</b>: ${
-            fields.phone
-          }\n<b>Сообщение</b>: ${fields.message || "-"}`,
+          name: fields.name,
+          email: fields.email,
+          phone: fields.phone,
+          message: fields.message || "-",
         }),
       })
         .then(() => {
@@ -75,7 +73,7 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
         })
         .catch((error) => {
           setResponseMessage(
-            "Произошла ошибка при отправке. Пожалуйста, свяжитесь с нами через контакты"
+            "Произошла ошибка при отправке. Пожалуйста, свяжитесь с нами через контакты",
           );
           setLoading(false);
           console.error("Ошибка:", error);
@@ -92,16 +90,17 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
     <div
       onClick={(e) => {
         setOpened(false);
-        document.documentElement.classList.remove("mobile-menu-opened");
+        document.documentElement.classList.remove("overflow-hidden");
       }}
-      className={
-        styles["popup-overlay"] +
-        " " +
-        (popupOpened ? styles["popup-overlay--opened"] : "")
-      }
+      className={overlayClassName}
     >
-      <div onClick={(e) => e.stopPropagation()} className={styles.popup}>
-        <h2 className={styles["popup__title"]}>Оставить заявку</h2>
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={styles.popup}
+      >
+        <h2 className={styles.popupTitle}>
+          Оставить заявку
+        </h2>
         <Formik
           initialValues={{
             name: "",
@@ -127,82 +126,76 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
         >
           {({ isValid, dirty, errors }) => (
             <Form className={styles.form}>
-              <div className={styles["form-group"]}>
+              <div className={styles.formGroup}>
                 <Field
                   type="text"
                   disabled={responseMessage.length > 0}
                   placeholder="Ваше имя"
                   name="name"
-                  className={styles["input-field"]}
+                  className={styles.inputField}
                 />
                 <ErrorMessage
                   name="name"
                   component="div"
-                  className={styles["error-message"]}
+                  className={styles.errorMessage}
                 />
               </div>
-              <div className={styles["form-group"]}>
+              <div className={styles.formGroup}>
                 <Field
                   type="email"
                   disabled={responseMessage.length > 0}
                   placeholder="E-mail"
                   name="email"
-                  className={styles["input-field"]}
+                  className={styles.inputField}
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className={styles["error-message"]}
+                  className={styles.errorMessage}
                 />
               </div>
 
-              <div className={styles["form-group"]}>
+              <div className={styles.formGroup}>
                 <Field
                   name="phone"
                   disabled={responseMessage.length > 0}
                   placeholder="+7 (999) 999-9999"
                   component={MaskedInput}
-                  className={styles["input-field"]}
+                  className={styles.inputField}
                 />
                 <ErrorMessage
                   name="phone"
                   component="div"
-                  className={styles["error-message"]}
+                  className={styles.errorMessage}
                 />
               </div>
 
-              <div className={styles["form-group"]}>
+              <div className={styles.formGroup}>
                 <Field
                   placeholder="Напишите то, что нам важно знать"
                   disabled={responseMessage.length > 0}
                   as="textarea"
                   name="message"
-                  className={
-                    styles["input-field"] + " " + styles["form-textarea"]
-                  }
+                  className={styles.formTextarea}
                 />
               </div>
 
-              <div
-                className={styles["form-group"] + " " + styles["form-checkbox"]}
-              >
+              <div className={styles.formCheckbox}>
                 <Field
                   id="id-form-checkbox"
                   type="checkbox"
                   disabled={responseMessage.length > 0}
                   name="checkbox"
-                  className={`${styles["form-checkbox__input"]} ${
-                    errors.checkbox ? styles["form-checkbox__input--error"] : ""
-                  }`}
+                  className={errors.checkbox ? styles.formCheckboxInput + " " + styles.formCheckboxInputError : styles.formCheckboxInput}
                 />
                 <label
                   htmlFor="id-form-checkbox"
-                  className={`${styles["form-checkbox__label"]}`}
+                  className={styles.formCheckboxLabel}
                 >
                   Я ознакомлен (ознакомлена) с{" "}
                   <a
                     target="_blank"
-                    className={styles["form-doc"]}
+                    className={styles.formDoc}
                     href="/agreement-data.pdf"
                   >
                     правилами
@@ -212,27 +205,27 @@ const RegistrationForm = ({ popupOpened, setOpened }) => {
               </div>
               <button
                 type="submit"
-                className={`${styles.formSubmitButton} ${shadowStyles.shadow}`}
+                className={styles.formSubmitButton}
                 disabled={!(isValid && dirty) || responseMessage.length > 0}
               >
                 <span>
                   {responseMessage.length > 0 ? responseMessage : "Отправить"}
                 </span>
-                {loading && <div className={styles["loader-button"]} />}
+                {loading && (
+                  <div className={styles.loaderButton} />
+                )}
               </button>
             </Form>
           )}
         </Formik>
         <ArrowButton
-          classes={styles["close-button"]}
+          classes={styles.closeButton}
           onClick={() => {
             setOpened(false);
-            document.documentElement.classList.remove("mobile-menu-opened");
+            document.documentElement.classList.remove("overflow-hidden");
           }}
         />
       </div>
     </div>
   );
-};
-
-export default RegistrationForm;
+}

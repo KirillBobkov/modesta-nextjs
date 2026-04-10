@@ -1,0 +1,114 @@
+/* PhotoSliderBlock.module.css */
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-bottom: 120px;
+  }
+}
+
+.contentWrapper {
+  width: auto;
+  padding-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .contentWrapper {
+    padding-top: 60px;
+  }
+}
+
+.title {
+  color: var(--font-color);
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  line-height: 38px;
+  padding: 40px 20px 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .title {
+    width: auto;
+    font-size: 52px;
+    line-height: 60px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.carousel {
+  /* Стили для carousel компонента */
+}
+
+.carouselControlDots {
+  bottom: -10px;
+}
+
+@media (min-width: 768px) {
+  .carouselControlDots {
+    bottom: auto;
+  }
+}
+
+.carouselSlider {
+  height: 100%;
+}
+
+.sliderWrapper {
+  height: 100%;
+}
+
+.slider {
+  height: 100%;
+  align-items: center;
+  align-content: middle;
+}
+
+.slide {
+  height: 100%;
+}
+
+.arrowPrev {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: calc(50% - 30px);
+  transform: rotate(-90deg);
+}
+
+.arrowNext {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: calc(50% - 30px);
+  transform: rotate(90deg);
+}
+
+.image {
+  width: auto;
+  height: 100%;
+  max-height: 700px;
+  object-fit: contain;
+  opacity: 0;
+  transition: all 800ms ease-in-out;
+}
+
+.imageLoaded {
+  opacity: 1;
+}

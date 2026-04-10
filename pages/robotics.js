@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout.js";
-import { VideoWidget } from "../components/VideoWidget.jsx";
+import Layout from "../components/Layout/Layout.js";
+import { VideoWidget } from "../components/VideoWidget/VideoWidget.jsx";
 import { VisibilityManager } from "../components/VisibilityManager.jsx";
-import { PreviewBlock } from "../components/PreviewBlock.jsx";
+import { PreviewBlock } from "../components/PreviewBlock/PreviewBlock.jsx";
 import { PhotoSliderBlock } from "../components/PhotoSliderBlock.jsx";
 import Image from "next/image";
-import AnimatedCounter from "../components/AnimatedCounter.jsx";
+import AnimatedCounter from "../components/AnimatedCounter/AnimatedCounter.jsx";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 import { useRouter } from "next/router.js";
+import styles from "./robotics.module.css";
 
 // Видео для preview блока
 import roboticsPreviewVideo from "../assets/images/robot.mp4";
 import processPreviewImage from "../assets/images/robot__poster.jpg";
-import FeedbackButton from "../components/FeedbackButton.jsx";
+import FeedbackButton from "../components/FeedbackButton/FeedbackButton.jsx";
 
 // Технические характеристики робота
 import robot_features_img_1 from "../assets/images/robot_features_1.jpg";
@@ -74,7 +75,7 @@ const robotCapabilities = {
       img: robot_features_img_2,
       title: "Автономность и управление",
       alt: "Автономный и ручной режимы управления",
-      description: `Робот может работать в автономном режиме, самостоятельно выполняя задачи, 
+      description: `Робот может работать в автономном режиме, самостоятельно выполняя задачи,
       или в режиме ручного управления для выполнения специфических операций.
       Время работы от батареи до 8 часов с возможностью установки литий-ионных батарей.`,
     },
@@ -103,7 +104,7 @@ const roboticsVideos = [
     link: "https://vkvideo.ru/video_ext.php?oid=-131964440&id=456239170&hash=1590d0b4562f1981",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8711623936750&idx=0&type=39&tkn=FLPLsKicgLY9zBnXwQ1RErpn4pk&fn=vid_w",
-    name: "Резидент «Модеста» , финалист акселератора «Инновации в реабилитаци», разработал робота-помощника. ",
+    name: "Резидент «Модеста» , финалист акселератора «Инновации в реабилитации», разработал робота-помощника. ",
     uploadDate: new Date("October 03, 2024").toISOString(),
   },
   {
@@ -190,14 +191,14 @@ const roboticsPreviewVideoData = {
 // Компонент технических характеристик робота
 const RobotTechBlock = () => {
   return (
-    <VisibilityManager className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
+    <VisibilityManager className={styles.techBlock}>
       <h2
-        className="max-w-sm text-left text-2xl leading-8 mb-5 font-bold whitespace-pre-line uppercase md:max-w-none md:text-center md:text-5xl md:leading-[60px] md:mb-7.5"
+        className={styles.techBlockTitle}
         id="tech"
       >
         Технические характеристики
       </h2>
-      <ul className="w-full mx-auto flex justify-center flex-wrap gap-x-5 md:gap-x-[2%] gap-y-5">
+      <ul className={styles.techBlockList}>
         {robotTechSpecs.map((item, i) => {
           return <RobotTechBlockItem key={i} item={item} i={i} />;
         })}
@@ -210,28 +211,30 @@ const RobotTechBlock = () => {
 const RobotTechBlockItem = ({ item, i }) => {
   const [loaded, setLoaded] = useState(false);
 
+  const imageClassName = loaded
+    ? styles.techBlockItemImage + " " + styles.techBlockItemImageLoaded
+    : styles.techBlockItemImage;
+
   return (
     <VisibilityManager
       as="li"
-      className="flex relative overflow-hidden justify-start items-end w-full md:w-[49%] flex-shrink-0 h-[200px] md:h-[300px] rounded-[30px] p-5 md:p-10 gap-2.5 bg-[#d8d7dc] shadow-lg"
+      className={styles.techBlockItem}
     >
       <Image
         itemProp="contentUrl"
-        className={`absolute object-center object-top object-cover -z-10 transition-all duration-700 ease-in-out ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
+        className={imageClassName}
         src={item.img.src}
         alt={`Характеристика #${i}`}
         fill
         onLoad={() => setLoaded(true)}
       />
-      <div className="flex-[80%]">
-        <span className="whitespace-pre-wrap text-left text-black text-base md:text-xl leading-[25px] font-bold uppercase">
+      <div className={styles.techBlockItemContent}>
+        <span className={styles.techBlockItemText}>
           {item.text} <br />
-          <span className="mr-[5px] text-black text-[60px] md:text-[100px] font-bold leading-[70px] md:leading-[100px]">
+          <span className={styles.techBlockItemValue}>
             <AnimatedCounter start={0} end={parseInt(item.key)} />
           </span>
-          <span className="text-black text-2xl md:text-[32px] font-bold leading-[30px] md:leading-9">
+          <span className={styles.techBlockItemParam}>
             {item.key_param}
           </span>
         </span>
@@ -243,17 +246,20 @@ const RobotTechBlockItem = ({ item, i }) => {
 // Компонент возможностей робота
 const RobotCapabilitiesBlock = () => {
   return (
-    <div className="max-w-screen-xl w-full mx-auto px-4 mb-15 md:px-10 md:mb-30">
+    <div className={styles.capabilitiesBlock}>
       <VisibilityManager
         as="h2"
-        className="max-w-sm text-left text-2xl leading-8 mb-5 font-bold whitespace-pre-line uppercase md:max-w-none md:text-center md:text-5xl md:leading-[60px] md:mb-7.5"
+        className={styles.capabilitiesTitle}
         id="capabilities"
       >
         {robotCapabilities.title}
       </VisibilityManager>
       <VisibilityManager as="ul">
         {robotCapabilities.blocks.map((capability, i) => {
-          return <Capability key={i} capability={capability} />;
+          const capabilityClassName = i % 2 === 1
+            ? styles.capability + " " + styles.capabilityEven
+            : styles.capability;
+          return <Capability key={i} capability={capability} className={capabilityClassName} />;
         })}
       </VisibilityManager>
     </div>
@@ -261,37 +267,39 @@ const RobotCapabilitiesBlock = () => {
 };
 
 // Компонент одной возможности
-const Capability = ({ capability }) => {
+const Capability = ({ capability, className }) => {
   const [loaded, setLoaded] = useState(false);
+
+  const imageClassName = loaded
+    ? styles.capabilityImage + " " + styles.capabilityImageLoaded
+    : styles.capabilityImage;
 
   return (
     <VisibilityManager
       as="li"
       itemType="http://schema.org/ImageObject"
-      className="flex flex-col gap-[30px] mb-[30px] rounded-[30px] md:flex-row md:min-h-[400px] md:mb-10 md:gap-[2%] md:even:flex-row-reverse"
+      className={className}
       id="capability"
     >
       <Image
         itemProp="contentUrl"
-        className={`shadow-lg transition-all duration-[800ms] ease-in-out w-full h-[230px] object-cover rounded-[30px] md:w-[38%] md:h-auto ${
-          loaded ? "opacity-100" : "opacity-0"
-        }`}
+        className={imageClassName}
         src={capability.img}
         alt={capability.alt}
         width={400}
         height={300}
         onLoad={() => setLoaded(true)}
       />
-      <div className="shadow-lg w-full py-10 px-5 text-left bg-card rounded-[30px] flex flex-col justify-center md:w-[60%] md:p-10">
+      <div className={styles.capabilityContent}>
         <h3
           itemProp="name"
-          className="text-[25px] leading-[32px] mb-[10px] font-bold text-left whitespace-pre-line uppercase md:mb-[15px] lg:text-[40px] lg:leading-[40px]"
+          className={styles.capabilityTitle}
         >
           {capability.title}
         </h3>
         <p
           itemProp="description"
-          className="text-base leading-[25px] text-font-secondary whitespace-pre-line text-left"
+          className={styles.capabilityDescription}
         >
           {capability.description}
         </p>
@@ -349,7 +357,7 @@ export default function Robotics() {
       popupOpened={popupOpened}
       setOpened={setOpened}
     >
-      <main className="w-full">
+      <main className={styles.main}>
         {/* Preview блок с видео */}
         <PreviewBlock
           video={roboticsPreviewVideoData}
@@ -360,9 +368,9 @@ export default function Robotics() {
         {/* Возможности робота */}
         <RobotCapabilitiesBlock />
 
-        <div className="flex justify-center mb-[80px]">
+        <div className={styles.feedbackButtonWrapper}>
           <FeedbackButton
-            classes="px-[30px] shadow-none w-auto"
+            classes={styles.feedbackButton}
             onClick={setOpened}
             text={"Оформить Предзаказ"}
             withIcon={false}
