@@ -5,6 +5,143 @@
   margin-bottom: 40px;
 }
 
+/* === Photo Layouts === */
+
+/* Single photo - full width */
+.photoSingle {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Two photos - 2 columns */
+.photoTwo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .photoTwo {
+    gap: 12px;
+  }
+}
+
+/* Photo image base */
+.photoImage {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .photoImage {
+    max-height: 500px;
+  }
+}
+
+/* === Carousel for 3+ photos === */
+.photoCarouselWrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.photoCarousel {
+  width: 100%;
+}
+
+.carouselSlide {
+  position: relative;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+@media (min-width: 480px) {
+  .carouselImage {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carouselImage {
+    height: 450px;
+  }
+}
+
+/* Carousel arrows on top of images */
+.carouselArrowPrev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  z-index: 3;
+}
+
+.carouselArrowNext {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .carouselArrowPrev {
+    left: 20px;
+  }
+
+  .carouselArrowNext {
+    right: 20px;
+  }
+}
+
+/* Counter badge */
+.photoCounter {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Override carousel dots */
+.photoCarousel :global(.carousel .control-dots) {
+  bottom: 12px;
+  left: 12px;
+  right: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.photoCarousel :global(.carousel .control-dots .dot) {
+  background: rgba(255, 255, 255, 0.5);
+  width: 8px;
+  height: 8px;
+  box-shadow: none;
+}
+
+.photoCarousel :global(.carousel .control-dots .dot.selected) {
+  background: white;
+}
+
+/* === Original styles === */
+
 .mediaGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -71,4 +208,4 @@
   z-index: -1;
   opacity: 0.7;
   filter: blur(5px);
-} 
+}
