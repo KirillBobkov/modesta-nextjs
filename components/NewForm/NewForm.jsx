@@ -56,7 +56,7 @@ export default function NewForm({ popupOpened, setOpened }) {
     setLoading(true);
 
     const sendMessage = () => {
-      const url = `https://telegram-proxy.servemp3.com:4444/api/prosthesis/send-request`;
+      const url = `https://shepsik.servemp3.com:4444/api/prosthesis/send-request`;
 
       fetch(url, {
         method: "POST",
