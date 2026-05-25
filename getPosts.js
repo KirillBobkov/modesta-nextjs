@@ -1,7 +1,8 @@
 const { VK } = require("vk-io");
 const fs = require("fs");
 
-const token = ""
+const token = "vk1.a.PgthEOHud5WUOCKYSZg7SBT8sWrIi2os2zV7itoRA9aPSYKBImR5lkvEz5gQ6kOtkbIQT_m2LR9ZeXmlvPLy3dE74PwQBodVRV4SY7f4MrlwEHZpF9CBNkZcdNaFJ_3o-bxMxKeE4giWmQJd95QJ5RehFesBOt3KuFKcADr8D8UUPO356swVvVrOObJk8d-wEmk3b2cVtRR4OOLFTWmk5Q"
+
 
 
 const groupId = -131964440; // Replace with the ID of your group (note the negative sign)
