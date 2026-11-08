@@ -19,6 +19,7 @@ export default function InfoPage() {
     useYandexRobot(router.pathname);
   }, []);
 
+
   const metaConfig = {
     seoContent: `Информационный портал о протезировании верхних конечностей 2025
 
