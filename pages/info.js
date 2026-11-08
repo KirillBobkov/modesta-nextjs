@@ -10,6 +10,7 @@ import { ArticlesGrid } from "../components/ArticlesGrid/ArticlesGrid";
 import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
 
+
 export default function InfoPage() {
   const router = useRouter();
   const [popupOpened, setOpened] = useState(false);
