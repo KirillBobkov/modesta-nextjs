@@ -29,7 +29,7 @@ import workingProcess9_2 from "../assets/images/working_process_2_9.jpg";
 import { useScrollToLocation } from "../hooks/useScrollToLocation.jsx";
 import { useRouter } from "next/router.js";
 import { useYandexRobot } from "../hooks/useYandexMetricsPageLoaded.jsx";
-import process from "../assets/images/process.mp4";
+import processVideo from "../assets/images/process.mp4";
 
 const secondMozaicImages = [
   workingProcess1,
@@ -65,7 +65,7 @@ export const quoteContent = {
 
 
 const productionPageVideo = {
-  link: process,
+  link: processVideo,
   thumbnailUrl: process__poster.src,
   name: "Процесс создания протеза руки",
   uploadDate: new Date("February 12, 2025").toISOString(),
