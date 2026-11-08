@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "node getPosts.js & next build",
+    "build": "next build",
     "dev": "next dev",
     "start": "next start",
     "parse": "node getPosts.js"
